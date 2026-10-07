@@ -7,7 +7,7 @@ import {
   getContentsByTeacher,
   getContentFiles,
   getClassByTeacher,
-} from "../api/teacherCourseApi.js";
+} from "../api/TeacherCourseApi.js";
 
 const TeacherCourseContext = createContext(null);
 
@@ -128,9 +128,7 @@ export const TeacherCourseProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-
-    
-  }
+  };
 
   const loadContents = async (bookId, teacherId) => {
     if (!bookId || !teacherId) {
