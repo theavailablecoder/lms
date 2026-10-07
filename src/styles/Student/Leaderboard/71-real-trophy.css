@@ -1,0 +1,290 @@
+.lbRealTrophy{display:grid!important;place-items:center;height:170px!important;transform:none!important}.lbRealTrophy img{position:relative;z-index:2;display:block;width:205px;height:205px;object-fit:contain;filter:drop-shadow(0 14px 12px rgba(74,62,151,.27));transform:translateY(4px)}.lbRealTrophy:before{content:"";position:absolute;left:50%;bottom:2px;width:205px;height:35px;border-radius:50%;background:radial-gradient(ellipse,#8770e55c,transparent 68%);transform:translateX(-50%)}.lbRealTrophy .trophySpark{z-index:4}@media(max-width:1450px){.lbRealTrophy img{width:180px;height:180px}}@media(max-width:700px){.lbRealTrophy{right:8px!important}.lbRealTrophy img{width:155px;height:155px}}
+.lbRealTrophy img{object-fit:cover!important;object-position:center 57%!important;border-radius:50%!important}
+.lbRealTrophy{width:230px!important;height:170px!important;overflow:visible!important}.lbRealTrophy img{width:225px!important;height:190px!important;object-fit:contain!important;object-position:center!important;border-radius:0!important;mix-blend-mode:multiply;filter:drop-shadow(0 12px 10px rgba(74,62,151,.22))!important;transform:translateY(1px)!important}.lbRealTrophy:before{bottom:-3px!important;width:225px!important}@media(max-width:1450px){.lbRealTrophy{width:195px!important}.lbRealTrophy img{width:190px!important;height:175px!important}}@media(max-width:700px){.lbRealTrophy{width:165px!important}.lbRealTrophy img{width:160px!important;height:155px!important}}
+.studentShell .studentLeaderboardPage>.lbHero{isolation:isolate;background:radial-gradient(ellipse at 50% 108%,#8f77ed38 0%,transparent 33%),radial-gradient(circle at 48% 45%,#fff 0%,#e9f7ff 23%,transparent 48%),linear-gradient(112deg,#fbfdff 0%,#eaf6ff 48%,#eeebff 100%)!important}.studentShell .studentLeaderboardPage>.lbHero:after{content:"";position:absolute;z-index:-1;left:47%;top:48%;width:620px;height:420px;pointer-events:none;background:repeating-conic-gradient(from -4deg,rgba(83,184,255,.14) 0deg,rgba(83,184,255,.14) 4deg,transparent 4deg,transparent 13deg);mask-image:radial-gradient(circle,#000 0%,#000 35%,transparent 70%);transform:translate(-50%,-50%)}.studentShell .studentLeaderboardPage>.lbHero:before{content:"✦      ✧       ✦";position:absolute;z-index:1;left:35%;top:11px;width:340px;color:#fff;font-size:20px;letter-spacing:34px;text-shadow:42px 48px #ffd449,168px 8px #fff,245px 62px #69bdf3;pointer-events:none}.lbRealTrophy:after{content:"";position:absolute;z-index:1;left:50%;bottom:-9px;width:260px;height:37px;border:2px solid #a78af3;border-radius:50%;background:radial-gradient(ellipse,#fff 0%,#d9ccff 42%,#9376df 75%,transparent 77%);box-shadow:0 0 0 7px #c5b5fa42,0 0 25px #7e67d94f;transform:translateX(-50%)}.lbRealTrophy img{z-index:3!important}@media(max-width:700px){.studentShell .studentLeaderboardPage>.lbHero:after{left:70%;width:400px}.studentShell .studentLeaderboardPage>.lbHero:before{display:none}.lbRealTrophy:after{width:180px}}
+.lbRealTrophy:after{bottom:0!important;width:190px!important;height:18px!important;border:0!important;background:radial-gradient(ellipse,rgba(83,70,174,.32) 0%,rgba(124,104,221,.14) 43%,transparent 72%)!important;box-shadow:none!important;filter:blur(3px)}.lbRealTrophy{perspective:700px;transform-style:preserve-3d}.lbRealTrophy img{transform-origin:center 72%;animation:leaderboardTrophyFloat 4s ease-in-out infinite;will-change:transform,filter}.lbRealTrophy .trophySpark{animation:leaderboardSparkPulse 2s ease-in-out infinite}.lbRealTrophy .s2{animation-delay:.6s}.lbRealTrophy .s3{animation-delay:1.1s}@keyframes leaderboardTrophyFloat{0%,100%{transform:translateY(1px) rotateY(-3deg) rotateX(1deg);filter:drop-shadow(0 12px 10px rgba(74,62,151,.22))}50%{transform:translateY(-8px) rotateY(4deg) rotateX(-1deg) scale(1.025);filter:drop-shadow(0 19px 14px rgba(74,62,151,.3))}}@keyframes leaderboardSparkPulse{0%,100%{opacity:.45;transform:scale(.75) rotate(0)}50%{opacity:1;transform:scale(1.25) rotate(28deg);filter:drop-shadow(0 0 8px #ffd34f)}}@media(prefers-reduced-motion:reduce){.lbRealTrophy img,.lbRealTrophy .trophySpark{animation:none!important}}
+.studentShell .studentLeaderboardPage>.lbHero{background-size:140% 140%!important;animation:leaderboardColorWash 10s ease-in-out infinite}.studentShell .studentLeaderboardPage>.lbHero:after{transform-origin:center;animation:leaderboardRaySpin 24s linear infinite}.studentShell .studentLeaderboardPage>.lbHero:before{animation:leaderboardStarsDrift 5s ease-in-out infinite}.lbRealTrophy:before{animation:leaderboardGlowBreathe 3.2s ease-in-out infinite}.lbRealTrophy:after{animation:leaderboardShadowBreathe 4s ease-in-out infinite}@keyframes leaderboardColorWash{0%,100%{background-position:0% 50%}50%{background-position:100% 45%}}@keyframes leaderboardRaySpin{0%{transform:translate(-50%,-50%) rotate(0deg);opacity:.62}50%{opacity:1}100%{transform:translate(-50%,-50%) rotate(360deg);opacity:.62}}@keyframes leaderboardStarsDrift{0%,100%{transform:translate3d(0,0,0);opacity:.55}50%{transform:translate3d(12px,-7px,0);opacity:1}}@keyframes leaderboardGlowBreathe{0%,100%{transform:translateX(-50%) scale(.86);opacity:.45}50%{transform:translateX(-50%) scale(1.12);opacity:.9}}@keyframes leaderboardShadowBreathe{0%,100%{transform:translateX(-50%) scaleX(.86);opacity:.48}50%{transform:translateX(-50%) scaleX(1.08);opacity:.78}}@media(prefers-reduced-motion:reduce){.studentShell .studentLeaderboardPage>.lbHero,.studentShell .studentLeaderboardPage>.lbHero:after,.studentShell .studentLeaderboardPage>.lbHero:before,.lbRealTrophy:before,.lbRealTrophy:after{animation:none!important}}
+
+/* Wide trophy artwork supplied for the leaderboard hero. */
+.lbRealTrophy img{width:230px!important;height:165px!important;object-fit:cover!important;object-position:center!important;border-radius:18px!important;mix-blend-mode:normal!important}
+@media(max-width:1450px){.lbRealTrophy img{width:195px!important;height:150px!important}}
+@media(max-width:700px){.lbRealTrophy img{width:165px!important;height:135px!important}}
+
+/* Continue the artwork's blue radiant backdrop across the complete hero. */
+.studentShell .studentLeaderboardPage>.lbHero{
+  background:
+    radial-gradient(circle at 50% 52%,rgba(255,255,255,.96) 0 8%,rgba(205,231,255,.82) 21%,transparent 46%),
+    linear-gradient(112deg,#eaf6ff 0%,#b8d9ff 52%,#d9e9ff 100%)!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero:after{
+  background:repeating-conic-gradient(from -5deg,rgba(255,255,255,.55) 0deg,rgba(255,255,255,.55) 3deg,transparent 3deg,transparent 12deg)!important;
+  opacity:.58;
+}
+.lbRealTrophy img{
+  width:240px!important;
+  height:170px!important;
+  object-fit:contain!important;
+  border-radius:0!important;
+}
+@media(max-width:1450px){.lbRealTrophy img{width:205px!important;height:155px!important}}
+@media(max-width:700px){.lbRealTrophy img{width:175px!important;height:140px!important}}
+
+/* Final hero composition: artwork on the left, clean metrics on the right. */
+.studentShell .studentLeaderboardPage>.lbHero{
+  display:grid!important;
+  grid-template-columns:245px minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:18px!important;
+  min-height:212px!important;
+  padding:0 20px!important;
+  background:linear-gradient(90deg,#e9f6ff 0 27%,#cfe4ff 48%,#cbdfff 100%)!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroCopy{display:none!important}
+.studentShell .studentLeaderboardPage>.lbHero:after{
+  left:122px!important;
+  top:50%!important;
+  z-index:0!important;
+  width:430px!important;
+  height:430px!important;
+  opacity:.62!important;
+  background:repeating-conic-gradient(from -7deg,rgba(255,255,255,.9) 0 4deg,transparent 4deg 13deg)!important;
+  mask-image:radial-gradient(circle,#000 0 37%,transparent 72%)!important;
+  animation:none!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero:before{
+  left:24px!important;
+  top:18px!important;
+  z-index:1!important;
+  width:220px!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{
+  grid-column:1!important;
+  grid-row:1!important;
+  z-index:2!important;
+  width:245px!important;
+  height:205px!important;
+  overflow:visible!important;
+  transform:none!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy img{
+  width:245px!important;
+  height:205px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  border-radius:0!important;
+  animation:none!important;
+  filter:drop-shadow(0 12px 12px rgba(61,76,150,.18))!important;
+  transform:none!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:before,
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after,
+.studentShell .studentLeaderboardPage>.lbHero .trophySpark{display:none!important}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics{
+  grid-column:2!important;
+  grid-row:1!important;
+  width:100%!important;
+  min-height:116px!important;
+  margin:0!important;
+  overflow:hidden!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics>.lbWeek,
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics>article{
+  background:#fff!important;
+  box-shadow:0 5px 0 rgba(58,76,138,.12)!important;
+}
+@media(max-width:900px){
+  .studentShell .studentLeaderboardPage>.lbHero{grid-template-columns:190px minmax(0,1fr)!important;padding:0 12px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{width:190px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy img{width:190px!important;height:175px!important}
+  .studentShell .studentLeaderboardPage>.lbHero:after{left:95px!important;width:340px!important;height:340px!important}
+}
+@media(max-width:700px){
+  .studentShell .studentLeaderboardPage>.lbHero{display:flex!important;min-height:450px!important;padding:12px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{align-self:center!important;width:220px!important;height:170px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy img{width:220px!important;height:170px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics{margin-top:0!important}
+  .studentShell .studentLeaderboardPage>.lbHero:after{left:50%!important;top:90px!important}
+}
+
+/* Restore the original leaderboard introduction before the trophy artwork. */
+.studentShell .studentLeaderboardPage>.lbHero{
+  grid-template-columns:minmax(285px,.8fr) 245px minmax(520px,1.45fr)!important;
+  gap:16px!important;
+  padding:16px 20px!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroCopy{
+  display:flex!important;
+  grid-column:1!important;
+  grid-row:1!important;
+  position:relative!important;
+  z-index:4!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{
+  grid-column:2!important;
+  grid-row:1!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics{
+  grid-column:3!important;
+  grid-row:1!important;
+}
+@media(max-width:1250px){
+  .studentShell .studentLeaderboardPage>.lbHero{
+    grid-template-columns:minmax(280px,1fr) 230px!important;
+    min-height:340px!important;
+  }
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroCopy{grid-column:1!important;grid-row:1!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{grid-column:2!important;grid-row:1!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroMetrics{grid-column:1/-1!important;grid-row:2!important}
+}
+@media(max-width:700px){
+  .studentShell .studentLeaderboardPage>.lbHero{display:flex!important;min-height:590px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroCopy{display:flex!important;width:100%!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbHeroTrophy{align-self:center!important}
+}
+
+/* Soft animated light wash behind the complete leaderboard hero. */
+.studentShell .studentLeaderboardPage>.lbHero{
+  background-size:180% 180%!important;
+  animation:leaderboardHeroBackgroundFlow 9s ease-in-out infinite!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero:after{
+  transform-origin:center!important;
+  animation:leaderboardHeroRays 18s linear infinite!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero:before{
+  animation:leaderboardHeroSparkles 3.8s ease-in-out infinite!important;
+}
+@keyframes leaderboardHeroBackgroundFlow{
+  0%,100%{background-position:0% 48%}
+  50%{background-position:100% 52%}
+}
+@keyframes leaderboardHeroRays{
+  0%{transform:translate(-50%,-50%) rotate(0deg) scale(.96);opacity:.42}
+  50%{transform:translate(-50%,-50%) rotate(180deg) scale(1.05);opacity:.68}
+  100%{transform:translate(-50%,-50%) rotate(360deg) scale(.96);opacity:.42}
+}
+@keyframes leaderboardHeroSparkles{
+  0%,100%{transform:translate3d(0,0,0);opacity:.42}
+  50%{transform:translate3d(8px,-5px,0);opacity:.95}
+}
+@media(prefers-reduced-motion:reduce){
+  .studentShell .studentLeaderboardPage>.lbHero,
+  .studentShell .studentLeaderboardPage>.lbHero:after,
+  .studentShell .studentLeaderboardPage>.lbHero:before{animation:none!important}
+}
+
+/* Keep the motion focused directly behind the trophy. */
+.studentShell .studentLeaderboardPage>.lbHero{
+  animation:none!important;
+  background-position:center!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero:after{animation:none!important}
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:before{
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  z-index:0!important;
+  left:50%!important;
+  top:50%!important;
+  bottom:auto!important;
+  width:245px!important;
+  height:185px!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle at 30% 42%,rgba(115,199,255,.72),transparent 38%),
+    radial-gradient(circle at 72% 58%,rgba(157,122,255,.55),transparent 42%),
+    radial-gradient(circle,rgba(255,255,255,.78),rgba(171,217,255,.22) 54%,transparent 72%)!important;
+  filter:blur(9px)!important;
+  transform:translate(-50%,-50%)!important;
+  animation:trophyBackdropMove 5.5s ease-in-out infinite alternate!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after{
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  z-index:1!important;
+  left:50%!important;
+  top:50%!important;
+  bottom:auto!important;
+  width:218px!important;
+  height:145px!important;
+  border:1px solid rgba(255,255,255,.72)!important;
+  border-radius:50%!important;
+  background:radial-gradient(ellipse,rgba(255,255,255,.34),rgba(117,183,255,.14) 50%,transparent 72%)!important;
+  box-shadow:0 0 28px rgba(93,164,255,.28),inset 0 0 22px rgba(255,255,255,.38)!important;
+  filter:none!important;
+  transform:translate(-50%,-50%)!important;
+  animation:trophyHaloFloat 3.6s ease-in-out infinite!important;
+}
+@keyframes trophyBackdropMove{
+  0%{opacity:.58;transform:translate(-56%,-53%) scale(.92) rotate(-5deg)}
+  50%{opacity:.92;transform:translate(-47%,-48%) scale(1.08) rotate(3deg)}
+  100%{opacity:.7;transform:translate(-52%,-55%) scale(1) rotate(7deg)}
+}
+@keyframes trophyHaloFloat{
+  0%,100%{opacity:.48;transform:translate(-50%,-48%) scale(.92)}
+  50%{opacity:.95;transform:translate(-50%,-54%) scale(1.07)}
+}
+@media(max-width:700px){
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:before{width:205px!important;height:155px!important}
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after{width:180px!important;height:125px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:before,
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after{animation:none!important}
+}
+
+/* Gentle movement for the trophy, books and stationery artwork. */
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy img{
+  transform-origin:center 72%!important;
+  will-change:transform,filter!important;
+  animation:trophyArtworkFloat 4.2s ease-in-out infinite!important;
+}
+@keyframes trophyArtworkFloat{
+  0%,100%{
+    transform:translate3d(0,2px,0) rotate(-.6deg) scale(1)!important;
+    filter:drop-shadow(0 10px 10px rgba(61,76,150,.18))!important;
+  }
+  50%{
+    transform:translate3d(0,-8px,0) rotate(.7deg) scale(1.018)!important;
+    filter:drop-shadow(0 18px 15px rgba(61,76,150,.3))!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy img{animation:none!important}
+}
+
+/* Animated aura contained inside the trophy background area. */
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy{
+  background:
+    radial-gradient(circle at 28% 55%,rgba(91,181,255,.32),transparent 34%),
+    radial-gradient(circle at 72% 42%,rgba(157,126,255,.26),transparent 36%),
+    radial-gradient(circle at 50% 52%,rgba(255,255,255,.58),transparent 62%)!important;
+  background-size:145% 145%!important;
+  background-position:20% 50%!important;
+  border-radius:50%!important;
+  animation:trophyAuraShift 6s ease-in-out infinite alternate!important;
+}
+.studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after{
+  border:2px solid rgba(255,255,255,.68)!important;
+  box-shadow:
+    0 0 0 10px rgba(255,255,255,.08),
+    0 0 30px rgba(77,159,255,.36),
+    inset 0 0 24px rgba(255,255,255,.42)!important;
+  animation:trophyHaloRipple 3.4s ease-in-out infinite!important;
+}
+@keyframes trophyAuraShift{
+  0%{background-position:8% 58%}
+  50%{background-position:55% 42%}
+  100%{background-position:92% 56%}
+}
+@keyframes trophyHaloRipple{
+  0%,100%{opacity:.38;transform:translate(-50%,-50%) scale(.84)}
+  50%{opacity:.95;transform:translate(-50%,-50%) scale(1.08)}
+}
+@media(prefers-reduced-motion:reduce){
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy,
+  .studentShell .studentLeaderboardPage>.lbHero .lbRealTrophy:after{animation:none!important}
+}

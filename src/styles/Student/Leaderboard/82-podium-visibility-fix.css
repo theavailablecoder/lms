@@ -1,0 +1,368 @@
+/* Final podium layer: keep every scholar detail and book platform visible. */
+.lbPodiumPanel{overflow:hidden!important}
+.lbPodiumPanel .lbPodium{
+  min-height:430px!important;
+  padding:58px 24px 72px!important;
+  overflow:hidden!important;
+  align-items:flex-end!important;
+  justify-content:center!important;
+  gap:clamp(18px,3vw,38px)!important;
+}
+.lbPodiumPanel .lbPodiumCard,
+.lbPodiumPanel .lbPodiumRank1,
+.lbPodiumPanel .lbPodiumRank2,
+.lbPodiumPanel .lbPodiumRank3{
+  position:relative!important;
+  flex:0 0 175px!important;
+  width:175px!important;
+  min-height:275px!important;
+  margin:0!important;
+  padding:8px 6px 88px!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:0!important;
+  clip-path:none!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.lbPodiumPanel .lbPodiumCard:before,
+.lbPodiumPanel .lbPodiumCard:after,
+.lbPodiumPanel .lbRankRibbon,
+.lbPodiumPanel .lbPodiumMedal{display:none!important}
+.lbPodiumPanel .lbPodiumRank1{order:2!important;transform:translateY(-22px)!important}
+.lbPodiumPanel .lbPodiumRank2{order:1!important;transform:translateY(0)!important}
+.lbPodiumPanel .lbPodiumRank3{order:3!important;transform:translateY(10px)!important}
+.lbPodiumPanel .lbPodiumCard:hover{transform:translateY(-7px) scale(1.02)!important}
+.lbPodiumPanel .lbPodiumRank1:hover{transform:translateY(-29px) scale(1.02)!important}
+.lbPodiumPanel .lbPodiumRank3:hover{transform:translateY(3px) scale(1.02)!important}
+.lbPodiumPanel .lbPodiumAvatar,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{
+  width:74px!important;
+  height:74px!important;
+  margin:0 auto 12px!important;
+  border-width:6px!important;
+}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:84px!important;height:84px!important}
+.lbPodiumPanel .lbPodiumCard h3{margin:7px 0 4px!important;font-size:13px!important}
+.lbPodiumPanel .lbPodiumScore strong{font-size:20px!important}
+.lbPodiumPanel .lbPodiumCard>p{margin:5px 0!important;font-size:8px!important}
+.lbPodiumPanel .lbStudyBadge{display:inline-flex!important;margin-top:5px!important;font-size:6px!important}
+.lbPodiumPanel .lbPodiumCard>.lbMovement{display:flex!important;margin:5px auto 0!important}
+.lbPodiumPanel .lbPodiumBase,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{
+  position:absolute!important;
+  display:grid!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:18px!important;
+  width:155px!important;
+  height:24px!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:7px 16px 16px 7px!important;
+  clip-path:none!important;
+  transform:translateX(-50%)!important;
+}
+.lbPodiumPanel .lbPodiumRank2 .lbPodiumBase{background:linear-gradient(#5683e4 0 28%,#fff 28% 74%,#3862bd 74%)!important;box-shadow:0 10px 0 #f0b62e,0 17px 0 #fff7d8,0 24px 0 #d79513,0 30px 15px #34476b35!important}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{background:linear-gradient(#f2bd2a 0 28%,#fffdf0 28% 74%,#d6970c 74%)!important;box-shadow:0 10px 0 #5681dc,0 17px 0 #f7f9ff,0 24px 0 #3860b4,0 30px 15px #34476b35!important}
+.lbPodiumPanel .lbPodiumRank3 .lbPodiumBase{background:linear-gradient(#72a657 0 28%,#fbfff8 28% 74%,#4b7f36 74%)!important;box-shadow:0 10px 0 #eb8960,0 17px 0 #fff5ee,0 24px 0 #c86942,0 30px 15px #34476b35!important}
+.lbPodiumPanel .lbPodiumBase:before,
+.lbPodiumPanel .lbPodiumBase:after{display:none!important}
+.lbPodiumPanel .lbPodiumBase span{
+  position:absolute!important;
+  display:grid!important;
+  place-items:center!important;
+  z-index:4!important;
+  left:50%!important;
+  top:-25px!important;
+  width:48px!important;
+  height:48px!important;
+  color:#fff!important;
+  font-size:21px!important;
+  border:4px solid #fff!important;
+  border-radius:50%!important;
+  background:#426fd0!important;
+  transform:translateX(-50%)!important;
+}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase span{background:#dfa312!important}
+.lbPodiumPanel .lbPodiumRank3 .lbPodiumBase span{background:#5c913f!important}
+.lbPodiumPanel .lbGrowthRibbon{display:flex!important;bottom:11px!important;width:min(470px,70%)!important}
+@media(max-width:700px){
+  .lbPodiumPanel .lbPodium{min-height:360px!important;padding:50px 3px 60px!important;gap:3px!important}
+  .lbPodiumPanel .lbPodiumCard,.lbPodiumPanel .lbPodiumRank1,.lbPodiumPanel .lbPodiumRank2,.lbPodiumPanel .lbPodiumRank3{flex-basis:32%!important;width:32%!important;min-height:235px!important;padding:5px 2px 72px!important}
+  .lbPodiumPanel .lbPodiumAvatar,.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:52px!important;height:52px!important;border-width:4px!important}
+  .lbPodiumPanel .lbPodiumBase,.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{bottom:15px!important;width:92px!important;height:18px!important}
+  .lbPodiumPanel .lbPodiumBase span{top:-18px!important;width:37px!important;height:37px!important;font-size:16px!important}
+  .lbPodiumPanel .lbGrowthRibbon{width:88%!important}
+}
+
+/* Stable final layout: clean vertical scholar cards with integrated rank footers. */
+.lbPodiumPanel .lbPodium{
+  min-height:445px!important;
+  padding:66px 24px 68px!important;
+  align-items:flex-end!important;
+  gap:clamp(18px,3vw,32px)!important;
+}
+.lbPodiumPanel .lbPodiumCard,
+.lbPodiumPanel .lbPodiumRank1,
+.lbPodiumPanel .lbPodiumRank2,
+.lbPodiumPanel .lbPodiumRank3{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  flex:0 1 195px!important;
+  width:min(29%,195px)!important;
+  height:305px!important;
+  min-height:305px!important;
+  padding:20px 12px 74px!important;
+  overflow:hidden!important;
+  border:2px solid #668ae0!important;
+  border-radius:26px!important;
+  clip-path:none!important;
+  background:linear-gradient(180deg,#fff,#f4f8ff)!important;
+  box-shadow:0 16px 28px rgba(51,75,123,.17)!important;
+}
+.lbPodiumPanel .lbPodiumRank1{
+  order:2!important;
+  height:340px!important;
+  min-height:340px!important;
+  border-color:#edb31c!important;
+  background:linear-gradient(180deg,#fffef8,#fff6d4)!important;
+  transform:translateY(-24px)!important;
+}
+.lbPodiumPanel .lbPodiumRank2{order:1!important;transform:none!important}
+.lbPodiumPanel .lbPodiumRank3{
+  order:3!important;
+  height:290px!important;
+  min-height:290px!important;
+  border-color:#6a9c51!important;
+  background:linear-gradient(180deg,#fcfffa,#eef8e9)!important;
+  transform:translateY(8px)!important;
+}
+.lbPodiumPanel .lbPodiumCard:hover{transform:translateY(-7px)!important}
+.lbPodiumPanel .lbPodiumRank1:hover{transform:translateY(-31px)!important}
+.lbPodiumPanel .lbPodiumRank3:hover{transform:translateY(1px)!important}
+.lbPodiumPanel .lbPodiumCard:before,
+.lbPodiumPanel .lbPodiumCard:after{display:none!important}
+.lbPodiumPanel .lbPodiumAvatar,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{
+  flex:none!important;
+  width:68px!important;
+  height:68px!important;
+  margin:0 auto 11px!important;
+  border-width:5px!important;
+}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:80px!important;height:80px!important}
+.lbPodiumPanel .lbRankNumber{display:block!important;font-size:10px!important}
+.lbPodiumPanel .lbPodiumCard h3{margin:6px 0 5px!important;font-size:13px!important;line-height:1.2!important;text-align:center!important}
+.lbPodiumPanel .lbPodiumScore{display:block!important;text-align:center!important}
+.lbPodiumPanel .lbPodiumScore strong{font-size:21px!important}
+.lbPodiumPanel .lbPodiumScore span{font-size:7px!important}
+.lbPodiumPanel .lbPodiumCard>p{display:block!important;margin:5px 0!important;font-size:8px!important;text-align:center!important}
+.lbPodiumPanel .lbStudyBadge{display:inline-flex!important;margin:4px auto 0!important;padding:4px 8px!important;font-size:6px!important}
+.lbPodiumPanel .lbPodiumCard>.lbMovement{display:flex!important;margin:6px auto 0!important}
+.lbPodiumPanel .lbPodiumBase,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{
+  position:absolute!important;
+  display:grid!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:100%!important;
+  height:62px!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:45% 45% 23px 23px/17px 17px 23px 23px!important;
+  clip-path:none!important;
+  transform:none!important;
+  box-shadow:none!important;
+  background:linear-gradient(145deg,#5c86e2,#315dbd)!important;
+}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{height:68px!important;background:linear-gradient(145deg,#ffc831,#dd9c08)!important}
+.lbPodiumPanel .lbPodiumRank3 .lbPodiumBase{height:58px!important;background:linear-gradient(145deg,#79aa5f,#4d8338)!important}
+.lbPodiumPanel .lbPodiumBase span{
+  top:4px!important;
+  width:50px!important;
+  height:50px!important;
+  font-size:21px!important;
+}
+.lbPodiumPanel .lbPodiumCard.isCurrent{outline:0!important}
+.lbPodiumPanel .lbPodiumCard.isCurrent>em{right:10px!important;top:10px!important}
+@media(max-width:700px){
+  .lbPodiumPanel .lbPodium{min-height:365px!important;padding:55px 4px 58px!important;gap:4px!important}
+  .lbPodiumPanel .lbPodiumCard,.lbPodiumPanel .lbPodiumRank1,.lbPodiumPanel .lbPodiumRank2,.lbPodiumPanel .lbPodiumRank3{width:32.5%!important;height:250px!important;min-height:250px!important;padding:14px 3px 56px!important;border-radius:16px!important}
+  .lbPodiumPanel .lbPodiumRank1{height:278px!important;min-height:278px!important}
+  .lbPodiumPanel .lbPodiumRank3{height:238px!important;min-height:238px!important}
+  .lbPodiumPanel .lbPodiumAvatar,.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:50px!important;height:50px!important}
+  .lbPodiumPanel .lbPodiumBase,.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{height:48px!important}
+  .lbPodiumPanel .lbPodiumBase span{top:3px!important;width:38px!important;height:38px!important;font-size:16px!important}
+}
+
+/* New UI: self-contained circular scholar medals. */
+.lbPodiumPanel .lbPodium{
+  min-height:390px!important;
+  padding:64px 22px 66px!important;
+  align-items:center!important;
+  gap:clamp(22px,4vw,48px)!important;
+}
+.lbPodiumPanel .lbPodiumCard,
+.lbPodiumPanel .lbPodiumRank1,
+.lbPodiumPanel .lbPodiumRank2,
+.lbPodiumPanel .lbPodiumRank3{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  flex:0 0 210px!important;
+  width:210px!important;
+  height:210px!important;
+  min-height:210px!important;
+  padding:25px 18px 18px!important;
+  overflow:visible!important;
+  border:3px solid #6389e3!important;
+  border-radius:50%!important;
+  clip-path:none!important;
+  background:radial-gradient(circle at 50% 30%,#fff 0 38%,#eef4ff 72%,#dce8ff 100%)!important;
+  box-shadow:inset 0 0 0 8px rgba(255,255,255,.72),0 18px 32px rgba(54,78,127,.17)!important;
+  transform:none!important;
+}
+.lbPodiumPanel .lbPodiumRank1{
+  order:2!important;
+  width:232px!important;
+  height:232px!important;
+  min-height:232px!important;
+  flex-basis:232px!important;
+  border-color:#efb51d!important;
+  background:radial-gradient(circle at 50% 30%,#fff 0 36%,#fff8d8 70%,#ffeb9e 100%)!important;
+  transform:translateY(-24px)!important;
+  box-shadow:inset 0 0 0 9px rgba(255,255,255,.76),0 20px 38px rgba(176,125,20,.2)!important;
+}
+.lbPodiumPanel .lbPodiumRank2{order:1!important}
+.lbPodiumPanel .lbPodiumRank3{
+  order:3!important;
+  border-color:#6b9d52!important;
+  background:radial-gradient(circle at 50% 30%,#fff 0 38%,#eff9ea 72%,#dcedd4 100%)!important;
+  transform:translateY(8px)!important;
+}
+.lbPodiumPanel .lbPodiumCard:hover{transform:translateY(-7px) scale(1.035)!important}
+.lbPodiumPanel .lbPodiumRank1:hover{transform:translateY(-31px) scale(1.035)!important}
+.lbPodiumPanel .lbPodiumRank3:hover{transform:translateY(1px) scale(1.035)!important}
+.lbPodiumPanel .lbPodiumCard:before{display:none!important}
+.lbPodiumPanel .lbPodiumCard:after{
+  position:absolute!important;
+  display:grid!important;
+  place-items:center!important;
+  z-index:10!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:-18px!important;
+  width:48px!important;
+  height:48px!important;
+  color:#fff!important;
+  font-size:18px!important;
+  font-weight:1000!important;
+  border:5px solid #fff!important;
+  border-radius:50%!important;
+  clip-path:none!important;
+  background:#4f79d7!important;
+  box-shadow:0 7px 15px rgba(43,67,117,.25)!important;
+  transform:translateX(-50%)!important;
+}
+.lbPodiumPanel .lbPodiumRank1:after{content:"#1"!important;background:#e4a30c!important}
+.lbPodiumPanel .lbPodiumRank2:after{content:"#2"!important}
+.lbPodiumPanel .lbPodiumRank3:after{content:"#3"!important;background:#5d913f!important}
+.lbPodiumPanel .lbPodiumBase{display:none!important}
+.lbPodiumPanel .lbPodiumAvatar,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{
+  width:58px!important;
+  height:58px!important;
+  margin:0 auto 7px!important;
+  border-width:4px!important;
+}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:66px!important;height:66px!important}
+.lbPodiumPanel .lbCrown{top:-28px!important;font-size:29px!important}
+.lbPodiumPanel .lbRankNumber{font-size:9px!important}
+.lbPodiumPanel .lbPodiumCard h3{margin:3px 0!important;font-size:12px!important}
+.lbPodiumPanel .lbPodiumScore strong{font-size:18px!important}
+.lbPodiumPanel .lbPodiumScore span{font-size:6px!important}
+.lbPodiumPanel .lbPodiumCard>p{margin:3px 0!important;font-size:7px!important}
+.lbPodiumPanel .lbStudyBadge{margin-top:3px!important;padding:3px 6px!important;font-size:5.5px!important}
+.lbPodiumPanel .lbPodiumCard>.lbMovement{margin-top:3px!important;padding:2px 6px!important;font-size:7px!important}
+.lbPodiumPanel .lbGrowthRibbon{bottom:10px!important}
+@media(max-width:900px){
+  .lbPodiumPanel .lbPodium{gap:10px!important;padding-inline:8px!important}
+  .lbPodiumPanel .lbPodiumCard,.lbPodiumPanel .lbPodiumRank2,.lbPodiumPanel .lbPodiumRank3{flex-basis:185px!important;width:185px!important;height:185px!important;min-height:185px!important}
+  .lbPodiumPanel .lbPodiumRank1{flex-basis:205px!important;width:205px!important;height:205px!important;min-height:205px!important}
+}
+@media(max-width:700px){
+  .lbPodiumPanel .lbPodium{min-height:320px!important;padding:55px 3px 55px!important;gap:3px!important}
+  .lbPodiumPanel .lbPodiumCard,.lbPodiumPanel .lbPodiumRank1,.lbPodiumPanel .lbPodiumRank2,.lbPodiumPanel .lbPodiumRank3{flex-basis:31.8%!important;width:31.8%!important;height:165px!important;min-height:165px!important;padding:19px 3px 10px!important}
+  .lbPodiumPanel .lbPodiumRank1{height:182px!important;min-height:182px!important}
+  .lbPodiumPanel .lbPodiumAvatar,.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:45px!important;height:45px!important}
+  .lbPodiumPanel .lbPodiumCard h3{font-size:9px!important}
+  .lbPodiumPanel .lbPodiumScore strong{font-size:14px!important}
+  .lbPodiumPanel .lbPodiumCard:after{bottom:-13px!important;width:36px!important;height:36px!important;font-size:13px!important;border-width:3px!important}
+  .lbPodiumPanel .lbStudyBadge,.lbPodiumPanel .lbPodiumCard>p{display:none!important}
+}
+
+/* Cohesive scholar podium: no accidental rectangular current-user outline. */
+.lbPodiumPanel .lbPodiumCard.isCurrent{
+  outline:0!important;
+  box-shadow:none!important;
+}
+.lbPodiumPanel .lbPodiumCard.isCurrent>em{
+  right:18px!important;
+  top:8px!important;
+  z-index:8!important;
+  box-shadow:0 4px 10px rgba(44,83,177,.2)!important;
+}
+.lbPodiumPanel .lbPodium{
+  min-height:390px!important;
+  padding:52px 26px 72px!important;
+  gap:clamp(24px,4vw,52px)!important;
+}
+.lbPodiumPanel .lbPodiumCard,
+.lbPodiumPanel .lbPodiumRank1,
+.lbPodiumPanel .lbPodiumRank2,
+.lbPodiumPanel .lbPodiumRank3{
+  flex-basis:185px!important;
+  width:185px!important;
+  min-height:255px!important;
+  padding:6px 8px 74px!important;
+}
+.lbPodiumPanel .lbPodiumRank1{transform:translateY(-18px)!important}
+.lbPodiumPanel .lbPodiumRank2{transform:translateY(0)!important}
+.lbPodiumPanel .lbPodiumRank3{transform:translateY(8px)!important}
+.lbPodiumPanel .lbPodiumCard:after{
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  z-index:-1!important;
+  left:50%!important;
+  top:28px!important;
+  width:150px!important;
+  height:172px!important;
+  border-radius:50%!important;
+  clip-path:none!important;
+  background:radial-gradient(circle,rgba(255,255,255,.92),rgba(230,239,255,.56) 62%,transparent 72%)!important;
+  transform:translateX(-50%)!important;
+}
+.lbPodiumPanel .lbPodiumRank1:after{background:radial-gradient(circle,rgba(255,255,255,.96),rgba(255,238,169,.52) 62%,transparent 72%)!important}
+.lbPodiumPanel .lbPodiumRank3:after{background:radial-gradient(circle,rgba(255,255,255,.94),rgba(220,241,210,.55) 62%,transparent 72%)!important}
+.lbPodiumPanel .lbPodiumAvatar,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:68px!important;height:68px!important}
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumAvatar{width:78px!important;height:78px!important}
+.lbPodiumPanel .lbPodiumBase,
+.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{
+  bottom:14px!important;
+  width:168px!important;
+}
+.lbPodiumPanel .lbPodiumBase span{top:-23px!important}
+.lbPodiumPanel .lbGrowthRibbon{z-index:30!important}
+@media(max-width:700px){
+  .lbPodiumPanel .lbPodium{min-height:345px!important;padding:46px 2px 58px!important;gap:2px!important}
+  .lbPodiumPanel .lbPodiumCard,.lbPodiumPanel .lbPodiumRank1,.lbPodiumPanel .lbPodiumRank2,.lbPodiumPanel .lbPodiumRank3{flex-basis:32.5%!important;width:32.5%!important;min-height:225px!important;padding-inline:2px!important}
+  .lbPodiumPanel .lbPodiumCard:after{width:95px!important;height:140px!important}
+  .lbPodiumPanel .lbPodiumBase,.lbPodiumPanel .lbPodiumRank1 .lbPodiumBase{width:96px!important}
+}

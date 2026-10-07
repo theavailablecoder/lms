@@ -1,0 +1,41 @@
+/* Registration presentation only; retain field names, validation and submission. */
+#akTeacherRegistration { display:grid; grid-template-columns:minmax(280px,.85fr) minmax(0,1.65fr); gap:36px; align-items:start; min-height:100svh; padding:40px max(24px,calc((100vw - 1260px)/2)); background:#edf3f8; color:#2c4b60; }
+#akTeacherRegistration .teacherRegistrationIntro { display:flex; flex-direction:column; gap:40px; position:sticky; top:40px; padding:34px; border:1px solid #d8e6ee; border-radius:18px; background:linear-gradient(155deg,#fff,#e7f2f6); }
+#akTeacherRegistration .teacherRegistrationIntro .akCompanyBrand { padding:10px 14px; align-self:start; border:1px solid #fff; border-radius:10px; background:#fff; box-shadow:0 3px 0 #d0e0e9; }
+#akTeacherRegistration .registrationEyebrow { color:#4a91a5; font-size:9px; font-weight:700; letter-spacing:1.4px; }
+#akTeacherRegistration .teacherRegistrationIntro h1 { margin:16px 0; font-size:clamp(30px,3vw,43px); font-weight:650; line-height:1.15; letter-spacing:-1.4px; color:#244d64; }
+#akTeacherRegistration .teacherRegistrationIntro p { font-size:13px; line-height:1.9; color:#748fa0; margin:0; }
+#akTeacherRegistration .registrationBenefits { display:grid; gap:18px; }
+#akTeacherRegistration .registrationBenefits>span { display:flex; align-items:center; gap:12px; font-size:12px; color:#5f8094; }
+#akTeacherRegistration .registrationBenefits b { display:grid; place-items:center; width:31px; height:31px; flex-shrink:0; background:#dbedf3; border-radius:8px; color:#3b8aa1; font-size:10px; font-weight:600; }
+#akTeacherRegistration .teacherRegistrationIntro>small { color:#8aa0ad; font-size:11px; line-height:1.8; }
+#akTeacherRegistration .loginShell { display:block; min-height:0 !important; padding:0 !important; background:transparent !important; }
+#akTeacherRegistration .loginBackdrop,#akTeacherRegistration .loginBrand { display:none !important; }
+#akTeacherRegistration .loginCard { display:block !important; width:100% !important; height:auto !important; max-height:none !important; min-height:0 !important; margin:0 !important; padding:0 !important; background:#fff !important; border:1px solid #d8e6ee !important; border-radius:18px !important; box-shadow:0 10px 30px #244d6406 !important; overflow:visible !important; }
+#akTeacherRegistration .loginCard::before,#akTeacherRegistration .loginCard::after,#akTeacherRegistration .loginPanel::before,#akTeacherRegistration .loginPanel::after { display:none !important; }
+#akTeacherRegistration .loginPanel { display:block !important; width:100%; padding:30px !important; background:transparent !important; overflow:visible !important; }
+#akTeacherRegistration .teacherRegisterForm { display:block; width:100% !important; max-width:none !important; margin:0 !important; padding:0 !important; border:0 !important; background:transparent !important; border-radius:0; box-shadow:none !important; }
+#akTeacherRegistration .registerTitle { display:block; margin:0 0 26px !important; padding:0 0 24px !important; background:transparent !important; border:0 !important; border-bottom:1px solid #e3edf2 !important; text-align:left; border-radius:0; color:#31586f !important; }
+#akTeacherRegistration .registerTitle>span { font-size:9px; font-weight:700; letter-spacing:1.4px; color:#4b91a5; }
+#akTeacherRegistration .registerTitle h2 { margin:12px 0 9px; font-size:25px; color:#31586f; font-weight:600; letter-spacing:-.6px; }
+#akTeacherRegistration .registerTitle p { margin:0; font-size:12px; font-weight:400; line-height:1.7; color:#7b95a5; }
+#akTeacherRegistration .registerGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 18px; padding:0 !important; }
+#akTeacherRegistration .registerGrid label,#akTeacherRegistration .registerDropdownField { display:grid; gap:9px; min-width:0; color:#547487 !important; -webkit-text-fill-color:#547487; font-size:12px; font-weight:500; }
+#akTeacherRegistration .registerWide { grid-column:1 / -1; }
+#akTeacherRegistration :is(input:not([type=checkbox]),select,textarea) { width:100%; min-height:46px; padding:12px 14px; border:1px solid #d7e5ed !important; border-radius:8px !important; background:#f9fbfd !important; color:#2c4e63 !important; -webkit-text-fill-color:#2c4e63 !important; font-size:13px; box-shadow:none !important; }
+#akTeacherRegistration textarea { min-height:90px; resize:vertical; }
+#akTeacherRegistration input[type=checkbox] { accent-color:#16869a; }
+#akTeacherRegistration .multiSelectDropdown { border:1px solid #d7e5ed !important; border-radius:8px; background:#f9fbfd !important; box-shadow:none; }
+#akTeacherRegistration .multiSelectDropdown summary { padding:13px 14px; min-height:44px; color:#53788c; cursor:pointer; font-size:12px; }
+#akTeacherRegistration .multiSelectDropdown.isDisabled { color:#94a8b4; background:#f2f5f8 !important; }
+#akTeacherRegistration .multiSelectMenu { padding:12px; background:#fff; border-top:1px solid #e3edf2; }
+#akTeacherRegistration .multiSelectMenu label { display:flex; align-items:center; gap:10px; padding:7px; }
+#akTeacherRegistration .subjectBooksDropdown { border:1px solid #e0eaf0; border-radius:8px; padding:14px; background:#fafcfd; }
+#akTeacherRegistration .registrationActions { display:flex; flex-wrap:wrap; gap:12px; padding-top:24px; margin-top:24px; border-top:1px solid #e3edf2; }
+#akTeacherRegistration .registerSubmit { flex:1; min-height:46px; padding:12px 18px; border:0 !important; border-radius:8px; background:#16869a !important; color:#fff !important; -webkit-text-fill-color:#fff !important; font-size:13px; box-shadow:none !important; }
+#akTeacherRegistration .registrationBackButton { min-height:46px; padding:12px 18px; border:1px solid #d7e5ed !important; border-radius:8px; background:#fff !important; color:#648697 !important; -webkit-text-fill-color:#648697 !important; font-size:12px; box-shadow:none !important; }
+#akTeacherRegistration .fieldError,#akTeacherRegistration .authError { color:#b14e39 !important; -webkit-text-fill-color:#b14e39 !important; font-size:11px; line-height:1.6; }
+#akTeacherRegistration .authSuccess { color:#41805a; font-size:12px; }
+#akTeacherRegistration :is(input,select,textarea,button,summary):focus-visible { outline:2px solid #16869a !important; outline-offset:3px; }
+@media(max-width:900px) { #akTeacherRegistration { grid-template-columns:1fr; padding:24px; gap:24px; } #akTeacherRegistration .teacherRegistrationIntro { position:static; padding:24px; gap:20px; } #akTeacherRegistration .teacherRegistrationIntro h1 br { display:none; } #akTeacherRegistration .registrationBenefits { grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; } }
+@media(max-width:550px) { #akTeacherRegistration { padding:16px; } #akTeacherRegistration .loginPanel { padding:22px !important; } #akTeacherRegistration .registerGrid { grid-template-columns:1fr; } #akTeacherRegistration .registerTitle h2 { font-size:22px; } #akTeacherRegistration .registrationBenefits { grid-template-columns:1fr; } #akTeacherRegistration .registrationActions { flex-direction:column; } }

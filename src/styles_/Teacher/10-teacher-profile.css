@@ -1,0 +1,48 @@
+.teacherProfilePage {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px 0 32px;
+}
+.teacherProfileHero {
+  display: flex; align-items: center; gap: 20px; min-height: 112px; padding: 24px 30px;
+  border-radius: 18px; color: #fff !important;
+  background: linear-gradient(120deg, #294c9f, #5f7fe0) !important;
+  box-shadow: 0 12px 26px #3158b633;
+}
+.teacherProfileAvatar {
+  display: grid; width: 76px; height: 76px; flex: 0 0 76px; place-items: center;
+  border: 4px solid #ffffff80; border-radius: 50%; background: #ffffff2b;
+}
+.teacherProfileHero > div:nth-child(2) > span { color: #fff !important; font-size: 10px; font-weight: 800; letter-spacing: .15em; opacity: .9; }
+.teacherProfileHero h1 { margin: 4px 0; color: #fff !important; font-size: 25px; }
+.teacherProfileHero p { margin: 0; color: #eef3ff !important; font-size: 13px; }
+.teacherProfileHeading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.teacherProfileHeading h2 { margin: 0 0 4px; color: #203954; font-size: 20px; }
+.teacherProfileHeading p { margin: 0; color: #74859b; font-size: 12px; }
+.teacherProfileNotice { padding: 28px; color: #52657d; }
+.teacherProfileError { color: #b42318; }
+.teacherProfileGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.teacherProfileField {
+  display: flex; align-items: center; gap: 14px; min-height: 78px; padding: 15px 18px;
+  border: 1px solid #e0e7f1; border-radius: 13px; background: #fff; box-shadow: 0 4px 13px #2e47700c;
+}
+.teacherProfileField.schoolAddress, .teacherProfileField.address { grid-column: 1 / -1; }
+.teacherProfileField > span {
+  display: grid; width: 38px; height: 38px; flex: 0 0 38px; place-items: center;
+  border-radius: 11px; color: #315ec7; background: #eaf0ff;
+}
+.teacherProfileField.phone > span { color: #12865b; background: #e3f7ef; }
+.teacherProfileField.email > span { color: #8650c5; background: #f2eaff; }
+.teacherProfileField div { display: grid; min-width: 0; gap: 4px; }
+.teacherProfileField small { color: #8190a3; font-size: 10px; font-weight: 700; }
+.teacherProfileField strong { overflow-wrap: anywhere; color: #263e59; font-size: 14px; }
+@media (max-width: 700px) {
+  .teacherProfilePage { gap: 18px; padding: 4px 0 24px; }
+  .teacherProfileHero { align-items: flex-start; flex-wrap: wrap; padding: 20px; }
+  .teacherProfileHeading { align-items: flex-start; flex-direction: column; }
+  .teacherProfileGrid { grid-template-columns: 1fr; }
+  .teacherProfileField.schoolAddress, .teacherProfileField.address { grid-column: auto; }
+}

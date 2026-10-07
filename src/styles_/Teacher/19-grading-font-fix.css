@@ -1,0 +1,9 @@
+/* Readable type scale for the compact grading workspace. */
+.gradingExact { font-size: 13px; }
+.gradingExactHeader { height: 58px; }.gradingTitle { font-size: 18px; }.gradingSelects select, .gradingSelects label, .gradingSelects input { font-size: 11px; }.gradingUser b { font-size: 12px; }.gradingUser small { font-size: 10px; }
+.exactStat small { font-size: 10px; }.exactStat b { font-size: 20px; }.exactStat em { font-size: 9px; }
+.assignmentName small, .assignmentMeta small, .graderAssignment small { font-size: 10px; }.assignmentName strong { font-size: 15px; }.assignmentName em, .assignmentMeta b { font-size: 10px; }.exactAssignment > button { font-size: 10px; }
+.exactTableTools button, .exactTableTools input, .exactTableTools label { font-size: 10px; }.exactTable { font-size: 10px; }.exactTable th { font-size: 9px; }.exactTable td b { font-size: 10px; }.state, .exactTable td button, .exactPagination { font-size: 9px; }
+.exactAnalytics h3 { font-size: 12px; }.analyticsGrid h4 { font-size: 10px; }.analyticsGrid p, .analyticsGrid article > small, .analyticsGrid article button { font-size: 9px; }
+.exactGrader header button { font-size: 11px; }.studentDetail b { font-size: 12px; }.studentDetail small { font-size: 10px; }.graderAssignment b, .submissionFile > b, .submissionFile span { font-size: 10px; }.submissionFile small { font-size: 9px; }
+.gradeForm h4 { font-size: 11px; }.gradeForm label, .marks > span, .quick small { font-size: 10px; }.gradeForm textarea { font-size: 9px; }.quick button { font-size: 8px; }.rubric h4, .rubric > div, .rubric .rubricHead, .rubric input, .rubric footer { font-size: 9px; }.exactGrader > footer, .exactGrader > footer button { font-size: 9px; }

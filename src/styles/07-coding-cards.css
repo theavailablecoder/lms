@@ -1,0 +1,1389 @@
+/* Coding lab cards — compact tool tiles with a clear launch action. */
+.codingLabGrid {
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+  perspective: none;
+}
+
+.codingLabCard {
+  isolation: isolate;
+  align-content: start;
+  min-height: 318px;
+  padding: 24px 22px 20px;
+  overflow: hidden;
+  border: 1px solid #dbe6f4 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #ffffff 0%, #fbfdff 100%) !important;
+  box-shadow: 0 18px 34px rgba(57, 82, 117, 0.10) !important;
+  transform: translateY(0);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.codingLabCard::before {
+  position: absolute;
+  inset: 14px 14px auto auto;
+  width: 56px;
+  height: 56px;
+  border-top: 2px solid #d7e8ff;
+  border-right: 2px solid #d7e8ff;
+  border-radius: 0 14px 0 0;
+  content: "";
+  transform: none;
+}
+
+.codingLabCard::after {
+  right: 22px;
+  bottom: 18px;
+  left: 22px;
+  height: 5px;
+  border-radius: 999px;
+  transform: none;
+}
+
+.codingLabCard:hover {
+  border-color: #b9d2f1 !important;
+  box-shadow: 0 24px 42px rgba(57, 82, 117, 0.16) !important;
+  transform: translateY(-6px);
+}
+
+.codingLabCard:active {
+  box-shadow: 0 12px 24px rgba(57, 82, 117, 0.13) !important;
+  transform: translateY(-1px);
+}
+
+.codingLabCard .labLogo,
+.codingLabCard .labBadge,
+.codingLabCard strong,
+.codingLabCard p,
+.codingLabCard .labAction { transform: none; }
+
+.codingLabCard .labLogo {
+  width: 74px;
+  height: 74px;
+  border: 1px solid #e4edf8;
+  border-radius: 18px;
+  background: #f8fbff !important;
+  box-shadow: 0 12px 24px rgba(57, 82, 117, 0.10);
+}
+
+.codingLabCard .labBadge {
+  min-height: 26px;
+  padding: 6px 12px;
+  border: 1px solid #b9e7f0;
+  border-radius: 999px;
+  background: #e9fbff !important;
+  color: #087c8f;
+}
+
+.codingLabCard strong {
+  margin-top: 4px;
+  font-size: 27px;
+  letter-spacing: -0.025em;
+}
+
+.codingLabCard p {
+  margin-top: -5px;
+  color: #526174;
+}
+
+.codingLabCard .labAction {
+  width: 100%;
+  min-height: 50px;
+  margin-top: auto;
+  padding: 0 16px;
+  border: 1px solid #b9d5fa;
+  border-radius: 14px;
+  background: #f2f7ff !important;
+  color: #2878eb;
+  box-shadow: inset 0 -4px 0 rgba(40, 120, 235, 0.10);
+}
+
+.codingLabCard .labAction i {
+  min-width: 36px;
+  height: 28px;
+}
+
+.codingLabCard:hover .labAction {
+  border-color: #2878eb;
+  background: #2878eb !important;
+  color: #ffffff;
+}
+
+@media (max-width: 1380px) {
+  .codingLabGrid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .codingLabGrid { grid-template-columns: repeat(2, minmax(210px, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .codingLabGrid { grid-template-columns: 1fr; }
+  .codingLabCard { min-height: 300px; }
+}
+
+/* Shared card language across teacher and student workspaces. */
+:is(.teacherShell, .studentShell) :is(
+  .panel,
+  .statCard,
+  .leaderboardCard,
+  .attachmentCard,
+  .scratchInfoCard,
+  .examPreviewCard,
+  .worksheetCard,
+  .lessonPlanCard,
+  .topicAnimationCard
+) {
+  border: 1px solid #dfe8f3 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #ffffff 0%, #fbfdff 100%) !important;
+  box-shadow: 0 12px 30px rgba(62, 84, 118, 0.08) !important;
+}
+
+:is(.teacherShell, .studentShell) :is(
+  .statCard,
+  .monitorCard,
+  .reviewCard,
+  .homeworkCard,
+  .featureCard,
+  .worksheetCard,
+  .lessonPlanCard,
+  .topicAnimationCard
+) {
+  position: relative;
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+:is(.teacherShell, .studentShell) :is(
+  .statCard,
+  .monitorCard,
+  .reviewCard,
+  .homeworkCard,
+  .featureCard,
+  .worksheetCard,
+  .lessonPlanCard,
+  .topicAnimationCard
+):hover {
+  border-color: #bcd2ec !important;
+  box-shadow: 0 20px 38px rgba(62, 84, 118, 0.13) !important;
+  transform: translateY(-4px);
+}
+
+:is(.teacherShell, .studentShell) .statCard {
+  min-height: 144px;
+  padding: 22px !important;
+  border-top: 1px solid #dfe8f3 !important;
+}
+
+:is(.teacherShell, .studentShell) .statCard::after {
+  position: absolute;
+  inset: auto 20px 0;
+  display: block !important;
+  height: 4px;
+  border-radius: 999px 999px 0 0;
+  background: #4f8fe8;
+  content: "";
+}
+
+:is(.teacherShell, .studentShell) .statCard:nth-child(2)::after { background: #24a99a; }
+:is(.teacherShell, .studentShell) .statCard:nth-child(3)::after { background: #876fd1; }
+:is(.teacherShell, .studentShell) .statCard:nth-child(4)::after { background: #e39b45; }
+
+:is(.teacherShell, .studentShell) .statCard .statIcon,
+:is(.teacherShell, .studentShell) .assignmentIcon {
+  border: 1px solid #dce8f6;
+  border-radius: 13px !important;
+  background: #f2f7fd !important;
+  box-shadow: 0 8px 18px rgba(62, 84, 118, 0.08) !important;
+}
+
+:is(.teacherShell, .studentShell) :is(.panelHeader, .dashboardSectionHeading) {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+:is(.teacherShell, .studentShell) :is(.featureCard, .homeworkCard, .monitorCard) > :is(h2, h3, strong):first-child {
+  color: #172033;
+  letter-spacing: -0.02em;
+}
+
+:is(.teacherShell, .studentShell) :is(.scheduleItem, .assignmentPreviewList article, .assignedHomeworkItem) {
+  border: 1px solid #e4ebf4;
+  border-radius: 12px;
+  background: #fbfdff;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+:is(.teacherShell, .studentShell) :is(.scheduleItem, .assignmentPreviewList article, .assignedHomeworkItem):hover {
+  border-color: #c7d8eb;
+  background: #f6faff;
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.teacherShell, .studentShell) :is(.statCard, .monitorCard, .reviewCard, .homeworkCard, .featureCard):hover {
+    transform: none;
+  }
+}
+
+/* Premium game-card treatment for the coding lab library. */
+.codingLabPage .codingLabGrid {
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid rgba(153, 105, 100, 0.24);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% -15%, rgba(182, 112, 103, 0.28), transparent 36%),
+    radial-gradient(circle at 12% 35%, rgba(110, 58, 59, 0.18), transparent 28%),
+    linear-gradient(145deg, #211719, #120e10 72%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), 0 20px 45px rgba(24, 15, 18, 0.18);
+}
+
+.codingLabPage .codingLabCard {
+  --lab-accent: #e8b86a;
+  display: flex;
+  min-height: 360px;
+  align-items: center;
+  padding: 26px 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 18px !important;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.018)),
+    rgba(35, 25, 28, 0.88) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.28) !important;
+  color: #f8f3ee;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard.python,
+.codingLabPage .codingLabCard.sql { --lab-accent: #26d9c7; }
+.codingLabPage .codingLabCard.java { --lab-accent: #ff7780; }
+.codingLabPage .codingLabCard.scratch { --lab-accent: #d791ff; }
+.codingLabPage .codingLabCard.phet { --lab-accent: #ffc857; }
+
+.codingLabPage .codingLabCard::before {
+  inset: 10px;
+  width: auto;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  border-radius: 13px;
+  pointer-events: none;
+}
+
+.codingLabPage .codingLabCard::after {
+  right: 20px;
+  bottom: 16px;
+  left: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lab-accent), transparent);
+  opacity: 0.75;
+}
+
+.codingLabPage .codingLabCard:hover {
+  border-color: color-mix(in srgb, var(--lab-accent) 50%, transparent) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.09),
+    0 22px 38px rgba(0, 0, 0, 0.38),
+    0 0 24px color-mix(in srgb, var(--lab-accent) 13%, transparent) !important;
+  transform: translateY(-6px);
+}
+
+.codingLabPage .codingLabCard strong {
+  order: 1;
+  margin: 0;
+  color: #fffaf4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.codingLabPage .codingLabCard p {
+  order: 2;
+  min-height: 34px;
+  margin: 2px 0 12px;
+  color: #a99ea0;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.codingLabPage .codingLabCard .labBadge {
+  order: 3;
+  min-height: 20px;
+  margin-bottom: -5px;
+  padding: 4px 9px;
+  border-color: color-mix(in srgb, var(--lab-accent) 46%, transparent);
+  background: color-mix(in srgb, var(--lab-accent) 13%, transparent) !important;
+  color: var(--lab-accent);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  order: 4;
+  width: 86px;
+  height: 96px;
+  margin: 0 auto 14px;
+  border: 1px solid var(--lab-accent);
+  border-radius: 16px 16px 28px 28px;
+  background:
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--lab-accent) 18%, transparent), transparent 60%),
+    #181416 !important;
+  box-shadow:
+    inset 0 0 0 5px #282024,
+    inset 0 0 0 6px color-mix(in srgb, var(--lab-accent) 45%, transparent),
+    0 10px 22px rgba(0, 0, 0, 0.4),
+    0 0 18px color-mix(in srgb, var(--lab-accent) 14%, transparent);
+  clip-path: polygon(10% 0, 90% 0, 100% 15%, 92% 80%, 50% 100%, 8% 80%, 0 15%);
+}
+
+.codingLabPage .codingLabCard .labLogo img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
+}
+
+.codingLabPage .codingLabCard .labAction {
+  order: 5;
+  position: relative;
+  min-height: 32px;
+  margin-top: auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(12, 10, 11, 0.72) !important;
+  color: #dcd4d2;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.codingLabPage .codingLabCard .labAction::before {
+  position: absolute;
+  inset: 3px 42% 3px 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lab-accent) 72%, #ffffff), var(--lab-accent));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--lab-accent) 42%, transparent);
+  content: "";
+  opacity: 0.88;
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  position: relative;
+  z-index: 1;
+  min-width: 30px;
+  height: 22px;
+  border: 1px solid color-mix(in srgb, var(--lab-accent) 70%, #ffffff);
+  border-radius: 999px;
+  background: #20191b;
+  color: var(--lab-accent);
+}
+
+.codingLabPage .codingLabCard .labAction {
+  isolation: isolate;
+}
+
+.codingLabPage .codingLabCard .labAction > * ,
+.codingLabPage .codingLabCard .labAction i {
+  z-index: 1;
+}
+
+.codingLabPage .codingLabCard:hover .labAction {
+  border-color: var(--lab-accent);
+  background: rgba(12, 10, 11, 0.82) !important;
+  color: #ffffff;
+}
+
+/* Fix card flow and finish the glassmorphism layout. */
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(155, 91, 100, 0.26), transparent 38%),
+    radial-gradient(circle at 5% 60%, rgba(83, 48, 70, 0.18), transparent 32%),
+    linear-gradient(145deg, #21171b, #100d10 76%);
+}
+
+.codingLabPage .codingLabCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  min-width: 0;
+  min-height: 370px;
+  padding: 24px 20px 22px;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035) 55%, rgba(255, 255, 255, 0.018)),
+    rgba(48, 37, 42, 0.64) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(18px) saturate(130%);
+}
+
+.codingLabPage .codingLabCard strong,
+.codingLabPage .codingLabCard p,
+.codingLabPage .codingLabCard .labBadge,
+.codingLabPage .codingLabCard .labLogo,
+.codingLabPage .codingLabCard .labAction {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.codingLabPage .codingLabCard strong {
+  order: 1;
+  width: 100%;
+  min-height: 26px;
+  overflow-wrap: anywhere;
+  font-size: clamp(18px, 1.45vw, 23px);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard p {
+  order: 2;
+  width: 100%;
+  min-height: 30px;
+  margin: 0 0 2px;
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard .labBadge {
+  order: 3;
+  margin: 0 0 4px;
+  white-space: normal;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  order: 4;
+  margin: 0 auto 8px;
+}
+
+.codingLabPage .codingLabCard .labAction {
+  order: 5;
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.codingLabPage .codingLabCard .labAction::before {
+  z-index: -1;
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  z-index: 1;
+}
+
+@media (max-width: 1380px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .codingLabPage .codingLabGrid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .codingLabPage .codingLabCard { min-height: 350px; }
+}
+
+/* True transparent glass cards. */
+.codingLabPage .codingLabCard {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.025) 58%, rgba(255, 255, 255, 0.045)) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  backdrop-filter: blur(22px) saturate(145%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.17),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.035),
+    0 18px 34px rgba(0, 0, 0, 0.24) !important;
+}
+
+.codingLabPage .codingLabCard::before {
+  border-color: rgba(255, 255, 255, 0.075);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.025), transparent 55%);
+}
+
+.codingLabPage .codingLabCard:hover {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04) 58%, rgba(255, 255, 255, 0.065)) !important;
+}
+
+/* Dark stage behind the transparent cards so the glass is visible. */
+.codingLabPage .codingLabGrid {
+  position: relative;
+  padding: 26px;
+  border-color: rgba(125, 184, 255, 0.18) !important;
+  background:
+    radial-gradient(circle at 18% 5%, rgba(47, 120, 232, 0.34), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(35, 164, 222, 0.24), transparent 32%),
+    radial-gradient(circle at 52% 110%, rgba(54, 82, 190, 0.26), transparent 38%),
+    linear-gradient(145deg, #101f38 0%, #0c172b 48%, #080e1b 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(164, 207, 255, 0.1),
+    inset 0 0 80px rgba(0, 0, 0, 0.22),
+    0 22px 48px rgba(8, 22, 46, 0.24);
+}
+
+.codingLabPage .codingLabCard {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035) 55%, rgba(255, 255, 255, 0.055)) !important;
+}
+
+.codingLabPage .codingLabCard strong {
+  color: #fffaf6 !important;
+}
+
+.codingLabPage .codingLabCard p {
+  color: rgba(241, 230, 230, 0.65) !important;
+}
+
+/* Pastel aurora glass layout inspired by the supplied reference. */
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 9% 10%, rgba(190, 255, 213, 0.92), transparent 30%),
+    radial-gradient(circle at 55% 5%, rgba(208, 207, 255, 0.86), transparent 32%),
+    radial-gradient(circle at 92% 38%, rgba(189, 225, 255, 0.86), transparent 34%),
+    radial-gradient(circle at 22% 93%, rgba(218, 230, 255, 0.9), transparent 36%),
+    radial-gradient(circle at 70% 90%, rgba(255, 227, 190, 0.82), transparent 34%),
+    linear-gradient(145deg, #eaf9f2 0%, #e7ecfb 52%, #edf8f4 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 20px 48px rgba(71, 93, 128, 0.13);
+}
+
+.codingLabPage .codingLabCard {
+  min-height: 280px;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 22px 20px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.78) !important;
+  border-radius: 20px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.3)) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(125%);
+  backdrop-filter: blur(20px) saturate(125%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 12px 26px rgba(63, 82, 116, 0.12) !important;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard:nth-child(2),
+.codingLabPage .codingLabCard:nth-child(5) {
+  background: linear-gradient(145deg, rgba(245, 244, 255, 0.75), rgba(223, 224, 255, 0.34)) !important;
+}
+
+.codingLabPage .codingLabCard:nth-child(3),
+.codingLabPage .codingLabCard:nth-child(6) {
+  background: linear-gradient(145deg, rgba(255, 244, 230, 0.7), rgba(228, 250, 241, 0.36)) !important;
+}
+
+.codingLabPage .codingLabCard::before {
+  inset: 11px 11px auto auto;
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(53, 70, 96, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.codingLabPage .codingLabCard::after {
+  display: none;
+}
+
+.codingLabPage .codingLabCard:hover {
+  border-color: rgba(255, 255, 255, 0.96) !important;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.42)) !important;
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 18px 34px rgba(63, 82, 116, 0.17) !important;
+  transform: translateY(-5px);
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  order: 1;
+  width: 58px;
+  height: 58px;
+  margin: 0 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 7px 16px rgba(75, 92, 124, 0.1);
+  clip-path: none;
+}
+
+.codingLabPage .codingLabCard .labLogo img {
+  width: 34px;
+  height: 34px;
+  filter: none;
+}
+
+.codingLabPage .codingLabCard strong {
+  order: 2;
+  min-height: 0;
+  color: #172033 !important;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: left;
+  text-shadow: none;
+}
+
+.codingLabPage .codingLabCard p {
+  order: 3;
+  min-height: 34px;
+  margin: 0;
+  color: #677187 !important;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard .labBadge {
+  order: 4;
+  margin: 0;
+  border-color: rgba(93, 105, 133, 0.18);
+  background: rgba(255, 255, 255, 0.48) !important;
+  color: #5c6680;
+  font-size: 9px;
+}
+
+.codingLabPage .codingLabCard .labAction {
+  order: 5;
+  align-self: stretch;
+  min-height: 30px;
+  margin-top: auto;
+  border: 1px solid rgba(82, 92, 116, 0.18);
+  background: rgba(75, 83, 103, 0.58) !important;
+  color: #ffffff;
+  box-shadow: none;
+  font-size: 10px;
+}
+
+.codingLabPage .codingLabCard .labAction::before {
+  display: none;
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  min-width: 30px;
+  height: 20px;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.codingLabPage .codingLabCard:hover .labAction {
+  border-color: rgba(65, 78, 105, 0.3);
+  background: rgba(57, 68, 92, 0.72) !important;
+}
+
+@media (max-width: 1050px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .codingLabPage .codingLabGrid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+
+/* Bright step-card layout from the latest reference. */
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+  padding: 28px;
+  background: #f2f3f6 !important;
+  border-color: #e3e6eb !important;
+  box-shadow: inset 0 1px #ffffff, 0 16px 38px rgba(49, 58, 78, 0.08);
+}
+
+.codingLabPage .codingLabCard {
+  --step-start: #ff9e3d;
+  --step-end: #f06a4f;
+  isolation: isolate;
+  min-height: 320px;
+  align-items: center;
+  gap: 7px;
+  padding: 18px 18px 16px;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, var(--step-start), var(--step-end)) !important;
+  box-shadow: 0 9px 0 color-mix(in srgb, var(--step-end) 72%, #323b55), 0 16px 25px rgba(49, 58, 78, 0.22) !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.codingLabPage .codingLabCard.python {
+  --step-start: #f05288;
+  --step-end: #d51f80;
+}
+
+.codingLabPage .codingLabCard.java {
+  --step-start: #e414a3;
+  --step-end: #962fb7;
+}
+
+.codingLabPage .codingLabCard.sql {
+  --step-start: #a849d1;
+  --step-end: #6d42dc;
+}
+
+.codingLabPage .codingLabCard.scratch {
+  --step-start: #627ee7;
+  --step-end: #358cd0;
+}
+
+.codingLabPage .codingLabCard.phet {
+  --step-start: #3daedb;
+  --step-end: #22b8c0;
+}
+
+.codingLabPage .codingLabCard::before {
+  z-index: 0;
+  inset: 58px 14px 22px;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 12px rgba(39, 46, 67, 0.18);
+}
+
+.codingLabPage .codingLabCard::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  height: auto;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(255, 255, 255, 0.22), transparent 22%),
+    linear-gradient(120deg, transparent 56%, rgba(255, 255, 255, 0.12) 56% 72%, transparent 72%);
+  content: "";
+}
+
+.codingLabPage .codingLabCard:hover {
+  background: linear-gradient(145deg, var(--step-start), var(--step-end)) !important;
+  box-shadow: 0 11px 0 color-mix(in srgb, var(--step-end) 72%, #323b55), 0 21px 31px rgba(49, 58, 78, 0.25) !important;
+  transform: translateY(-5px);
+}
+
+.codingLabPage .codingLabCard .labBadge {
+  order: 1;
+  align-self: stretch;
+  min-height: 27px;
+  margin: -3px 0 13px;
+  padding: 5px 2px;
+  border: 0;
+  background: transparent !important;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  order: 2;
+  width: 55px;
+  height: 55px;
+  margin: 5px auto 4px;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--step-start) 10%, #ffffff) !important;
+  box-shadow: none;
+}
+
+.codingLabPage .codingLabCard .labLogo img {
+  width: 32px;
+  height: 32px;
+}
+
+.codingLabPage .codingLabCard strong {
+  order: 3;
+  width: calc(100% - 18px);
+  color: #505160 !important;
+  font-size: 18px;
+  font-weight: 850;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard p {
+  order: 4;
+  width: calc(100% - 30px);
+  min-height: 42px;
+  color: #9696a0 !important;
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.codingLabPage .codingLabCard .labAction {
+  order: 5;
+  z-index: 2;
+  align-self: center;
+  width: calc(100% - 26px);
+  min-height: 34px;
+  margin-top: auto;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--step-start), var(--step-end)) !important;
+  color: #ffffff;
+  box-shadow: 0 4px 10px color-mix(in srgb, var(--step-end) 28%, transparent);
+  font-size: 11px;
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.codingLabPage .codingLabCard:hover .labAction {
+  background: linear-gradient(90deg, var(--step-start), var(--step-end)) !important;
+}
+
+@media (max-width: 1050px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: 1fr; }
+}
+
+/* Soft “How it works” card design with controlled card widths. */
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(4, minmax(210px, 270px));
+  justify-content: center;
+  gap: 24px;
+  padding: 42px 28px;
+  border: 0 !important;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 16% 88%, rgba(255, 212, 203, 0.72), transparent 32%),
+    radial-gradient(circle at 82% 14%, rgba(255, 231, 225, 0.82), transparent 34%),
+    linear-gradient(145deg, #fff8f7, #fceceb) !important;
+  box-shadow: none;
+}
+
+.codingLabPage .codingLabCard {
+  --card-accent: #347ee9;
+  width: 100%;
+  min-width: 0;
+  min-height: 278px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px 22px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.68) !important;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 28px rgba(112, 75, 80, 0.08) !important;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard.python {
+  --card-accent: #f34e78;
+}
+
+.codingLabPage .codingLabCard.java {
+  --card-accent: #ef5c43;
+}
+
+.codingLabPage .codingLabCard.sql {
+  --card-accent: #4fcaa0;
+}
+
+.codingLabPage .codingLabCard.scratch {
+  --card-accent: #9668db;
+}
+
+.codingLabPage .codingLabCard.phet {
+  --card-accent: #26aec9;
+}
+
+.codingLabPage .codingLabCard::before,
+.codingLabPage .codingLabCard::after {
+  display: none;
+}
+
+.codingLabPage .codingLabCard:hover {
+  border-color: rgba(255, 255, 255, 1) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 18px 34px rgba(112, 75, 80, 0.13) !important;
+  transform: translateY(-4px);
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  order: 1;
+  width: 52px;
+  height: 52px;
+  margin: 0 0 8px;
+  border: 0;
+  border-radius: 13px;
+  background: var(--card-accent) !important;
+  box-shadow: 0 8px 17px color-mix(in srgb, var(--card-accent) 28%, transparent);
+}
+
+.codingLabPage .codingLabCard .labLogo img {
+  width: 31px;
+  height: 31px;
+  padding: 3px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.codingLabPage .codingLabCard strong {
+  order: 2;
+  width: 100%;
+  min-height: 0;
+  color: #24232b !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard p {
+  order: 3;
+  width: 100%;
+  min-height: 38px;
+  margin: 0;
+  color: #746d75 !important;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard .labBadge {
+  order: 4;
+  align-self: flex-start;
+  min-height: 22px;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 25%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card-accent) 9%, #ffffff) !important;
+  color: var(--card-accent);
+  font-size: 9px;
+  text-align: left;
+}
+
+.codingLabPage .codingLabCard .labAction {
+  order: 5;
+  align-self: flex-start;
+  width: auto;
+  min-height: 28px;
+  margin-top: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  color: var(--card-accent);
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.codingLabPage .codingLabCard .labAction::after {
+  margin-left: 2px;
+  content: "→";
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  min-width: 25px;
+  height: 20px;
+  border: 0;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--card-accent) 12%, transparent);
+  color: var(--card-accent);
+}
+
+.codingLabPage .codingLabCard:hover .labAction {
+  background: transparent !important;
+  color: color-mix(in srgb, var(--card-accent) 82%, #111827);
+}
+
+@media (max-width: 1180px) {
+  .codingLabPage .codingLabGrid {
+    grid-template-columns: repeat(3, minmax(210px, 270px));
+  }
+}
+
+@media (max-width: 900px) {
+  .codingLabPage .codingLabGrid {
+    grid-template-columns: repeat(2, minmax(230px, 290px));
+  }
+}
+
+@media (max-width: 620px) {
+  .codingLabPage .codingLabGrid {
+    grid-template-columns: minmax(0, 320px);
+    padding: 24px 16px;
+  }
+}
+
+/* Coding card CTA buttons. */
+.codingLabPage .codingLabCard .labAction {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  min-height: 42px;
+  margin-top: auto;
+  padding: 0 38px 0 10px;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 72%, #ffffff);
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--card-accent), color-mix(in srgb, var(--card-accent) 72%, #26345b)) !important;
+  color: #ffffff;
+  box-shadow: 0 8px 17px color-mix(in srgb, var(--card-accent) 24%, transparent);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.01em;
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.codingLabPage .codingLabCard .labAction::after {
+  position: absolute;
+  right: 11px;
+  display: grid;
+  width: 23px;
+  height: 23px;
+  margin: 0;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.18);
+  content: "→";
+  font-size: 14px;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.codingLabPage .codingLabCard .labAction i {
+  min-width: 29px;
+  height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 9px;
+}
+
+.codingLabPage .codingLabCard:hover .labAction {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 88%, #ffffff), var(--card-accent)) !important;
+  color: #ffffff;
+  box-shadow: 0 10px 21px color-mix(in srgb, var(--card-accent) 32%, transparent);
+  transform: translateY(-1px);
+}
+
+.codingLabPage .codingLabCard:hover .labAction::after {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(2px);
+}
+
+.codingLabPage .codingLabCard:active .labAction {
+  box-shadow: 0 4px 10px color-mix(in srgb, var(--card-accent) 22%, transparent);
+  transform: translateY(1px);
+}
+
+.codingLabPage .codingLabCard .labAction:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--card-accent) 30%, transparent);
+  outline-offset: 3px;
+}
+
+/* Transparent frosted-glass card surface. */
+.codingLabPage .codingLabCard {
+  border: 1px solid rgba(255, 255, 255, 0.68) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.14) 58%, rgba(255, 255, 255, 0.24)) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  backdrop-filter: blur(20px) saturate(135%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2),
+    0 14px 30px rgba(104, 73, 84, 0.12) !important;
+}
+
+.codingLabPage .codingLabCard:hover {
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0.3)) !important;
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 19px 36px rgba(104, 73, 84, 0.16) !important;
+}
+
+/* Compact workspace cards inspired by the supplied card reference. */
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(3, minmax(210px, 1fr)) !important;
+  gap: 22px !important;
+  padding: 22px !important;
+  border: 0 !important;
+  border-radius: 22px !important;
+  background: #f5f6f8 !important;
+}
+
+.codingLabPage .codingLabCard {
+  position: relative;
+  display: flex !important;
+  min-height: 265px !important;
+  padding: 18px !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  border: 1px solid #e7e9ed !important;
+  border-radius: 19px !important;
+  background: #fff !important;
+  color: #17191d !important;
+  text-align: left !important;
+  box-shadow: 0 9px 22px rgba(20, 25, 35, .11) !important;
+  transform: none !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.codingLabPage .codingLabCard::before,
+.codingLabPage .codingLabCard::after { display: none !important; content: none !important; }
+.codingLabPage .codingLabCard:hover { transform: translateY(-4px) !important; box-shadow: 0 15px 30px rgba(20, 25, 35, .15) !important; }
+.codingLabPage .codingLabCard:focus-visible { outline: 3px solid rgba(65, 105, 225, .28); outline-offset: 3px; }
+.codingLabCardTop { display: flex; align-items: flex-start; justify-content: space-between; }
+
+.codingLabPage .codingLabCard .labLogo {
+  display: grid !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 8px !important;
+  place-items: center;
+  border: 1px solid #e0e3e8 !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: 0 2px 7px rgba(20, 25, 35, .1) !important;
+}
+.codingLabPage .codingLabCard .labLogo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.codingLabPage .codingLabCard .labLogo span { display: none; }
+.codingLabSave { min-height: 25px; padding: 0 7px; border: 1px solid #e5e7eb; border-radius: 5px; background: #fafafa; color: #70757d; font-size: 9px; cursor: pointer; }
+.codingLabSave.saved { background: #edf7f1; color: #23734a; }
+.codingLabPage .codingLabCard .codingLabMeta { margin-top: 15px; color: #7d8590; font-size: 11px; }
+.codingLabPage .codingLabCard strong { margin-top: 5px !important; color: #17191d !important; font-size: 19px !important; line-height: 1.25 !important; }
+.codingLabPage .codingLabCard p { margin: 6px 0 0 !important; color: #555d68 !important; font-size: 13px !important; line-height: 1.4 !important; }
+.codingLabTags { display: flex; margin-top: 10px; gap: 6px; flex-wrap: wrap; }
+.codingLabTags span { padding: 5px 8px; border-radius: 4px; background: #f0f1f3; color: #4e5661; font-size: 10px; font-weight: 700; }
+.codingLabCardFooter { display: flex; margin-top: auto; padding-top: 15px; align-items: center; justify-content: space-between; border-top: 1px solid #eceef1; }
+.codingLabCardFooter > span { color: #24272d; font-size: 13px; font-weight: 800; }
+.codingLabCardFooter button { min-height: 34px; padding: 0 15px; border: 0; border-radius: 6px; background: #17191d; color: #fff; font-size: 11px; font-weight: 800; cursor: pointer; }
+.codingLabCardFooter button:hover { background: #333740; }
+
+@media (max-width: 900px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(2, minmax(210px, 1fr)) !important; }
+}
+@media (max-width: 560px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: 1fr !important; padding: 12px !important; }
+}
+
+/* Extra-clear glass: keep the card itself almost transparent. */
+.codingLabPage .codingLabCard {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.025) 60%, rgba(255, 255, 255, 0.09)) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    0 14px 30px rgba(104, 73, 84, 0.1) !important;
+}
+
+.codingLabPage .codingLabCard:hover {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.055) 60%, rgba(255, 255, 255, 0.12)) !important;
+}
+
+/* Coding-lab toolbar: restore the hidden project CTA and balance the bar. */
+.codingLabPage .codingLabActions {
+  min-height: 72px;
+  padding: 13px 16px;
+  border: 1px solid #cbdcf2;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 22px rgba(66, 91, 130, 0.07);
+}
+
+.codingLabPage .codingLabActions > button {
+  display: inline-flex !important;
+  min-width: 178px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 1px solid #377ee8 !important;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #4d91f2, #326fda) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 17px rgba(50, 111, 218, 0.22);
+  font-size: 13px;
+  font-weight: 850;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.codingLabPage .codingLabActions > button:hover {
+  background: linear-gradient(135deg, #4387eb, #285fc4) !important;
+  box-shadow: 0 10px 20px rgba(50, 111, 218, 0.28);
+  transform: translateY(-1px);
+}
+
+.codingLabPage .codingLabActions > button:active {
+  box-shadow: 0 4px 10px rgba(50, 111, 218, 0.2);
+  transform: translateY(1px);
+}
+
+.codingLabPage .codingLabActions > .badge {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid #cfddf5;
+  border-radius: 9px !important;
+  background: #eef4ff !important;
+  color: #4775d6 !important;
+  font-size: 11px;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 520px) {
+  .codingLabPage .codingLabActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .codingLabPage .codingLabActions > button,
+  .codingLabPage .codingLabActions > .badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animated coding marker in the top-right of every lab card. */
+.codingLabPage .codingLabCard::after {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  bottom: auto;
+  left: auto;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 32%, rgba(255, 255, 255, 0.8));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card-accent) 10%, rgba(255, 255, 255, 0.35));
+  color: var(--card-accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    0 7px 15px color-mix(in srgb, var(--card-accent) 15%, transparent);
+  content: "</>";
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  pointer-events: none;
+  transform-origin: center;
+  animation: codingMarkerFloat 2.8s ease-in-out infinite;
+}
+
+.codingLabPage .codingLabCard:nth-child(2n)::after {
+  animation-delay: -0.7s;
+}
+
+.codingLabPage .codingLabCard:nth-child(3n)::after {
+  animation-delay: -1.4s;
+}
+
+.codingLabPage .codingLabCard:hover::after {
+  background: color-mix(in srgb, var(--card-accent) 17%, rgba(255, 255, 255, 0.42));
+  animation-duration: 1.35s;
+}
+
+@keyframes codingMarkerFloat {
+  0%, 100% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.72),
+      0 7px 15px color-mix(in srgb, var(--card-accent) 14%, transparent);
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.82),
+      0 11px 21px color-mix(in srgb, var(--card-accent) 27%, transparent);
+    transform: translateY(-5px) rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .codingLabPage .codingLabCard::after {
+    animation: none;
+  }
+}
+
+/* Match the coding-card stage to the LMS blue education theme. */
+.codingLabPage .codingLabGrid {
+  padding: 16px;
+  border: 1px solid rgba(190, 213, 244, 0.72) !important;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(184, 224, 255, 0.78), transparent 31%),
+    radial-gradient(circle at 84% 14%, rgba(208, 217, 255, 0.72), transparent 34%),
+    radial-gradient(circle at 48% 92%, rgba(192, 239, 242, 0.62), transparent 38%),
+    linear-gradient(145deg, #f3f8ff 0%, #eaf2ff 52%, #f1f8fc 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 16px 38px rgba(62, 91, 139, 0.09);
+}
+
+@media (max-width: 620px) {
+  .codingLabPage .codingLabGrid {
+    padding: 10px;
+  }
+}
+
+.codingLabPage .codingLabCard {
+  border-color: rgba(255, 255, 255, 0.62) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 14px 30px rgba(62, 91, 139, 0.1) !important;
+}
+
+.codingLabPage .codingLabCard:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    0 19px 36px rgba(62, 91, 139, 0.16) !important;
+}
+
+.codingLabPage .codingLabCard { border-color: #e7e9ed !important; box-shadow: 0 9px 22px rgba(20, 25, 35, .11) !important; }
+.codingLabPage .codingLabCard:hover { box-shadow: 0 15px 30px rgba(20, 25, 35, .15) !important; }

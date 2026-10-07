@@ -1,0 +1,225 @@
+.homeworkSwipeWorkspace {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid #d2dff0;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 8% 0, rgba(59, 126, 232, .13), transparent 24%),
+    radial-gradient(circle at 96% 5%, rgba(113, 81, 220, .13), transparent 23%),
+    linear-gradient(145deg, #f8fbff, #f3f1ff);
+  box-shadow: 0 7px 0 #d8e2ee, 0 22px 45px rgba(42, 67, 105, .11);
+}
+
+.homeworkSwipeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 5px 5px 0;
+}
+
+.homeworkSwipeHeader span {
+  color: #5375bb;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.homeworkSwipeHeader h2 {
+  margin: 5px 0 3px;
+  color: #263a58;
+  font-size: 21px;
+}
+
+.homeworkSwipeHeader p {
+  margin: 0;
+  color: #70819a;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.homeworkSwipeHint {
+  display: inline-flex;
+  padding: 8px 11px;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #d7e2f2;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .7);
+  color: #657b9c;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.homeworkSwipeTabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 7px;
+  border: 1px solid #ccdbee;
+  border-radius: 19px;
+  background: rgba(228, 236, 248, .8);
+  box-shadow: inset 0 2px 6px rgba(55, 79, 113, .08);
+}
+
+.homeworkSwipeTabs button {
+  border-radius: 14px;
+  background: transparent;
+  color: #314966 !important;
+  transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+}
+
+
+
+
+
+
+
+.homeworkSwipeTabs button.active {
+  border-color: rgba(255, 255, 255, .65);
+  background: linear-gradient(110deg, #3479e7 0%, #4e67dc 55%, #6551d8 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #3d52ae, 0 12px 20px rgba(55, 70, 170, .22);
+  transform: translateY(-2px);
+}
+
+
+
+.homeworkSwipeTabs button.active .homeworkSwipeTabIcon {
+  background: rgba(255, 255, 255, .18) !important;
+  color: #fff !important;
+}
+
+.homeworkSwipeTabs button span:nth-child(2) { display: grid; gap: 3px; }
+.homeworkSwipeTabs button strong { color: #293f5d !important; font-size: 13px; opacity: 1; }
+.homeworkSwipeTabs button small { color: #667b98 !important; font-size: 10px; font-style: normal; opacity: 1; }
+.homeworkSwipeTabs button.active strong { color: #fff !important; }
+.homeworkSwipeTabs button.active small { color: #e8efff !important; }
+.homeworkSwipeTabs button em {
+  min-width: 30px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .72);
+  color: #4f6cb0;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+.homeworkSwipeTabs button.active em { background: rgba(255,255,255,.20) !important; color: #fff !important; }
+
+.homeworkSwipeViewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  touch-action: pan-y;
+}
+
+.homeworkSwipeTrack {
+  display: flex;
+  width: 200%;
+  align-items: flex-start;
+  transition: transform .42s cubic-bezier(.22, .8, .25, 1);
+}
+
+.homeworkSwipeViewport.showing-ai .homeworkSwipeTrack,
+.homeworkSwipeViewport.showing-submitted .homeworkSwipeTrack { transform: translateX(-50%); }
+
+.homeworkSwipePane {
+  width: 50%;
+  min-width: 0;
+  padding: 2px 4px 9px;
+  box-sizing: border-box;
+}
+
+.homeworkSwipePane[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.homeworkSwipePane .createHomeworkModule { margin: 0; }
+
+@media (max-width: 650px) {
+  .homeworkSwipeWorkspace { padding: 12px; border-radius: 20px; }
+  .homeworkSwipeHeader { align-items: flex-start; }
+  .homeworkSwipeHint { display: none; }
+  .homeworkSwipeTabs button { min-height: 60px; padding: 8px; gap: 7px; }
+  .homeworkSwipeTabIcon { width: 34px; height: 34px; }
+  .homeworkSwipeTabs button small { display: none; }
+  .homeworkSwipeTabs button strong { font-size: 11px; }
+  .homeworkSwipeTabs button em { min-width: 24px; padding: 4px 6px; }
+}
+
+
+.homeworkCreateTab{
+  display: flex;
+  align-items: flex-start;
+  justify-items: flex-start;
+  padding : 1rem .5rem;
+  gap: 1rem;
+}
+.homeworkCreateTab .homeworkCreateTabIcon{
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-items: center;
+  background: rgb(248, 248, 248) !important;
+    color: #470cf8 !important;
+    border-radius: .5rem;
+}
+
+.homeworkbothTab.active .homeworkCreateTab .homeworkCreateTabIcon{
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-items: center;
+  background: rgba(20, 4, 248, 0.212) !important;
+    color: #e7e7e7 !important;
+    border-radius: .5rem;
+}
+
+
+
+
+
+.homeworkCreateTab .homeworkCreateTabIcon span{
+  padding: .5rem;
+
+}
+.homeworkCreateTab .homeworkCreateTabNote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  span:first-child {
+    color: #0b0b0c;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  span:last-child {
+    color: #000000;
+    font-size: .7rem;
+    font-weight: 500;
+    font-style: normal;
+    opacity: 1;
+  }
+}
+
+.homeworkbothTab.active .homeworkCreateTab .homeworkCreateTabNote {
+  span:first-child {
+    color: #e6e6e6;
+  }
+
+  span:last-child {
+    color: #e9eaf0;
+  }
+}
+
+
+
+

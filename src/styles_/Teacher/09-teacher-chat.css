@@ -1,0 +1,681 @@
+/* Layout only. All chat visuals and controls are provided by react-chat-elements. */
+.rceTeacherChat {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  height: calc(100vh - 168px);
+  min-height: 610px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.rceTeacherInbox {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid #e2e8f0;
+}
+
+.rceTeacherInbox > .rce-container-input {
+  margin: 10px;
+}
+
+.rceTeacherFilters {
+  display: flex;
+  gap: 6px;
+  padding: 0 10px 10px;
+}
+
+.rceTeacherConversationList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.rceTeacherThread {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rceTeacherThread .rce-navbar-item__center > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: center;
+}
+
+.rceTeacherThread .rce-navbar-item__center small {
+  color: #8492a6;
+}
+
+.rceTeacherMessages {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.rceTeacherMessages > .rce-container-mlist,
+.rceTeacherMessages .rce-mlist {
+  height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rceTeacherMessages > .rce-container-mlist::-webkit-scrollbar,
+.rceTeacherMessages .rce-mlist::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.rceTeacherThread > form {
+  position: relative;
+  padding: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.messageActionBar,
+.messageEditBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  border: 1px solid #dbe4f0;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.messageActionBar > span,
+.messageEditBar > span {
+  margin-right: auto;
+  color: #304662;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.messageActionButton {
+  min-width: 76px;
+  min-height: 34px;
+  border-radius: 6px !important;
+}
+
+.messageActionsDropdown {
+  position: relative;
+}
+
+.messageActionsMenu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  right: 0;
+  display: none;
+  min-width: 100px;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid #dbe4f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(32, 55, 88, .18);
+}
+
+.messageActionsDropdown:hover .messageActionsMenu,
+.messageActionsDropdown:focus-within .messageActionsMenu {
+  display: grid;
+}
+
+.messageActionsMenu .messageActionButton {
+  width: 100%;
+}
+
+.messageDeleteButton {
+  background: #dc2626 !important;
+}
+
+.messageDeleteButton:hover,
+.messageDeleteButton:focus-visible {
+  background: #b91c1c !important;
+}
+
+.messageCancelButton {
+  background: #eef4ff !important;
+  color: #2563eb !important;
+}
+
+.messageMenu {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateY(-50%);
+}
+
+.rce-container-mbox {
+  position: relative;
+}
+
+.messageMenuLeft {
+  left: 8px;
+}
+
+.messageMenuRight {
+  right: 8px;
+}
+
+.messageSelectCheckbox {
+  position: absolute;
+  top: 50%;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.message-selection-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-height: 72px;
+  overflow: visible !important;
+  padding-right: 10px;
+}
+
+.messageSelectionControls {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  z-index: 12;
+}
+
+.message-selection-row > .rce-mbox {
+  float: none !important;
+  flex: 0 1 fit-content;
+  width: fit-content !important;
+  max-width: calc(100% - 88px);
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  order: 1;
+}
+
+.message-selection-row > .messageSelectionControls {
+  order: 2;
+}
+
+.messageSelectionControls .messageSelectCheckbox {
+  position: static;
+  flex: 0 0 auto;
+  transform: none;
+}
+
+.messageInlineActions {
+  display: grid;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid #dbe4f0;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(32, 55, 88, .16);
+}
+
+.messageInlineActions button {
+  min-width: 58px;
+  min-height: 26px;
+  padding: 4px 7px;
+  border: 0;
+  border-radius: 4px;
+  background: #eef4ff;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.messageInlineActions button:last-child {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.messageInlineActions button:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.message-selection-row .messageSelectCheckbox {
+  z-index: 9;
+}
+
+.message-selection-left .messageSelectCheckbox {
+  left: 8px;
+}
+
+.message-selection-right .messageSelectCheckbox {
+  right: 8px;
+}
+
+.chatHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.messageSelectionToolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 4px 3px 8px;
+  border: 1px solid #d1d7db;
+  border-radius: 18px;
+  background: #fff;
+  color: #304662;
+}
+
+.messageSelectionToolbar strong {
+  min-width: 18px;
+  color: #111b21;
+  font-size: 12px;
+  text-align: center;
+}
+
+.selectionToolbarButton {
+  min-height: 28px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 14px;
+  background: #eef4ff;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.selectionToolbarButton:hover,
+.selectionToolbarButton:focus-visible {
+  background: #dbeafe;
+}
+
+.selectionToolbarButton:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+
+.selectionToolbarDelete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.selectionToolbarDelete:hover,
+.selectionToolbarDelete:focus-visible {
+  background: #fecaca;
+}
+
+.chatHeaderMenu {
+  position: relative;
+  z-index: 50;
+}
+
+.selectionCloseButton {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.selectionCloseButton:hover,
+.selectionCloseButton:focus-visible {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.chatHeaderDropdown {
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 100;
+  min-width: 132px;
+}
+
+.messageMenuTrigger {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .9);
+  color: #60738e;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.messageMenuTrigger:hover,
+.messageMenuTrigger:focus-visible {
+  background: #eaf2ff;
+  color: #2563eb;
+}
+
+.messageMenuDropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: grid;
+  min-width: 92px;
+  padding: 4px;
+  border: 1px solid #dbe4f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(32, 55, 88, .18);
+}
+
+.messageMenuDropdown button {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #304662;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+}
+
+.messageMenuDropdown button:hover,
+.messageMenuDropdown button:focus-visible {
+  background: #eef4ff;
+  color: #2563eb;
+}
+
+.rce-container-mbox.message-focus .rce-mbox {
+  outline: 2px solid #74a7ff;
+  outline-offset: 2px;
+}
+
+.rce-container-mbox.message-editing .rce-mbox {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.emojiPickerControl {
+  position: relative;
+  display: inline-flex;
+}
+
+.emojiPickerPopover {
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  bottom: calc(100% + 10px);
+  filter: drop-shadow(0 10px 24px rgba(15, 23, 42, .18));
+}
+
+/* WhatsApp-inspired student chat treatment. */
+.rceStudentChat {
+  grid-template-columns: 300px minmax(0, 1fr);
+  border: 1px solid #d1d7db;
+  border-radius: 10px;
+  background: #f0f2f5;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .08);
+}
+
+.rceStudentChat .rceTeacherInbox {
+  border-right-color: #d1d7db;
+  background: #fff;
+}
+
+.rceStudentChat .rceTeacherInbox > .rce-navbar,
+.rceStudentChat .rceTeacherThread > .rce-navbar {
+  min-height: 60px;
+  border-bottom: 1px solid #d1d7db;
+  background: #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherInbox > .rce-navbar .rce-navbar-item__left strong {
+  color: #111b21;
+  font-size: 17px;
+}
+
+.rceStudentChat .rceTeacherInbox > .rce-container-input {
+  margin: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherFilters {
+  padding: 0 12px 10px;
+}
+
+.rceStudentChat .rceTeacherFilters .rce-button {
+  border-radius: 18px !important;
+  font-size: 12px;
+}
+
+.rceStudentChat .rceTeacherConversationList {
+  background: #fff;
+}
+
+.rceStudentChat .rceTeacherConversationList .rce-citem {
+  min-height: 70px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherConversationList .rce-citem.selected,
+.rceStudentChat .rceTeacherConversationList .rce-citem:hover {
+  background: #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherThread {
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(rgba(84, 110, 122, .08) 1px, transparent 1px),
+    radial-gradient(rgba(84, 110, 122, .05) 1px, transparent 1px);
+  background-position: 0 0, 12px 12px;
+  background-size: 24px 24px;
+}
+
+.rceStudentChat .rceTeacherThread > .rce-navbar {
+  background: #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherThread .rce-navbar-item__center > div {
+  text-align: left;
+}
+
+.rceStudentChat .rceTeacherThread .rce-navbar-item__center strong {
+  color: #111b21;
+  font-size: 16px;
+}
+
+.rceStudentChat .rceTeacherThread .rce-navbar-item__center small {
+  color: #667781;
+  font-size: 12px;
+}
+
+.rceStudentChat .rceTeacherMessages {
+  padding: 12px 18px 4px;
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mlist {
+  background: transparent;
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mbox {
+  max-width: min(70%, 520px);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mbox-left {
+  background: #fff;
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mbox-right {
+  background: #d9fdd3;
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mbox-text {
+  color: #111b21;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.rceStudentChat .rceTeacherMessages .rce-mbox-time {
+  color: #667781;
+  font-size: 10px;
+}
+
+.rceStudentChat .rceTeacherThread > form {
+  padding: 8px 12px 10px;
+  border-top-color: #d1d7db;
+  background: #f0f2f5;
+}
+
+.rceStudentChat .rceTeacherThread > form > .rce-container-input {
+  min-height: 44px;
+  border: 0;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .08);
+}
+
+.rceStudentChat .rceTeacherThread > form .rce-input {
+  color: #111b21;
+  font-size: 14px;
+}
+
+.rceStudentChat .rceTeacherThread > form .rce-input::placeholder {
+  color: #667781;
+}
+
+.rceStudentChat .rceTeacherThread > form .rce-button {
+  border-radius: 50% !important;
+}
+
+.rceStudentChat .rceTeacherThread > form .rceSendButton {
+  width: 36px;
+  height: 36px;
+  margin-right: 4px;
+  background: #00a884 !important;
+}
+
+.rceStudentChat .rceTeacherThread > form .rceSendButton:hover {
+  background: #008f72 !important;
+}
+
+.rceStudentChat .messageEditBar {
+  margin-bottom: 8px;
+  border-color: #b7dfd2;
+  border-left: 4px solid #00a884;
+  background: #e7f8f2;
+}
+
+@media (max-width: 760px) {
+  .rceStudentChat {
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 120px);
+  }
+
+  .rceStudentChat .rceTeacherInbox {
+    display: none;
+  }
+
+  .rceStudentChat .rceTeacherMessages {
+    padding: 10px 8px 4px;
+  }
+
+  .rceStudentChat .rceTeacherMessages .rce-mbox {
+    max-width: 82%;
+  }
+}
+
+.rceGroupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(400px, 78vw);
+}
+
+.rceGroupContent > .rce-container-input {
+  min-height: 44px;
+  border: 1px solid #d8e0ea;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.rceGroupStudentList {
+  height: 288px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.rceGroupStudentList .rce-citem {
+  min-height: 72px;
+}
+
+.rceGroupStudentList .rce-citem-body--top-time {
+  display: none;
+}
+
+.rceGroupStudentList .rce-citem.selected {
+  background: #eef4ff;
+}
+
+.rceGroupStudentList .rce-citem.selected .rce-citem-body--top-title,
+.rceGroupStudentList .rce-citem.selected .rce-citem-body--bottom-title {
+  color: #2563eb;
+}
+
+.rceSelectedCheck {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+}
+
+.rce-popup-wrapper .rce-popup {
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+}
+
+.rce-popup-wrapper .rce-popup-content {
+  overflow: hidden;
+}
+
+@media (max-height: 650px) {
+  .rceGroupStudentList {
+    height: 216px;
+  }
+}
+
+@media (max-width: 760px) {
+  .rceTeacherChat {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .rceTeacherFilters {
+    flex-direction: column;
+  }
+}

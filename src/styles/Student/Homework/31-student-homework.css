@@ -1,0 +1,213 @@
+.studentShell .homeworkModule {
+  display: grid;
+  gap: 18px;
+  /* padding: 22px 24px 30px; */
+}
+.studentShell .homeworkModule .homeworkHero {
+  position: relative;
+  display: grid;
+  min-height: 146px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 24px;
+  border: 1px solid #e0e8f3;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(118deg, #ffffff 0%, #f8fbff 58%, #eef4ff 100%);
+  box-shadow: 0 10px 30px rgba(28, 51, 84, .07);
+}
+.studentShell .homeworkModule .homeworkHero .featureIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  background: #eef3ff;
+  color: #587be7;
+}
+.studentShell .homeworkModule .homeworkHero h2 { margin: 0 0 4px; color: #23334a; font-size: 26px; line-height: 1.15; }
+.studentShell .homeworkModule .homeworkHero p { margin: 0; color: #718096; font-size: 12px; }
+.studentShell .homeworkModule .homeworkHero > div:nth-child(2),
+.studentShell .homeworkModule .homeworkHero > .badge {
+  position: relative;
+  z-index: 3;
+}
+.studentShell .homeworkHeroArtwork {
+  position: absolute;
+  z-index: 1;
+  top: -28px;
+  right: 102px;
+  bottom: -30px;
+  display: grid;
+  width: 300px;
+  place-items: center;
+  pointer-events: none;
+}
+.studentShell .homeworkHeroArtwork img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 15px rgba(41, 77, 137, .16));
+}
+.studentShell .homeworkHeroGlow {
+  position: absolute;
+  width: 210px;
+  height: 82px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(110, 145, 235, .18), transparent 72%);
+}
+@media (max-width: 1050px) {
+  .studentShell .homeworkHeroArtwork {
+    right: 94px;
+    width: 230px;
+    opacity: .88;
+  }
+}
+@media (max-width: 780px) {
+  .studentShell .homeworkHeroArtwork { display: none; }
+}
+.studentHomeworkWorkspace {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.studentHomeworkSidebar {
+  position: sticky;
+  top: 14px;
+  overflow: hidden;
+  border: 1px solid #dbe4f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(35, 57, 91, .06);
+}
+.studentHomeworkSidebarTitle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px; border-bottom: 1px solid #e7edf5; }
+.studentHomeworkSidebarTitle > div { display: grid; gap: 3px; }
+.studentHomeworkSidebarTitle strong { color: #263a57; font-size: 14px; }
+.studentHomeworkSidebarTitle small { color: #8492a6; font-size: 11px; }
+.studentHomeworkSidebar > button { display: grid; width: 100%; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px; padding: 14px 15px; border: 0; border-bottom: 1px solid #edf1f6; border-radius: 0; background: #fff; color: #6280ab; text-align: left; box-shadow: none; }
+.studentHomeworkSidebar > button:hover, .studentHomeworkSidebar > button.active { background: #f1f6ff; }
+.studentHomeworkSidebar > button.active { box-shadow: inset 3px 0 #526fe8; }
+.studentHomeworkSidebar > button > span:nth-child(2) { display: grid; min-width: 0; gap: 4px; }
+.studentHomeworkSidebar > button strong { overflow: hidden; color: #253955; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.studentHomeworkSidebar > button small { color: #8492a6; font-size: 10px; }
+.studentHomeworkSidebar > button .badge { grid-column: 2; width: fit-content; margin-top: 2px; font-size: 8px; }
+.studentHomeworkSidebar .studentHomeworkSidebarTitle .badge { min-width: 38px; justify-content: center; }
+.studentHomeworkDetail { display: block; min-width: 0; }
+.studentHomeworkPaper { overflow: hidden; border: 1px solid #d5dfec; border-radius: 13px; background: #edf2f8; box-shadow: 0 8px 25px rgba(39, 56, 82, .06); }
+.studentPaperToolbar { display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 12px 16px; color: #5577ba; }
+.studentPaperToolbar > div { display: grid; flex: 1; gap: 2px; }
+.studentPaperToolbar strong { color: #344c70; font-size: 13px; }
+.studentPaperToolbar small { color: #7c8ca3; font-size: 10px; }
+.studentPaperToolbar > span { padding: 4px 7px; border-radius: 5px; background: #ed4962; color: #fff; font-size: 9px; font-weight: 800; }
+.studentPaperSheet { min-height: 540px; max-height: calc(100vh - 220px); margin: 0 12px 12px; padding: 28px 32px; overflow-x: hidden; overflow-y: auto; background: #fff; box-shadow: 0 2px 10px rgba(34, 52, 77, .08); scrollbar-color: #9dafca #edf1f6; scrollbar-width: thin; }
+.studentPaperSheet::-webkit-scrollbar { width: 9px; }
+.studentPaperSheet::-webkit-scrollbar-track { background: #edf1f6; }
+.studentPaperSheet::-webkit-scrollbar-thumb { border: 2px solid #edf1f6; border-radius: 10px; background: #9dafca; }
+.studentPaperSheet::-webkit-scrollbar-thumb:hover { background: #7188aa; }
+.studentPaperSheet header { text-align: center; }
+.studentPaperSheet header small { color: #73839a; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.studentPaperSheet h3 { margin: 6px 0 3px; color: #21324c; font-family: Georgia, serif; font-size: 20px; }
+.studentPaperSheet header p { margin: 0; color: #65758c; font-size: 10px; }
+.studentPaperMeta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; margin-top: 26px; }
+.studentPaperMeta span { display: grid; padding-bottom: 5px; border-bottom: 1px dotted #b9c5d4; }
+.studentPaperMeta small { color: #76869b; font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.studentPaperMeta strong { color: #40536e; font-size: 10px; }
+.studentPaperRule { height: 1px; margin: 17px 0; background: #293b55; }
+.studentPaperQuestions { display: grid; gap: 17px; }
+.studentPaperQuestions article { color: #34445a; font-size: 12px; }
+.studentPaperQuestions article > small { color: #6c7d93; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.studentPaperQuestions p { margin: 5px 0; line-height: 1.55; }
+.studentPaperQuestions ol { margin: 6px 0 0 30px; padding: 0; }
+.studentPaperEmpty { display: grid; min-height: 230px; place-content: center; justify-items: center; gap: 10px; color: #9babc0; text-align: center; }
+.studentPaperEmpty span { max-width: 420px; color: #75869c; font-size: 11px; }
+.studentPaperAnswerArea { margin-top: 28px; padding-top: 22px; border-top: 2px solid #dfe6f0; }
+.studentPaperAnswerHeading { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; color: #5876dc; }
+.studentPaperAnswerHeading > div { display: grid; gap: 2px; }
+.studentPaperAnswerHeading strong { color: #2b3f5b; font-size: 15px; }
+.studentPaperAnswerHeading small { color: #7d8da2; font-size: 10px; }
+.studentPaperAnswerArea > .attachmentCard { margin-bottom: 12px; }
+.studentPaperAnswerArea > .teacherFeedbackBox { margin-bottom: 12px; }
+.studentPaperAnswerArea .homeworkSubmitBox { margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.studentPaperAnswerArea .homeworkSubmitHeader { margin-bottom: 13px; }
+.studentPaperAnswerArea .studentQuestionAnswerList { grid-template-columns: minmax(0, 1fr); }
+.studentPaperAnswerArea .homeworkSubmitBox > button { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 14px; }
+.studentHomeworkActionCard {
+  position: sticky;
+  top: 14px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 !important;
+  border: 1px solid #dbe4f0 !important;
+  border-top: 4px solid #617ff0 !important;
+  border-radius: 13px !important;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(39, 56, 82, .06);
+}
+.studentHomeworkActionCard > .homeworkTop { margin: 0; padding: 18px 18px 14px; border-bottom: 1px solid #edf1f6; }
+.studentHomeworkActionCard > .homeworkTop span { color: #6682da; font-size: 9px; letter-spacing: .08em; }
+.studentHomeworkActionCard > .homeworkTop strong { margin-top: 4px; color: #24364f; font-size: 17px; }
+.studentHomeworkBrief { margin: 0 !important; padding: 14px 18px 0; color: #6f7f94 !important; font-size: 11px !important; line-height: 1.55 !important; }
+.studentHomeworkActionCard > .homeworkMeta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 14px 18px; }
+.studentHomeworkActionCard > .homeworkMeta div { min-height: 54px; padding: 9px 10px; border: 1px solid #e5ebf3; border-radius: 8px; background: #f8fafd; }
+.studentHomeworkActionCard > .homeworkMeta span { color: #8a98aa; font-size: 9px; }
+.studentHomeworkActionCard > .homeworkMeta strong { margin-top: 3px; color: #354963; font-size: 11px; }
+.studentHomeworkActionCard > .attachmentCard, .studentHomeworkActionCard > .teacherFeedbackBox { margin: 0 18px 14px; }
+.studentHomeworkActionCard .homeworkSubmitBox { margin: 0; padding: 17px 18px 18px; border: 0; border-top: 1px solid #e7edf5; border-radius: 0; background: #fbfcfe; }
+.studentHomeworkActionCard .homeworkSubmitHeader strong { color: #2d405b; font-size: 13px; }
+.studentHomeworkActionCard .homeworkSubmitBox textarea { min-height: 116px; resize: vertical; }
+.studentHomeworkActionCard .homeworkSubmitBox > button { width: 100%; min-height: 42px; justify-content: center; }
+.studentQuestionAnswerList { display: grid; gap: 13px; }
+.studentAnswerCategory { display: flex; grid-column: 1 / -1; align-items: center; gap: 9px; margin-top: 7px; padding: 9px 11px; border-left: 3px solid #607ee5; border-radius: 0 8px 8px 0; background: #f1f5ff; }
+.studentAnswerCategory span { color: #6881d9; font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.studentAnswerCategory strong { color: #344d83; font-size: 11px; }
+.studentQuestionAnswer { min-width: 0; margin: 0; padding: 13px; border: 1px solid #dfe7f1; border-radius: 10px; background: #fff; }
+.studentQuestionAnswer legend { display: flex; width: 100%; align-items: flex-start; gap: 9px; padding: 0 0 10px; }
+.studentQuestionAnswer legend > span { display: grid; width: 25px; height: 25px; flex: 0 0 25px; place-items: center; border-radius: 7px; background: #edf2ff; color: #5876da; font-size: 11px; font-weight: 800; }
+.studentQuestionAnswer legend > div { display: grid; gap: 3px; }
+.studentQuestionAnswer legend small { color: #7c8da3; font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.studentQuestionAnswer legend strong { color: #30445f; font-size: 11px; line-height: 1.45; }
+.studentQuestionAnswer textarea { width: 100%; min-height: 78px !important; padding: 10px 11px !important; border: 1px solid #d9e2ee !important; border-radius: 8px !important; background: #fbfcfe !important; color: #2f435e !important; font-size: 11px !important; line-height: 1.5; }
+.studentQuestionAnswer textarea:focus { border-color: #6683e8 !important; box-shadow: 0 0 0 3px rgba(102, 131, 232, .12) !important; outline: 0; }
+.studentMcqAnswers { display: grid; gap: 7px; }
+.studentMcqAnswers label { display: flex !important; min-height: 38px; align-items: center; gap: 9px; padding: 8px 10px; border: 1px solid #e0e7f0; border-radius: 8px; background: #fbfcfe; color: #465a74; font-size: 11px; cursor: pointer; }
+.studentMcqAnswers label:has(input:checked) { border-color: #7089e7; background: #f0f4ff; color: #304b9a; }
+.studentMcqAnswers input { width: 15px !important; height: 15px; margin: 0; padding: 0 !important; accent-color: #5876da; }
+.studentMcqAnswers label > span { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 6px; background: #edf1f7; font-size: 9px; font-weight: 800; }
+.studentMcqAnswers label:has(input:checked) > span { background: #637fe0; color: #fff; }
+.studentSubmittedAnswers { display: grid; gap: 10px; }
+.studentSubmittedAnswers > div { padding: 10px; border: 1px solid #d5e9dd; border-radius: 8px; background: #fff; }
+.studentSubmittedAnswers span { display: block; color: #667c70; font-size: 10px; font-weight: 700; line-height: 1.4; }
+.studentSubmittedAnswers p { margin-top: 6px; color: #263e33; font-size: 11px; }
+.studentReviewLocked { display: flex; align-items: center; gap: 7px; padding: 9px 10px; border: 1px solid #b9dfc8; border-radius: 7px; background: #eaf8ef; color: #287446; font-size: 10px; font-weight: 800; }
+.studentTeacherReview { padding: 14px !important; border: 1px solid #b9dfc8 !important; border-radius: 10px !important; background: #f1faf4 !important; }
+.studentTeacherReviewTitle { display: flex; align-items: center; gap: 8px; color: #27804a; }
+.studentTeacherReviewTitle strong { flex: 1; color: #28533a; font-size: 13px; }
+.studentTeacherReview > p { margin: 10px 0 !important; color: #385746 !important; font-size: 11px !important; line-height: 1.55; }
+.studentTeacherReview .assignmentMeta { display: flex; justify-content: space-between; gap: 10px; padding-top: 9px; border-top: 1px solid #d4eadc; color: #658071; font-size: 9px; }
+.studentSubmittedPreview { display: grid; gap: 10px; padding: 14px; border: 1px solid #bfe5d0; border-radius: 10px; background: #f3fbf6; }
+.studentSubmittedPreview small { color: #56806a; font-weight: 800; text-transform: uppercase; }
+.studentSubmittedPreview p { margin: 0; color: #294438; line-height: 1.55; white-space: pre-wrap; }
+.studentSubmittedPreview span, .studentAnswerUpload > span { display: flex; align-items: center; gap: 6px; color: #52709a; font-size: 11px; font-weight: 700; }
+.studentSubmittedPreview button { display: inline-flex; width: fit-content; align-items: center; gap: 6px; }
+.studentAnswerUpload input { padding: 9px !important; background: #fff; }
+@media (max-width: 1250px) {
+  .studentHomeworkActionCard { position: static; }
+}
+@media (max-width: 850px) {
+  .studentHomeworkWorkspace { grid-template-columns: 1fr; }
+  .studentHomeworkSidebar { position: static; }
+  .studentHomeworkSidebar > button { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .studentHomeworkSidebar > button .badge { grid-column: auto; margin: 0; }
+  .studentPaperAnswerArea .studentQuestionAnswerList { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .studentShell .homeworkModule { padding: 14px; }
+  .studentShell .homeworkModule .homeworkHero { min-height: 0; grid-template-columns: auto 1fr; padding: 16px; }
+  .studentShell .homeworkModule .homeworkHero > .badge { grid-column: 2; width: fit-content; }
+  .studentPaperSheet { min-height: 430px; max-height: calc(100vh - 170px); padding: 24px 18px; }
+  .studentPaperMeta { grid-template-columns: 1fr; }
+  .studentHomeworkActionCard > .homeworkMeta { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,6 @@
+/* Keep the submission label above its file card in the grading sidebar. */
+.teacherShell .exactGrader .submissionFile { display: block !important; }
+.teacherShell .exactGrader .submissionFile > b { display: block; margin-bottom: 7px; }
+.teacherShell .exactGrader .submissionFile > div { display: flex; width: 100%; box-sizing: border-box; }
+.teacherShell .exactGrader .marks { align-items: end; }
+.teacherShell .exactGrader .marks > span { min-width: 58px; text-align: right; }

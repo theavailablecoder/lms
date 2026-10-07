@@ -1,0 +1,91 @@
+.teacherShell .dashboardSchedule {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 24px !important;
+  background: #f7f9fd !important;
+  box-shadow: 0 18px 45px -26px rgba(25,44,78,.34), 0 8px 0 -5px rgba(46,70,110,.12) !important;
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 17px;
+  padding: 22px 24px;
+  border: 0;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(103,145,226,.28), transparent 28%),
+    linear-gradient(125deg, #172d50, #244d82 60%, #3167a8);
+}
+
+.teacherShell .scheduleDateBadge {
+  display: grid;
+  width: 64px;
+  height: 70px;
+  place-content: center;
+  justify-items: center;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 17px;
+  background: rgba(255,255,255,.13);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(7,21,43,.22), inset 0 1px 0 rgba(255,255,255,.32);
+  backdrop-filter: blur(8px);
+}
+.teacherShell .scheduleDateBadge span { font-size: 9px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.teacherShell .scheduleDateBadge strong { margin-top: 2px; font-size: 27px; line-height: 1; }
+.teacherShell .dashboardSchedule .eyebrow { color: #a9c9f5 !important; }
+.teacherShell .dashboardSchedule .dashboardSectionHeading h2 { margin: 4px 0 2px; color: #fff; font-size: 22px; }
+.teacherShell .dashboardSchedule .dashboardSectionHeading p { margin: 0; color: #c5d8f0; font-size: 10px; }
+.teacherShell .dashboardSchedule .scheduleHeadingIcon { display: none; }
+.teacherShell .dashboardSchedule .textAction { padding: 10px 13px; border: 1px solid rgba(255,255,255,.3); border-radius: 11px; background: rgba(255,255,255,.13); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(7px); }
+
+.teacherShell .dashboardSchedule .scheduleList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 0;
+  padding: 20px;
+}
+.teacherShell .dashboardSchedule .scheduleList::before { display: none; }
+.teacherShell .dashboardSchedule .scheduleItem {
+  --event-color: #4088ee;
+  --event-soft: #eaf3ff;
+  display: grid;
+  min-height: 190px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
+  gap: 9px 12px;
+  margin: 0;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--event-color) 22%, #dfe7f1) !important;
+  border-top: 5px solid var(--event-color) !important;
+  border-radius: 18px;
+  background: linear-gradient(150deg, #fff 52%, var(--event-soft)) !important;
+  box-shadow: 0 10px 0 -7px color-mix(in srgb, var(--event-color) 25%, transparent), 0 20px 30px -22px rgba(32,54,89,.3), inset 0 1px 0 #fff !important;
+}
+.teacherShell .dashboardSchedule .scheduleItem:nth-child(2) { --event-color: #765de0; --event-soft: #f0edff; }
+.teacherShell .dashboardSchedule .scheduleItem:nth-child(3) { --event-color: #e28b28; --event-soft: #fff3df; }
+.teacherShell .dashboardSchedule .scheduleItem:hover { transform: translateY(-5px) rotateX(1deg); box-shadow: 0 14px 0 -8px color-mix(in srgb, var(--event-color) 28%, transparent), 0 27px 35px -21px rgba(32,54,89,.36), inset 0 1px 0 #fff !important; }
+.teacherShell .dashboardSchedule .scheduleMarker { display: none; }
+.teacherShell .dashboardSchedule .scheduleEventIcon { grid-column: 1; grid-row: 1; width: 48px; height: 48px; border: 0; border-radius: 14px; background: var(--event-soft); color: var(--event-color); box-shadow: 0 8px 0 -5px color-mix(in srgb, var(--event-color) 28%, transparent), inset 0 1px 0 #fff; }
+.teacherShell .dashboardSchedule .scheduleTime { display: grid; min-width: 0; grid-column: 2; grid-row: 1; justify-items: end; padding: 0; border: 0; }
+.teacherShell .dashboardSchedule .scheduleTime strong { color: #203653; font-size: 20px; }
+.teacherShell .dashboardSchedule .scheduleTime span { color: var(--event-color); font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) { display: grid; grid-column: 1 / -1; grid-row: 2 / 4; align-content: start; gap: 7px; padding-top: 7px; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) strong { color: #233852; font-size: 14px; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) p { margin: 0; color: #708197; font-size: 10px; line-height: 1.55; }
+.teacherShell .dashboardSchedule .scheduleItem .badge { grid-column: 1; grid-row: 4; width: fit-content; border: 1px solid color-mix(in srgb, var(--event-color) 20%, transparent); background: var(--event-soft); color: var(--event-color); }
+
+@media (max-width: 1050px) {
+  .teacherShell .dashboardSchedule .scheduleList { grid-template-columns: 1fr; }
+  .teacherShell .dashboardSchedule .scheduleItem { min-height: 155px; }
+}
+
+@media (max-width: 560px) {
+  .teacherShell .dashboardSchedule .dashboardSectionHeading { grid-template-columns: auto 1fr; padding: 17px; }
+  .teacherShell .dashboardSchedule .textAction { grid-column: 1 / -1; justify-content: center; }
+  .teacherShell .dashboardSchedule .scheduleList { padding: 13px; }
+}

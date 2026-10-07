@@ -1,0 +1,4 @@
+/* Keep the student count at left and group every page control at bottom right. */
+.exactPagination > div { margin-left: auto; }
+.exactPagination > button { margin-left: 10px; }
+.exactPagination > div, .exactPagination > button { cursor: pointer; }

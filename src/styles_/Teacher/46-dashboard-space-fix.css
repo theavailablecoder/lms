@@ -1,0 +1,17 @@
+.teacherShell .teacherDashboardWorkspace {
+  align-items: start !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardAssignments {
+  min-height: 0 !important;
+  height: auto !important;
+  align-self: start !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardAssignments .assignmentPreviewList {
+  align-content: start;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardMiniCalendar {
+  align-self: start !important;
+}

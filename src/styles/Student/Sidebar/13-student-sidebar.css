@@ -1,0 +1,510 @@
+/* Compact two-tone student navigation — matches teacher sidebar. */
+.studentShell .dashboard {
+  grid-template-columns: 224px minmax(0, 1fr);
+}
+
+/* Active navigation: glass icon zone with a solid white text surface. */
+@media (min-width: 781px) {
+  .studentShell .navItem.active,
+  .studentShell .navItem.active:hover {
+    border: 1px solid rgba(255, 255, 255, .76) !important;
+    border-left: 0 !important;
+    background: linear-gradient(90deg, rgba(202, 225, 255, .62) 0 43px, #ffffff 43px 100%) !important;
+    box-shadow: 10px 0 0 #ffffff, -4px 8px 20px rgba(29, 48, 130, .16) !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .studentShell .navItem.active::before {
+    top: -25px;
+    right: 0;
+    left: auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 0 0 25px 0;
+    box-shadow: 8px 8px 0 8px #ffffff;
+  }
+  .studentShell .navItem.active::after {
+    right: 0;
+    bottom: -25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 0 25px 0 0;
+    box-shadow: 8px -8px 0 8px #ffffff;
+  }
+
+  .studentShell .navItem.active svg,
+  .studentShell .navItem.active:hover svg {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, .76);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .28);
+    -webkit-backdrop-filter: blur(10px) saturate(145%);
+    backdrop-filter: blur(10px) saturate(145%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+}
+
+/* Keep the connected active tab contained when the student sidebar is collapsed. */
+@media (min-width: 781px) {
+  .studentShell .studentSidebarCollapsed .sidebar {
+    overflow-x: hidden;
+  }
+
+  .studentShell .studentSidebarCollapsed .navItem.active,
+  .studentShell .studentSidebarCollapsed .navItem.active:hover {
+    width: 100% !important;
+    min-height: 42px;
+    padding: 6px 0 !important;
+    border: 1px solid rgba(255, 255, 255, .34) !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, .18) !important;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .18) !important;
+  }
+
+  .studentShell .studentSidebarCollapsed .navItem.active::before,
+  .studentShell .studentSidebarCollapsed .navItem.active::after {
+    display: none !important;
+    box-shadow: none !important;
+  }
+
+  .studentShell .studentSidebarCollapsed .navItem.active svg,
+  .studentShell .studentSidebarCollapsed .navItem.active:hover svg {
+    width: 28px;
+    height: 28px;
+    justify-self: center;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, .16);
+  }
+}
+
+/* Exact right-side active curves. */
+@media (min-width: 781px) {
+  .studentShell .navItem.active::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 0;
+    left: auto;
+    top: -25px;
+    display: block;
+    background: transparent;
+    border-radius: 0 0 25px 0;
+    box-shadow: 8px 8px 0 8px #ffffff;
+    transform: none;
+    pointer-events: none;
+  }
+
+  .studentShell .navItem.active::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 0;
+    bottom: -25px;
+    display: block;
+    background: transparent;
+    border-radius: 0 25px 0 0;
+    box-shadow: 8px -8px 0 8px #ffffff;
+    pointer-events: none;
+  }
+}
+
+.studentShell .sidebar {
+  display: flex;
+  width: 208px;
+  height: calc(100vh - 32px);
+  margin: 16px 0 16px 16px;
+  padding: 12px 10px 14px;
+  flex-direction: column;
+  overflow: hidden auto;
+  border: 0 !important;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #5d7ddd 0 52px, #3f58a5 52px 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 34px rgba(37, 52, 117, 0.28) !important;
+}
+
+.studentShell .brand {
+  position: relative;
+  display: flex;
+  min-height: 108px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 4px;
+  padding: 5px 8px;
+  border: 0;
+  background: transparent;
+}
+
+.studentShell .brand::after { display: none; }
+
+.studentShell .sidebarLogoOrbit {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  margin: 0;
+  border: 2px solid #b9cdec;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 4px rgba(213, 225, 244, 0.28),
+    0 7px 16px rgba(24, 38, 96, 0.24);
+}
+
+.studentShell .sidebarLogoOrbit::before,
+.studentShell .sidebarLogoOrbit::after {
+  display: block;
+  border: 2px solid rgba(202, 220, 246, 0.62);
+  animation: studentSidebarRingPulse 2.8s ease-in-out infinite;
+}
+
+.studentShell .sidebarLogoOrbit::before { inset: -7px; }
+
+.studentShell .sidebarLogoOrbit::after {
+  inset: -13px;
+  border-color: rgba(202, 220, 246, 0.30);
+  animation-delay: 0.7s;
+}
+
+.studentShell .sidebarBrandLogo {
+  width: 62px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  box-shadow: none;
+  animation: studentSidebarLogoFloat 2.8s ease-in-out infinite;
+}
+
+.studentShell .brand .srOnly {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
+
+@keyframes studentSidebarLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes studentSidebarRingPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studentShell .sidebarBrandLogo,
+  .studentShell .sidebarLogoOrbit::before,
+  .studentShell .sidebarLogoOrbit::after {
+    animation: none;
+  }
+}
+
+.studentShell .brand .sidebarToggle {
+  position: absolute;
+  top: -3px;
+  right: 1px;
+  z-index: 4;
+  display: grid;
+  width: 37px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: -10%;
+  background: #ffffff;
+  color: #194ae1;
+  box-shadow: 0 4px 12px rgba(25, 39, 96, 0.24);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.studentShell .brand .sidebarToggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(25, 39, 96, 0.30);
+}
+
+.studentSidebarCollapsed {
+  grid-template-columns: 80px minmax(0, 1fr) !important;
+}
+
+.studentSidebarCollapsed .studentShell .sidebar,
+.studentShell .studentSidebarCollapsed .sidebar {
+  width: 64px;
+  padding-right: 6px;
+  padding-left: 6px;
+  background: #5d7ddd !important;
+}
+
+.studentShell .studentSidebarCollapsed .brand {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.studentShell .studentSidebarCollapsed .brand .sidebarToggle {
+  top: 8px;
+  right: 7px;
+}
+
+.studentShell .studentSidebarCollapsed .sidebarLogoOrbit { display: none; }
+.studentShell .studentSidebarCollapsed .navGroup p,
+.studentShell .studentSidebarCollapsed .navItem span,
+.studentShell .studentSidebarCollapsed .logoutButton span { display: none; }
+
+.studentShell .studentSidebarCollapsed .navItem,
+.studentShell .studentSidebarCollapsed .logoutButton {
+  width: 100%;
+  grid-template-columns: 1fr;
+  padding: 6px 0;
+  border-radius: 8px;
+}
+
+.studentShell .studentSidebarCollapsed .navItem:hover {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.studentShell .studentSidebarCollapsed .navItem.active,
+.studentShell .studentSidebarCollapsed .navItem.active:hover {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(241, 2, 2, 0.92);
+}
+
+.studentShell .studentSidebarCollapsed .navItem::before { left: -6px; }
+
+.studentShell .sidebar nav {
+  display: block;
+  flex: 1;
+}
+
+.studentShell .navGroup {
+  margin: 0 0 17px;
+  padding: 0;
+  border: 0;
+}
+
+.studentShell .navGroup p {
+  margin: 10px 4px 6px 57px;
+  color: rgba(255, 255, 255, 0.62) !important;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.studentShell .navItem {
+  position: relative;
+  width: 100%;
+  min-height: 38px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 9px;
+  margin: 1px 0;
+  padding: 6px 8px 6px 0;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: left;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: color 180ms ease, background-color 180ms ease, filter 180ms ease;
+}
+
+.studentShell .navItem::before {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 3px;
+  height: 0;
+  border-radius: 0 3px 3px 0;
+  background: #ffffff;
+  content: "";
+  transform: translateY(-50%);
+  transition: height 180ms ease;
+}
+
+.studentShell .navItem svg {
+  width: 16px;
+  height: 16px;
+  justify-self: center;
+  color: #ffffff !important;
+  stroke-width: 2;
+}
+
+.studentShell .navItem:hover {
+  width: calc(100% + 6px);
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(90deg, transparent 0 43px, #ffffff 43px) !important;
+  color: #3f58a5 !important;
+  font-weight: 750;
+}
+
+.studentShell .navItem:hover::before { height: 14px; }
+
+.studentShell .navItem:hover svg { color: #ffffff !important; }
+
+.studentShell .navItem:active {
+  filter: brightness(0.94);
+}
+
+.studentShell .navItem:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -2px;
+}
+
+.studentShell .navItem.active,
+.studentShell .navItem.active:hover {
+  width: calc(100% + 6px);
+  border: 0 !important;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(90deg, transparent 0 43px, #ffffff 43px) !important;
+  color: #3f58a5 !important;
+  font-weight: 750;
+  box-shadow: none !important;
+}
+
+.studentShell .navItem.active svg { color: #ffffff !important; }
+
+.studentShell .navItem.active::before { height: 22px; }
+
+.studentShell .logoutButton {
+  width: 100%;
+  min-height: 38px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 9px;
+  margin: 4px 0 0;
+  padding: 6px 8px 6px 0;
+  border: 0;
+  border-radius: 9px !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.86) !important;
+  font-size: 13px;
+  font-weight: 650;
+  box-shadow: none;
+  transform: none;
+}
+
+.studentShell .logoutButton svg {
+  width: 16px;
+  height: 16px;
+  justify-self: center;
+  color: #ffffff !important;
+}
+
+.studentShell .logoutButton:hover {
+  background: linear-gradient(90deg, transparent 0 43px, rgba(255, 255, 255, 0.12) 43px) !important;
+  color: #ffffff !important;
+  transform: none;
+}
+
+@media (max-width: 780px) {
+  .studentShell .dashboard { grid-template-columns: 1fr; }
+  .studentShell .sidebar {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  .studentShell .studentSidebarCollapsed .sidebar {
+    width: auto;
+    padding: 12px 10px 14px;
+    background: linear-gradient(90deg, #5d7ddd 0 52px, #3f58a5 52px 100%) !important;
+  }
+  .studentShell .brand .sidebarToggle { display: grid; }
+}
+
+/* Connected active-page tab inspired by the curved product navigation. */
+@media (min-width: 781px) {
+  .studentShell .navItem.active,
+  .studentShell .navItem.active:hover {
+    position: relative;
+    z-index: 2;
+    width: calc(100% + 10px);
+    min-height: 42px;
+    padding-left: 7px;
+    border: 1px solid rgba(255, 255, 255, .62) !important;
+    border-left: 0 !important;
+    border-radius: 26px 0px 0px 25px !important;
+    background-color: #fff !important;
+    color: #294fae !important;
+    font-weight: 750;
+  }
+
+  .studentShell .navItem.active::before {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    left: auto;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 0 0 18px 0;
+    background: transparent;
+    box-shadow: 9px 9px 0 9px rgba(243, 248, 253, .58);
+    content: "";
+    transform: none;
+    pointer-events: none;
+  }
+
+  .studentShell .navItem.active::after {
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 0 18px 0 0;
+    background: transparent;
+    box-shadow: 9px -9px 0 9px rgba(243, 248, 253, .58);
+    content: "";
+    pointer-events: none;
+  }
+
+  .studentShell .navItem.active svg,
+  .studentShell .navItem.active:hover svg {
+    color: #3567df !important;
+    filter: drop-shadow(0 2px 4px rgba(53, 103, 223, .16));
+  }
+}
+
+@media (min-width: 781px) {
+  .studentShell .navItem.active,
+  .studentShell .navItem.active:hover {
+    box-shadow: 10px 0 0 #ffffff, -4px 8px 20px rgba(29, 48, 130, .16) !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .studentShell .navItem.active::before { box-shadow: 9px 9px 0 9px #ffffff; }
+  .studentShell .navItem.active::after { box-shadow: 9px -9px 0 9px #ffffff; }
+  .studentShell .navItem.active svg,
+  .studentShell .navItem.active:hover svg {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, .76);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .28);
+    -webkit-backdrop-filter: blur(10px) saturate(145%);
+    backdrop-filter: blur(10px) saturate(145%);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .9), 0 4px 10px rgba(42, 78, 174, .13);
+  }
+}

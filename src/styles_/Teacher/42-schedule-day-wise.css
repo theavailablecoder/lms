@@ -1,0 +1,12 @@
+.teacherShell .dashboardSchedule .schedulePlannerBody { grid-template-rows: auto 1fr; }
+.teacherShell .scheduleDayTabs { display: flex; grid-column: 1 / -1; gap: 8px; padding-bottom: 3px; overflow-x: auto; scrollbar-width: thin; }
+.teacherShell .scheduleDayTabs button { display: grid; min-width: 82px; grid-template-columns: auto auto; align-items: center; gap: 1px 7px; padding: 9px 11px; border: 1px solid #d5e0ee; border-radius: 11px; background: #fff; color: #71829a; text-align: left; box-shadow: 0 5px 0 -3px #d6e0ed; cursor: pointer; }
+.teacherShell .scheduleDayTabs button span { font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.teacherShell .scheduleDayTabs button strong { grid-row: 1 / 3; grid-column: 2; color: #293d59; font-size: 20px; }
+.teacherShell .scheduleDayTabs button small { font-size: 8px; }
+.teacherShell .scheduleDayTabs button.active { border-color: #6f98dd; background: linear-gradient(145deg, #4f88e1, #3b69bd); color: #dfeaff; box-shadow: 0 7px 0 -4px #9db6da, 0 12px 18px -14px #355c96; }
+.teacherShell .scheduleDayTabs button.active strong { color: #fff; }
+
+@media (max-width: 650px) {
+  .teacherShell .scheduleDayTabs { grid-column: 1; }
+}

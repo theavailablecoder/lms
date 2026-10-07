@@ -1,0 +1,39 @@
+.gradingWrittenAnswers {
+  display: grid;
+  max-height: 360px;
+  gap: 9px;
+  padding: 16px 18px;
+  overflow-y: auto;
+  border-bottom: 1px solid #e3e8f0;
+  background: #f8faff;
+}
+.gradingWrittenAnswers h4 { margin: 0 0 3px; color: #27364d; font-size: 13px; }
+.gradingWrittenAnswers article { display: grid; gap: 4px; padding: 10px; border: 1px solid #e0e7f2; border-radius: 8px; background: #fff; }
+.gradingWrittenAnswers article small { color: #5575d7; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.gradingWrittenAnswers article b { color: #2d405b; font-size: 11px; line-height: 1.4; }
+.gradingWrittenAnswers article p,
+.gradingWrittenAnswers > p { margin: 3px 0 0; padding: 8px; border-radius: 6px; background: #eef3ff; color: #30476b; font-size: 11px; line-height: 1.5; white-space: pre-wrap; }
+.gradingAnswerCategory { display: grid; gap: 8px; }
+.gradingAnswerCategory + .gradingAnswerCategory { margin-top: 7px; padding-top: 14px; border-top: 1px solid #dce4f0; }
+.gradingAnswerCategory > header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 7px; padding: 9px 10px; border-left: 3px solid #5d7ce2; border-radius: 0 7px 7px 0; background: #eaf0ff; }
+.gradingAnswerCategory > header span { color: #5b78d4; font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.gradingAnswerCategory > header b { color: #304878; font-size: 10px; }
+.gradingAnswerCategory > header small { color: #7083a5; font-size: 8px; font-weight: 700; }
+.viewStudentAnswersButton { width: 100%; margin-top: 10px; padding: 9px 12px; border: 1px solid #bfd0f3; border-radius: 7px; background: #eef3ff; color: #4265ca; font-size: 11px; font-weight: 800; cursor: pointer; }
+.viewStudentAnswersButton:hover { border-color: #6683df; background: #e5edff; }
+.studentAnswersModalBackdrop { position: fixed; z-index: 120; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(19, 31, 51, .55); backdrop-filter: blur(3px); }
+.studentAnswersModal { display: grid; width: min(760px, 100%); max-height: min(820px, calc(100vh - 48px)); grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; border: 1px solid #dce4f0; border-radius: 16px; background: #fff; box-shadow: 0 24px 70px rgba(15, 27, 48, .28); }
+.studentAnswersModal > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 20px 22px; border-bottom: 1px solid #e5eaf2; background: #fff; }
+.studentAnswersModal > header small { color: #5876d6; font-size: 9px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.studentAnswersModal > header h2 { margin: 4px 0; color: #243650; font-size: 20px; }
+.studentAnswersModal > header p { margin: 0; color: #75859a; font-size: 11px; }
+.studentAnswersModal > header button { display: grid; width: 34px; height: 34px; place-items: center; border: 0; border-radius: 8px; background: #f0f3f8; color: #66778e; cursor: pointer; }
+.studentAnswersModal .gradingWrittenAnswers { max-height: none; padding: 18px 22px; border: 0; }
+.studentAnswersModal > footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 22px; border-top: 1px solid #e5eaf2; background: #fff; }
+.studentAnswersModal > footer span { color: #7b899c; font-size: 10px; }
+.studentAnswersModal > footer button { padding: 9px 18px; border: 0; border-radius: 7px; background: #5876dc; color: #fff; font-size: 11px; font-weight: 800; cursor: pointer; }
+@media (max-width: 600px) {
+  .studentAnswersModalBackdrop { padding: 10px; }
+  .studentAnswersModal { max-height: calc(100vh - 20px); }
+  .studentAnswersModal > header, .studentAnswersModal .gradingWrittenAnswers, .studentAnswersModal > footer { padding-left: 15px; padding-right: 15px; }
+}

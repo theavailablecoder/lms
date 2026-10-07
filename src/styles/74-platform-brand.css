@@ -1,0 +1,22 @@
+.akCompanyBrand .akPlatformName { display:inline-block; position:relative; margin-top:7px; padding:5px 15px; border:1px solid #b8dce5; border-radius:20px; background:linear-gradient(135deg,#f1fbfd,#e1f1f6); color:#15677f; -webkit-text-fill-color:#15677f; font-size:15px; font-weight:750; line-height:1.3; letter-spacing:1px; white-space:nowrap; box-shadow:0 2px 0 #c4dfe8; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand { max-width:160px; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand .akPlatformName { font-size:12px; padding:4px 13px; }
+.sidebarLogoOrbit::before,.sidebarLogoOrbit::after,.loginLogoOrbit::before,.loginLogoOrbit::after { display:none !important; animation:none !important; }
+.loginShell .loginBrand .loginLogoOrbit { display:flex; justify-content:center; width:auto; height:auto; border:0 !important; border-radius:0; background:transparent !important; box-shadow:none !important; animation:none !important; }
+.loginShell .loginBrand .akCompanyBrand { align-items:center; }
+.welcomeBrand .akCompanyBrand .akPlatformName { color:#15677f; font-size:14px; letter-spacing:2px; }
+
+/* Place the platform name beside the company logo. */
+.akCompanyBrand { flex-direction:row; align-items:center; gap:12px; }
+.akCompanyBrand .akPlatformName { margin:0; padding:3px 0 3px 12px; border:0; border-left:1px solid #b5d7e2; border-radius:0; background:transparent; color:#145374; -webkit-text-fill-color:#145374; font-size:21px; font-weight:750; letter-spacing:-.6px; line-height:1.2; box-shadow:none; }
+.akCompanyBrand .akPlatformName>span { color:#0babb0; -webkit-text-fill-color:#0babb0; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand { flex-direction:row; width:100%; max-width:184px; gap:8px; padding:10px 8px !important; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand .akCompanyLogo { width:84px; max-width:84px; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand .akPlatformName { font-size:17px; padding:3px 0 3px 8px; }
+.welcomeBrand .akCompanyBrand .akPlatformName { color:#145374; font-size:21px; letter-spacing:-.6px; }
+.classroomWelcome .welcomeBrand .akCompanyLogo { width:115px; }
+#akTeacherRegistration .teacherRegistrationIntro .akCompanyBrand { flex-direction:row; align-items:center; }
+#akTeacherRegistration .teacherRegistrationIntro .akCompanyLogo { width:110px; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyBrand { width:44px; max-width:44px; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyBrand .akCompanyLogo { width:30px; max-width:30px; }
+@media(max-width:400px) { .welcomeBrand .akCompanyBrand .akPlatformName { font-size:18px; }.classroomWelcome .welcomeBrand .akCompanyLogo { width:100px; } }

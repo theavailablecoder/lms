@@ -1,0 +1,303 @@
+/* Readable grading workspace: standard typography and comfortable sizing. */
+.teacherShell .gradingExact,
+.teacherShell .gradingExact * {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.teacherShell .gradingExact {
+  color: #243853;
+  font-size: 14px;
+}
+
+.teacherShell .gradingExactMain {
+  gap: 16px;
+  padding: 18px;
+}
+
+.teacherShell .gradingExactBody:not(:has(.exactGrader)) {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.teacherShell .gradingClassFilterBar {
+  position: relative;
+  overflow: hidden;
+  min-height: 72px;
+  padding: 14px 18px;
+  border-color: #c9d9f4;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 82% -40%, rgba(129, 105, 238, .22), transparent 38%),
+    linear-gradient(120deg, #edf6ff 0%, #f7f5ff 55%, #eef1ff 100%);
+  box-shadow: 0 8px 22px rgba(43, 67, 109, .1);
+}
+
+.teacherShell .gradingClassFilterBar label {
+  position: relative;
+  z-index: 1;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: 650;
+}
+.teacherShell .gradingClassFilterBar .gradingFilterCopy + label { margin-left: auto; }
+
+.teacherShell .gradingFilterIcon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 13px;
+  background: linear-gradient(145deg, #4286ee, #6251d8) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #454db4, 0 10px 18px rgba(71, 78, 182, .2);
+}
+.teacherShell .gradingFilterIcon svg { color: #fff !important; stroke: #fff !important; }
+
+.teacherShell .gradingFilterCopy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+}
+
+.teacherShell .gradingFilterCopy strong { color: #253a5b; font-size: 16px; font-weight: 700; }
+.teacherShell .gradingFilterCopy small { color: #6d7f9b; font-size: 12px; }
+
+.teacherShell .gradingClassFilterBar select {
+  position: relative;
+  z-index: 1;
+  min-width: 190px;
+  height: 46px;
+  padding: 0 38px 0 14px;
+  border-radius: 9px;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+.teacherShell .gradingClassFilterBar #grading-section-filter { min-width: 145px; }
+
+.teacherShell .exactTableCard {
+  border: 1px solid #d9e3f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(37, 61, 101, .08);
+  overflow-x: auto;
+}
+
+.teacherShell .exactTableTools {
+  min-width: 1120px;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #e2e9f3;
+  background: #fff;
+}
+
+.teacherShell .exactTableTools > div {
+  gap: 7px;
+}
+
+.teacherShell .exactTableTools button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 8px;
+  font-size: 12px !important;
+  font-weight: 600;
+  color: #4b617f !important;
+  -webkit-text-fill-color: #4b617f !important;
+}
+
+.teacherShell .exactTableTools button svg { flex: 0 0 auto; color: #58739a !important; stroke: #58739a !important; }
+.teacherShell .exactTableTools button span { color: #4b617f !important; -webkit-text-fill-color: #4b617f !important; }
+.teacherShell .exactTableTools button em {
+  display: inline-grid;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 6px;
+  place-items: center;
+  border-radius: 999px;
+  background: #edf2fb;
+  color: #506785;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.teacherShell .exactTableTools button.active {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: #376de3 !important;
+  background: linear-gradient(135deg, #3979e8, #5b56d7) !important;
+  box-shadow: 0 4px 10px rgba(55, 100, 215, .2) !important;
+}
+
+.teacherShell .exactTableTools button.active span,
+.teacherShell .exactTableTools button.active svg { color: #fff !important; stroke: #fff !important; -webkit-text-fill-color: #fff !important; }
+.teacherShell .exactTableTools button.active em { background: rgba(255, 255, 255, .2) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; }
+
+.teacherShell .exactTableTools > label {
+  width: 225px;
+  min-height: 40px;
+  padding: 0 11px;
+  border-radius: 8px;
+}
+
+.teacherShell .exactTableTools input {
+  height: 38px;
+  font-size: 13px !important;
+}
+
+.teacherShell .exactTable {
+  min-width: 1120px;
+  font-size: 13px !important;
+}
+
+.teacherShell .exactTable th {
+  padding: 14px 12px;
+  background: #f3f6fb;
+  color: #526782;
+  font-size: 12px !important;
+  font-weight: 650;
+  text-transform: none;
+}
+
+.teacherShell .exactTable td {
+  height: 58px;
+  padding: 11px 12px;
+  color: #2e435f;
+  font-size: 13px !important;
+}
+.teacherShell .exactTable td:first-child { display: table-cell; white-space: nowrap; }
+.teacherShell .exactTable td:nth-child(2) { display: flex; align-items: center; gap: 9px; white-space: nowrap; }
+.teacherShell .exactTable td:first-child strong { color: #38577d; font-size: 13px; font-weight: 700; }
+
+.teacherShell .exactTable tbody tr:hover {
+  background: #f8faff;
+}
+
+.teacherShell .exactTable td b {
+  font-size: 13px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactTable .avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  font-size: 10px !important;
+}
+
+.teacherShell .exactTable .studentClassCell,
+.teacherShell .exactTable .state {
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 11px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactTable td button {
+  min-width: 76px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 7px;
+  font-size: 11px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactPagination {
+  min-width: 1120px;
+  min-height: 58px;
+  padding: 12px 14px;
+  border-top: 1px solid #e6ecf4;
+  font-size: 12px !important;
+}
+
+.teacherShell .exactPagination button {
+  min-height: 34px;
+  font-size: 11px !important;
+}
+
+.teacherShell .exactPagination > span { flex: 1; color: #71819a; }
+.teacherShell .exactPagination > span strong { color: #314866; font-weight: 700; }
+.teacherShell .exactPagination .gradingPaginationControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 14px;
+  letter-spacing: normal;
+}
+.teacherShell .gradingPaginationControls button {
+  display: grid;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #d5e0ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #4b6383;
+  -webkit-text-fill-color: #4b6383;
+  font-weight: 700;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.teacherShell .gradingPaginationControls button:hover:not(:disabled) { transform: translateY(-1px); border-color: #6689e8; box-shadow: 0 4px 10px rgba(58, 92, 177, .14); }
+.teacherShell .gradingPaginationControls button.active { border-color: #3e68d9 !important; background: linear-gradient(145deg, #397ce9, #5c55d8) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; box-shadow: 0 4px 0 #414ba9, 0 7px 12px rgba(62, 74, 169, .2) !important; }
+.teacherShell .gradingPaginationControls button:disabled { cursor: not-allowed; opacity: .42; }
+.teacherShell .gradingPaginationControls .pageArrow { color: #587198 !important; -webkit-text-fill-color: #587198 !important; font-size: 20px !important; line-height: 1; }
+.teacherShell .gradingPageSize { display: inline-flex; align-items: center; gap: 8px; color: #647895; font-size: 11px; font-weight: 650; }
+.teacherShell .gradingPageSize select { width: 66px; height: 36px; padding: 0 8px; border: 1px solid #d5e0ef; border-radius: 9px; background: #f8faff; color: #314866; font: 650 12px "Segoe UI", Arial, sans-serif; outline: none; }
+
+.teacherShell .feedbackOverview {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(37, 61, 101, .07);
+}
+
+@media (max-width: 760px) {
+  .teacherShell .gradingExactMain { padding: 10px; }
+  .teacherShell .gradingClassFilterBar { align-items: stretch; flex-direction: column; }
+  .teacherShell .gradingClassFilterBar label { margin-left: 0; }
+  .teacherShell .gradingClassFilterBar select { width: 100%; }
+  .teacherShell .exactPagination { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .teacherShell .exactPagination .gradingPaginationControls { margin: 0; }
+}
+
+/* Teacher's own-details popover. */
+.teacherShell .profilePopover {
+  width: 310px;
+  padding: 17px;
+  border: 1px solid #cbdaf0;
+  border-radius: 16px;
+  /* background: linear-gradient(155deg, #fff 0%, #f8faff 100%); */
+  box-shadow: 0 22px 55px rgba(35, 55, 91, .22);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.teacherShell .profilePopoverEyebrow { display: block; margin-bottom: 11px; color: #5871c9; font-size: 10px; font-weight: 750; letter-spacing: .1em; }
+.teacherShell .profilePopoverTitle { gap: 12px; padding-bottom: 14px; }
+.teacherShell .profilePopoverTitle > svg { width: 40px; height: 40px; padding: 8px; border-radius: 11px; background: #edf2ff; color: #3970df; stroke: #3970df; }
+.teacherShell .profilePopoverTitle strong { font-size: 16px; font-weight: 700; }
+.teacherShell .profilePopoverTitle span { font-size: 12px; }
+.teacherShell .teacherProfileEmail { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid #e2e9f4; }
+.teacherShell .teacherProfileEmail > svg { color: #5874b8; stroke: #5874b8; }
+.teacherShell .teacherProfileEmail div { display: grid; min-width: 0; gap: 3px; }
+.teacherShell .teacherProfileEmail span { color: #70829b; font-size: 11px; font-weight: 650; }
+.teacherShell .teacherProfileEmail strong { overflow: hidden; color: #29405f; font-size: 13px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .teacherCodeRow span { font-size: 11px; }
+.teacherShell .teacherCodeRow strong { color: #253d5e; font-size: 15px; }
+.teacherShell .teacherCodeRow button { min-width: 72px; height: 36px; border: 1px solid #c7d5ec; background: #fff; color: #3867c7; box-shadow: 0 3px 8px rgba(46, 76, 139, .08); }
+.teacherShell .teacherCodeRow button:hover { border-color: #527be0; background: #eef3ff; }
+
+/* Focused marks entry for assessment and assignment grading. */
+.teacherShell .simplifiedGradeForm { display: grid; gap: 16px; }
+.teacherShell .simplifiedGradeForm > h4 { margin: 0; color: #245fd1; font-size: 16px; }
+.teacherShell .gradingMarksHint { margin: -8px 0 0; color: #71829a; font-size: 12px; line-height: 1.45; }
+.teacherShell .directMarksField { display: grid; gap: 8px; color: #526783; font-size: 12px; font-weight: 650; }
+.teacherShell .directMarksField > div { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid #d8e3f2; border-radius: 10px; background: #f7faff; }
+.teacherShell .directMarksField input { width: 92px; height: 44px; border: 1px solid #bfd0e9; border-radius: 8px; background: #fff; color: #203b60; font-size: 17px; font-weight: 700; text-align: center; }
+.teacherShell .directMarksField strong { color: #253e64; font-size: 15px; }
+.teacherShell .simplifiedGradeForm textarea { min-height: 115px; }

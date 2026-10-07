@@ -1,0 +1,115 @@
+/* Shared dimensional card language across teacher and student workspaces. */
+:is(.teacherShell, .studentShell) {
+  --card-surface: #ffffff;
+  --card-line: #dde6f1;
+  --card-depth: rgba(38, 60, 94, .13);
+  --card-soft-depth: rgba(38, 60, 94, .07);
+  --card-highlight: rgba(255, 255, 255, .94);
+}
+
+:is(.teacherShell, .studentShell) :is(
+  .panel,
+  .featureCard,
+  .homeworkCard,
+  .reviewCard,
+  .monitorCard,
+  .courseCard,
+  .scheduleItem,
+  .assignedHomeworkItem,
+  .studentHomeworkPaper,
+  .studentHomeworkSidebar,
+  .homeworkWorkList,
+  .sdCard
+) {
+  position: relative;
+  border-color: var(--card-line);
+  background-color: var(--card-surface);
+  box-shadow:
+    0 2px 0 var(--card-highlight) inset,
+    0 -1px 0 rgba(74, 96, 128, .05) inset,
+    0 8px 0 -5px rgba(69, 91, 126, .10),
+    0 16px 30px -18px var(--card-depth);
+}
+
+:is(.teacherShell, .studentShell) :is(
+  .featureCard,
+  .homeworkCard,
+  .reviewCard,
+  .monitorCard,
+  .courseCard,
+  .scheduleItem,
+  .assignedHomeworkItem,
+  .studentHomeworkSidebar > button,
+  .homeworkWorkList > button,
+  .sdAssignmentItem
+) {
+  transform: translateZ(0);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+@media (hover: hover) {
+  :is(.teacherShell, .studentShell) :is(
+    .featureCard,
+    .homeworkCard,
+    .reviewCard,
+    .monitorCard,
+    .courseCard,
+    .scheduleItem,
+    .assignedHomeworkItem
+  ):hover {
+    z-index: 2;
+    border-color: #c7d5e8;
+    box-shadow:
+      0 2px 0 rgba(255,255,255,.98) inset,
+      0 11px 0 -7px rgba(67, 91, 130, .14),
+      0 24px 38px -20px rgba(35, 57, 93, .25);
+    transform: translateY(-4px);
+  }
+
+  :is(.teacherShell, .studentShell) :is(.studentHomeworkSidebar > button, .homeworkWorkList > button, .sdAssignmentItem):hover {
+    box-shadow: inset 4px 0 #6683e8, 0 7px 16px -12px rgba(41, 66, 107, .3);
+    transform: translateX(3px);
+  }
+}
+
+/* Color-coded top depth for major content card families. */
+:is(.teacherShell, .studentShell) :is(.homeworkCard, .assignedHomeworkItem) { border-top: 3px solid #6985e5; }
+:is(.teacherShell, .studentShell) :is(.reviewCard, .teacherFeedbackBox) { border-top: 3px solid #36a875; }
+:is(.teacherShell, .studentShell) :is(.courseCard, .featureCard) { border-top: 3px solid #8a6adf; }
+:is(.teacherShell, .studentShell) :is(.monitorCard, .scheduleItem) { border-top: 3px solid #4c9bd8; }
+
+/* Raised icon treatment used by cards throughout the product. */
+:is(.teacherShell, .studentShell) :is(
+  .featureIcon,
+  .assignmentIcon,
+  .quickActionIcon,
+  .homeworkWorkIcon,
+  .sdItemIcon
+) {
+  box-shadow:
+    0 7px 0 -4px rgba(52, 78, 123, .24),
+    0 12px 18px -11px rgba(35, 58, 97, .35),
+    inset 0 1px 0 rgba(255,255,255,.72);
+}
+
+/* Inputs and small data tiles sit slightly inset into their parent card. */
+:is(.teacherShell, .studentShell) :is(
+  .homeworkMeta > div,
+  .studentPaperMeta > span,
+  .studentQuestionAnswer,
+  .gradingAnswerCategory > article,
+  .submissionBlock
+) {
+  box-shadow: inset 0 1px 3px rgba(51, 73, 107, .06), 0 1px 0 #fff;
+}
+
+/* Preserve overlays as flat surfaces so nested depth stays readable. */
+:is(.studentAnswersModal, .homeworkViewModal, .miniEventPopup, .profilePopover) {
+  box-shadow: 0 28px 80px rgba(19, 34, 58, .3), inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.teacherShell, .studentShell) :is(.featureCard, .homeworkCard, .reviewCard, .monitorCard, .courseCard, .scheduleItem, .assignedHomeworkItem) {
+    transition: none;
+  }
+}

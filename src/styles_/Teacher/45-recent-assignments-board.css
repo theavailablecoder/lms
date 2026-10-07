@@ -1,0 +1,102 @@
+.teacherShell .dashboardAssignments {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 24px !important;
+  background: linear-gradient(155deg, #f8fbff, #f3f6fc) !important;
+  box-shadow: 0 18px 0 -11px #d3deeb, 0 30px 46px -30px rgba(31,53,87,.34), inset 0 1px 0 #fff !important;
+}
+
+.teacherShell .dashboardAssignments > .dashboardSectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 22px 24px;
+  border: 0;
+  border-left: 0;
+  background:
+    radial-gradient(circle at 84% 20%, rgba(143,119,234,.22), transparent 28%),
+    linear-gradient(125deg, #273c6f, #3c5fa2 62%, #5a67bb);
+}
+.teacherShell .dashboardAssignments .dashboardSectionHeading .eyebrow { color: #bdcff4 !important; }
+.teacherShell .dashboardAssignments .dashboardSectionHeading h2 { margin: 4px 0 2px; color: #fff !important; font-size: 21px; }
+.teacherShell .dashboardAssignments .dashboardSectionHeading p { margin: 0; color: #d1dcf2; font-size: 10px; }
+.teacherShell .dashboardAssignmentCount { display: grid; min-width: 72px; justify-items: center; padding: 8px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 13px; background: rgba(255,255,255,.13); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(7px); }
+.teacherShell .dashboardAssignmentCount strong { color: #fff; font-size: 20px; line-height: 1; }
+.teacherShell .dashboardAssignmentCount small { margin-top: 3px; color: #cbdaf3; font-size: 8px; text-transform: uppercase; }
+.teacherShell .dashboardAssignments .textAction { border: 1px solid rgba(255,255,255,.27); background: rgba(255,255,255,.13); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.24); }
+
+.teacherShell .dashboardAssignments .assignmentPreviewList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 0;
+  padding: 20px;
+}
+.teacherShell .dashboardAssignments .assignmentPreviewCard {
+  --assignment-accent: #3e83eb;
+  --assignment-soft: #eaf3ff;
+  position: relative;
+  display: grid;
+  min-height: 205px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 12px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--assignment-accent) 23%, #dce5f0);
+  border-top: 5px solid var(--assignment-accent);
+  border-radius: 18px;
+  background: linear-gradient(150deg, #fff 54%, var(--assignment-soft));
+  box-shadow: 0 11px 0 -7px color-mix(in srgb, var(--assignment-accent) 25%, transparent), 0 22px 30px -23px rgba(34,56,89,.36), inset 0 1px 0 #fff;
+}
+.teacherShell .dashboardAssignments .assignmentPreviewCard:nth-child(2) { --assignment-accent: #795cdf; --assignment-soft: #f0edff; }
+.teacherShell .dashboardAssignments .assignmentPreviewCard:nth-child(3) { --assignment-accent: #17a379; --assignment-soft: #e5f8f1; }
+.teacherShell .dashboardAssignments .assignmentPreviewCard::after { position: absolute; right: -30px; bottom: -42px; width: 120px; height: 120px; border: 18px solid color-mix(in srgb, var(--assignment-accent) 8%, transparent); border-radius: 50%; content: ""; }
+.teacherShell .dashboardAssignments .assignmentPreviewCard:hover { transform: translateY(-6px); box-shadow: 0 15px 0 -8px color-mix(in srgb, var(--assignment-accent) 28%, transparent), 0 29px 37px -22px rgba(34,56,89,.4), inset 0 1px 0 #fff; }
+.teacherShell .dashboardAssignments .assignmentIcon { z-index: 1; display: grid; width: 50px; height: 50px; grid-column: 1; grid-row: 1; place-items: center; border: 0; border-radius: 14px; background: var(--assignment-soft); color: var(--assignment-accent); box-shadow: 0 8px 0 -5px color-mix(in srgb, var(--assignment-accent) 28%, transparent), inset 0 1px 0 #fff; }
+.teacherShell .dashboardAssignments .assignmentPreviewContent { z-index: 1; display: grid; grid-column: 1 / -1; grid-row: 2; align-content: start; gap: 5px; }
+.teacherShell .dashboardAssignments .assignmentPreviewContent > span { color: var(--assignment-accent); }
+.teacherShell .dashboardAssignments .assignmentPreviewContent strong { color: #253b58; font-size: 14px; white-space: normal; }
+.teacherShell .dashboardAssignments .assignmentPreviewContent p { color: #718299; font-size: 10px; line-height: 1.5; }
+.teacherShell .dashboardAssignments .assignmentPreviewSide { z-index: 1; display: grid; grid-column: 1; grid-row: 3; justify-items: start; }
+.teacherShell .dashboardAssignments .assignmentPreviewArrow { z-index: 1; grid-column: 2; grid-row: 3; align-self: end; color: var(--assignment-accent); }
+
+/* Explicit contrast overrides for theme rules loaded elsewhere. */
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .eyebrow { color: #c6d8f7 !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading {
+  border-bottom: 1px solid #cadbf1 !important;
+  background: radial-gradient(circle at 85% 15%, rgba(115,139,224,.18), transparent 30%), linear-gradient(125deg, #edf5ff, #e2ecff 62%, #ecebff) !important;
+}
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .eyebrow { color: #5576ad !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading h2 { color: #203650 !important; opacity: 1 !important; text-shadow: none !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading p { color: #617793 !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .dashboardAssignmentCount { border-color: #b9cce9; background: rgba(255,255,255,.72); box-shadow: 0 6px 14px rgba(58,83,125,.09), inset 0 1px 0 #fff; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .dashboardAssignmentCount strong { color: #315da9 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .dashboardAssignmentCount small { color: #657b9b !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .textAction { border-color: #b7cae8; background: rgba(255,255,255,.72); }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .textAction,
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments > .dashboardSectionHeading .textAction svg { color: #3f68b9 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewCard { color: #263b58 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewContent > span { color: var(--assignment-accent) !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewContent > strong { color: #1f3451 !important; opacity: 1 !important; text-shadow: none !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewContent > p { color: #5f738f !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewSide > small { color: #667a95 !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewSide .badge { color: #25764d !important; opacity: 1 !important; }
+.teacherShell .teacherDashboardWorkspace .dashboardAssignments .assignmentPreviewCard:nth-child(3) .assignmentPreviewSide .badge { color: #187252 !important; }
+
+.teacherShell .dashboardAssignments .dashboardEmptyState { margin: 20px; }
+
+@media (max-width: 1100px) {
+  .teacherShell .dashboardAssignments .assignmentPreviewList { grid-template-columns: 1fr; }
+  .teacherShell .dashboardAssignments .assignmentPreviewCard { min-height: 155px; }
+}
+
+@media (max-width: 560px) {
+  .teacherShell .dashboardAssignments > .dashboardSectionHeading { grid-template-columns: 1fr auto; padding: 17px; }
+  .teacherShell .dashboardAssignments .textAction { grid-column: 1 / -1; justify-content: center; }
+  .teacherShell .dashboardAssignments .assignmentPreviewList { padding: 13px; }
+}

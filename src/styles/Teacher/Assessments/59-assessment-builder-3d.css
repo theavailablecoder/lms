@@ -1,0 +1,722 @@
+/* Dimensional assessment builder with an illustrated header. */
+.teacherShell .examBuilderGrid .examForm {
+  overflow: hidden;
+  padding: 18px !important;
+  border: 1px solid #cdd8ee !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(143, 111, 225, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(145deg, #f7faff, #f0f2ff) !important;
+  box-shadow:
+    0 9px 0 #d5ddeb,
+    0 26px 55px rgba(43, 57, 103, 0.16) !important;
+}
+.teacherShell .examBuilderGrid .examForm > .panelHeader {
+  position: relative;
+  min-height: 118px;
+  overflow: hidden;
+  margin: -4px -4px 18px !important;
+  padding: 24px 245px 24px 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 70% 0, rgba(255, 255, 255, 0.3), transparent 25%),
+    linear-gradient(135deg, #416fe6, #704fd2) !important;
+  box-shadow:
+    0 7px 0 #384aa9,
+    0 17px 27px rgba(51, 60, 156, 0.24) !important;
+}
+.teacherShell .examBuilderGrid .examForm > .panelHeader h2 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff !important;
+  font-size: 21px !important;
+  text-shadow: 0 2px 0 rgba(31, 32, 95, 0.24);
+}
+.teacherShell .examBuilderGrid .examForm > .panelHeader h2::after {
+  color: #dfe5ff !important;
+  font-size: 10px !important;
+  text-shadow: none;
+}
+.teacherShell .examBuilderGrid .examForm > .panelHeader h2 > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.17) !important;
+  color: #fff !important;
+  stroke: #fff !important;
+  box-shadow: 0 4px 0 rgba(40, 39, 116, 0.38);
+}
+.teacherShell .examBuilderGrid .examForm > .panelHeader > span {
+  position: absolute;
+  z-index: 3;
+  right: 18px;
+  top: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #26764c !important;
+  box-shadow: 0 4px 0 rgba(34, 43, 105, 0.18) !important;
+}
+.teacherShell .examHeaderIllustration {
+  position: absolute;
+  z-index: 2;
+  right: 58px;
+  bottom: -18px;
+  width: 180px;
+  height: 118px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 10px rgba(30, 29, 91, 0.28));
+  pointer-events: none;
+}
+.teacherShell .examBuilderGrid .examCreationModes {
+  padding: 5px !important;
+  border: 1px solid #cbd5ed !important;
+  border-radius: 15px !important;
+  background: #e8ecf7 !important;
+  box-shadow:
+    inset 0 2px 5px rgba(53, 70, 109, 0.1),
+    0 3px 0 #d1d8e8 !important;
+}
+.teacherShell .examBuilderGrid .examCreationModes button {
+  min-height: 46px;
+  border-radius: 10px !important;
+}
+.teacherShell .examBuilderGrid .examCreationModes button.active {
+  border: 1px solid rgba(255, 255, 255, 0.42) !important;
+  background: linear-gradient(135deg, #3d7ce7, #654ed1) !important;
+  color: #fff !important;
+  box-shadow:
+    0 5px 0 #4148a7,
+    0 11px 18px rgba(60, 66, 160, 0.2) !important;
+  transform: translateY(-2px);
+}
+.teacherShell .examBuilderGrid .examCreationModes button.active svg {
+  color: #fff !important;
+  stroke: #fff !important;
+}
+.teacherShell .examBuilderGrid .examForm > label,
+.teacherShell .examBuilderGrid .examForm > .formRow:not(.examFormFooter) {
+  padding: 13px !important;
+  border: 1px solid #d6dfef !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow:
+    0 5px 0 #dde3ee,
+    0 12px 20px rgba(54, 68, 104, 0.07) !important;
+}
+.teacherShell .examBuilderGrid .examForm > .formRow label {
+  background: linear-gradient(145deg, #fff, #f8f9ff) !important;
+}
+.teacherShell .examBuilderGrid .examForm input,
+.teacherShell .examBuilderGrid .examForm select {
+  border-color: #cbd7eb !important;
+  background-color: #fbfcff !important;
+  box-shadow:
+    inset 0 2px 4px rgba(51, 68, 105, 0.055),
+    0 2px 0 #e2e7f0 !important;
+}
+.teacherShell .examBuilderGrid .examForm input:focus,
+.teacherShell .examBuilderGrid .examForm select:focus {
+  border-color: #6d64dc !important;
+  box-shadow:
+    inset 0 2px 4px rgba(51, 68, 105, 0.04),
+    0 0 0 4px rgba(103, 86, 213, 0.12),
+    0 3px 0 #b9b5e8 !important;
+}
+.teacherShell .examBuilderGrid .examForm .examFieldIcon {
+  color: #5749ce !important;
+  stroke: #5749ce !important;
+}
+.teacherShell .examBuilderGrid .examForm .createExamButton {
+  border-radius: 13px !important;
+  background: linear-gradient(135deg, #328ed3, #5361dc) !important;
+  box-shadow:
+    0 6px 0 #354aa8,
+    0 14px 22px rgba(51, 70, 167, 0.23) !important;
+}
+@media (max-width: 760px) {
+  .teacherShell .examBuilderGrid .examForm > .panelHeader {
+    min-height: 105px;
+    padding-right: 115px !important;
+  }
+  .teacherShell .examHeaderIllustration {
+    right: 5px;
+    width: 115px;
+    opacity: 0.62;
+  }
+  .teacherShell .examBuilderGrid .examForm > .panelHeader > span {
+    display: none;
+  }
+}
+
+.teacherShell .assessmentExcelImport {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px 18px;
+  padding: 17px !important;
+  border: 2px dashed #aebce8 !important;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f0f5ff, #ebeaff) !important;
+  box-shadow:
+    0 5px 0 #d6ddec,
+    0 12px 20px rgba(58, 69, 120, 0.08);
+}
+.teacherShell .assessmentExcelIntro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.teacherShell .assessmentExcelIntro > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #3ca96f, #258857);
+  color: #fff !important;
+  stroke: #fff !important;
+  box-shadow: 0 4px 0 #1f7049;
+}
+.teacherShell .assessmentExcelIntro > span {
+  display: grid;
+  gap: 4px;
+}
+.teacherShell .assessmentExcelIntro strong {
+  color: #263852;
+  font-size: 13px;
+}
+.teacherShell .assessmentExcelIntro small {
+  color: #718097;
+  font-size: 9px;
+}
+.teacherShell .assessmentExcelPicker {
+  position: relative;
+  overflow: hidden;
+  padding: 11px 15px !important;
+  border: 1px solid #5e55ce !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #6b75e7, #6250cb) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 0 #4443a1 !important;
+  cursor: pointer;
+}
+.teacherShell .assessmentExcelPicker input {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  opacity: 0;
+}
+.teacherShell .assessmentExcelPicker span {
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: 800;
+}
+.teacherShell .assessmentExcelImport > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+}
+.teacherShell .assessmentExcelImport > p.success {
+  background: #e4f7eb;
+  color: #267247;
+}
+.teacherShell .assessmentExcelImport > p.error {
+  background: #fff0f0;
+  color: #b43c49;
+}
+.teacherShell .assessmentImportedQuestions {
+  display: grid;
+  grid-column: 1 / -1;
+  max-height: 280px;
+  gap: 9px;
+  padding: 3px;
+  overflow-y: auto;
+}
+.teacherShell .assessmentImportedQuestions article {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid #d7deed;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 3px 0 #dfe4ed;
+}
+.teacherShell .assessmentImportedQuestions article > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border-radius: 8px;
+  background: #e8e9ff;
+  color: #5547bf;
+  font-size: 10px;
+  font-weight: 900;
+}
+.teacherShell .assessmentImportedQuestions article > div {
+  display: grid;
+  gap: 3px;
+}
+.teacherShell .assessmentImportedQuestions small {
+  color: #6c7890;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.teacherShell .assessmentImportedQuestions strong {
+  color: #273850;
+  font-size: 11px;
+}
+.teacherShell .assessmentImportedQuestions p {
+  margin: 2px 0 0;
+  color: #68758a;
+  font-size: 9px;
+}
+@media (max-width: 650px) {
+  .teacherShell .assessmentExcelImport {
+    grid-template-columns: 1fr;
+  }
+  .teacherShell .assessmentExcelPicker {
+    text-align: center;
+  }
+}
+
+/* Preserve Excel import icon and typography above global form themes. */
+.teacherShell .examBuilderGrid .examForm .assessmentExcelIntro > svg {
+  background: linear-gradient(145deg, #43b879, #238653) !important;
+  color: #fff !important;
+  stroke: #fff !important;
+  opacity: 1 !important;
+}
+.teacherShell .examBuilderGrid .examForm .assessmentExcelIntro strong {
+  color: #243751 !important;
+  -webkit-text-fill-color: #243751;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+.teacherShell .examBuilderGrid .examForm .assessmentExcelIntro small {
+  color: #61718a !important;
+  -webkit-text-fill-color: #61718a;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+}
+.teacherShell .examBuilderGrid .examForm .assessmentExcelPicker,
+.teacherShell .examBuilderGrid .examForm .assessmentExcelPicker span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  font-weight: 800 !important;
+}
+
+/* Reserve space for leading field icons so values never overlap them. */
+.teacherShell .examBuilderGrid .examFormManual > label > input,
+.teacherShell .examBuilderGrid .examFormManual > label > select,
+.teacherShell .examBuilderGrid .examFormManual > .formRow label > input,
+.teacherShell .examBuilderGrid .examFormManual > .formRow label > select,
+.teacherShell .examBuilderGrid .examFormAi > label > input,
+.teacherShell .examBuilderGrid .examFormAi > label > select,
+.teacherShell .examBuilderGrid .examFormAi > .formRow label > input,
+.teacherShell .examBuilderGrid .examFormAi > .formRow label > select {
+  padding-left: 42px !important;
+}
+.teacherShell .examBuilderGrid .examForm label > .examFieldIcon {
+  z-index: 3;
+  left: 14px !important;
+  width: 17px;
+  pointer-events: none;
+}
+
+/* Keep the form compact when the type-filtered question preview grows taller. */
+.teacherShell .examBuilderGrid .examForm {
+  min-height: 0;
+  height: fit-content;
+  align-self: start;
+  align-content: start;
+}
+
+.teacherShell .examPreviewQuestionList {
+  max-height: 330px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aeb9df transparent;
+}
+
+/* Spacious submission review cards with persistent scoring controls. */
+.teacherShell .submittedAssessmentGrid { grid-template-columns: repeat(auto-fit,minmax(430px,1fr)); gap: 18px; }
+.teacherShell .submittedAssessmentCard { display: grid; padding: 0; overflow: hidden; grid-template-columns: 1fr; gap: 0; border-radius: 20px; background: #fff !important; box-shadow: 0 7px 0 #d3deeb,0 18px 34px rgba(41,60,98,.12); }
+.teacherShell .submittedAssessmentCard > header { display: grid; padding: 17px 18px; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px; border-bottom: 1px solid #e0e7f1; background: linear-gradient(120deg,#f3f7ff,#f4f1ff); }
+.teacherShell .submittedAssessmentCard > header > div { display: grid; gap: 2px; min-width: 0; }
+.teacherShell .submittedAssessmentCard > header small { color: #5b73c0; font-size: 8px; }
+.teacherShell .submittedAssessmentCard > header h3 { margin: 2px 0; color: #263b59; font-size: 14px; }
+.teacherShell .submittedAssessmentCard > header strong { color: #516783; font-size: 10px; }
+.teacherShell .submittedAssessmentCard > header > .badge { background: #e5f7ed !important; color: #188354 !important; -webkit-text-fill-color: #188354; }
+.teacherShell .submittedAssessmentAvatar { background: linear-gradient(145deg,#4180e8,#6554d5) !important; color: #fff !important; box-shadow: 0 5px 0 #414ba9; }
+.teacherShell .submittedAssessmentAvatar svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submittedAssessmentAnswers { display: grid; max-height: 390px; padding: 16px 18px; overflow-y: auto; gap: 10px; background: #f8faff; }
+.teacherShell .submittedAssessmentAnswersTitle { display: flex; padding: 0 2px 4px; align-items: center; gap: 9px; color: #5c69d0; }
+.teacherShell .submittedAssessmentAnswersTitle span { display: grid; gap: 2px; }
+.teacherShell .submittedAssessmentAnswersTitle strong { color: #2d4362; font-size: 11px; }
+.teacherShell .submittedAssessmentAnswersTitle small { color: #7a899f; font-size: 8px; text-transform: none; }
+.teacherShell .submittedAssessmentAnswers > article { display: flex; padding: 11px 12px; align-items: flex-start; gap: 10px; border: 1px solid #dce4f0; border-radius: 12px; background: #fff; box-shadow: 0 3px 8px rgba(45,62,104,.05); }
+.teacherShell .submittedAssessmentAnswers > article > b { display: grid; width: 25px; height: 25px; flex: 0 0 25px; place-items: center; border-radius: 8px; background: #6572de; color: #fff; font-size: 9px; }
+.teacherShell .submittedAssessmentAnswers > article > div { display: grid; min-width: 0; gap: 3px; }
+.teacherShell .submittedAssessmentAnswers > article small { color: #6575bd; font-size: 7px; }
+.teacherShell .submittedAssessmentAnswers > article strong { color: #334966; font-size: 10px; line-height: 1.4; }
+.teacherShell .submittedAssessmentAnswers > article p { margin: 4px 0 0; padding: 7px 9px; border-left: 3px solid #58a979; border-radius: 6px; background: #eef8f2; color: #286745; font-size: 10px; font-weight: 750; white-space: pre-wrap; }
+.teacherShell .submittedAssessmentPlainAnswer { margin: 0; padding: 13px; border: 1px solid #dce4ef; border-radius: 10px; background: #fff; color: #506680; font-size: 10px; line-height: 1.6; white-space: pre-wrap; }
+.teacherShell .submittedAssessmentCard > footer { display: flex; padding: 13px 18px 17px; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid #e1e7f0; background: #fff; }
+.teacherShell .submittedAssessmentCard > footer em { display: inline-flex; align-items: center; gap: 5px; color: #71829a; font-size: 8px; font-style: normal; font-weight: 700; }
+.teacherShell .submittedAssessmentCard > footer label { display: flex; padding: 5px 8px 5px 10px; align-items: center; gap: 7px; border: 1px solid #cdd9eb; border-radius: 11px; background: #f6f9ff; color: #536888; }
+.teacherShell .submittedAssessmentCard > footer label > span { font-size: 9px; font-weight: 900; text-transform: uppercase; }
+.teacherShell .submittedAssessmentCard > footer input { width: 55px; height: 34px; padding: 0 7px; border: 1px solid #bfcde2; border-radius: 8px; background: #fff; color: #273e5d; text-align: center; font-size: 12px; font-weight: 900; outline: none; }
+.teacherShell .submittedAssessmentCard > footer input:focus { border-color: #6370d9; box-shadow: 0 0 0 3px rgba(99,112,217,.12); }
+.teacherShell .submittedAssessmentCard > footer label > strong { color: #70809a; font-size: 10px; }
+@media (max-width:600px) { .teacherShell .submittedAssessmentGrid { grid-template-columns: 1fr; } .teacherShell .submittedAssessmentCard > footer { align-items: flex-start; flex-direction: column; } }
+
+.teacherShell .submittedAssessmentGrid { grid-template-columns: 280px minmax(0,1fr); align-items: start; }
+.assessmentSwipeTrack.singleAssessmentPane { width: 100%; }
+.assessmentSwipeTrack.singleAssessmentPane > .assessmentSwipePane { width: 100%; }
+.assessmentSwipeViewport.showing-submitted .assessmentSwipeTrack.singleAssessmentPane { transform: translateX(0); }
+.teacherShell .submittedStudentList { overflow: hidden; border: 1px solid #cdd9eb; border-radius: 18px; background: #fff; box-shadow: 0 6px 0 #d6e0ec,0 16px 28px rgba(43,62,99,.1); }
+.teacherShell .submittedStudentList > header { display: grid; min-height: 72px; padding: 14px; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; background: linear-gradient(120deg,#3f78df,#6252d3) !important; }
+.teacherShell .submittedStudentList > header > span { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 11px; background: rgba(255,255,255,.16) !important; color: #fff !important; }
+.teacherShell .submittedStudentList > header svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submittedStudentList > header > div { display: grid; gap: 3px; }
+.teacherShell .submittedStudentList > header strong { color: #fff !important; -webkit-text-fill-color: #fff; font-size: 11px; }
+.teacherShell .submittedStudentList > header small { color: #e4eaff !important; -webkit-text-fill-color: #e4eaff; font-size: 8px; }
+.teacherShell .submittedStudentList > header em { display: grid; width: 27px; height: 27px; place-items: center; border-radius: 8px; background: rgba(255,255,255,.18) !important; color: #fff !important; font-size: 9px; font-style: normal; font-weight: 900; }
+.teacherShell .submittedStudentList > button { display: grid; width: 100%; min-height: 84px; padding: 12px; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 10px; border: 0; border-bottom: 1px solid #e2e8f1; border-radius: 0; background: #fff !important; text-align: left; box-shadow: none !important; cursor: pointer; }
+.teacherShell .submittedStudentList > button:hover { background: #f6f8ff !important; }
+.teacherShell .submittedStudentList > button.active { background: linear-gradient(105deg,#eaf2ff,#f1edff) !important; box-shadow: inset 4px 0 #5e6cda !important; }
+.teacherShell .submittedStudentListAvatar { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 12px; background: #e8efff !important; color: #586dd2 !important; }
+.teacherShell .submittedStudentList > button > div { display: grid; min-width: 0; gap: 2px; }
+.teacherShell .submittedStudentList > button strong { overflow: hidden; color: #2d4362; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .submittedStudentList > button small { overflow: hidden; color: #657892; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .submittedStudentList > button p { margin: 2px 0 0; color: #7182a0; font-size: 7px; font-weight: 800; text-transform: uppercase; }
+.teacherShell .submittedStudentList > button > em { padding: 5px 7px; border-radius: 999px; background: #fff2d8 !important; color: #a06b06 !important; font-size: 7px; font-style: normal; font-weight: 900; }
+.teacherShell .submittedStudentList > button > em.graded { background: #e3f6eb !important; color: #1b8155 !important; }
+.teacherShell .submittedAssessmentDetail { min-width: 0; }
+.teacherShell .submittedQuestionMarks { display: flex !important; min-height: 42px; padding: 8px 10px; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid #d7e1ef; border-radius: 10px; background: #fff; color: #506681 !important; font-size: 9px !important; }
+.teacherShell .submittedQuestionMarks > span { display: inline-flex; align-items: center; gap: 7px; }
+.teacherShell .submittedQuestionMarks input { width: 62px; height: 32px; padding: 0 7px; border: 1px solid #bfcee2; border-radius: 8px; background: #f8faff; color: #2e4563; text-align: center; font-size: 11px; font-weight: 850; }
+.teacherShell .submittedQuestionMarks b { color: #73839a; font-size: 9px; }
+.teacherShell .submittedMarksActions { display: flex; align-items: center; gap: 10px; }
+.teacherShell .submittedMarksActions > button { display: inline-flex; min-height: 45px; padding: 0 16px; align-items: center; justify-content: center; gap: 7px; border: 1px solid rgba(255,255,255,.35) !important; border-radius: 11px; background: linear-gradient(100deg,#397ae4,#6253d4) !important; color: #fff !important; -webkit-text-fill-color: #fff; font-size: 9px; font-weight: 900; box-shadow: 0 5px 0 #414aa6 !important; cursor: pointer; }
+.teacherShell .submittedMarksActions > button svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submittedMarksActions > button:disabled { cursor: not-allowed; filter: grayscale(.7); opacity: .58; }
+@media (max-width:850px) { .teacherShell .submittedAssessmentGrid { grid-template-columns: 1fr; } .teacherShell .submittedStudentList { max-height: 300px; overflow-y: auto; } }
+@media (max-width:600px) { .teacherShell .submittedMarksActions { width: 100%; align-items: stretch; flex-direction: column; } .teacherShell .submittedMarksActions > button { width: 100%; } }
+
+.teacherShell .submittedStudentFilters { display: grid; padding: 12px; gap: 9px; border-bottom: 1px solid #e1e7f0; background: #f7f9fd; }
+.teacherShell .submittedStudentFilters label { display: grid; gap: 4px; color: #60738e; font-size: 8px; font-weight: 900; text-transform: uppercase; }
+.teacherShell .submittedStudentFilters select { width: 100%; min-height: 36px; padding: 0 9px; border: 1px solid #cad6e8; border-radius: 9px; background: #fff; color: #314965; font-size: 10px; font-weight: 750; outline: none; }
+.teacherShell .submittedStudentFilters select:focus { border-color: #6370d9; box-shadow: 0 0 0 3px rgba(99,112,217,.1); }
+.teacherShell .submittedStudentListItems { max-height: 360px; overflow-y: auto; }
+.teacherShell .submittedStudentListItems > button { display: grid; width: 100%; min-height: 84px; padding: 12px; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 10px; border: 0; border-bottom: 1px solid #e2e8f1; border-radius: 0; background: #fff !important; text-align: left; box-shadow: none !important; cursor: pointer; }
+.teacherShell .submittedStudentListItems > button:hover { background: #f6f8ff !important; }
+.teacherShell .submittedStudentListItems > button.active { background: linear-gradient(105deg,#eaf2ff,#f1edff) !important; box-shadow: inset 4px 0 #5e6cda !important; }
+.teacherShell .submittedStudentListItems > button > div { display: grid; min-width: 0; gap: 2px; }
+.teacherShell .submittedStudentListItems > button strong { overflow: hidden; color: #2d4362; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .submittedStudentListItems > button small { overflow: hidden; color: #657892; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .submittedStudentListItems > button p { margin: 2px 0 0; color: #7182a0; font-size: 7px; font-weight: 800; text-transform: uppercase; }
+.teacherShell .submittedStudentListItems > button > em { padding: 5px 7px; border-radius: 999px; background: #fff2d8 !important; color: #a06b06 !important; font-size: 7px; font-style: normal; font-weight: 900; }
+.teacherShell .submittedStudentListItems > button > em.graded { background: #e3f6eb !important; color: #1b8155 !important; }
+.teacherShell .submittedStudentNoResults { margin: 0; padding: 22px 14px; color: #78889f; font-size: 10px; text-align: center; }
+.teacherShell .submittedSelectionEmpty { display: grid; min-height: 440px; padding: 30px; place-items: center; align-content: center; gap: 8px; border: 2px dashed #cbd7e9; border-radius: 20px; background: linear-gradient(145deg,#fbfcff,#f1f5ff); color: #6571d3; text-align: center; }
+.teacherShell .submittedSelectionEmpty > span { display: grid; width: 70px; height: 70px; place-items: center; border-radius: 22px; background: linear-gradient(145deg,#e7edff,#eee9ff) !important; box-shadow: 0 6px 0 #d9dfed; }
+.teacherShell .submittedSelectionEmpty h3 { margin: 8px 0 0; color: #304664; font-size: 17px; }
+.teacherShell .submittedSelectionEmpty p { margin: 0; color: #74859e; font-size: 10px; }
+
+.teacherShell .submissionQueueSection,.teacherShell .checkedAssessmentSection { display: grid; border-top: 1px solid #dfe6f0; }
+.teacherShell .submissionQueueSection > header,.teacherShell .checkedAssessmentSection > header { display: grid; padding: 11px 12px; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; background: #f5f8fd; }
+.teacherShell .submissionQueueSection > header > span,.teacherShell .checkedAssessmentSection > header > span { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 9px; background: #e9efff !important; color: #5c6bd2 !important; }
+.teacherShell .submissionQueueSection > header > div,.teacherShell .checkedAssessmentSection > header > div { display: grid; gap: 2px; }
+.teacherShell .submissionQueueSection > header strong,.teacherShell .checkedAssessmentSection > header strong { color: #304661; font-size: 10px; }
+.teacherShell .submissionQueueSection > header small,.teacherShell .checkedAssessmentSection > header small { color: #77879d; font-size: 7px; }
+.teacherShell .submissionQueueSection > header em,.teacherShell .checkedAssessmentSection > header em { display: grid; width: 23px; height: 23px; place-items: center; border-radius: 7px; background: #e8edfa !important; color: #586a88 !important; font-size: 8px; font-style: normal; font-weight: 900; }
+.teacherShell .checkedAssessmentSection > header { background: #f0faf4; }
+.teacherShell .checkedAssessmentSection > header > span { background: #dff4e8 !important; color: #23815a !important; }
+.teacherShell .checkedAssessmentSection > header em { background: #dff4e8 !important; color: #23815a !important; }
+.teacherShell .submissionQueueSection .submittedStudentListItems,.teacherShell .checkedAssessmentSection .submittedStudentListItems { max-height: 235px; }
+.teacherShell .submittedStudentListAvatar.checked { background: #e1f5e9 !important; color: #23815a !important; }
+.teacherShell .submittedStudentListAvatar.checked svg { color: #23815a !important; stroke: #23815a !important; }
+
+.teacherShell .submissionSearchPanel { display: grid; grid-column: 1/-1; padding: 20px; grid-template-columns: repeat(4,minmax(140px,1fr)) auto; align-items: end; gap: 16px; border: 1px solid #355b9b; border-radius: 21px; background: linear-gradient(115deg,#285b91,#374a93 55%,#5642a0) !important; box-shadow: 0 8px 0 #cbd8e8,0 20px 34px rgba(38,60,115,.19); }
+.teacherShell .submissionSearchPanel.assessmentSubmissionSearch { grid-template-columns: repeat(4,minmax(0,1fr)) auto; }
+.teacherShell .submissionSearchPanel label { display: grid; gap: 7px; color: #e7efff !important; -webkit-text-fill-color: #e7efff; font-size: 9px; font-weight: 900; }
+.teacherShell .submissionSearchPanel select { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid rgba(255,255,255,.25); border-radius: 13px; background: rgba(255,255,255,.12); color: #fff; font-size: 11px; font-weight: 750; outline: none; }
+.teacherShell .submissionSearchPanel select option { background: #fff; color: #273b59; }
+.teacherShell .submissionSearchPanel select:focus { border-color: #8fc0ff; box-shadow: 0 0 0 3px rgba(143,192,255,.14); }
+.teacherShell .submissionSearchPanel > button { display: inline-flex; min-width: 132px; min-height: 50px; padding: 0 20px; align-items: center; justify-content: center; gap: 8px; border: 2px solid #ffc05a !important; border-radius: 14px; background: linear-gradient(145deg,#ffac32,#f3851f) !important; color: #fff !important; -webkit-text-fill-color: #fff; font-size: 12px; font-weight: 900; cursor: pointer; box-shadow: 0 6px 0 #bd5b18 !important; }
+.teacherShell .submissionSearchPanel > button svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submissionSearchPanel > button:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.teacherShell .submittedStudentListItems > button > em { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+@media (max-width:1100px) { .teacherShell .submissionSearchPanel { grid-template-columns: repeat(2,minmax(0,1fr)); } .teacherShell .submissionSearchPanel > button { width: 100%; } }
+@media (max-width:600px) { .teacherShell .submissionSearchPanel { padding: 15px; grid-template-columns: 1fr; } }
+
+.teacherShell .submittedSearchState { display: grid; min-height: 300px; padding: 30px; grid-column: 1/-1; place-items: center; align-content: center; gap: 8px; border: 2px dashed #cbd7e8; border-radius: 20px; background: linear-gradient(145deg,#fbfcff,#f1f5ff); color: #6170d2; text-align: center; }
+.teacherShell .submittedSearchState > span { display: grid; width: 66px; height: 66px; place-items: center; border-radius: 20px; background: #e8edff !important; color: #5d6bd3 !important; box-shadow: 0 5px 0 #d8dfed; }
+.teacherShell .submittedSearchState h3 { margin: 7px 0 0; color: #304661; font-size: 16px; }
+.teacherShell .submittedSearchState p { margin: 0; color: #74859c; font-size: 10px; }
+.teacherShell .submittedSearchState.noResults > span { background: #fff0e5 !important; color: #d27a3d !important; }
+
+.teacherShell .submissionResultsCard { grid-column: 1/-1; overflow: hidden; border: 1px solid #d4dfed; border-radius: 18px; background: #fff; box-shadow: 0 6px 0 #d6e0ec,0 17px 30px rgba(43,61,99,.1); }
+.teacherShell .submissionResultsCard > header { display: flex; min-height: 70px; padding: 14px 17px; align-items: center; justify-content: space-between; gap: 14px; border-bottom: 1px solid #dce5f0; background: linear-gradient(110deg,#f4f7ff,#f4f1ff); }
+.teacherShell .submissionResultsCard > header > div { display: flex; align-items: center; gap: 10px; }
+.teacherShell .submissionResultsCard > header > div > span { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 12px; background: linear-gradient(145deg,#447fe6,#6253d2) !important; color: #fff !important; box-shadow: 0 4px 0 #434ca7; }
+.teacherShell .submissionResultsCard > header > div > span svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submissionResultsCard > header > div > div { display: grid; gap: 3px; }
+.teacherShell .submissionResultsCard > header strong { color: #2c4260; font-size: 12px; }
+.teacherShell .submissionResultsCard > header small { color: #74849c; font-size: 8px; }
+.teacherShell .submissionResultsCard > header > em { padding: 6px 9px; border-radius: 999px; background: #e9eefb !important; color: #5d6f8d !important; font-size: 8px; font-style: normal; font-weight: 900; }
+.teacherShell .submissionResultsScroll { overflow-x: auto; }
+.teacherShell .submissionResultsCard table { width: 100%; min-width: 1120px; border-collapse: collapse; }
+.teacherShell .submissionResultsCard th { padding: 11px 12px; background: #f3f6fb; color: #586d8d; font-size: 8px; font-weight: 900; text-align: left; text-transform: uppercase; }
+.teacherShell .submissionResultsCard td { padding: 12px; border-top: 1px solid #e4e9f1; color: #455b78; font-size: 9px; vertical-align: middle; }
+.teacherShell .submissionResultsCard tbody tr:hover { background: #f8f9ff; }
+.teacherShell .submissionResultsCard td:first-child { display: flex; align-items: center; gap: 8px; }
+.teacherShell .submissionResultsCard td strong { display: block; color: #2d4362; font-size: 10px; }
+.teacherShell .submissionResultsCard td small { display: block; margin-top: 3px; color: #7a899f; font-size: 7px; }
+.teacherShell .submissionTableAvatar { display: grid; width: 30px; height: 30px; flex: 0 0 30px; place-items: center; border-radius: 50%; background: linear-gradient(145deg,#3268ab,#594aa5) !important; color: #fff !important; font-size: 8px; font-weight: 900; }
+.teacherShell .submissionResultsCard td > em { display: inline-flex; padding: 5px 7px; border-radius: 6px; font-size: 8px; font-style: normal; font-weight: 850; }
+.teacherShell .submissionResultsCard em.submitted,.teacherShell .submissionResultsCard em.graded { background: #e5f6ec !important; color: #208158 !important; }
+.teacherShell .submissionResultsCard em.pending { background: #fff0db !important; color: #c36d21 !important; }
+.teacherShell .submissionResultsCard td button { display: inline-flex; min-height: 31px; padding: 0 10px; align-items: center; gap: 5px; border: 1px solid #a9c4f0 !important; border-radius: 7px; background: #f7faff !important; color: #2466cf !important; font-size: 8px; font-weight: 850; box-shadow: none !important; cursor: pointer; white-space: nowrap; }
+.teacherShell .submissionResultsCard td button:hover { background: #eaf2ff !important; }
+.submissionReviewModalBackdrop { position: fixed; z-index: 1100; inset: 0 auto 0 50%; display: grid; width: 50%; height: 100vh; box-sizing: border-box; padding: 22px; place-items: center; background: rgba(17,25,49,.66); backdrop-filter: blur(7px); }
+.teacherShell .submissionReviewModal { width: min(900px,calc(100vw - 44px)); max-height: calc(100vh - 44px); box-sizing: border-box; overflow: hidden; border-radius: 22px; background: #fff !important; box-shadow: 0 30px 90px rgba(12,20,52,.42); animation: examQuestionsModalIn .24s ease-out both; }
+.teacherShell .submissionReviewModal > header > button { display: grid; width: 36px; height: 36px; padding: 0; place-items: center; border: 1px solid #d4deeb !important; border-radius: 10px; background: #fff !important; color: #536783 !important; box-shadow: none !important; cursor: pointer; }
+.teacherShell .submissionReviewModal > header > button svg { color: #536783 !important; stroke: #536783 !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers { max-height: calc(100vh - 245px); }
+.teacherShell .submissionReviewModal > header { background: radial-gradient(circle at 88% 0,rgba(255,255,255,.18),transparent 30%),linear-gradient(120deg,#3977df,#6251d2) !important; border-bottom: 0 !important; }
+.teacherShell .submissionReviewModal > header small { color: #dfe7ff !important; -webkit-text-fill-color: #dfe7ff; }
+.teacherShell .submissionReviewModal > header h3 { color: #fff !important; -webkit-text-fill-color: #fff; }
+.teacherShell .submissionReviewModal > header strong { color: #eef2ff !important; -webkit-text-fill-color: #eef2ff; }
+.teacherShell .submissionReviewModal > header .submittedAssessmentAvatar { background: rgba(255,255,255,.17) !important; border: 1px solid rgba(255,255,255,.35); color: #fff !important; box-shadow: 0 5px 0 rgba(37,40,119,.42); }
+.teacherShell .submissionReviewModal > header .submittedAssessmentAvatar svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submissionReviewModal > header > button { border-color: rgba(255,255,255,.38) !important; background: rgba(255,255,255,.16) !important; color: #fff !important; }
+.teacherShell .submissionReviewModal > header > button svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers { background: #f5f8ff !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswersTitle { color: #5969cf !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswersTitle svg { color: #5969cf !important; stroke: #5969cf !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswersTitle strong { color: #2d4362 !important; -webkit-text-fill-color: #2d4362; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswersTitle small { color: #78889f !important; -webkit-text-fill-color: #78889f; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers > article { background: #fff !important; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers > article > b { background: linear-gradient(145deg,#667bea,#6154d4) !important; color: #fff !important; -webkit-text-fill-color: #fff; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers > article small { color: #6072bd !important; -webkit-text-fill-color: #6072bd; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers > article strong { color: #304763 !important; -webkit-text-fill-color: #304763; }
+.teacherShell .submissionReviewModal .submittedAssessmentAnswers > article p { background: #eaf7ef !important; color: #216943 !important; -webkit-text-fill-color: #216943; }
+.teacherShell .submissionReviewModal .submittedAssessmentPlainAnswer { background: #fff !important; color: #405874 !important; -webkit-text-fill-color: #405874; }
+.teacherShell .submissionReviewModal > footer { background: #fff !important; }
+.teacherShell .submissionReviewModal > footer em { color: #667994 !important; -webkit-text-fill-color: #667994; }
+.teacherShell .submissionReviewModal .submittedMarksActions label { background: #f3f7ff !important; color: #506685 !important; -webkit-text-fill-color: #506685; }
+.teacherShell .submissionReviewModal .submittedMarksActions input { background: #fff !important; color: #263e5d !important; -webkit-text-fill-color: #263e5d; opacity: 1 !important; }
+.teacherShell .submissionReviewModal .submittedMarksActions > button:not(:disabled) { background: linear-gradient(100deg,#397ae4,#6253d4) !important; color: #fff !important; -webkit-text-fill-color: #fff; }
+@media (max-width:600px) { .submissionReviewModalBackdrop { padding: 8px; } .teacherShell .submissionReviewModal { max-height: calc(100vh - 16px); border-radius: 16px; } .teacherShell .submissionResultsCard > header { align-items: flex-start; flex-direction: column; } }
+
+/* Readable, standard typography for submission search and results. */
+.teacherShell .submissionSearchPanel,
+.teacherShell .submissionSearchPanel *,
+.teacherShell .submissionResultsCard,
+.teacherShell .submissionResultsCard * {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+.teacherShell .submissionSearchPanel label { font-size: 12px; font-weight: 600; }
+.teacherShell .submissionSearchPanel select { min-height: 54px; font-size: 14px; font-weight: 500; }
+.teacherShell .submissionSearchPanel > button { min-height: 54px; font-size: 14px; font-weight: 700; }
+.teacherShell .submissionResultsCard > header { min-height: 78px; }
+.teacherShell .submissionResultsCard > header strong { font-size: 15px; font-weight: 650; }
+.teacherShell .submissionResultsCard > header small { font-size: 11px; font-weight: 500; }
+.teacherShell .submissionResultsCard > header > em { padding: 7px 11px; font-size: 11px; font-weight: 650; }
+.teacherShell .submissionResultsCard th { padding: 14px 13px; font-size: 11px; font-weight: 650; text-transform: none; }
+.teacherShell .submissionResultsCard td { padding: 15px 13px; font-size: 12px; }
+.teacherShell .submissionResultsCard td strong { font-size: 13px; font-weight: 650; }
+.teacherShell .submissionResultsCard td small { font-size: 10px; }
+.teacherShell .submissionResultsCard td > em { padding: 6px 9px; font-size: 11px; font-weight: 650; }
+.teacherShell .submissionResultsCard td button { min-height: 38px; padding: 0 13px; font-size: 11px; font-weight: 650; }
+.teacherShell .submissionTableAvatar { width: 36px; height: 36px; flex-basis: 36px; font-size: 10px; }
+
+/* Assessment overview cards mirror the homework dashboard language. */
+.teacherShell .testExamModule .assessmentSummaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.teacherShell .testExamModule .assessmentSummaryCard {
+  position: relative;
+  min-height: 132px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid #e1e7f0;
+  border-radius: 18px;
+  /* background: linear-gradient(145deg, #fff, #f8faff); */
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 8px 0 #d9e1ee,
+    0 20px 34px rgba(43, 68, 107, 0.13);
+  transform: perspective(700px) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.teacherShell .testExamModule .assessmentSummaryCard:nth-of-type(1) {
+ background-color: #7de2fc !important;
+background-image: linear-gradient(135deg, #7de2fc 0%, #b9b6e5 100%)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.teacherShell .testExamModule .assessmentSummaryCard::after {
+  position: absolute;
+  right: -28px;
+  bottom: -34px;
+  width: 94px;
+  height: 94px;
+  border: 18px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  opacity: 0.06;
+}
+.teacherShell .testExamModule .assessmentSummaryIcon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+  background: color-mix(in srgb, currentColor 13%, white) !important;
+  color: inherit !important;
+  box-shadow:
+    0 5px 0 color-mix(in srgb, currentColor 28%, transparent),
+    0 11px 16px color-mix(in srgb, currentColor 14%, transparent);
+  transform: translateZ(18px);
+}
+.teacherShell .testExamModule .assessmentSummaryIcon svg {
+  color: currentColor !important;
+  stroke: currentColor !important;
+}
+.teacherShell .testExamModule .assessmentSummaryArtwork {
+  position: absolute;
+  z-index: 1;
+  right: -8px;
+  bottom: -10px;
+  width: 118px;
+  height: 92px;
+  object-fit: contain;
+  object-position: right bottom;
+  filter: saturate(0.85) drop-shadow(0 9px 8px rgba(38, 52, 93, 0.2));
+  transform: translateZ(8px);
+  pointer-events: none;
+  opacity: 1 !important;
+}
+.teacherShell .testExamModule .assessmentSummaryCard > strong {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 13px;
+  color: #172942 !important;
+  font-size: 23px;
+  line-height: 1;
+  transform: translateZ(14px);
+}
+.teacherShell .testExamModule .assessmentSummaryCard h3 {
+  position: relative;
+  z-index: 2;
+  margin: 6px 0 1px;
+  color: #203550 !important;
+  font-size: 12px;
+  transform: translateZ(12px);
+}
+.teacherShell .testExamModule .assessmentSummaryCard p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #718198 !important;
+  font-size: 10px;
+  font-weight: 650;
+  transform: translateZ(10px);
+}
+.teacherShell .testExamModule .assessmentSummaryCard.violet {
+  color: #6c56dc;
+  border-top: 3px solid #765ce1;
+  background-color: #7de2fc;
+  background-image: linear-gradient(135deg, #7de2fc 0%, #b9b6e5 100%);
+}
+.teacherShell .testExamModule .assessmentSummaryCard.amber {
+  color: #d99225;
+  border-top: 3px solid #e3a137;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.green {
+  color: #20a875;
+  border-top: 3px solid #35b986;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.pink {
+  color: #dc4f83;
+  border-top: 3px solid #e36593;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.violet {
+background-color: #a27cf5;
+background-image: linear-gradient(0deg, #c8a9f2 0%, #c7aae7 1%, #e4dee9 100%)!important;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.amber {
+  background-color: #fff7e9;
+  background-image: linear-gradient(135deg, #fff7e9 0%, #f3f0ff 100%)!important;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.green {
+  background-color: #edfaf5;
+  background-image: linear-gradient(135deg, #edfaf5 0%, #d3e9e2 100%)!important;
+}
+.teacherShell .testExamModule .assessmentSummaryCard.pink {
+  background-color: #fff0f6;
+  background-image: linear-gradient(135deg, #fff0f6 0%, #f3f0ff 100%)!important;
+}
+.teacherShell .testExamModule .assessmentSummaryCard:hover {
+  transform: perspective(700px) translateY(-6px) rotateX(2deg) rotateY(-2deg);
+  box-shadow:
+    inset 0 2px 0 #fff,
+    0 11px 0 #d9e1ee,
+    0 29px 44px rgba(43, 68, 107, 0.2);
+}
+.teacherShell
+  .testExamModule
+  .assessmentSummaryCard:hover
+  .assessmentSummaryArtwork {
+  opacity: 0.5;
+  transform: translateZ(20px) scale(1.06);
+}
+@media (max-width: 900px) {
+  .teacherShell .testExamModule .assessmentSummaryGrid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .teacherShell .testExamModule .assessmentSummaryGrid {
+    grid-template-columns: 1fr;
+  }
+}

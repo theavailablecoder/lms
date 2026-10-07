@@ -1,0 +1,93 @@
+.assessmentSwipeWorkspace {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid #cfddf0;
+  border-radius: 26px;
+  background: radial-gradient(circle at 2% 0, rgba(54,126,232,.13), transparent 24%), radial-gradient(circle at 98% 0, rgba(105,78,215,.13), transparent 24%), linear-gradient(145deg, #f9fbff, #f3f1ff);
+  box-shadow: 0 7px 0 #d6e1ed, 0 22px 44px rgba(42,67,103,.11);
+}
+.assessmentSwipeHeader { padding: 4px 5px 0; }
+.assessmentSwipeHeader span { color: #5474bc; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.assessmentSwipeHeader h2 { margin: 5px 0 3px; color: #263b59; font-size: 21px; }
+.assessmentSwipeHeader p { margin: 0; color: #6c809c; font-size: 12px; font-weight: 650; }
+.assessmentSwipeTabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px;
+  padding: 7px;
+  border: 1px solid #cbd9ec;
+  border-radius: 19px;
+  background: rgba(228,236,248,.86);
+  box-shadow: inset 0 2px 6px rgba(52,76,111,.08);
+}
+.assessmentSwipeTabs > button {
+  display: grid;
+  min-height: 68px;
+  padding: 10px 14px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid transparent !important;
+  border-radius: 14px !important;
+  background: transparent !important;
+  color: #314966 !important;
+  text-align: left;
+  box-shadow: none !important;
+}
+.assessmentSwipeTabs > button.active {
+  border-color: rgba(255,255,255,.4) !important;
+  background: linear-gradient(105deg, #347ce9, #4e62d8 56%, #654fd5) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #394da8, 0 12px 21px rgba(54,69,164,.22) !important;
+  transform: translateY(-2px);
+}
+.assessmentSwipeTabs > button > span {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  background: #fff !important;
+  color: #4d6bd0 !important;
+  place-items: center;
+}
+.assessmentSwipeTabs > button.active > span { background: rgba(255,255,255,.18) !important; color: #fff !important; }
+.assessmentSwipeTabs > button.active svg { stroke: #fff !important; }
+.assessmentSwipeTabs > button > div { display: grid; gap: 3px; }
+.assessmentSwipeTabs strong { color: #293f5d !important; font-size: 13px; }
+.assessmentSwipeTabs small { color: #667b98 !important; font-size: 10px; }
+.assessmentSwipeTabs button.active strong { color: #fff !important; }
+.assessmentSwipeTabs button.active small { color: #e7eeff !important; }
+.assessmentSwipeTabs em { padding: 5px 9px; border-radius: 999px; background: #fff; color: #506db2; font-size: 10px; font-style: normal; font-weight: 900; }
+.assessmentSwipeTabs button.active em { background: rgba(255,255,255,.2); color: #fff; }
+.assessmentSwipeViewport { width: 100%; overflow: hidden; border-radius: 20px; touch-action: pan-y; }
+.assessmentSwipeTrack { display: flex; width: 200%; align-items: flex-start; transition: transform .42s cubic-bezier(.22,.8,.25,1); }
+.assessmentSwipeViewport.showing-submitted .assessmentSwipeTrack { transform: translateX(-50%); }
+.assessmentSwipePane { width: 50%; min-width: 0; padding: 3px 4px 10px; box-sizing: border-box; }
+.assessmentSwipePane[aria-hidden="true"] { visibility: hidden; pointer-events: none; }
+.assessmentSwipePane .examBuilderGrid,
+.assessmentSwipePane .examListGrid { margin: 0; }
+.assessmentSwipePane .examListGrid { padding-top: 3px; }
+.assessmentSwipePane:first-child .examListGrid { margin-top: 18px; }
+.submittedAssessmentGrid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 15px; }
+.submittedAssessmentCard { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 13px; padding: 18px; border: 1px solid #cbdbee; border-radius: 18px; background: linear-gradient(145deg,#fff,#eef5ff); box-shadow: 0 5px 0 #d3dfed, 0 14px 25px rgba(43,68,104,.1); }
+.submittedAssessmentAvatar { display: grid; width: 45px; height: 45px; border-radius: 13px; background: linear-gradient(145deg,#3980ed,#6654da); color: #fff; place-items: center; box-shadow: 0 5px 0 #ccd9ed; }
+.submittedAssessmentCard > div { min-width: 0; }
+.submittedAssessmentCard small { color: #5972bd; font-size: 9px; font-weight: 900; text-transform: uppercase; }
+.submittedAssessmentCard h3 { margin: 4px 0; color: #253b59; font-size: 15px; }
+.submittedAssessmentCard strong { color: #385478; font-size: 12px; }
+.submittedAssessmentCard p { margin: 9px 0; color: #667b96; font-size: 11px; line-height: 1.5; }
+.submittedAssessmentCard em { display: inline-flex; align-items: center; gap: 5px; color: #71849d; font-size: 9px; font-style: normal; font-weight: 700; }
+.assessmentSubmissionEmpty { grid-column: 1/-1; display: grid; min-height: 260px; place-items: center; align-content: center; gap: 8px; border: 2px dashed #c8d8ee; border-radius: 20px; background: rgba(255,255,255,.65); color: #5973c5; text-align: center; }
+.assessmentSubmissionEmpty strong { color: #2c4566; }
+.assessmentSubmissionEmpty p { margin: 0; color: #71849d; }
+@media (max-width: 650px) {
+  .assessmentSwipeWorkspace { padding: 12px; border-radius: 20px; }
+  .assessmentSwipeTabs > button { min-height: 60px; padding: 8px; gap: 7px; }
+  .assessmentSwipeTabs > button > span { width: 34px; height: 34px; }
+  .assessmentSwipeTabs small { display: none; }
+  .assessmentSwipeTabs strong { font-size: 11px; }
+  .assessmentSwipeTabs em { padding: 4px 6px; }
+  .submittedAssessmentGrid { grid-template-columns: 1fr; }
+}

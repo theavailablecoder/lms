@@ -1,0 +1,135 @@
+.studentProfilePage {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px 0 32px;
+}
+
+.studentProfileHero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 112px;
+  padding: 24px 30px;
+  border-radius: 18px;
+  color: #fff !important;
+  background: linear-gradient(120deg, #3158b6, #5c7fe0) !important;
+  box-shadow: 0 12px 26px #3158b633;
+}
+
+.studentProfileAvatar {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  place-items: center;
+  border: 4px solid #ffffff80;
+  border-radius: 50%;
+  background: #ffffff2b;
+}
+
+.studentProfileKicker {
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  opacity: .78;
+}
+
+.studentProfileHero h1 { margin: 4px 0; color: #fff !important; font-size: 25px; }
+.studentProfileHero p { margin: 0; color: #eef3ff !important; font-size: 13px; }
+
+.studentProfileStatus {
+  display: grid;
+  gap: 2px;
+  margin-left: auto;
+  padding: 11px 15px;
+  border: 1px solid #ffffff4d;
+  border-radius: 12px;
+  background: #ffffff1f;
+  text-align: right;
+}
+
+.studentProfileStatus strong { color: #fff !important; font-size: 20px; }
+.studentProfileStatus span { color: #fff !important; font-size: 10px; opacity: .9; }
+
+.studentProfileProgress {
+  height: 8px;
+  margin: -4px 28px 0;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #dce5f8;
+}
+
+.studentProfileProgress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #2bb673;
+  transition: width .3s ease;
+}
+
+.studentProfileSectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.studentProfileSectionHeading h2 { margin: 0 0 4px; color: #203954; font-size: 20px; }
+.studentProfileSectionHeading p { margin: 0; color: #74859b; font-size: 12px; }
+.profileCompleteBadge, .profileIncompleteBadge {
+  padding: 7px 11px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.profileCompleteBadge { color: #147a54; background: #dff7eb; }
+.profileIncompleteBadge { color: #9a6800; background: #fff3cf; }
+
+.studentProfileGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.studentProfileField {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 78px;
+  padding: 15px 18px;
+  border: 1px solid #e0e7f1;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 4px 13px #2e47700c;
+}
+
+.studentProfileField.address { grid-column: 1 / -1; }
+.studentProfileFieldIcon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border-radius: 11px;
+  color: #315ec7;
+  background: #eaf0ff;
+}
+.studentProfileField.phone .studentProfileFieldIcon { color: #12865b; background: #e3f7ef; }
+.studentProfileField.email .studentProfileFieldIcon { color: #8650c5; background: #f2eaff; }
+.studentProfileField div { display: grid; min-width: 0; gap: 4px; }
+.studentProfileField small { color: #8190a3; font-size: 10px; font-weight: 700; }
+.studentProfileField strong { overflow-wrap: anywhere; color: #263e59; font-size: 14px; }
+
+@media (max-width: 700px) {
+  .studentProfilePage { gap: 18px; padding: 4px 0 24px; }
+  .studentProfileHero { align-items: flex-start; flex-wrap: wrap; padding: 20px; }
+  .studentProfileStatus { width: 100%; margin-left: 0; text-align: left; }
+  .studentProfileProgress { margin-right: 20px; margin-left: 20px; }
+  .studentProfileSectionHeading { align-items: flex-start; flex-direction: column; }
+  .studentProfileGrid { grid-template-columns: 1fr; }
+  .studentProfileField.address { grid-column: auto; }
+}

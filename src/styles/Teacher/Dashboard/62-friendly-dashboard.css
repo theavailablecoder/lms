@@ -1,0 +1,82 @@
+/* Teacher workspace presentation only; routes and API contracts stay intact. */
+.teacherShell.teacherRefresh { --refresh-ink:#292e28; --refresh-muted:#70786c; --refresh-surface:#fff; --refresh-line:#e7e8df; --refresh-bg:#f6f7f2; background:var(--refresh-bg) !important; }
+.teacherRefresh .content { background:var(--refresh-bg) !important; min-width:0; }
+.teacherRefresh .topbar { background:var(--refresh-bg) !important; border-bottom:1px solid var(--refresh-line); padding:24px 30px; }
+.teacherRefresh .topbar h1 { color:var(--refresh-ink); font-size:24px; letter-spacing:-.7px; }
+.teacherRefresh .topbar h1::after { display:none; }
+.teacherRefresh .topbar p { color:var(--refresh-muted); font-size:13px; font-weight:400; margin-top:7px; }
+.teacherRefresh .sidebar { background:#283b32 !important; border:0 !important; border-radius:16px !important; box-shadow:none !important; }
+.teacherRefresh .sidebar::before,.teacherRefresh .sidebar::after,.teacherRefresh .navItem::before,.teacherRefresh .navItem::after { display:none !important; }
+.teacherRefresh .brand { background:transparent !important; min-height:115px; }
+.teacherRefresh .sidebarLogoOrbit { width:70px; height:70px; box-shadow:none !important; border:0; background:transparent; }
+.teacherRefresh .sidebarLogoOrbit::before,.teacherRefresh .sidebarLogoOrbit::after { display:none; }
+.teacherRefresh .sidebarToggle { background:#41564a !important; color:#fff !important; border:0; box-shadow:none; }
+.teacherRefresh .navGroup>p { color:#a6b9aa !important; font-size:10px; letter-spacing:1.3px; padding:0 16px; margin:22px 0 10px; }
+.teacherRefresh .navItem { width:calc(100% - 20px) !important; margin:3px 10px !important; padding:12px !important; min-height:43px; border-radius:9px !important; background:transparent !important; color:#dce6dc !important; box-shadow:none !important; font-size:13px !important; font-weight:500; }
+.teacherRefresh .navItem svg { color:#b8cbb9 !important; background:transparent !important; box-shadow:none !important; width:19px; height:19px; }
+.teacherRefresh .navItem.active,.teacherRefresh .navItem:hover { background:#40584a !important; color:#fff !important; border:0 !important; }
+.teacherRefresh .navItem.active svg { color:#e1bd8b !important; }
+.teacherRefresh .logoutButton { background:transparent !important; color:#dce6dc !important; border-top:1px solid #ffffff18; padding:18px; }
+.teacherRefresh .teacherOverview { padding:24px 30px 30px; }
+.teacherRefresh .overviewWelcome { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:25px 28px; margin-bottom:24px; border:1px solid #e5e6d9; border-radius:16px; background:#eef0e5; }
+.teacherRefresh .eyebrow { color:#79866b !important; font-size:10px; letter-spacing:1.2px; font-weight:700; }
+.teacherRefresh .overviewWelcome h2 { color:var(--refresh-ink); font-size:27px; font-weight:600; margin:9px 0; letter-spacing:-.7px; }
+.teacherRefresh .overviewWelcome p { color:var(--refresh-muted); font-size:13px; line-height:1.6; margin:0; }
+.teacherRefresh .overviewWelcome>button { display:flex; align-items:center; justify-content:center; gap:9px; flex-shrink:0; background:#b9522b; color:#fff; padding:13px 18px; min-height:44px; border-radius:9px; font-size:13px; }
+.teacherRefresh .teacherStats { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; padding:0; margin:0 0 26px; perspective:none; }
+.teacherShell.teacherRefresh .teacherStats .statCard { min-height:144px; padding:20px !important; gap:14px; background:var(--refresh-surface) !important; border:1px solid var(--refresh-line) !important; border-radius:14px !important; box-shadow:none !important; transform:none !important; text-align:left; }
+.teacherRefresh .teacherStats .statCard::before,.teacherRefresh .teacherStats .statCard::after { display:none; }
+.teacherShell.teacherRefresh .teacherStats .statIcon { width:42px; height:42px; border:0; border-radius:12px; background:#edf2e8 !important; color:#55704b !important; box-shadow:none !important; transform:none; }
+.teacherRefresh .teacherStats .statIcon svg { width:21px; height:21px; filter:none; }
+.teacherRefresh .teacherStats .statText { transform:none; }
+.teacherShell.teacherRefresh .teacherStats .statText p { color:var(--refresh-muted) !important; font-size:12px !important; font-weight:500 !important; }
+.teacherShell.teacherRefresh .teacherStats .statText strong { color:var(--refresh-ink) !important; font-size:30px !important; font-weight:650 !important; text-shadow:none !important; }
+.teacherShell.teacherRefresh .teacherStats .statText small { color:var(--refresh-muted) !important; font-size:10px !important; font-weight:400 !important; }
+.teacherRefresh .teacherStats .cardOpen { right:10px; top:10px; padding:0; border:0; background:transparent; box-shadow:none; color:#88927d; }
+.teacherShell.teacherRefresh .teacherStats .statCard:hover { border-color:#8da082 !important; box-shadow:0 4px 14px #344c3210 !important; }
+.teacherRefresh .teacherDashboardWorkspace { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr); gap:22px; padding:0; margin:0; }
+.teacherShell.teacherRefresh .teacherDashboardWorkspace>.panel { background:var(--refresh-surface) !important; border:1px solid var(--refresh-line) !important; border-radius:16px !important; box-shadow:none !important; height:auto !important; min-height:0 !important; overflow:hidden; }
+.teacherRefresh .dashboardSchedule { padding:0 !important; }
+.teacherRefresh .dashboardSchedule .dashboardSectionHeading { display:grid; grid-template-columns:auto 1fr auto; gap:15px; padding:24px !important; background:#fff !important; border-bottom:1px solid var(--refresh-line); }
+.teacherRefresh .dashboardSectionHeading h2,.teacherRefresh .dashboardQuickActions h2 { color:var(--refresh-ink) !important; font-size:20px !important; font-weight:600; margin:6px 0 !important; letter-spacing:-.4px; }
+.teacherRefresh .dashboardSectionHeading p,.teacherRefresh .dashboardQuickActions>p { color:var(--refresh-muted) !important; font-size:12px !important; font-weight:400; line-height:1.6; }
+.teacherRefresh .scheduleDateBadge { width:53px; height:62px; border:1px solid #e5e5d6 !important; border-radius:10px; background:#f4f4eb !important; color:#596c4b !important; box-shadow:none !important; }
+.teacherRefresh .scheduleDateBadge strong { font-size:25px; color:#46583d; }
+.teacherRefresh .scheduleHeadingIcon,.teacherRefresh .scheduleIllustrationPanel { display:none !important; }
+.teacherRefresh .textAction { display:inline-flex; align-items:center; justify-content:center; gap:5px; background:#f6f7f2 !important; color:#516744 !important; border:1px solid #e3e7dc !important; border-radius:8px; min-height:38px; padding:8px 10px; box-shadow:none !important; font-size:12px; }
+.teacherRefresh .schedulePlannerBody { display:block !important; padding:20px !important; min-height:0 !important; height:auto !important; }
+.teacherRefresh .dashboardSchedule .scheduleList { display:grid !important; grid-template-columns:1fr !important; gap:10px; margin:0; padding:0 !important; max-height:360px !important; min-height:0 !important; overflow-y:auto; }
+.teacherRefresh .scheduleList::before { display:none; }
+.teacherShell.teacherRefresh .dashboardSchedule .scheduleItem { display:grid; grid-template-columns:40px 85px minmax(0,1fr) auto; grid-template-rows:auto; gap:12px; min-height:90px !important; margin:0; padding:15px !important; border:1px solid #eceee5 !important; border-left:3px solid #a5b58f !important; border-radius:10px; background:#fcfcf9 !important; box-shadow:none !important; transform:none !important; }
+.teacherRefresh .dashboardSchedule .scheduleEventIcon { grid-column:1; grid-row:1; width:36px; height:36px; border:0; border-radius:9px; background:#edf2e5 !important; color:#658251 !important; box-shadow:none; }
+.teacherRefresh .dashboardSchedule .scheduleTime { grid-column:2; grid-row:1; justify-items:start; border:0 !important; }
+.teacherRefresh .dashboardSchedule .scheduleTime strong { color:#3d4a36; font-size:13px; }
+.teacherRefresh .dashboardSchedule .scheduleTime span { font-size:9px; color:#77886b; }
+.teacherRefresh .dashboardSchedule .scheduleItem>div:nth-of-type(2) { grid-column:3; grid-row:1; padding:0; }
+.teacherRefresh .dashboardSchedule .scheduleItem>div:nth-of-type(2) strong { font-size:13px; color:var(--refresh-ink); white-space:normal; }
+.teacherRefresh .dashboardSchedule .scheduleItem>div:nth-of-type(2) p { font-size:11px; line-height:1.5; color:var(--refresh-muted); }
+.teacherRefresh .dashboardSchedule .scheduleItem .badge { grid-column:4; grid-row:1; background:#edf3e5; color:#5c754b; border:0; font-size:10px; }
+.teacherRefresh .scheduleTodayEmpty { padding:30px 16px; color:#657b52; background:#fafbf7; border:1px dashed #d9dfcd; border-radius:12px; text-align:center; }
+.teacherRefresh .scheduleTodayEmpty p { font-size:13px; color:var(--refresh-muted); }
+.teacherRefresh .dashboardQuickActions { display:grid; grid-template-columns:1fr !important; gap:9px !important; padding:24px !important; }
+.teacherRefresh .dashboardQuickActions>p { margin:0 0 10px; }
+.teacherShell.teacherRefresh .dashboardQuickActions>button { display:grid; grid-template-columns:40px minmax(0,1fr) auto; gap:12px; min-height:76px !important; padding:14px !important; border:1px solid #e9ebe2 !important; border-radius:10px; background:#fafbf7 !important; box-shadow:none !important; transform:none !important; }
+.teacherRefresh .dashboardQuickActions>button:hover { border-color:#9aae88 !important; }
+.teacherRefresh .dashboardQuickActions .quickActionIcon { width:38px; height:38px; background:#edf2e5; color:#607a4f; border-radius:10px; box-shadow:none; }
+.teacherRefresh .dashboardQuickActions>button strong { font-size:13px; color:var(--refresh-ink); }
+.teacherRefresh .dashboardQuickActions>button small { font-size:11px; font-weight:400; line-height:1.5; color:var(--refresh-muted); }
+.teacherRefresh .dashboardQuickActions>button>svg { position:static; color:#7f906f; }
+.teacherRefresh .dashboardAssignments { padding:24px !important; }
+.teacherRefresh .dashboardAssignments .dashboardSectionHeading { border:0; padding:0; background:transparent; }
+.teacherRefresh .assignmentPreviewCard { background:#fafbf7; border-color:var(--refresh-line); border-radius:10px; box-shadow:none !important; transform:none !important; }
+.teacherRefresh .assignmentPreviewContent strong { font-size:14px; color:var(--refresh-ink); white-space:normal; }
+.teacherRefresh .assignmentPreviewContent p { font-size:12px; }
+.teacherRefresh .dashboardMiniCalendar { padding:20px !important; }
+.teacherRefresh .miniCalendarNewEvent { background:#59734b; color:#fff; box-shadow:none; }
+.teacherRefresh button:focus-visible { outline:3px solid #b86b38 !important; outline-offset:3px; }
+.teacherRefresh.themeDark { --refresh-bg:#202820; --refresh-surface:#2c352b; --refresh-ink:#edf1e8; --refresh-muted:#b3bdab; --refresh-line:#424d3b; }
+.teacherRefresh.themeDark .overviewWelcome,.teacherRefresh.themeDark .dashboardSchedule .dashboardSectionHeading { background:#303b2b !important; }
+.teacherRefresh.themeDark .dashboardQuickActions>button,.teacherRefresh.themeDark .dashboardSchedule .scheduleItem,.teacherRefresh.themeDark .assignmentPreviewCard { background:#323d2e !important; }
+@media(max-width:1100px) { .teacherRefresh .teacherStats { grid-template-columns:repeat(2,minmax(0,1fr)); }.teacherRefresh .teacherDashboardWorkspace { grid-template-columns:1fr; }.teacherRefresh .overviewWelcome { align-items:flex-start; }.teacherRefresh .overviewWelcome h2 { font-size:23px; } }
+@media(max-width:700px) { .teacherRefresh .teacherOverview { padding:16px; }.teacherRefresh .topbar { padding:20px 16px; }.teacherRefresh .overviewWelcome { flex-direction:column; padding:20px; }.teacherRefresh .overviewWelcome>button { width:100%; }.teacherRefresh .dashboardSchedule .dashboardSectionHeading { grid-template-columns:auto 1fr; padding:18px !important; }.teacherRefresh .dashboardSchedule .dashboardSectionHeading>.textAction { grid-column:1 / -1; }.teacherRefresh .dashboardSchedule .scheduleItem { grid-template-columns:36px minmax(0,1fr) auto; gap:10px; }.teacherRefresh .dashboardSchedule .scheduleTime { grid-column:2; }.teacherRefresh .dashboardSchedule .scheduleItem>div:nth-of-type(2) { grid-column:2 / -1; grid-row:2; }.teacherRefresh .dashboardSchedule .scheduleItem .badge { grid-column:3; }.teacherRefresh .teacherStats { gap:10px; }.teacherShell.teacherRefresh .teacherStats .statCard { grid-template-columns:1fr; padding:16px !important; }.teacherRefresh .dashboardAssignments .dashboardSectionHeading { flex-wrap:wrap; } }
+@media(prefers-reduced-motion:reduce) { .teacherRefresh *, .teacherRefresh *::before, .teacherRefresh *::after { transition:none !important; animation:none !important; } }

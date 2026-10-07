@@ -1,0 +1,55 @@
+/* Student homework presentation; answers, validation and submission are untouched. */
+#eduStudentHomework { padding:24px 30px; min-width:0; }
+#eduStudentHomework .homeworkHero { display:flex; align-items:center; gap:16px; min-height:0; padding:24px 28px; margin:0 0 22px; border:0 !important; border-radius:12px; background:#173e55 !important; box-shadow:none !important; }
+#eduStudentHomework .homeworkHero::before,#eduStudentHomework .homeworkHero::after,#eduStudentHomework .homeworkHeroArtwork { display:none !important; }
+#eduStudentHomework .homeworkHero .featureIcon { width:44px; height:44px; padding:10px; border:0; border-radius:10px; background:#ffffff15 !important; color:#77d4df; box-shadow:none; }
+#eduStudentHomework .homeworkHero h2 { color:#fff !important; -webkit-text-fill-color:#fff !important; font-size:27px; font-weight:600; }
+#eduStudentHomework .homeworkHero p { color:#b8d1df !important; -webkit-text-fill-color:#b8d1df !important; font-size:12px; font-weight:400; line-height:1.7; }
+#eduStudentHomework .homeworkHero>.badge { margin-left:auto; border:1px solid #ffffff20; background:#ffffff15 !important; color:#bce6ed !important; box-shadow:none; }
+#eduStudentHomework .studentHomeworkWorkspace { display:grid; grid-template-columns:260px minmax(0,1fr); gap:22px; align-items:start; }
+#eduStudentHomework .studentHomeworkSidebar { border:1px solid #d9e5ec; border-radius:12px; background:#fff; box-shadow:none !important; overflow:hidden; }
+#eduStudentHomework .studentHomeworkSidebarTitle { padding:20px; background:#f3f8fb; border-bottom:1px solid #e0eaf0; }
+#eduStudentHomework .studentHomeworkSidebarTitle strong { color:#365d72; font-size:14px; }
+#eduStudentHomework .studentHomeworkSidebarTitle small { color:#829aaa; font-size:11px; margin-top:6px; }
+#eduStudentHomework .studentHomeworkSidebar>button { display:grid; grid-template-columns:22px minmax(0,1fr); gap:10px; width:100%; padding:18px !important; border:0; border-bottom:1px solid #e4edf2; border-radius:0; background:#fff !important; box-shadow:none !important; text-align:left; }
+#eduStudentHomework .studentHomeworkSidebar>button.active { background:#edf7fa !important; box-shadow:inset 3px 0 0 #16869a !important; }
+#eduStudentHomework .studentHomeworkSidebar>button>svg { color:#498a9f; }
+#eduStudentHomework .studentHomeworkSidebar>button strong { color:#3b647a; font-size:12px; line-height:1.6; }
+#eduStudentHomework .studentHomeworkSidebar>button small { color:#829baa; font-size:10px; line-height:1.7; }
+#eduStudentHomework .studentHomeworkSidebar>button .badge { grid-column:2; justify-self:start; border-radius:5px; box-shadow:none; }
+#eduStudentHomework .studentHomeworkDetail { min-width:0; }
+#eduStudentHomework .studentHomeworkPaper { padding:0 !important; border:0; background:transparent; box-shadow:none !important; }
+#eduStudentHomework .studentPaperSheet { padding:24px !important; border:1px solid #d9e5ec; border-radius:12px; background:#fff !important; box-shadow:none !important; }
+#eduStudentHomework .studentQuizVisual { display:none !important; }
+#eduStudentHomework .studentPaperSheet>header { min-height:0; padding:0 0 22px !important; margin:0; border:0; border-bottom:1px solid #e2edf2; border-radius:0; background:transparent !important; box-shadow:none !important; }
+#eduStudentHomework .studentPaperSheet>header::before { display:none !important; }
+#eduStudentHomework .studentPaperSheet>header>small { display:block; color:#438fa4 !important; -webkit-text-fill-color:#438fa4 !important; font-size:9px; letter-spacing:1.3px; }
+#eduStudentHomework .studentPaperSheet>header h3 { color:#2c536a !important; -webkit-text-fill-color:#2c536a !important; font-size:25px; font-weight:600; line-height:1.4; margin:12px 0 8px; text-shadow:none; }
+#eduStudentHomework .studentPaperSheet>header p { color:#829aaa !important; -webkit-text-fill-color:#829aaa !important; font-size:12px; font-weight:400; }
+#eduStudentHomework .studentPaperMeta { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:20px 0; }
+#eduStudentHomework .studentPaperMeta>span { min-height:68px; padding:13px !important; border:1px solid #e0eaf0 !important; border-radius:8px; background:#f8fbfd !important; box-shadow:none !important; }
+#eduStudentHomework .studentPaperMeta>span::before,#eduStudentHomework .studentPaperMeta>span::after { display:none; }
+#eduStudentHomework .studentPaperMeta small { color:#829aaa !important; -webkit-text-fill-color:#829aaa !important; font-size:9px; letter-spacing:.3px; }
+#eduStudentHomework .studentPaperMeta strong { color:#426c83 !important; -webkit-text-fill-color:#426c83 !important; font-size:12px; margin-top:7px; line-height:1.5; }
+#eduStudentHomework .studentQuizMetric i { position:static; display:inline-flex; margin-bottom:6px; width:24px; height:24px; background:#e5f2f7; color:#3c8aa3; border-radius:6px; box-shadow:none; }
+#eduStudentHomework .studentPaperAnswerArea { padding:20px !important; margin-top:22px; border:1px solid #dce8ef; border-radius:10px; background:#fafcfd !important; box-shadow:none; }
+#eduStudentHomework .studentPaperAnswerHeading { border-bottom:1px solid #e1ebf0; padding-bottom:18px; margin-bottom:18px; }
+#eduStudentHomework .studentPaperAnswerHeading>span { background:#e8f3f7 !important; color:#34839b !important; border:0; box-shadow:none !important; border-radius:9px; }
+#eduStudentHomework .studentPaperAnswerHeading strong { color:#385f74 !important; -webkit-text-fill-color:#385f74 !important; font-size:17px; }
+#eduStudentHomework .studentPaperAnswerHeading small { color:#829aaa !important; -webkit-text-fill-color:#829aaa !important; font-size:11px; }
+#eduStudentHomework .homeworkSubmitBox { padding:0; border:0; background:transparent; box-shadow:none; }
+#eduStudentHomework .homeworkSubmitHeader strong { color:#486e83; font-size:14px; }
+#eduStudentHomework fieldset { min-width:0; padding:18px; border:1px solid #dbe7ee; border-radius:9px; background:#fff; }
+#eduStudentHomework legend { max-width:100%; color:#426c83 !important; -webkit-text-fill-color:#426c83 !important; font-size:13px; line-height:1.7; }
+#eduStudentHomework legend b { background:#2c8a9f !important; color:#fff !important; -webkit-text-fill-color:#fff !important; border-radius:6px; }
+#eduStudentHomework .studentMcqAnswers label { background:#f9fcfd !important; border:1px solid #dce8ef; border-radius:8px; padding:13px; color:#52798e !important; -webkit-text-fill-color:#52798e !important; font-size:12px; box-shadow:none !important; }
+#eduStudentHomework .studentMcqAnswers label:has(input:checked) { background:#e8f5f8 !important; border-color:#75b8c9; color:#256d87 !important; -webkit-text-fill-color:#256d87 !important; }
+#eduStudentHomework .studentMcqAnswers label>span { background:#edf4f8 !important; color:#52889e !important; -webkit-text-fill-color:#52889e !important; border-radius:6px; box-shadow:none; }
+#eduStudentHomework input[type=radio] { accent-color:#16869a; }
+#eduStudentHomework textarea { background:#fff !important; border:1px solid #d5e5ee !important; color:#365d72 !important; -webkit-text-fill-color:#365d72 !important; border-radius:8px; padding:12px; font-size:13px; }
+#eduStudentHomework button[type=submit] { background:#16869a !important; color:#fff !important; border:0; border-radius:8px; min-height:44px; padding:12px 20px; box-shadow:none !important; }
+#eduStudentHomework .studentTeacherReview { background:#eef8f2 !important; border:1px solid #d6e9dd; border-radius:9px; padding:18px; }
+#eduStudentHomework .homeworkEmptyState { background:#fff !important; border:1px dashed #cddfe9; border-radius:12px; box-shadow:none; }
+#eduStudentHomework :is(button,input,textarea):focus-visible { outline:2px solid #138b9f !important; outline-offset:3px; }
+@media(max-width:950px) { #eduStudentHomework .studentHomeworkWorkspace { grid-template-columns:1fr; } #eduStudentHomework .studentHomeworkSidebar { max-height:300px; overflow-y:auto; } }
+@media(max-width:600px) { #eduStudentHomework { padding:16px; } #eduStudentHomework .homeworkHero { padding:20px; } #eduStudentHomework .studentPaperSheet { padding:18px !important; } #eduStudentHomework .studentPaperMeta { grid-template-columns:repeat(2,minmax(0,1fr)); } #eduStudentHomework .studentPaperSheet>header h3 { font-size:22px; } #eduStudentHomework .studentPaperAnswerArea { padding:14px !important; } }

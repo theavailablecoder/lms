@@ -1,0 +1,12 @@
+.teacherShell .exactGrader .gradeForm .marks label {
+  position: relative;
+  padding-bottom: 0;
+}
+.teacherShell .exactGrader .gradeForm .marks label b {
+  position: absolute;
+  top: 28px;
+  left: 80px;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+.teacherShell .exactGrader .gradeForm .marks label input { width: 68px; }

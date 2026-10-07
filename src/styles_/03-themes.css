@@ -1,0 +1,2036 @@
+/* Simple education theme */
+:root {
+  color: #203040;
+  background: #f6fbff;
+  --ink: #203040;
+  --muted: #66788a;
+  --soft-text: #40566c;
+  --surface: #ffffff;
+  --surface-soft: #f3f9ff;
+  --line: #d7e7f2;
+  --primary: #256fbd;
+  --primary-soft: #e8f3ff;
+  --secondary: #159477;
+  --accent: #d58a16;
+  --accent-soft: #fff6df;
+  --success: #238651;
+  --success-soft: #e9f8ef;
+  --warning: #bd6b13;
+  --warning-soft: #fff4e5;
+  --sidebar: #123c4d;
+  --sidebar-deep: #0c2c38;
+  --shadow: 0 14px 34px rgba(25, 58, 86, 0.08);
+}
+
+body,
+.appShell,
+.teacherShell {
+  background:
+    linear-gradient(90deg, rgba(37, 111, 189, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(21, 148, 119, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, #f7fcff 0%, #f1f8fb 100%);
+  background-size: 34px 34px, 34px 34px, auto;
+  color: var(--ink);
+}
+
+.loginShell {
+  background:
+    linear-gradient(180deg, rgba(247, 252, 255, 0.96), rgba(240, 248, 250, 0.98)),
+    radial-gradient(circle at 12% 12%, rgba(37, 111, 189, 0.10), transparent 30%),
+    radial-gradient(circle at 88% 88%, rgba(21, 148, 119, 0.10), transparent 28%);
+}
+
+.loginCard,
+.signupRolePopup,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.courseCard,
+.examCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background:
+    linear-gradient(180deg, rgba(18, 60, 77, 0.98), rgba(12, 44, 56, 0.98)),
+    linear-gradient(135deg, rgba(37, 111, 189, 0.22), rgba(21, 148, 119, 0.18));
+  color: #f8fcff;
+}
+
+.loginPanel,
+.teacherShell .content {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(243, 249, 255, 0.96)),
+    radial-gradient(circle at 90% 12%, rgba(37, 111, 189, 0.08), transparent 28%),
+    radial-gradient(circle at 8% 88%, rgba(21, 148, 119, 0.08), transparent 30%);
+}
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: #f8fcff;
+}
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #a9e7d8;
+}
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #cbe7ef;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: #ffffff;
+  color: #123c4d;
+  box-shadow: 0 12px 24px rgba(7, 38, 52, 0.20), inset 3px 0 0 var(--secondary);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--secondary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 3px 0 0 #a9e7d8;
+}
+
+.topbar h1,
+.teacherShell .topbar h1,
+.featureHero h2,
+.panelHeader h2,
+.statText strong,
+.featureCard strong,
+.courseItem strong,
+.assignmentItem span,
+.homeworkTop strong,
+.examPreviewCard strong,
+.signupRolePopup h2,
+.registerForm label {
+  color: var(--ink);
+}
+
+.topbar h1 span,
+.teacherShell .topbar h1 span,
+.panelHeader h2 svg,
+.featureIcon,
+.loginBrand svg,
+.loginSubTitle,
+.loginForm .forgotButton,
+.homeworkTop span,
+.examPreviewCard span,
+.teacherShell .headerActions button {
+  color: var(--primary);
+}
+
+.topbar p,
+.teacherShell .topbar p,
+.loginBrand p,
+.featureHero p,
+.featureCard p,
+.featureCard small,
+.courseItem p,
+.activityItem p,
+.todayFocus p,
+.examCard small,
+.note,
+.assignmentBrief,
+.assignmentBoardTop p {
+  color: var(--muted);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm,
+.assignForm,
+.homeworkSubmitBox,
+.examPreviewCard,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel {
+  border-color: var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(243, 249, 255, 0.96)),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.chatComposer input {
+  border-color: var(--line);
+  background: #fbfdff;
+  color: var(--ink);
+}
+
+.loginForm input:focus,
+.loginForm select:focus,
+.loginForm textarea:focus,
+.assignForm input:focus,
+.assignForm select:focus,
+.assignForm textarea:focus,
+.registerForm input:focus,
+.registerForm select:focus,
+.registerForm textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 111, 189, 0.14);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(37, 111, 189, 0.15);
+}
+
+.signupRoleActions button:first-child,
+.registerTitle {
+  background: linear-gradient(135deg, var(--secondary), #0f766e);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span,
+.badge.green {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge,
+.activeRoleBanner {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #bde7d4;
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange,
+.authError {
+  border-color: #f3d19c;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.courseProgress {
+  background: #e3edf5;
+}
+
+.dataBars i {
+  background: rgba(169, 231, 216, 0.82);
+}
+
+.hubVisual::before {
+  border-color: rgba(169, 231, 216, 0.36);
+  background:
+    radial-gradient(circle, rgba(169, 231, 216, 0.14), transparent 58%),
+    repeating-radial-gradient(circle, rgba(255, 255, 255, 0.10) 0 2px, transparent 2px 18px);
+}
+
+/* Human-made flat theme: no gradients */
+:root {
+  color: #243244;
+  background: #f5f8fb;
+  --ink: #243244;
+  --muted: #687789;
+  --soft-text: #43556a;
+  --surface: #ffffff;
+  --surface-soft: #f4f7fa;
+  --line: #dbe5ee;
+  --primary: #2e6fba;
+  --primary-soft: #eaf2fb;
+  --secondary: #1b8a72;
+  --accent: #c77b19;
+  --accent-soft: #fff3dd;
+  --success: #2e7d50;
+  --success-soft: #eaf6ef;
+  --warning: #b86b17;
+  --warning-soft: #fff2df;
+  --sidebar: #23485a;
+  --sidebar-deep: #1c3a49;
+  --shadow: 0 10px 24px rgba(36, 50, 68, 0.07);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: #f5f8fb;
+  color: var(--ink);
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--sidebar);
+  color: #ffffff;
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: #ffffff;
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #b7ded5;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #d5e5eb;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--sidebar);
+  box-shadow: inset 4px 0 0 var(--secondary);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--secondary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: #2c566a;
+  box-shadow: inset 4px 0 0 #b7ded5;
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.signupRoleActions button:first-child,
+.registerTitle {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--success);
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #c9e8d5;
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange,
+.authError {
+  border-color: #f1d2a5;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: var(--primary);
+  background: #edf4fb;
+  color: var(--primary);
+}
+
+.courseProgress {
+  background: #e4ebf2;
+}
+
+.hubVisual::before,
+.dataBars i {
+  background: #b7ded5;
+}
+
+/* Keep the final visual language flat and intentional. */
+*,
+*::before,
+*::after {
+  background-image: none !important;
+}
+
+/* Updated classroom color theme */
+:root {
+  color: #172033;
+  background: #f3f6f2;
+  --ink: #172033;
+  --muted: #667085;
+  --soft-text: #344054;
+  --surface: #ffffff;
+  --surface-soft: #f7faf6;
+  --line: #d9e3d5;
+  --primary: #315f9c;
+  --primary-soft: #eaf1f8;
+  --secondary: #3f7d58;
+  --accent: #b7791f;
+  --accent-soft: #fff4d8;
+  --success: #2f7a4f;
+  --success-soft: #e8f4ec;
+  --warning: #a15c16;
+  --warning-soft: #fff1df;
+  --sidebar: #2f4f3f;
+  --sidebar-deep: #263f33;
+  --shadow: 0 8px 20px rgba(23, 32, 51, 0.06);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: #f3f6f2;
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--sidebar);
+  color: #ffffff;
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--success);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #c5decf;
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange,
+.authError {
+  border-color: #e7c687;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #d9e9c9;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #dce8dc;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--sidebar);
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--accent);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: #3b614e;
+  box-shadow: inset 4px 0 0 #d9e9c9;
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: var(--primary);
+  background: #eef4fa;
+  color: var(--primary);
+}
+
+/* Lighter classroom color theme */
+:root {
+  color: #233247;
+  background: #f8fbff;
+  --ink: #233247;
+  --muted: #748195;
+  --soft-text: #4f5f73;
+  --surface: #ffffff;
+  --surface-soft: #f7faff;
+  --line: #e2ebf4;
+  --primary: #5b8fd6;
+  --primary-soft: #eef5ff;
+  --secondary: #6fb896;
+  --accent: #d6a24f;
+  --accent-soft: #fff7e8;
+  --success: #5ca978;
+  --success-soft: #eef8f2;
+  --warning: #c99043;
+  --warning-soft: #fff6ea;
+  --sidebar: #dcefe7;
+  --sidebar-deep: #dcefe7;
+  --shadow: 0 8px 18px rgba(35, 50, 71, 0.05);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: #f8fbff;
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--sidebar);
+  color: #233247;
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: #233247;
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #3f8d68;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #607466;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #c7dfd4;
+  background: #ffffff;
+  color: #233247;
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--primary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: #c7dfd4;
+  background: #eef8f3;
+  box-shadow: inset 4px 0 0 var(--secondary);
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--success);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: #376cae;
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #d4eadc;
+  background: var(--success-soft);
+  color: #3d8659;
+}
+
+.badge.orange,
+.authError {
+  border-color: #efd9b4;
+  background: var(--warning-soft);
+  color: #9d6a2b;
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: #cfe0f3;
+  background: #f2f7ff;
+  color: #376cae;
+}
+
+/* Light blue education theme: no green palette */
+:root {
+  color: #1f2d3d;
+  background: #f7faff;
+  --ink: #1f2d3d;
+  --muted: #718096;
+  --soft-text: #4a5b70;
+  --surface: #ffffff;
+  --surface-soft: #f6f9fd;
+  --line: #dfe8f3;
+  --primary: #4f7fc8;
+  --primary-soft: #edf4ff;
+  --secondary: #6f7f95;
+  --accent: #c99542;
+  --accent-soft: #fff7e8;
+  --success: #587a9c;
+  --success-soft: #eef4fa;
+  --warning: #b97932;
+  --warning-soft: #fff4e8;
+  --sidebar: #e8f0fb;
+  --sidebar-deep: #e8f0fb;
+  --shadow: 0 8px 18px rgba(31, 45, 61, 0.05);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: #f7faff;
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--sidebar);
+  color: #1f2d3d;
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: #1f2d3d;
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #4f7fc8;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #6f7f95;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #ccd9eb;
+  background: #ffffff;
+  color: #1f2d3d;
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--primary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: #ccd9eb;
+  background: #f2f6fc;
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: #587a9c;
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #d6e2ee;
+  background: #eef4fa;
+  color: #587a9c;
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: #ccd9eb;
+  background: #f2f6fc;
+  color: var(--primary);
+}
+
+/* Polished light + dark education theme */
+:root {
+  color: #182233;
+  background: #f5f7fb;
+  --ink: #182233;
+  --muted: #667085;
+  --soft-text: #3f4f63;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fc;
+  --line: #dbe3ee;
+  --primary: #3f6fb6;
+  --primary-soft: #edf3fc;
+  --secondary: #6b5fa8;
+  --accent: #c58b31;
+  --accent-soft: #fff5e3;
+  --success: #4c7f8f;
+  --success-soft: #edf5f7;
+  --warning: #b9782f;
+  --warning-soft: #fff3e5;
+  --sidebar: #202b3d;
+  --sidebar-deep: #202b3d;
+  --shadow: 0 10px 26px rgba(24, 34, 51, 0.08);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: #f5f7fb;
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: #202b3d;
+  color: #f8fafc;
+  border-right: 1px solid #182233;
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: #f8fafc;
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #9db7df;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #b6c1d2;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #182233;
+  box-shadow: inset 4px 0 0 var(--accent), 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--primary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: #3b4a61;
+  background: #2a374c;
+  box-shadow: inset 4px 0 0 #9db7df;
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.topbar,
+.featureHero,
+.panelHeader {
+  color: var(--ink);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea,
+.chatWindow {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.signupRoleActions button,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--success);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--accent);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #d2e2e7;
+  background: var(--success-soft);
+  color: #3f7180;
+}
+
+.badge.orange,
+.authError {
+  border-color: #ead1a5;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: #c9d7ea;
+  background: #eef3fa;
+  color: var(--primary);
+}
+
+/* Requested website palette */
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #2878EB;
+  --secondary: #F14D5D;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #ECF4FF;
+  --dark: #120F2D;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --ink: #120F2D;
+  --muted: #6c757d;
+  --soft-text: #343a40;
+  --surface: #ffffff;
+  --surface-soft: #f7fbff;
+  --line: #d8e7fb;
+  --primary-soft: #ECF4FF;
+  --secondary-soft: #fff0f2;
+  --accent: #ffc107;
+  --accent-soft: #fff8dc;
+  --success-soft: #eaf7ed;
+  --warning-soft: #fff8df;
+  --sidebar: #120F2D;
+  --sidebar-deep: #120F2D;
+  --shadow: 0 10px 26px rgba(18, 15, 45, 0.10);
+  font-family: var(--font-family-sans-serif);
+  color: var(--ink);
+  background: var(--light);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: var(--light);
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--dark);
+  color: var(--white);
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: var(--white);
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #9ec5fe;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #cbd5e1;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--dark);
+  box-shadow: inset 4px 0 0 var(--secondary), 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--primary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: #201a49;
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea,
+.chatWindow {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.signupRoleActions button,
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--success);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--warning);
+  color: var(--dark);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #c8ead0;
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange,
+.authError {
+  border-color: #ffe08a;
+  background: var(--warning-soft);
+  color: #8a6400;
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: #b8d4fa;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* Refined human-made theme based on the requested palette */
+:root {
+  --blue: #2878EB;
+  --indigo: #4b2fbf;
+  --purple: #6250b5;
+  --pink: #d94a86;
+  --red: #d64252;
+  --orange: #e87722;
+  --yellow: #f2b705;
+  --green: #2f9f5b;
+  --teal: #20a99a;
+  --cyan: #2098b4;
+  --white: #fff;
+  --gray: #6f7785;
+  --gray-dark: #343a40;
+  --primary: #2f73d8;
+  --secondary: #df5262;
+  --success: #2f9f5b;
+  --info: #2098b4;
+  --warning: #f2b705;
+  --danger: #d64252;
+  --light: #f2f7ff;
+  --dark: #17142f;
+  --ink: #17142f;
+  --muted: #6f7785;
+  --soft-text: #3d4654;
+  --surface: #ffffff;
+  --surface-soft: #f8fbff;
+  --line: #dce8f7;
+  --primary-soft: #eaf3ff;
+  --secondary-soft: #fff0f2;
+  --accent: #f2b705;
+  --accent-soft: #fff7dc;
+  --success-soft: #eaf7ef;
+  --warning-soft: #fff6db;
+  --sidebar: #17142f;
+  --sidebar-deep: #17142f;
+  --shadow: 0 10px 24px rgba(23, 20, 47, 0.08);
+  color: var(--ink);
+  background: var(--light);
+}
+
+body,
+.appShell,
+.teacherShell,
+.studentShell,
+.dashboard,
+.content,
+.teacherShell .content,
+.loginShell {
+  background: var(--light);
+  color: var(--ink);
+}
+
+.loginIntro,
+.sidebar,
+.teacherShell .sidebar {
+  background: var(--dark);
+  color: var(--white);
+  /* border-right: 1px solid #29254a; */
+}
+
+.brand,
+.navItem,
+.navItem:hover,
+.teacherShell .navItem,
+.teacherShell .navItem:hover,
+.logoutButton,
+.loginIntro h1,
+.loginIntro p:not(.introLabel) {
+  color: var(--white);
+}
+
+.brand svg,
+.navItem svg,
+.logoutButton svg,
+.teacherShell .brand svg,
+.teacherShell .navItem svg,
+.teacherShell .logoutButton svg,
+.introBadge,
+.introLabel {
+  color: #b7cff8;
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #bfc5d5;
+}
+
+.navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active,
+.teacherShell .navItem.active:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--dark);
+  box-shadow: inset 4px 0 0 var(--primary), 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.navItem.active svg,
+.navItem.active:hover svg,
+.teacherShell .navItem.active svg,
+.teacherShell .navItem.active:hover svg {
+  color: var(--secondary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover,
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: #343057;
+  background: #221f42;
+  box-shadow: inset 4px 0 0 #b7cff8;
+}
+
+.loginCard,
+.loginPanel,
+.signupRolePopup,
+.loginForm,
+.assignForm,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.homeworkSubmitBox,
+.examPreviewCard,
+.examCard,
+.courseCard,
+.studentCompiler,
+.studentLabList,
+.scratchStage,
+.codingWorkspace,
+.assignmentBoardItem,
+.chatComposer,
+.chatMessage.assistant p,
+.activeRoleBanner,
+.codingHomeworkBridge,
+.labProjectForm,
+.monitorTable,
+.submittedWorkPanel,
+.gradingPanel,
+.scratchEditor,
+.scratchPalette,
+.scratchCanvas,
+.compilerPane,
+.courseDashboardCard {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.roleSwitch,
+.authSwitch,
+.toolButton,
+.miniTools button,
+.modeTabs button,
+.promptChips button,
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.planScore,
+.homeworkMeta div,
+.assignmentMeta span,
+.emptyHomework,
+.courseProgress,
+.examCardActions button,
+.registerForm input,
+.registerForm select,
+.registerForm textarea,
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea,
+.chatWindow {
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+.loginForm button,
+.assignForm button,
+.roleSwitch button.active,
+.authSwitch button.active,
+.chatComposer button,
+.chatMessage.student p,
+.registerSubmit,
+.primaryButton,
+.saveButton,
+.submitButton,
+.runCodeButton,
+.publishButton,
+.modeTabs button.active,
+.weekGrid .active strong {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.signupRoleActions button,
+.signupRoleActions button:first-child,
+.registerTitle,
+.statCard:nth-child(3) .statIcon {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.statIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.statCard:nth-child(2) .statIcon,
+.courseProgress span,
+.teacherShell .courseProgress span {
+  background: var(--info);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: var(--warning);
+  color: var(--dark);
+}
+
+.badge,
+.activeRoleBanner,
+.headerActions button,
+.teacherShell .headerActions button,
+.featureIcon,
+.weekGrid strong {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge.green,
+.activeRoleBanner.teacher,
+.homeworkSubmitBox.submitted {
+  border-color: #cbe9d5;
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange,
+.authError {
+  border-color: #ffe38f;
+  background: var(--warning-soft);
+  color: #8a6500;
+}
+
+.toolButton:hover,
+.miniTools button:hover,
+.modeTabs button:hover,
+.promptChips button:hover,
+.examCardActions button:hover {
+  border-color: #c3d8f4;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+

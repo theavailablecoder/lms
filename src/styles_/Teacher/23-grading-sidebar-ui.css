@@ -1,0 +1,8 @@
+/* Desktop grading sidebar stays beside the table and scrolls independently. */
+@media (min-width: 1051px) {
+  .teacherShell .gradingExactBody { grid-template-columns: minmax(0, 1fr) 286px; align-items: stretch; }
+  .teacherShell .exactGrader { position: sticky; top: 0; height: 100vh; min-height: 0; overflow-y: auto; border-left: 1px solid #e2e9f4; border-top: 0; }
+}
+@media (max-width: 1050px) {
+  .teacherShell .exactGrader { position: static; height: auto; overflow: visible; }
+}

@@ -1,0 +1,332 @@
+.teacherAiStudyBox {
+  position: relative;
+  display: flex;
+  min-height: min(730px, calc(100vh - 170px));
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 48px 7.5% 74px;
+  perspective: 1100px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 8% 8%, rgba(237, 228, 255, 0.68) 0 13%, transparent 30%),
+    radial-gradient(ellipse at 95% 14%, rgba(220, 237, 255, 0.68) 0 14%, transparent 34%),
+    radial-gradient(ellipse at 96% 92%, rgba(239, 227, 255, 0.72) 0 12%, transparent 32%),
+    linear-gradient(135deg, #fbfcff 0%, #f5faff 51%, #fffaff 100%);
+  border: 0;
+  border-radius: 0;
+}
+
+.teacherAiStudyBox::before,
+.teacherAiStudyBox::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.teacherAiStudyBox::before {
+  z-index: -2;
+}
+
+.teacherAiStudyBox::after {
+  z-index: -2;
+}
+
+.teacherAiStudyBox::before {
+  top: -180px;
+  left: -100px;
+  width: 420px;
+  height: 420px;
+  background: rgba(235, 226, 255, 0.28);
+  filter: blur(12px);
+}
+
+.teacherAiStudyBox::after {
+  right: -130px;
+  bottom: -210px;
+  width: 480px;
+  height: 480px;
+  background: rgba(232, 222, 255, 0.25);
+  filter: blur(12px);
+}
+
+.teacherAiWelcome {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.teacherAiRobot {
+  position: relative;
+  width: 150px;
+  height: 178px;
+  margin-top: -18px;
+  margin-bottom: 20px;
+  transform: translateZ(34px) rotateX(3deg);
+  transform-style: preserve-3d;
+  animation: teacherAiFloat 4.8s ease-in-out infinite;
+}
+
+.teacherAiRobot::before {
+  position: absolute;
+  z-index: -1;
+  right: 12px;
+  bottom: -3px;
+  left: 12px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(49, 101, 218, 0.26), rgba(94, 132, 232, 0.04) 70%);
+  box-shadow: 0 10px 16px rgba(83, 117, 202, 0.16);
+  content: "";
+  transform: translateZ(-26px) rotateX(66deg);
+  filter: blur(1px);
+}
+
+.teacherAiRobot::after {
+  position: absolute;
+  z-index: -2;
+  top: 20px;
+  left: 50%;
+  width: 124px;
+  height: 124px;
+  border: 1px solid rgba(91, 132, 235, 0.24);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px rgba(103, 143, 240, 0.05),
+    0 0 0 22px rgba(161, 137, 239, 0.035);
+  content: "";
+  transform: translateX(-50%) translateZ(-20px) rotateX(66deg);
+}
+
+.teacherAiRobot img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150px;
+  height: 178px;
+  object-fit: contain;
+  object-position: 48% 8%;
+  transform: translateX(-50%) translateZ(28px) scale(1.12) rotateY(-4deg);
+  filter: drop-shadow(0 18px 11px rgba(49, 91, 193, 0.23));
+}
+
+.teacherAiSpark {
+  position: absolute;
+  color: #ffbf46;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.teacherAiSparkOne { top: 38px; left: 2px; }
+.teacherAiSparkTwo { top: 15px; right: 8px; font-size: 17px; }
+.teacherAiSparkThree { right: -2px; bottom: 44px; color: #7f91ee; font-size: 17px; }
+
+.teacherAiSparkOne { animation: teacherAiSparkFloat 2.8s ease-in-out infinite; }
+.teacherAiSparkTwo { animation: teacherAiSparkFloat 3.2s .4s ease-in-out infinite; }
+.teacherAiSparkThree { animation: teacherAiSparkFloat 2.5s .8s ease-in-out infinite; }
+
+.teacherAiWelcome h2 {
+  margin: 0;
+  color: #263dcc;
+  font-size: clamp(28px, 2.65vw, 39px);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  background: none;
+  -webkit-text-fill-color: #263dcc;
+  text-shadow: 0 2px 8px rgba(50, 76, 190, 0.14);
+  transform: translateZ(18px);
+}
+
+.teacherAiWelcome p {
+  margin: 10px 0 0;
+  color: #566f9d;
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.teacherAiDots {
+  display: flex;
+  gap: 11px;
+  margin-top: 25px;
+}
+
+.teacherAiDots i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbcaf5;
+}
+
+.teacherAiDots i.active {
+  background: #2863e8;
+}
+
+.teacherAiComposer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: min(900px, 100%);
+  min-height: 68px;
+  margin-top: 32px;
+  padding: 0 12px 0 18px;
+  border: 1px solid rgba(218, 226, 243, 0.8);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 18px 0 -12px rgba(111, 143, 226, 0.08),
+    0 25px 35px rgba(70, 100, 163, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: translateZ(22px) rotateX(2deg);
+  transform-style: preserve-3d;
+}
+
+.teacherAiAttach,
+.teacherAiSend {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 0;
+}
+
+.teacherAiAttach {
+  width: 36px;
+  height: 42px;
+  color: #59729d;
+  background: transparent;
+}
+
+.teacherAiComposer input {
+  min-width: 0;
+  flex: 1;
+  height: 60px;
+  padding: 0 14px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #293a5c;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.teacherAiComposer input::placeholder {
+  color: #8798b8;
+  opacity: 1;
+}
+
+.teacherAiSend {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  background: #2763e8;
+  box-shadow:
+    0 7px 12px rgba(39, 99, 232, 0.28),
+    inset 0 2px 3px rgba(255, 255, 255, 0.26);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.teacherAiSend:hover:not(:disabled) {
+  background: #174cc4;
+  transform: translateY(-1px);
+}
+
+.teacherAiSend:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.teacherAiConversation {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(900px, 100%);
+  max-height: min(540px, 60vh);
+  gap: 14px;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 25px rgba(70, 100, 163, 0.08);
+}
+
+.teacherAiMessage {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 15px;
+  background: #edf3ff;
+  color: #2c426b;
+}
+
+.teacherAiMessage.student {
+  justify-self: end;
+  background: #2863e8;
+  color: #fff;
+}
+
+.teacherAiMessage span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  opacity: 0.72;
+}
+
+.teacherAiMessage p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+
+@keyframes teacherAiFloat {
+  0%, 100% { transform: translateZ(34px) rotateX(3deg) translateY(0); }
+  50% { transform: translateZ(34px) rotateX(3deg) translateY(-8px); }
+}
+
+@keyframes teacherAiSparkFloat {
+  0%, 100% { opacity: .65; transform: translateY(0) scale(.9); }
+  50% { opacity: 1; transform: translateY(-5px) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teacherAiRobot,
+  .teacherAiSparkOne,
+  .teacherAiSparkTwo,
+  .teacherAiSparkThree {
+    animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacherAiStudyBox {
+    min-height: calc(100vh - 170px);
+    padding: 30px 18px 46px;
+  }
+
+  .teacherAiWelcome h2 {
+    font-size: 29px;
+  }
+
+  .teacherAiWelcome p br {
+    display: none;
+  }
+
+  .teacherAiComposer {
+    min-height: 62px;
+    border-radius: 17px;
+  }
+
+  .teacherAiComposer input {
+    font-size: 14px;
+  }
+}

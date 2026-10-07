@@ -1,0 +1,24 @@
+.lbGrowthRibbon {
+  left: 50% !important;
+  right: auto !important;
+  margin: 0 !important;
+  transform: translateX(-50%) translateZ(28px) !important;
+  animation: championRibbonFloatCentered 3s ease-in-out infinite !important;
+}
+
+@keyframes championRibbonFloatCentered {
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -4px;
+    filter: drop-shadow(0 6px 5px #4359912b);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lbGrowthRibbon {
+    animation: none !important;
+  }
+}

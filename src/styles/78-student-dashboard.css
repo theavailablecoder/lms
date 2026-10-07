@@ -1,0 +1,49 @@
+/* Only the student dashboard: no global website or data changes. */
+#eduStudentDashboard { padding:24px 30px; min-width:0; }
+#eduStudentDashboard .sdWelcome { position:relative; display:flex; align-items:center; min-height:220px; padding:28px 32px; border:0 !important; border-radius:16px; background:linear-gradient(110deg,#173e55,#246579) !important; overflow:hidden; box-shadow:none !important; }
+#eduStudentDashboard .sdWelcomeCopy { max-width:65%; position:relative; z-index:1; }
+#eduStudentDashboard .sdWelcome h1,#eduStudentDashboard .sdWelcome h2 { color:#fff !important; -webkit-text-fill-color:#fff; font-size:30px; font-weight:600; letter-spacing:-.8px; }
+#eduStudentDashboard .sdWelcomeCopy>p { color:#b9d7e4 !important; font-size:13px; font-weight:400; line-height:1.7; }
+#eduStudentDashboard .sdLearningHighlights { gap:8px; margin-top:18px; }
+#eduStudentDashboard .sdLearningHighlights>span { background:#ffffff10 !important; border:1px solid #ffffff25 !important; border-radius:7px; color:#cce8ef !important; font-size:11px; box-shadow:none; }
+#eduStudentDashboard .sdDailyGoal { margin-top:18px; max-width:310px; }
+#eduStudentDashboard .sdDailyGoalLabel { color:#b9d7e4; font-size:10px; }
+#eduStudentDashboard .sdDailyGoalLabel strong,#eduStudentDashboard .sdDailyGoalLabel span { color:#b9d7e4 !important; }
+#eduStudentDashboard .sdDailyGoalTrack { height:5px; border-radius:4px; background:#ffffff20; }
+#eduStudentDashboard .sdDailyGoalTrack>span { background:#63d0d3 !important; }
+#eduStudentDashboard .sdWelcomeVisual { width:220px; right:35px; opacity:.92; }
+#eduStudentDashboard .sdWelcomeVisual img { filter:drop-shadow(0 12px 12px #09283b25); }
+#eduStudentDashboard .sdVisualBubble { display:none; }
+#eduStudentDashboard .sdStatsRow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin:20px 0; }
+#eduStudentDashboard .sdStatCard { display:flex; align-items:center; gap:14px; min-height:120px; padding:20px; border:1px solid #d9e5ec !important; border-radius:12px; background:#fff !important; box-shadow:none !important; }
+#eduStudentDashboard .sdStatIcon { width:42px; height:42px; flex-shrink:0; background:#e9f4f7 !important; color:#34879f !important; border-radius:11px; box-shadow:none; }
+#eduStudentDashboard .sdStatText h3,#eduStudentDashboard .sdStatText p { color:#7b94a4 !important; font-size:12px; font-weight:500; }
+#eduStudentDashboard .sdStatText strong { color:#2d576e !important; font-size:29px; font-weight:650; }
+#eduStudentDashboard .sdStatText span,#eduStudentDashboard .sdStatText small { color:#8aa0ae !important; font-size:10px; }
+#eduStudentDashboard .sdDashboardContent { gap:20px; }
+#eduStudentDashboard .sdCard { padding:22px; border:1px solid #d9e5ec !important; border-radius:12px; background:#fff !important; box-shadow:none !important; }
+#eduStudentDashboard .sdCardHeader { margin-bottom:18px; }
+#eduStudentDashboard .sdCardHeader h2,#eduStudentDashboard .sdCardHeader h3 { color:#365e74; font-size:17px; font-weight:600; }
+#eduStudentDashboard .sdViewAll { padding:7px 10px; border:1px solid #dbe9ef; border-radius:7px; background:#f2f8fb; color:#39829b; font-size:10px; }
+#eduStudentDashboard .sdAssignmentList { display:grid; gap:7px; }
+#eduStudentDashboard .sdAssignmentItem { padding:12px; border:1px solid #e6eef3; border-radius:9px; background:#fafcfd; }
+#eduStudentDashboard .sdItemIcon { width:35px; height:35px; background:#e9f4f7 !important; color:#3989a1 !important; border-radius:8px; box-shadow:none !important; }
+#eduStudentDashboard .sdAssignmentBody strong,#eduStudentDashboard .sdAssignmentBody h3 { color:#3d647a; font-size:12px; }
+#eduStudentDashboard .sdAssignmentBody p,#eduStudentDashboard .sdAssignmentBody span { color:#8aa1af; font-size:10px; }
+#eduStudentDashboard .sdAssignmentTime { color:#8aa1af; font-size:9px; }
+#eduStudentDashboard .sdScheduleCardContent { grid-template-columns:1fr !important; }
+#eduStudentDashboard .sdScheduleIllustration { display:none; }
+#eduStudentDashboard .sdScheduleTrack { display:grid; gap:9px; }
+#eduStudentDashboard .sdScheduleItem { min-height:65px; padding:14px; border:1px solid #e0eaf0; border-radius:9px; background:#fafcfd; }
+#eduStudentDashboard .sdScheduleTime { color:#62879a; font-size:11px; }
+#eduStudentDashboard .sdScheduleBody strong { color:#426a80; font-size:12px; }
+#eduStudentDashboard .sdScheduleBody span,#eduStudentDashboard .sdScheduleBody p { color:#89a1af; font-size:10px; }
+#eduStudentDashboard .sdScheduleDot { background:#49a3b7 !important; border-color:#49a3b7 !important; box-shadow:none; }
+#eduStudentDashboard .sdAnnouncementItem { padding:14px 0; border-bottom:1px solid #e7eef3; }
+#eduStudentDashboard .sdAnnouncementItem strong { color:#426a80; font-size:12px; }
+#eduStudentDashboard .sdAnnouncementItem p { color:#839daa; font-size:11px; line-height:1.7; }
+#eduStudentDashboard .sdCalendarBox { border:1px solid #e0eaf0; border-radius:10px; background:#fafcfd; box-shadow:none; }
+#eduStudentDashboard .sdDateSelected { background:#16869a !important; color:#fff !important; }
+#eduStudentDashboard button:focus-visible { outline:2px solid #138b9f !important; outline-offset:3px; }
+@media(max-width:1100px) { #eduStudentDashboard .sdStatsRow { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:650px) { #eduStudentDashboard { padding:16px; } #eduStudentDashboard .sdWelcome { padding:24px; min-height:0; } #eduStudentDashboard .sdWelcomeCopy { max-width:100%; } #eduStudentDashboard .sdWelcomeVisual { display:none; } #eduStudentDashboard .sdWelcome h1,#eduStudentDashboard .sdWelcome h2 { font-size:25px; } #eduStudentDashboard .sdStatsRow { gap:10px; } #eduStudentDashboard .sdStatCard { padding:15px; gap:10px; } #eduStudentDashboard .sdMainGrid,#eduStudentDashboard .sdMainGridBottom { grid-template-columns:1fr; } #eduStudentDashboard .sdCard { padding:18px; } }

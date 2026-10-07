@@ -1,0 +1,21 @@
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./styles.css";
+import "./styles/Teacher/Dashboard/62-friendly-dashboard.css";
+import "./styles/63-website-refresh.css";
+import "./styles/64-aktech.css";
+import "./styles/65-grading-and-navigation.css";
+import "./styles/66-aktech-studio.css";
+import "./styles/68-assessment-workspace.css";
+import "./styles/69-assignment-studio.css";
+import "./styles/70-coding-studio.css";
+import "./styles/71-progress-studio.css";
+import "./styles/72-learning-background.css";
+import "./styles/73-teacher-registration.css";
+import "./styles/74-platform-brand.css";
+import "./styles/75-eduhub-loader.css";
+import "./styles/76-resource-studio.css";
+import "./styles/77-student-homework.css";
+import "./styles/78-student-dashboard.css";
+
+createRoot(document.getElementById("root")).render(<App />);

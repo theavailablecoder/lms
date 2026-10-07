@@ -1,0 +1,16 @@
+/* Do not clip the grading form beneath its sidebar header. */
+@media (min-width: 1051px) {
+  .teacherShell .exactGrader {
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    min-height: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+  .teacherShell .exactGrader > header,
+  .teacherShell .exactGrader > section,
+  .teacherShell .exactGrader > footer { display: flex; }
+  .teacherShell .exactGrader > section { display: grid; }
+  .teacherShell .studentDetail, .teacherShell .submissionFile { display: flex !important; }
+}

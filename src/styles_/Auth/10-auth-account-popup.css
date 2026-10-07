@@ -1,0 +1,574 @@
+.backdropCard.cardFour {
+  right: 12%;
+  bottom: 11%;
+  border-color: #ddd6fe;
+  color: #7357d8;
+  animation-delay: -7s;
+}
+
+.backdropCard.cardFour::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b6ce8;
+  content: "";
+}
+
+.loginIntro .chipProgress {
+  right: 18px;
+  bottom: 82px;
+  color: #2098b4;
+  animation-delay: -4.2s;
+}
+
+.loginForm .passwordInputWrap { position:relative; display:block; }
+.loginForm .passwordInputWrap input { width:100%; padding-right:48px; }
+.loginForm .passwordVisibilityToggle, .loginCard:not(:has(.registerForm)) .loginForm .passwordVisibilityToggle { position:absolute; top:50%; right:8px; display:grid; width:34px; height:34px; min-height:0; padding:0; place-items:center; border:0; border-radius:8px; background:transparent; color:#78869a; box-shadow:none; transform:translateY(-50%); }
+.loginForm .passwordVisibilityToggle:hover { background:#eef3fb; color:#4d61c8; transform:translateY(-50%); }
+.loginForm .passwordVisibilityToggle:focus-visible { outline:2px solid #8ea7e8; outline-offset:1px; }
+.loginForm .createAccountTrigger, .loginCard:not(:has(.registerForm)) .loginForm .createAccountTrigger { display:flex; align-items:center; justify-content:center; gap:4px; min-height:24px; padding:0; border:0; border-radius:0; background:transparent; color:#8a8f99; font-size:12px; font-weight:700; box-shadow:none; }
+.loginForm .createAccountTrigger strong { color:#7084e8; font-size:12px; font-weight:800; }
+.loginForm .createAccountTrigger:hover { border:0; background:transparent; color:#6d7480; transform:none; }
+.loginForm .createAccountTrigger:hover strong { color:#4e66dc; text-decoration:underline; }
+.accountChoiceOverlay { position:fixed; inset:0; z-index:1000; display:grid; place-items:center; padding:20px; background:rgba(18,28,47,.48); backdrop-filter:blur(5px); animation:accountOverlayIn 160ms ease-out; }
+.accountChoicePopup { position:relative; width:min(520px,100%); padding:28px; border:1px solid #dbe5f4; border-radius:20px; background:#fff; box-shadow:0 24px 70px rgba(21,38,69,.22); animation:accountPopupIn 190ms ease-out; }
+.accountChoiceClose { position:absolute; top:16px; right:16px; display:grid; width:34px; height:34px; padding:0; place-items:center; border:0; border-radius:9px; background:#f2f5fa; color:#657189; }
+.accountChoiceClose:hover { background:#e7ecf5; color:#263550; }
+.accountChoiceHeading>span { color:#6277df; font-size:11px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.accountChoiceHeading h3 { margin:7px 42px 0 0; color:#24324b; font-size:22px; }
+.accountChoiceHeading p { margin:7px 0 0; color:#78869a; font-size:13px; font-weight:600; }
+.accountChoiceCards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:24px; }
+.accountChoiceCard { display:grid; grid-template-columns:45px minmax(0,1fr) auto; align-items:center; gap:11px; min-width:0; padding:15px; border:1px solid #d5e0f0; border-radius:13px; background:#fff; color:#5367d3; text-decoration:none; transition:160ms ease; }
+.accountChoiceCard:hover { border-color:#9fb3e9; box-shadow:0 10px 24px rgba(65,88,146,.12); transform:translateY(-2px); }
+.accountChoiceIcon { display:grid; width:45px; height:45px; place-items:center; border-radius:12px; background:#eaf3ff; color:#3479e6; }
+.accountChoiceCard.teacher .accountChoiceIcon { background:#f0eaff; color:#8159e8; }
+.accountChoiceCard>span:nth-child(2) { display:grid; min-width:0; gap:3px; }
+.accountChoiceCard strong { color:#263550; font-size:15px; }
+.accountChoiceCard small { overflow:hidden; color:#8793a6; font-size:10px; font-weight:700; text-overflow:ellipsis; white-space:nowrap; }
+@keyframes accountOverlayIn { from { opacity:0; } }
+@keyframes accountPopupIn { from { opacity:0; transform:translateY(10px) scale(.98); } }
+@media (max-width:560px) { .accountChoicePopup{padding:23px 18px 18px}.accountChoiceCards{grid-template-columns:1fr} }
+
+/* Compact, even spacing for the login panel. */
+.loginCard:not(:has(.registerForm)) {
+  grid-template-columns: minmax(0, 46%) minmax(420px, 54%);
+  width: min(1180px, calc(100vw - 40px));
+  height: min(680px, calc(100vh - 32px));
+  max-height: none;
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel {
+  position: relative;
+  justify-content: flex-start;
+  padding-block: 22px;
+  overflow: hidden;
+}
+
+.loginBackgroundVideo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .72;
+  filter: saturate(1.05) contrast(1.02) brightness(.96);
+  pointer-events: none;
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(244, 248, 255, .28));
+  content: "";
+  pointer-events: none;
+}
+
+.loginPanelBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(126, 104, 231, .16), transparent 32%),
+    radial-gradient(circle at 5% 74%, rgba(47, 194, 185, .15), transparent 34%),
+    radial-gradient(circle at 82% 92%, rgba(255, 170, 91, .13), transparent 30%),
+    linear-gradient(145deg, #ffffff 2%, #f1f7ff 43%, #f8f3ff 72%, #fff8f1 100%);
+  pointer-events: none;
+}
+
+.loginCard:not(:has(.registerForm)) .loginBrand,
+.loginCard:not(:has(.registerForm)) .loginLearningFlow,
+.loginCard:not(:has(.registerForm)) .roleSwitch,
+.loginCard:not(:has(.registerForm)) .demoCredentials,
+.loginCard:not(:has(.registerForm)) .loginForm {
+  position: relative;
+  z-index: 1;
+}
+
+.loginPanelBackdrop .learningMesh {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-image:
+    radial-gradient(circle, rgba(91, 132, 220, .30) 1.25px, transparent 1.6px),
+    radial-gradient(circle, rgba(119, 87, 218, .17) 1px, transparent 1.4px);
+  background-size: 27px 27px;
+  background-position: 0 0, 13px 13px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), transparent 88%);
+  animation: learningMeshMove 18s linear infinite;
+}
+
+.loginPanelBackdrop .learningWave {
+  position: absolute;
+  display: block;
+  width: 620px;
+  height: 190px;
+  left: -80px;
+  border: 2px solid transparent;
+  border-top-color: rgba(88, 132, 228, .20);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.learningWaveOne {
+  top: 31%;
+  border-top-color: rgba(53, 132, 236, .28) !important;
+  animation: learningWaveFlow 8s ease-in-out infinite alternate;
+}
+
+.learningWaveTwo {
+  top: 57%;
+  border-top-color: rgba(139, 86, 224, .24) !important;
+  animation: learningWaveFlow 10s ease-in-out -4s infinite alternate-reverse;
+}
+
+.loginPanelBackdrop .learningPulse {
+  position: absolute;
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 2px solid rgba(93, 137, 230, .34);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 0 0 0 rgba(93, 137, 230, .22);
+  animation: learningPulseNode 3.2s ease-out infinite;
+}
+
+.pulseOne { top: 25%; right: 14%; border-color: rgba(100, 79, 221, .48) !important; }
+.pulseTwo { top: 54%; left: 9%; border-color: rgba(28, 174, 164, .48) !important; animation-delay: -1.1s !important; }
+.pulseThree { right: 10%; bottom: 13%; border-color: rgba(239, 145, 65, .46) !important; animation-delay: -2.2s !important; }
+
+@keyframes learningMeshMove {
+  to { background-position: 27px 27px, 40px 40px; }
+}
+
+@keyframes learningWaveFlow {
+  from { transform: translateX(-28px) rotate(-10deg) scaleX(.96); }
+  to { transform: translateX(34px) rotate(-6deg) scaleX(1.06); }
+}
+
+@keyframes learningPulseNode {
+  0% { box-shadow: 0 0 0 0 rgba(93, 137, 230, .26); transform: scale(.9); }
+  70% { box-shadow: 0 0 0 22px rgba(93, 137, 230, 0); transform: scale(1.08); }
+  100% { box-shadow: 0 0 0 0 rgba(93, 137, 230, 0); transform: scale(.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loginPanelBackdrop span { animation: none !important; }
+}
+
+/* Alternate motion design: all movement stays below the logo area. */
+.loginPanelBackdrop {
+  background: linear-gradient(180deg, #fff 0 34%, #f7faff 56%, #faf7ff 78%, #f3fbfa 100%);
+}
+
+.loginPanelBackdrop .colorRibbon {
+  position: absolute;
+  display: block;
+  width: 125%;
+  height: 150px;
+  left: -12%;
+  top: 45%;
+  border-radius: 50%;
+  filter: blur(1px);
+  transform: rotate(-8deg);
+}
+
+.ribbonBlue {
+  border-top: 18px solid rgba(80, 132, 235, .14);
+  animation: ribbonDriftBlue 8s ease-in-out infinite alternate;
+}
+
+.ribbonPurple {
+  top: 59% !important;
+  border-top: 14px solid rgba(139, 93, 224, .12);
+  animation: ribbonDriftPurple 10s ease-in-out infinite alternate-reverse;
+}
+
+.ribbonTeal {
+  top: 73% !important;
+  border-top: 11px solid rgba(42, 183, 171, .11);
+  animation: ribbonDriftBlue 12s ease-in-out -3s infinite alternate;
+}
+
+.loginPanelBackdrop .risingLight {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  bottom: 4%;
+  border-radius: 50%;
+  background: #79a0ef;
+  box-shadow: 0 0 16px rgba(91, 137, 232, .55);
+  opacity: 0;
+  animation: risingLightMove 7s ease-in infinite;
+}
+
+.lightOne { left: 16%; }
+.lightTwo { left: 52%; width: 7px !important; height: 7px !important; background: #9473df !important; animation-delay: -2.3s !important; }
+.lightThree { left: 83%; width: 8px !important; height: 8px !important; background: #3ab8ad !important; animation-delay: -4.6s !important; }
+
+@keyframes ribbonDriftBlue {
+  from { transform: translateX(-26px) rotate(-8deg) scaleY(.9); }
+  to { transform: translateX(34px) rotate(-3deg) scaleY(1.12); }
+}
+
+@keyframes ribbonDriftPurple {
+  from { transform: translateX(30px) rotate(-5deg) scaleY(1); }
+  to { transform: translateX(-30px) rotate(-10deg) scaleY(.86); }
+}
+
+@keyframes risingLightMove {
+  0% { transform: translateY(0) scale(.6); opacity: 0; }
+  18% { opacity: .7; }
+  72% { opacity: .45; }
+  100% { transform: translateY(-235px) scale(1.25); opacity: 0; }
+}
+
+/* Education + technology circuit animation, kept below the logo. */
+.loginPanelBackdrop .techCircuit {
+  position: absolute;
+  display: block;
+  height: 120px;
+  border: 1px solid rgba(91, 135, 226, .18);
+  border-right: 0;
+  border-radius: 24px 0 0 24px;
+}
+
+.circuitOne {
+  width: 78%;
+  top: 43%;
+  right: -12%;
+  animation: circuitShift 8s ease-in-out infinite alternate;
+}
+
+.circuitTwo {
+  width: 70%;
+  right: 2%;
+  bottom: 5%;
+  border-color: rgba(126, 94, 218, .15) !important;
+  transform: rotate(180deg);
+  animation: circuitShiftTwo 10s ease-in-out infinite alternate;
+}
+
+.loginPanelBackdrop .techSymbol {
+  position: absolute;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(117, 153, 226, .25);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .64);
+  color: rgba(62, 106, 203, .36);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(72, 105, 171, .06);
+  animation: techSymbolFloat 6s ease-in-out infinite alternate;
+}
+
+.techCode { top: 41%; left: 5%; }
+.techAi { top: 48%; right: 6%; color: rgba(116, 76, 211, .40) !important; animation-delay: -1.5s !important; }
+.techMath { left: 7%; bottom: 13%; color: rgba(28, 157, 150, .38) !important; animation-delay: -3s !important; }
+.techBinary { right: 8%; bottom: 8%; color: rgba(224, 128, 54, .38) !important; animation-delay: -4.5s !important; }
+
+.loginPanelBackdrop .techDataDot {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 51%;
+  border-radius: 50%;
+  background: #7297e9;
+  box-shadow: 0 0 12px rgba(71, 118, 224, .55);
+  animation: dataDotTravel 5s linear infinite;
+}
+
+.dataDotOne { left: 10%; }
+.dataDotTwo { left: 10%; top: auto !important; bottom: 16%; background: #8d6bdd !important; animation-delay: -2.5s !important; }
+
+@keyframes circuitShift {
+  to { transform: translateX(-45px); border-radius: 8px 0 0 42px; }
+}
+
+@keyframes circuitShiftTwo {
+  to { transform: translateX(38px) rotate(180deg); }
+}
+
+@keyframes techSymbolFloat {
+  from { transform: translateY(-7px) rotate(-3deg); }
+  to { transform: translateY(9px) rotate(3deg); }
+}
+
+@keyframes dataDotTravel {
+  from { transform: translateX(0); opacity: 0; }
+  15%, 80% { opacity: .75; }
+  to { transform: translateX(330px); opacity: 0; }
+}
+
+.loginLearningFlow {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  display: flex;
+  width: min(340px, calc(100% - 56px));
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #6c7f9c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.loginLearningFlow i {
+  position: relative;
+  width: 42px;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #d9e5f8;
+}
+
+.loginLearningFlow i b {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6f91eb;
+  box-shadow: 0 0 10px rgba(75, 120, 230, .65);
+  transform: translateY(-50%);
+  animation: loginLearningPulse 2.6s ease-in-out infinite;
+}
+
+.loginLearningFlow i:nth-of-type(2) b { animation-delay: 1.3s; }
+
+@keyframes loginLearningPulse {
+  0% { left: -8px; opacity: 0; }
+  18% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { left: calc(100% + 2px); opacity: 0; }
+}
+
+@media (max-height: 720px) and (min-width: 781px) {
+  .loginLearningFlow { top: 226px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loginLearningFlow i b { animation: none; left: 50%; }
+}
+
+.loginCard:not(:has(.registerForm)) .loginBrand {
+  justify-content: center;
+  margin: 38px 0 34px;
+  padding: 0;
+}
+
+.loginCard:not(:has(.registerForm)) .loginLogoOrbit { margin: 0; }
+
+.loginCard:not(:has(.registerForm)) .loginBrandLogo {
+  width: 112px;
+  height: 112px;
+  padding: 8px;
+  animation: loginLogoFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes loginLogoFloat {
+  0%, 100% { transform: translateY(0) scale(1) rotate(-0.5deg); }
+  50% { transform: translateY(-6px) scale(1.035) rotate(0.8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loginCard:not(:has(.registerForm)) .loginBrandLogo {
+    animation: none;
+  }
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel > h2 {
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel > h2 + p {
+  margin: 0 0 14px;
+  line-height: 1.45;
+}
+
+.loginCard:not(:has(.registerForm)) .roleSwitch { margin: 0 0 14px; }
+.loginCard:not(:has(.registerForm)) .demoCredentials { margin: 0 0 14px; }
+.loginCard:not(:has(.registerForm)) .loginForm { gap: 12px; }
+
+@media (max-width:780px) {
+  .loginCard:not(:has(.registerForm)) .loginPanel {
+    min-height: 100vh;
+    justify-content: center;
+    padding: 24px 14px;
+  }
+  .loginCard:not(:has(.registerForm)) .loginBrand { margin: 38px 0 34px; }
+  .loginCard:not(:has(.registerForm)) .loginBrandLogo {
+    width: 96px;
+    height: 96px;
+    padding: 7px;
+  }
+  .loginCard:not(:has(.registerForm)) .loginPanel > h2 { font-size: 24px; }
+  .loginCard:not(:has(.registerForm)) .loginPanel > h2 + p { margin-bottom: 12px; }
+  .loginCard:not(:has(.registerForm)) .roleSwitch { margin-bottom: 12px; }
+  .loginCard:not(:has(.registerForm)) .demoCredentials { margin-bottom: 12px; }
+  .loginCard:not(:has(.registerForm)) .loginForm { gap: 11px; padding: 16px 20px; }
+  .loginCard:not(:has(.registerForm)) .loginBrand,
+  .loginCard:not(:has(.registerForm)) .loginPanel > h2,
+  .loginCard:not(:has(.registerForm)) .roleSwitch,
+  .loginCard:not(:has(.registerForm)) .demoCredentials,
+  .loginCard:not(:has(.registerForm)) .loginForm {
+    position: static;
+  }
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel > h2,
+.loginCard:not(:has(.registerForm)) .roleSwitch,
+.loginCard:not(:has(.registerForm)) .demoCredentials,
+.loginCard:not(:has(.registerForm)) .loginForm {
+  width: min(100%, 395px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loginCard:not(:has(.registerForm)) .loginPanel > h2,
+.loginCard:not(:has(.registerForm)) .demoCredentials {
+  text-align: center;
+}
+
+@media (max-width:780px) {
+  .loginCard:not(:has(.registerForm)) .loginPanel > h2 {
+    margin-top: 0 !important;
+  }
+
+  .loginCard:not(:has(.registerForm)) .loginBrand,
+  .loginCard:not(:has(.registerForm)) .loginPanel > h2,
+  .loginCard:not(:has(.registerForm)) .roleSwitch,
+  .loginCard:not(:has(.registerForm)) .demoCredentials,
+  .loginCard:not(:has(.registerForm)) .loginForm {
+    transform: none;
+  }
+}
+/* Keep the authentication hero title compact and easier to scan. */
+.loginCard:not(:has(.registerForm)) .loginIntro h1 {
+  max-width: 100%;
+  font-size: clamp(32px, 3.25vw, 40px);
+  line-height: 1.04;
+}
+
+.loginCard:not(:has(.registerForm)) .loginIntro h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Fit the workspace feature summary into two balanced lines. */
+.loginCard:not(:has(.registerForm)) .loginIntro h1 + p {
+  max-width: 445px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-height: 800px) and (min-width: 781px) {
+  .loginCard:not(:has(.registerForm)) .loginIntro h1 {
+    font-size: clamp(30px, 3.1vw, 38px);
+  }
+}
+
+/* Use the empty lower area and give the login form more breathing room. */
+.loginCard:not(:has(.registerForm)) .roleSwitch,
+.loginCard:not(:has(.registerForm)) .loginForm {
+  position: relative;
+  top: 46px;
+}
+
+@media (max-width: 780px) {
+  .loginCard:not(:has(.registerForm)) .roleSwitch,
+  .loginCard:not(:has(.registerForm)) .loginForm {
+    position: relative;
+    top: 34px;
+  }
+}
+
+/* Responsive login composition. */
+@media (max-width: 1080px) and (min-width: 781px) {
+  .loginCard:not(:has(.registerForm)) {
+    grid-template-columns: minmax(0, 44%) minmax(400px, 56%);
+    width: calc(100vw - 32px);
+  }
+}
+
+@media (max-width: 780px) {
+  .loginShell { padding: 12px; }
+
+  .loginCard:not(:has(.registerForm)) {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    min-height: calc(100dvh - 24px);
+    max-height: none;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .loginCard:not(:has(.registerForm)) .loginIntro { display: none; }
+
+  .loginCard:not(:has(.registerForm)) .loginPanel {
+    width: 100%;
+    min-height: calc(100dvh - 24px);
+    padding-inline: 16px;
+  }
+
+  .loginLearningFlow {
+    top: 238px;
+    width: min(320px, calc(100% - 44px));
+  }
+}
+
+@media (max-width: 480px) {
+  .loginShell { padding: 0; }
+
+  .loginCard:not(:has(.registerForm)) {
+    width: 100%;
+    min-height: 100dvh;
+    border-radius: 0;
+  }
+
+  .loginCard:not(:has(.registerForm)) .loginPanel {
+    min-height: 100dvh;
+    padding-inline: 12px;
+  }
+
+  .loginCard:not(:has(.registerForm)) .roleSwitch,
+  .loginCard:not(:has(.registerForm)) .loginForm {
+    width: min(100%, 395px);
+  }
+}

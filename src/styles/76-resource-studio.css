@@ -1,0 +1,54 @@
+/* Scoped course-library styles keep legacy gradients and text colors out. */
+#eduResourceStudio .courseBookCoverGrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(225px,1fr)); align-items:stretch; gap:20px; margin:0 !important; padding:0 !important; min-height:0 !important; }
+#eduResourceStudio .courseCoverPreview { display:flex !important; flex-direction:column; align-items:stretch; width:100% !important; max-width:none !important; min-width:0 !important; min-height:0 !important; height:auto !important; padding:16px !important; margin:0 !important; border:1px solid #d9e5ec !important; border-radius:14px !important; background:#fff !important; box-shadow:0 4px 14px #193e5305 !important; overflow:hidden; transform:none !important; }
+#eduResourceStudio .courseCoverPreview::before,#eduResourceStudio .courseCoverPreview::after { display:none !important; }
+#eduResourceStudio .coverPaper { position:relative; display:grid; place-items:center; width:100% !important; max-width:none !important; height:220px !important; min-height:220px !important; padding:16px !important; margin:0 !important; border:0 !important; border-radius:9px; background:linear-gradient(145deg,#edf5f9,#f4f8fa) !important; box-shadow:none !important; overflow:hidden; }
+#eduResourceStudio .coverPaper img { position:static !important; width:100% !important; height:100% !important; max-height:188px; object-fit:contain; z-index:1; border-radius:0; filter:drop-shadow(0 5px 5px #234e6b1a); }
+#eduResourceStudio .coverPaper:has(img:not([hidden])) :is(.coverIdentity,h4,.coverPageLines),#eduResourceStudio .coverPaper::before,#eduResourceStudio .coverPaper::after { display:none !important; }
+#eduResourceStudio .coverPaper img[hidden] { display:none !important; }
+#eduResourceStudio .coverCaption { display:flex !important; flex-direction:column; align-items:stretch; justify-content:space-between; flex:1; gap:16px; width:100% !important; min-width:0; padding:16px 0 0 !important; margin:0 !important; }
+#eduResourceStudio .coverCaption>strong { display:block; width:100%; min-height:40px; margin:0 !important; color:#365d72 !important; -webkit-text-fill-color:#365d72; font-size:14px; font-weight:600; line-height:1.6; text-align:left; overflow-wrap:anywhere; }
+#eduResourceStudio .coverCaption .downloadButton { position:static !important; display:flex !important; justify-content:center; align-items:center; align-self:stretch; width:100% !important; max-width:100% !important; min-width:0 !important; min-height:42px; margin:0 !important; padding:11px 14px !important; box-sizing:border-box; border:0 !important; border-radius:8px; background:#16869a !important; color:#fff !important; -webkit-text-fill-color:#fff !important; box-shadow:none !important; transform:none !important; font-size:12px; }
+#eduResourceStudio .coverCaption .downloadButton>span { color:#fff !important; -webkit-text-fill-color:#fff !important; font-size:12px; }
+#eduResourceStudio .coverCaption .downloadButton:hover { background:#11748a !important; }
+#eduResourceStudio .courseTableFooter { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; min-height:0; padding:16px 18px !important; margin:0 !important; border:1px solid #d9e5ec !important; border-radius:10px; background:#fff !important; color:#7893a3; font-size:12px; box-shadow:none !important; }
+#eduResourceStudio .courseTableFooter>div { display:flex; align-items:center; gap:8px; }
+#eduResourceStudio .courseTableFooter button { min-height:34px; padding:8px 12px; border:1px solid #d7e5ee; border-radius:7px; background:#f8fbfd; color:#527a90; font-size:11px; box-shadow:none !important; }
+#eduResourceStudio .courseTableFooter strong { padding:8px 11px; border:0; border-radius:7px; background:#e9f4f8 !important; color:#347a91 !important; -webkit-text-fill-color:#347a91; font-size:11px; box-shadow:none !important; }
+#eduResourceStudio .courseTableFooter button:disabled { opacity:.5; cursor:not-allowed; }
+@media(max-width:550px) { #eduResourceStudio .courseBookCoverGrid { grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:14px; } #eduResourceStudio .courseCoverPreview { padding:13px !important; } #eduResourceStudio .coverPaper { height:200px !important; min-height:200px !important; } #eduResourceStudio .courseTableFooter { justify-content:center; } }
+#eduResourceStudio { padding:24px 30px !important; display:grid; gap:20px; min-width:0; }
+#eduResourceStudio .resourceLibraryHeading { padding:24px 28px !important; background:#173e55 !important; border:0; border-radius:12px; overflow:hidden; }
+#eduResourceStudio .resourceLibraryHeading>span { color:#71d2df !important; -webkit-text-fill-color:#71d2df; font-size:10px; letter-spacing:1.5px; }
+#eduResourceStudio .resourceLibraryHeading h2 { margin:10px 0 8px; color:#fff !important; -webkit-text-fill-color:#fff; font-size:27px; font-weight:600; line-height:1.3; }
+#eduResourceStudio .resourceLibraryHeading p { color:#b8d1df !important; -webkit-text-fill-color:#b8d1df; margin:0; font-size:13px; line-height:1.7; }
+#eduResourceStudio .resourceLibraryHeading::after { display:none; }
+#eduResourceStudio .courseBreadcrumb { margin:0 !important; padding:0 4px !important; min-height:28px; background:transparent !important; border:0; color:#7e95a4; font-size:11px; }
+#eduResourceStudio .courseBreadcrumb strong { color:#476e83 !important; }
+#eduResourceStudio .courseLibraryLayout { grid-template-columns:240px minmax(0,1fr); gap:22px; }
+#eduResourceStudio .courseCategoryPanel { background:#fff !important; border:1px solid #d9e5ec !important; border-radius:12px !important; box-shadow:none !important; }
+#eduResourceStudio .categoryPanelHeader { padding:20px !important; min-height:0; background:#f1f7fa !important; border-bottom:1px solid #e0eaf0; border-radius:0; box-shadow:none; }
+#eduResourceStudio .categoryPanelHeader>span { display:flex; align-items:center; gap:10px; color:#365d72 !important; -webkit-text-fill-color:#365d72 !important; font-size:14px; font-weight:600; }
+#eduResourceStudio .categoryPanelHeader svg { width:20px; height:20px; padding:0; border:0; background:transparent; color:#30849c; box-shadow:none; }
+#eduResourceStudio .categoryList { display:grid; gap:4px; padding:10px !important; }
+#eduResourceStudio .categoryList>button { display:flex !important; flex-direction:row !important; align-items:center; justify-content:start; gap:12px; min-height:54px; width:100%; padding:10px 12px !important; margin:0 !important; border:0 !important; border-radius:8px !important; background:transparent !important; color:#638395 !important; -webkit-text-fill-color:#638395 !important; text-align:left; box-shadow:none !important; transform:none !important; }
+#eduResourceStudio .categoryList>button>span { display:grid; place-items:center; width:32px; height:32px; flex-shrink:0; background:#f2f7fa; border:0; border-radius:7px; box-shadow:none; }
+#eduResourceStudio .categoryList img { width:25px !important; height:25px !important; object-fit:contain; }
+#eduResourceStudio .categoryList small { font-size:12px !important; font-weight:500 !important; line-height:1.5; color:inherit !important; -webkit-text-fill-color:currentColor !important; }
+#eduResourceStudio .categoryList>button.active { background:#e9f5f8 !important; color:#26758e !important; -webkit-text-fill-color:#26758e !important; box-shadow:inset 3px 0 0 #16869a !important; }
+#eduResourceStudio .categoryList>button:hover { background:#f2f8fb !important; }
+#eduResourceStudio .courseFilterBar { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; padding:22px !important; background:#fff !important; border:1px solid #d9e5ec !important; border-radius:12px !important; box-shadow:none !important; }
+#eduResourceStudio .courseFilterBar label { display:grid; gap:9px; color:#486a7e !important; -webkit-text-fill-color:#486a7e !important; font-size:12px; font-weight:600; }
+#eduResourceStudio select { min-height:44px; padding:10px 12px; border:1px solid #d0e0e9 !important; border-radius:8px; background:#f9fbfd !important; color:#314f61 !important; -webkit-text-fill-color:#314f61 !important; font-size:13px !important; box-shadow:none !important; }
+#eduResourceStudio .courseFilterBar>button { display:flex; align-items:center; justify-content:center; gap:8px; grid-column:1 / -1; justify-self:end; min-height:42px; margin:0 !important; padding:11px 18px; border:0 !important; border-radius:8px; background:#16869a !important; color:#fff !important; -webkit-text-fill-color:#fff !important; font-size:12px; box-shadow:none !important; transform:none; }
+#eduResourceStudio .courseFilterBar>button::before,#eduResourceStudio .courseFilterBar>button::after { display:none; }
+#eduResourceStudio .sharedResourceToolbar { padding:12px 16px !important; border:1px solid #d9e5ec !important; border-radius:10px; background:#fff !important; box-shadow:none !important; }
+#eduResourceStudio .sharedResourceToolbar label { color:#748d9d !important; -webkit-text-fill-color:#748d9d; font-size:12px; }
+#eduResourceStudio .courseBookCoverGrid { gap:18px; }
+#eduResourceStudio .courseCoverPreview { border:1px solid #d9e5ec !important; border-radius:12px !important; background:#fff !important; box-shadow:none !important; }
+#eduResourceStudio .coverCaption strong { color:#365d72 !important; -webkit-text-fill-color:#365d72; }
+#eduResourceStudio .downloadButton { background:#16869a !important; color:#fff !important; border-radius:8px; box-shadow:none !important; }
+#eduResourceStudio :is(button,select,a):focus-visible { outline:2px solid #138b9f !important; outline-offset:3px; }
+@media(max-width:1000px) { #eduResourceStudio .courseFilterBar { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) { #eduResourceStudio { padding:16px !important; } #eduResourceStudio .courseLibraryLayout { grid-template-columns:1fr; } #eduResourceStudio .categoryList { grid-template-columns:repeat(2,minmax(0,1fr)); } #eduResourceStudio .courseFilterBar>button { width:100%; } #eduResourceStudio .resourceLibraryHeading { padding:22px !important; } #eduResourceStudio .resourceLibraryHeading h2 { font-size:23px; } }
+@media(max-width:400px) { #eduResourceStudio .courseFilterBar,#eduResourceStudio .categoryList { grid-template-columns:1fr; } }

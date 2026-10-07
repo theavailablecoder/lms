@@ -1,0 +1,35 @@
+.lbPodiumPanel .lbPodium {
+  min-height: 510px !important;
+  padding: 64px clamp(18px, 5vw, 58px) 64px !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  gap: clamp(12px, 2vw, 22px) !important;
+}
+
+.lbPodiumPanel .lbPodiumCard {
+  flex: 0 1 205px;
+  width: min(29%, 205px) !important;
+  margin-inline: 0 !important;
+}
+
+.lbPodiumPanel .lbStageHalo {
+  left: 50% !important;
+  transform-origin: center;
+}
+
+.lbPodiumPanel .lbGrowthRibbon {
+  left: 50% !important;
+}
+
+@media (max-width: 700px) {
+  .lbPodiumPanel .lbPodium {
+    min-height: 410px !important;
+    padding: 54px 7px 57px !important;
+    gap: 6px !important;
+  }
+
+  .lbPodiumPanel .lbPodiumCard {
+    flex-basis: 33%;
+    width: 33% !important;
+  }
+}

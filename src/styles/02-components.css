@@ -1,0 +1,3700 @@
+/* Human-crafted visual refresh */
+:root {
+  --ink: #18202a;
+  --muted: #647184;
+  --soft-text: #475364;
+  --surface: #ffffff;
+  --surface-soft: #f6f8fb;
+  --line: #dde6ef;
+  --primary: #246bfe;
+  --primary-soft: #eaf1ff;
+  --secondary: #0f8b7a;
+  --accent: #c4573a;
+  --accent-soft: #fff1ea;
+  --success: #16824a;
+  --success-soft: #eaf8f0;
+  --warning: #b66a00;
+  --warning-soft: #fff6df;
+  --sidebar: #132335;
+  --sidebar-deep: #0c1825;
+  --shadow: 0 18px 45px rgba(26, 39, 58, 0.10);
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(36, 107, 254, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(15, 139, 122, 0.028) 1px, transparent 1px),
+    #f4f7fb;
+  background-size: 36px 36px;
+}
+
+.loginShell {
+  background:
+    linear-gradient(135deg, rgba(36, 107, 254, 0.08), rgba(15, 139, 122, 0.05) 42%, rgba(196, 87, 58, 0.07)),
+    #f7fafc;
+}
+
+.loginCard {
+  width: min(1040px, 100%);
+  border: 1px solid rgba(221, 230, 239, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 28px 80px rgba(19, 35, 53, 0.16);
+}
+
+.loginIntro {
+  background:
+    linear-gradient(165deg, rgba(19, 35, 53, 0.96), rgba(19, 35, 53, 0.86)),
+    linear-gradient(45deg, rgba(36, 107, 254, 0.35), transparent 55%),
+    var(--sidebar);
+}
+
+.loginIntro h1 {
+  max-width: 440px;
+  font-size: clamp(36px, 4.6vw, 58px);
+  letter-spacing: 0;
+}
+
+.introBadge,
+.hubCore {
+  border-radius: 16px;
+}
+
+.hubChip {
+  border-radius: 8px;
+}
+
+.loginPanel {
+  background: #ffffff;
+}
+
+.loginBrand h1,
+.topbar h1,
+.featureHero h2 {
+  letter-spacing: -0.01em;
+}
+
+.loginForm {
+  border-radius: 12px;
+  box-shadow: 0 16px 34px rgba(26, 39, 58, 0.07);
+}
+
+.loginForm input,
+.loginForm select,
+.loginForm textarea,
+.assignForm input,
+.assignForm select,
+.assignForm textarea,
+.reviewForm input,
+.reviewForm select,
+.reviewForm textarea,
+.homeworkSubmitBox textarea,
+.homeworkSubmitBox input {
+  border-radius: 8px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.loginForm button,
+.assignForm button,
+.reviewForm button,
+.createHomeworkForm button,
+.chatComposer button,
+.homeworkSubmitBox button,
+.automaticCreatorActions button {
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), #174fbf);
+  box-shadow: 0 10px 20px rgba(36, 107, 254, 0.18);
+}
+
+.loginForm .roleSwitch button {
+  background: transparent;
+  color: var(--soft-text);
+  box-shadow: none;
+}
+
+.loginForm .roleSwitch button.active {
+  background: linear-gradient(135deg, var(--primary), #174fbf);
+  color: #ffffff;
+}
+
+.authSwitch {
+  border-radius: 999px;
+}
+
+.authSwitch button,
+.roleSwitch button {
+  border-radius: 999px;
+}
+
+.dashboard {
+  grid-template-columns: 264px minmax(0, 1fr);
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background:
+    linear-gradient(180deg, rgba(19, 35, 53, 0.98), rgba(12, 24, 37, 0.98)),
+    linear-gradient(135deg, rgba(36, 107, 254, 0.22), rgba(15, 139, 122, 0.18));
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.brand {
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  font-size: 25px;
+}
+
+.navItem {
+  min-height: 42px;
+  border-radius: 10px;
+  color: #dbeafe;
+}
+
+.navItem.active {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  color: #132335;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.14);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover {
+  background: rgba(255, 255, 255, 0.11);
+  transform: translateX(4px);
+}
+
+.content {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(246, 248, 251, 0.96)),
+    #f6f8fb;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 6px 0 18px;
+  backdrop-filter: blur(12px);
+}
+
+.topbar h1 {
+  font-size: clamp(30px, 3.6vw, 44px);
+}
+
+.headerActions button {
+  border-radius: 10px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.statCard,
+.panel,
+.featureHero {
+  border-color: rgba(221, 230, 239, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(26, 39, 58, 0.06);
+}
+
+.statCard {
+  align-items: flex-start;
+  min-height: 124px;
+}
+
+.statCard::after {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  width: 36px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.45;
+  content: "";
+}
+
+.statIcon,
+.featureIcon {
+  border-radius: 12px;
+  background: #132335;
+}
+
+.statCard:nth-child(2) .statIcon,
+.featureIcon {
+  background: var(--secondary);
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: var(--accent);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: #6d5a34;
+}
+
+.panelHeader {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.panelHeader h2 {
+  font-size: 18px;
+}
+
+.badge {
+  min-height: 24px;
+  height: auto;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.mainGrid,
+.teacherGrid,
+.calendarPage {
+  gap: 22px;
+}
+
+.aiChatPanel {
+  background:
+    linear-gradient(180deg, #ffffff, #fbfcfe);
+}
+
+.modeTabs button,
+.promptChips button,
+.calendarControls button,
+.monitorActions button {
+  border-radius: 999px;
+}
+
+.modeTabs button.active {
+  background: #132335;
+  border-color: #132335;
+}
+
+.chatWindow {
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, #f8fafc, #f1f5f9);
+}
+
+.chatMessage p {
+  border-radius: 12px;
+}
+
+.chatMessage.student p {
+  background: #132335;
+}
+
+.chatComposer {
+  border-radius: 12px;
+}
+
+.profileRows div,
+.todayFocus,
+.timetableItem,
+.homeworkMeta div,
+.monitorStats div,
+.submissionBlock,
+.automaticCreator,
+.attachmentCard,
+.noAttachmentNotice,
+.emptyHomework {
+  border-radius: 10px;
+}
+
+.courseProgress {
+  height: 8px;
+  background: #e3eaf2;
+}
+
+.courseProgress span {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+}
+
+.featureHero {
+  background:
+    linear-gradient(135deg, rgba(36, 107, 254, 0.08), rgba(15, 139, 122, 0.06)),
+    #ffffff;
+}
+
+.featureCard,
+.homeworkCard,
+.reviewCard,
+.monitorCard {
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.featureCard:hover,
+.homeworkCard:hover,
+.reviewCard:hover,
+.monitorCard:hover {
+  border-color: #bfd0e4;
+  box-shadow: 0 18px 36px rgba(26, 39, 58, 0.09);
+  transform: translateY(-2px);
+}
+
+.teacherShell {
+  background: #f4f7fb;
+}
+
+.teacherShell .sidebar {
+  background:
+    linear-gradient(180deg, rgba(31, 49, 67, 0.98), rgba(16, 30, 44, 0.98)),
+    linear-gradient(135deg, rgba(196, 87, 58, 0.22), rgba(36, 107, 254, 0.16));
+}
+
+.teacherShell .content {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(244, 247, 251, 0.96)),
+    #f4f7fb;
+}
+
+.teacherShell .statCard,
+.teacherShell .panel {
+  border-color: rgba(221, 230, 239, 0.95);
+  box-shadow: 0 10px 28px rgba(26, 39, 58, 0.06);
+}
+
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: #132335;
+}
+
+.calendarDay {
+  border-radius: 10px;
+}
+
+.calendarDay.selected {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.calendarDay.today span {
+  background: #132335;
+}
+
+.registerTitle {
+  border-radius: 8px 8px 0 0;
+  background: #132335;
+}
+
+.registerSubmit {
+  background: var(--accent);
+}
+
+@media (max-width: 780px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+  }
+
+  .topbar {
+    position: relative;
+  }
+
+  .statCard {
+    min-height: 108px;
+  }
+}
+
+/* Light theme override */
+:root {
+  --ink: #1f2937;
+  --muted: #667085;
+  --soft-text: #4b5563;
+  --surface: #ffffff;
+  --surface-soft: #f8fbff;
+  --line: #dce8f5;
+  --primary: #3b82f6;
+  --primary-soft: #edf6ff;
+  --secondary: #22a699;
+  --accent: #f59e0b;
+  --accent-soft: #fff7e8;
+  --sidebar: #ffffff;
+  --sidebar-deep: #f5faff;
+  --shadow: 0 14px 34px rgba(59, 130, 246, 0.10);
+}
+
+body,
+.appShell,
+.teacherShell {
+  background:
+    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(34, 166, 153, 0.035) 1px, transparent 1px),
+    #f7fbff;
+  background-size: 34px 34px;
+}
+
+.loginIntro {
+  color: #1f2937;
+  background:
+    linear-gradient(145deg, rgba(237, 246, 255, 0.98), rgba(240, 253, 250, 0.95)),
+    #ffffff;
+}
+
+.loginIntro p:not(.introLabel),
+.introLabel {
+  color: #526477;
+}
+
+.introBadge,
+.hubCore,
+.hubChip {
+  border-color: #cfe1f5;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--primary);
+}
+
+.hubCore span,
+.hubChip {
+  color: #2563eb;
+}
+
+.orbit,
+.hubVisual::before {
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.dataBars i {
+  background: rgba(34, 166, 153, 0.55);
+}
+
+.sidebar,
+.teacherShell .sidebar {
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+  border-right: 1px solid var(--line);
+  box-shadow: 8px 0 28px rgba(59, 130, 246, 0.07);
+}
+
+.brand {
+  color: #1f2937;
+  border-bottom-color: var(--line);
+}
+
+.brand svg,
+.teacherShell .brand svg {
+  color: var(--primary);
+}
+
+.navGroup p,
+.teacherShell .navGroup p {
+  color: #7a8aa0;
+}
+
+.navItem,
+.teacherShell .navItem {
+  color: #405166;
+  border: 1px solid transparent;
+}
+
+.navItem svg,
+.teacherShell .navItem svg,
+.logoutButton svg,
+.teacherShell .logoutButton svg {
+  color: #60a5fa;
+}
+
+.navItem.active,
+.teacherShell .navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active:hover {
+  border-color: #c9def7;
+  background: linear-gradient(135deg, #edf6ff, #ffffff);
+  color: #1d4ed8;
+  box-shadow: 0 12px 26px rgba(59, 130, 246, 0.13);
+}
+
+.navItem.active svg,
+.teacherShell .navItem.active svg {
+  color: #2563eb;
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover {
+  border-color: #d7e7f8;
+  background: #f4f9ff;
+  color: #1d4ed8;
+  box-shadow: inset 3px 0 0 #93c5fd;
+}
+
+.navItem:hover svg,
+.teacherShell .navItem:hover svg {
+  color: #2563eb;
+}
+
+.logoutButton,
+.teacherShell .logoutButton {
+  border-color: #dce8f5;
+  background: #f7fbff;
+  color: #405166;
+}
+
+.logoutButton:hover,
+.teacherShell .logoutButton:hover {
+  border-color: #c9def7;
+  background: #edf6ff;
+}
+
+.content,
+.teacherShell .content {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(247, 251, 255, 0.98)),
+    #f7fbff;
+}
+
+.statIcon,
+.featureIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  color: #2563eb;
+}
+
+.statCard:nth-child(2) .statIcon,
+.featureIcon {
+  background: linear-gradient(135deg, #ccfbf1, #f0fdfa);
+  color: #0f766e;
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: linear-gradient(135deg, #fef3c7, #fffbeb);
+  color: #b45309;
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: linear-gradient(135deg, #fce7f3, #fff1f2);
+  color: #be185d;
+}
+
+.modeTabs button.active,
+.calendarDay.today span {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.chatMessage.student p {
+  background: var(--primary);
+}
+
+.registerTitle {
+  background: linear-gradient(135deg, #3b82f6, #22a699);
+}
+
+/* Balanced color layer */
+:root {
+  --primary: #3f7cff;
+  --primary-soft: #eaf2ff;
+  --secondary: #20b89f;
+  --accent: #f58b4c;
+  --accent-soft: #fff1e8;
+  --violet: #8b5cf6;
+  --rose: #ec4899;
+  --mint: #2dd4bf;
+}
+
+body,
+.appShell,
+.teacherShell {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(63, 124, 255, 0.13), transparent 28%),
+    radial-gradient(circle at 92% 14%, rgba(45, 212, 191, 0.13), transparent 26%),
+    radial-gradient(circle at 78% 86%, rgba(245, 139, 76, 0.12), transparent 28%),
+    #f8fbff;
+}
+
+.loginShell {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(63, 124, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 86% 24%, rgba(45, 212, 191, 0.16), transparent 28%),
+    radial-gradient(circle at 72% 88%, rgba(236, 72, 153, 0.11), transparent 26%),
+    #f8fbff;
+}
+
+.loginIntro {
+  background:
+    linear-gradient(145deg, rgba(232, 241, 255, 0.96), rgba(231, 252, 247, 0.94) 56%, rgba(255, 242, 232, 0.96)),
+    #ffffff;
+}
+
+.loginPanel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 251, 255, 0.96)),
+    radial-gradient(circle at 88% 12%, rgba(63, 124, 255, 0.10), transparent 28%),
+    radial-gradient(circle at 10% 92%, rgba(245, 139, 76, 0.09), transparent 30%),
+    #ffffff;
+}
+
+.sidebar,
+.teacherShell .sidebar {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 54%, #fff8f1 100%);
+}
+
+.brand {
+  color: #24506e;
+}
+
+.brand svg,
+.teacherShell .brand svg {
+  color: var(--accent);
+}
+
+.navItem:nth-child(3n + 1) svg {
+  color: #3f7cff;
+}
+
+.navItem:nth-child(3n + 2) svg {
+  color: #20b89f;
+}
+
+.navItem:nth-child(3n + 3) svg {
+  color: #f58b4c;
+}
+
+.navItem.active,
+.teacherShell .navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active:hover {
+  background: linear-gradient(135deg, #eaf2ff 0%, #ecfdf8 58%, #fff5ed 100%);
+  color: #1f5ccf;
+}
+
+.content,
+.teacherShell .content {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(63, 124, 255, 0.09), transparent 25%),
+    radial-gradient(circle at 2% 68%, rgba(32, 184, 159, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(248, 251, 255, 0.96)),
+    #f8fbff;
+}
+
+.topbar {
+  border-bottom: 1px solid rgba(220, 232, 245, 0.68);
+}
+
+.topbar h1 span,
+.loginSubTitle,
+a {
+  color: var(--accent);
+}
+
+.statCard:nth-child(1) {
+  background: linear-gradient(145deg, #ffffff 0%, #eef5ff 100%);
+}
+
+.statCard:nth-child(2) {
+  background: linear-gradient(145deg, #ffffff 0%, #ecfdf8 100%);
+}
+
+.statCard:nth-child(3) {
+  background: linear-gradient(145deg, #ffffff 0%, #fff7df 100%);
+}
+
+.statCard:nth-child(4) {
+  background: linear-gradient(145deg, #ffffff 0%, #fff0f7 100%);
+}
+
+.statCard:nth-child(1)::after {
+  background: #3f7cff;
+}
+
+.statCard:nth-child(2)::after {
+  background: #20b89f;
+}
+
+.statCard:nth-child(3)::after {
+  background: #f58b4c;
+}
+
+.statCard:nth-child(4)::after {
+  background: #ec4899;
+}
+
+.panel:nth-of-type(4n + 1),
+.featureCard:nth-child(4n + 1),
+.homeworkCard:nth-child(4n + 1),
+.monitorCard:nth-child(4n + 1) {
+  background: linear-gradient(180deg, #ffffff, #f3f8ff);
+}
+
+.panel:nth-of-type(4n + 2),
+.featureCard:nth-child(4n + 2),
+.homeworkCard:nth-child(4n + 2),
+.monitorCard:nth-child(4n + 2) {
+  background: linear-gradient(180deg, #ffffff, #f0fdf9);
+}
+
+.panel:nth-of-type(4n + 3),
+.featureCard:nth-child(4n + 3),
+.homeworkCard:nth-child(4n + 3),
+.monitorCard:nth-child(4n + 3) {
+  background: linear-gradient(180deg, #ffffff, #fff8eb);
+}
+
+.panel:nth-of-type(4n + 4),
+.featureCard:nth-child(4n + 4),
+.homeworkCard:nth-child(4n + 4),
+.monitorCard:nth-child(4n + 4) {
+  background: linear-gradient(180deg, #ffffff, #fff4fa);
+}
+
+.featureHero,
+.homeworkHero {
+  border-color: #cfe4fb;
+  background:
+    linear-gradient(135deg, rgba(234, 242, 255, 0.96), rgba(236, 253, 248, 0.94) 58%, rgba(255, 245, 237, 0.96)),
+    #ffffff;
+}
+
+.panelHeader h2 svg {
+  color: var(--accent);
+}
+
+.badge {
+  background: #eaf2ff;
+  color: #1f5ccf;
+}
+
+.badge.green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.orange {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.modeTabs button.active,
+.chatComposer button,
+.homeworkSubmitBox button,
+.assignForm button,
+.reviewForm button,
+.createHomeworkForm button,
+.automaticCreatorActions button {
+  background: linear-gradient(135deg, #3f7cff, #20b89f);
+}
+
+.promptChips button:hover,
+.modeTabs button:hover,
+.monitorActions button {
+  background: #fff1e8;
+  color: #c2410c;
+}
+
+.courseProgress span {
+  background: linear-gradient(90deg, #3f7cff, #20b89f, #f58b4c);
+}
+
+.weekGrid .active strong {
+  background: linear-gradient(135deg, #f58b4c, #ec4899);
+}
+
+/* Richer human-made color details */
+:root {
+  --sky: #38bdf8;
+  --blue: #4f7cff;
+  --teal: #14b8a6;
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --coral: #fb7185;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+
+.sidebar,
+.teacherShell .sidebar {
+  background:
+    linear-gradient(90deg, rgba(79, 124, 255, 0.18) 0 5px, transparent 5px),
+    linear-gradient(180deg, #ffffff 0%, #f4fbff 38%, #fff8ee 72%, #fff4fa 100%);
+}
+
+.brand {
+  position: relative;
+}
+
+.brand::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 96px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--teal), var(--amber), var(--pink));
+  content: "";
+}
+
+.navItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.navItem::before {
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 3px;
+  border-radius: 999px;
+  background: transparent;
+  content: "";
+}
+
+.navItem:nth-child(4n + 1)::before {
+  background: var(--blue);
+}
+
+.navItem:nth-child(4n + 2)::before {
+  background: var(--teal);
+}
+
+.navItem:nth-child(4n + 3)::before {
+  background: var(--amber);
+}
+
+.navItem:nth-child(4n + 4)::before {
+  background: var(--pink);
+}
+
+.navItem.active::before,
+.teacherShell .navItem.active::before {
+  width: 5px;
+}
+
+.topbar {
+  background:
+    linear-gradient(90deg, rgba(79, 124, 255, 0.10), rgba(20, 184, 166, 0.08), rgba(245, 158, 11, 0.08), rgba(236, 72, 153, 0.08));
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+}
+
+.topbar h1 {
+  color: #17324d;
+}
+
+.topbar h1::after {
+  display: block;
+  width: 74px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--teal), var(--amber));
+  content: "";
+}
+
+.headerActions button:nth-child(1) {
+  background: #fff7ed;
+  color: #ea580c;
+  border-color: #fed7aa;
+}
+
+.headerActions button:nth-child(2) {
+  background: #eef2ff;
+  color: #4f46e5;
+  border-color: #c7d2fe;
+}
+
+.loginCard {
+  border-color: rgba(79, 124, 255, 0.18);
+  box-shadow:
+    0 28px 80px rgba(79, 124, 255, 0.13),
+    0 10px 28px rgba(20, 184, 166, 0.08);
+}
+
+.loginIntro {
+  border-right: 1px solid rgba(79, 124, 255, 0.14);
+}
+
+.introBadge {
+  background: linear-gradient(135deg, #e0f2fe, #fef3c7);
+  color: #2563eb;
+}
+
+.hubCore {
+  background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+}
+
+.hubChip.chipCourse {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.hubChip.chipUsers {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.hubChip.chipReports {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.authSwitch button.active {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+}
+
+.loginForm {
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, var(--blue), var(--teal), var(--amber), var(--pink)) 1;
+}
+
+.statCard {
+  overflow: hidden;
+}
+
+.statCard::before,
+.panel::before,
+.featureCard::before,
+.homeworkCard::before,
+.monitorCard::before,
+.reviewCard::before {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+  content: "";
+}
+
+.statCard,
+.panel,
+.featureCard,
+.homeworkCard,
+.monitorCard,
+.reviewCard {
+  position: relative;
+}
+
+.statCard:nth-child(2)::before,
+.panel:nth-of-type(4n + 2)::before,
+.featureCard:nth-child(4n + 2)::before,
+.homeworkCard:nth-child(4n + 2)::before,
+.monitorCard:nth-child(4n + 2)::before,
+.reviewCard:nth-child(4n + 2)::before {
+  background: linear-gradient(90deg, var(--teal), var(--green));
+}
+
+.statCard:nth-child(3)::before,
+.panel:nth-of-type(4n + 3)::before,
+.featureCard:nth-child(4n + 3)::before,
+.homeworkCard:nth-child(4n + 3)::before,
+.monitorCard:nth-child(4n + 3)::before,
+.reviewCard:nth-child(4n + 3)::before {
+  background: linear-gradient(90deg, var(--amber), var(--coral));
+}
+
+.statCard:nth-child(4)::before,
+.panel:nth-of-type(4n + 4)::before,
+.featureCard:nth-child(4n + 4)::before,
+.homeworkCard:nth-child(4n + 4)::before,
+.monitorCard:nth-child(4n + 4)::before,
+.reviewCard:nth-child(4n + 4)::before {
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+.panelHeader {
+  margin: -2px -2px 18px;
+  padding: 0 0 14px;
+}
+
+.panelHeader h2 {
+  color: #24364b;
+}
+
+.panelHeader h2 svg {
+  padding: 3px;
+  border-radius: 8px;
+  background: #fff1e8;
+}
+
+.studentProfileCard .panelHeader h2 svg,
+.coursesPanel .panelHeader h2 svg {
+  background: #eaf2ff;
+  color: var(--blue);
+}
+
+.studentTodayCard .panelHeader h2 svg,
+.activityPanel .panelHeader h2 svg {
+  background: #fce7f3;
+  color: var(--pink);
+}
+
+.studentHomeworkPanel .panelHeader h2 svg,
+.planPanel .panelHeader h2 svg {
+  background: #fff7e8;
+  color: var(--amber);
+}
+
+.aiChatPanel .panelHeader h2 svg,
+.timetablePanel .panelHeader h2 svg {
+  background: #ccfbf1;
+  color: var(--teal);
+}
+
+.profileRows div:nth-child(1),
+.homeworkMeta div:nth-child(1),
+.monitorStats div:nth-child(1) {
+  background: #eef6ff;
+}
+
+.profileRows div:nth-child(2),
+.homeworkMeta div:nth-child(2),
+.monitorStats div:nth-child(2) {
+  background: #ecfdf8;
+}
+
+.profileRows div:nth-child(3),
+.homeworkMeta div:nth-child(3),
+.monitorStats div:nth-child(3) {
+  background: #fff7e8;
+}
+
+.profileRows div:nth-child(4),
+.monitorStats div:nth-child(4) {
+  background: #fff0f7;
+}
+
+.monitorStats div:nth-child(5) {
+  background: #f3e8ff;
+}
+
+.courseItem,
+.assignmentItem,
+.activityItem,
+.calendarEventItem,
+.assignmentBoardItem,
+.studentHomeworkItem {
+  border-bottom-color: rgba(148, 163, 184, 0.22);
+}
+
+.courseItem:hover,
+.assignmentItem:hover,
+.activityItem:hover,
+.calendarEventItem:hover {
+  background: rgba(234, 242, 255, 0.64);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.featureHero h2,
+.homeworkHero h2 {
+  color: #1e3a8a;
+}
+
+.featureIcon {
+  box-shadow: inset 0 0 0 1px rgba(20, 184, 166, 0.20), 0 10px 18px rgba(20, 184, 166, 0.12);
+}
+
+.chatWindow {
+  background:
+    linear-gradient(180deg, rgba(238, 246, 255, 0.92), rgba(255, 248, 235, 0.78)),
+    #f8fbff;
+}
+
+.chatMessage.assistant p {
+  border-left: 4px solid var(--teal);
+}
+
+.chatMessage.student p {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+}
+
+.attachmentCard {
+  background: linear-gradient(135deg, #f8fbff, #fff7ed);
+}
+
+.automaticCreator {
+  background: linear-gradient(135deg, #eef6ff, #ecfdf8 52%, #fff7e8);
+}
+
+.calendarDay:nth-child(7n + 1) {
+  background: #fff7ed;
+}
+
+.calendarDay:nth-child(7n + 2) {
+  background: #eff6ff;
+}
+
+.calendarDay:nth-child(7n + 3) {
+  background: #ecfdf8;
+}
+
+.calendarDay:nth-child(7n + 4) {
+  background: #fdf4ff;
+}
+
+.calendarDay:nth-child(7n + 5) {
+  background: #fffbeb;
+}
+
+.calendarDay:nth-child(7n + 6) {
+  background: #f0f9ff;
+}
+
+.calendarDay:nth-child(7n) {
+  background: #fff1f2;
+}
+
+.calendarDay.selected {
+  background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+}
+
+/* Human-made product polish: calmer, intentional, less generated-looking */
+:root {
+  --ink: #223044;
+  --muted: #687386;
+  --soft-text: #4d5c70;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fc;
+  --line: #d9e2ec;
+  --primary: #2f6fed;
+  --primary-soft: #eaf1ff;
+  --secondary: #188f7b;
+  --accent: #d97706;
+  --accent-soft: #fff4df;
+  --success: #16824a;
+  --success-soft: #e9f8ef;
+  --warning: #b45309;
+  --warning-soft: #fff5e6;
+}
+
+body,
+.appShell,
+.teacherShell,
+.loginShell {
+  background:
+    linear-gradient(180deg, #f4f8fc 0%, #eef4f8 100%);
+}
+
+.loginCard,
+.statCard,
+.panel,
+.featureHero,
+.featureCard,
+.homeworkCard,
+.monitorCard,
+.reviewCard {
+  box-shadow: 0 10px 28px rgba(34, 48, 68, 0.07);
+}
+
+.loginCard {
+  border: 1px solid #d7e3ee;
+}
+
+.loginIntro {
+  color: #ffffff;
+  border-right: 0;
+  background:
+    linear-gradient(180deg, rgba(47, 111, 237, 0.92), rgba(24, 143, 123, 0.92)),
+    #2f6fed;
+}
+
+.loginIntro h1,
+.loginIntro p:not(.introLabel),
+.introLabel {
+  color: #ffffff;
+}
+
+.loginIntro p:not(.introLabel) {
+  opacity: 0.88;
+}
+
+.introBadge,
+.hubCore {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.hubCore span {
+  color: #ffffff;
+}
+
+.hubChip,
+.hubChip.chipCourse,
+.hubChip.chipUsers,
+.hubChip.chipReports {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.orbit,
+.hubVisual::before {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dataBars i {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.loginPanel {
+  background: #ffffff;
+}
+
+.loginForm {
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-image: none;
+}
+
+.authSwitch button.active {
+  background: var(--primary);
+}
+
+.sidebar,
+.teacherShell .sidebar {
+  background: #ffffff;
+  border-right: 1px solid #dbe5ef;
+  box-shadow: 8px 0 26px rgba(34, 48, 68, 0.045);
+}
+
+.brand {
+  color: #223044;
+}
+
+.brand::after {
+  width: 54px;
+  background: var(--secondary);
+}
+
+.brand svg,
+.teacherShell .brand svg {
+  color: var(--primary);
+}
+
+.navItem,
+.teacherShell .navItem {
+  color: #42536a;
+}
+
+.navItem::before {
+  background: transparent;
+}
+
+.navItem:nth-child(4n + 1)::before,
+.navItem:nth-child(4n + 2)::before,
+.navItem:nth-child(4n + 3)::before,
+.navItem:nth-child(4n + 4)::before {
+  background: transparent;
+}
+
+.navItem svg,
+.teacherShell .navItem svg,
+.logoutButton svg,
+.teacherShell .logoutButton svg,
+.navItem:nth-child(3n + 1) svg,
+.navItem:nth-child(3n + 2) svg,
+.navItem:nth-child(3n + 3) svg {
+  color: #64748b;
+}
+
+.navItem.active,
+.teacherShell .navItem.active,
+.navItem.active:hover,
+.teacherShell .navItem.active:hover {
+  border-color: #c9d8ea;
+  background: #eef5ff;
+  color: #1f5fcb;
+  box-shadow: none;
+}
+
+.navItem.active svg,
+.teacherShell .navItem.active svg {
+  color: var(--primary);
+}
+
+.navItem:hover,
+.teacherShell .navItem:hover {
+  border-color: #d7e3ee;
+  background: #f6f9fc;
+  color: #223044;
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+.content,
+.teacherShell .content {
+  background: #f4f8fc;
+}
+
+.topbar {
+  border: 1px solid #dce6ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(34, 48, 68, 0.045);
+}
+
+.topbar h1 {
+  color: #223044;
+}
+
+.topbar h1::after {
+  width: 48px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+.topbar h1 span,
+.loginSubTitle,
+a {
+  color: var(--primary);
+}
+
+.headerActions button:nth-child(1),
+.headerActions button:nth-child(2) {
+  border-color: var(--line);
+  background: #ffffff;
+  color: var(--primary);
+}
+
+.statCard:nth-child(1),
+.statCard:nth-child(2),
+.statCard:nth-child(3),
+.statCard:nth-child(4),
+.panel:nth-of-type(4n + 1),
+.panel:nth-of-type(4n + 2),
+.panel:nth-of-type(4n + 3),
+.panel:nth-of-type(4n + 4),
+.featureCard:nth-child(4n + 1),
+.featureCard:nth-child(4n + 2),
+.featureCard:nth-child(4n + 3),
+.featureCard:nth-child(4n + 4),
+.homeworkCard:nth-child(4n + 1),
+.homeworkCard:nth-child(4n + 2),
+.homeworkCard:nth-child(4n + 3),
+.homeworkCard:nth-child(4n + 4),
+.monitorCard:nth-child(4n + 1),
+.monitorCard:nth-child(4n + 2),
+.monitorCard:nth-child(4n + 3),
+.monitorCard:nth-child(4n + 4) {
+  background: #ffffff;
+}
+
+.statCard::before,
+.panel::before,
+.featureCard::before,
+.homeworkCard::before,
+.monitorCard::before,
+.reviewCard::before,
+.statCard:nth-child(2)::before,
+.statCard:nth-child(3)::before,
+.statCard:nth-child(4)::before,
+.panel:nth-of-type(4n + 2)::before,
+.panel:nth-of-type(4n + 3)::before,
+.panel:nth-of-type(4n + 4)::before,
+.featureCard:nth-child(4n + 2)::before,
+.featureCard:nth-child(4n + 3)::before,
+.featureCard:nth-child(4n + 4)::before,
+.homeworkCard:nth-child(4n + 2)::before,
+.homeworkCard:nth-child(4n + 3)::before,
+.homeworkCard:nth-child(4n + 4)::before,
+.monitorCard:nth-child(4n + 2)::before,
+.monitorCard:nth-child(4n + 3)::before,
+.monitorCard:nth-child(4n + 4)::before,
+.reviewCard:nth-child(4n + 2)::before,
+.reviewCard:nth-child(4n + 3)::before,
+.reviewCard:nth-child(4n + 4)::before {
+  background: var(--primary);
+}
+
+.statCard:nth-child(2)::before,
+.coursesPanel::before,
+.aiChatPanel::before {
+  background: var(--secondary);
+}
+
+.statCard:nth-child(3)::before,
+.planPanel::before,
+.studentHomeworkPanel::before {
+  background: var(--accent);
+}
+
+.statCard:nth-child(4)::before,
+.activityPanel::before {
+  background: #7c3aed;
+}
+
+.statIcon,
+.featureIcon,
+.teacherShell .statIcon,
+.teacherShell .statCard:nth-child(2) .statIcon,
+.teacherShell .statCard:nth-child(3) .statIcon,
+.teacherShell .statCard:nth-child(4) .statIcon {
+  background: #eef5ff;
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.statCard:nth-child(2) .statIcon {
+  background: #e9f8f4;
+  color: var(--secondary);
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: #fff4df;
+  color: var(--accent);
+}
+
+.statCard:nth-child(4) .statIcon {
+  background: #f3eefe;
+  color: #7c3aed;
+}
+
+.panelHeader h2 svg,
+.studentProfileCard .panelHeader h2 svg,
+.coursesPanel .panelHeader h2 svg,
+.studentTodayCard .panelHeader h2 svg,
+.activityPanel .panelHeader h2 svg,
+.studentHomeworkPanel .panelHeader h2 svg,
+.planPanel .panelHeader h2 svg,
+.aiChatPanel .panelHeader h2 svg,
+.timetablePanel .panelHeader h2 svg {
+  background: transparent;
+  color: var(--primary);
+  padding: 0;
+}
+
+.profileRows div:nth-child(1),
+.profileRows div:nth-child(2),
+.profileRows div:nth-child(3),
+.profileRows div:nth-child(4),
+.homeworkMeta div:nth-child(1),
+.homeworkMeta div:nth-child(2),
+.homeworkMeta div:nth-child(3),
+.monitorStats div:nth-child(1),
+.monitorStats div:nth-child(2),
+.monitorStats div:nth-child(3),
+.monitorStats div:nth-child(4),
+.monitorStats div:nth-child(5) {
+  background: var(--surface-soft);
+}
+
+.featureHero,
+.homeworkHero {
+  border-color: #d7e3ee;
+  background: #ffffff;
+}
+
+.featureHero h2,
+.homeworkHero h2 {
+  color: #223044;
+}
+
+.badge {
+  background: #eef5ff;
+  color: #1f5fcb;
+}
+
+.badge.green {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge.orange {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.modeTabs button.active,
+.chatComposer button,
+.homeworkSubmitBox button,
+.assignForm button,
+.reviewForm button,
+.createHomeworkForm button,
+.automaticCreatorActions button {
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.promptChips button:hover,
+.modeTabs button:hover,
+.monitorActions button {
+  background: #eef5ff;
+  color: var(--primary);
+}
+
+.chatWindow {
+  background: #f7f9fc;
+}
+
+.chatMessage.assistant p {
+  border-left: 3px solid var(--secondary);
+}
+
+.chatMessage.student p {
+  background: var(--primary);
+}
+
+.courseProgress span {
+  background: var(--secondary);
+}
+
+.weekGrid .active strong {
+  background: var(--primary);
+}
+
+.attachmentCard,
+.automaticCreator {
+  background: var(--surface-soft);
+}
+
+.calendarDay:nth-child(7n + 1),
+.calendarDay:nth-child(7n + 2),
+.calendarDay:nth-child(7n + 3),
+.calendarDay:nth-child(7n + 4),
+.calendarDay:nth-child(7n + 5),
+.calendarDay:nth-child(7n + 6),
+.calendarDay:nth-child(7n) {
+  background: #ffffff;
+}
+
+.calendarDay.selected {
+  background: #eef5ff;
+}
+
+.calendarDay.today span {
+  background: var(--primary);
+}
+
+.calendarDay small {
+  background: #eef5ff;
+  color: #1f5fcb;
+}
+
+.codingLabPage {
+  display: grid;
+  gap: 22px;
+}
+
+.codingLabGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.codingLabActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.codingHomeworkBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eef5ff, #ffffff);
+}
+
+.codingHomeworkBanner strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.codingHomeworkBanner p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.codingLabActions button,
+.labProjectForm button {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.labProjectStatus {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.labProjectForm {
+  display: grid;
+  gap: 16px;
+}
+
+.labProjectForm .formRow {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.6fr;
+  gap: 14px;
+}
+
+.labProjectForm label {
+  display: grid;
+  gap: 8px;
+  color: var(--soft-text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.labProjectForm input,
+.labProjectForm select,
+.labProjectForm textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #cbd8e5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  padding: 0 12px;
+}
+
+.labProjectForm textarea {
+  min-height: 86px;
+  padding-top: 12px;
+}
+
+.labProjectList {
+  display: grid;
+  gap: 16px;
+}
+
+.labProjectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.labProjectItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #d8e4ef;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.labProjectItem strong {
+  display: block;
+  color: var(--ink);
+}
+
+.labProjectItem p,
+.labProjectItem small {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.codingLabCard {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  min-height: 286px;
+  padding: 24px 22px 20px;
+  overflow: hidden;
+  border: 1px solid #cbdceb;
+  border-radius: 20px;
+  background:
+    linear-gradient(120deg, rgba(224, 247, 255, 0.58), rgba(255, 255, 255, 0.88) 42%, rgba(235, 255, 246, 0.70)),
+    #ffffff;
+  box-shadow: 0 16px 34px rgba(28, 54, 78, 0.10);
+  color: #111827;
+  text-align: left;
+  transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+}
+
+.codingLabCard::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9, #7ee05f);
+  content: "";
+}
+
+.codingLabCard:hover {
+  border-color: #8bc8ee;
+  box-shadow: 0 20px 42px rgba(14, 165, 233, 0.15);
+  transform: translateY(-3px);
+}
+
+.labLogo {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 18px;
+  background: #f8fbff;
+  box-shadow: 0 12px 24px rgba(31, 52, 74, 0.12);
+  color: #111827;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.labLogo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.labLogo img + span {
+  display: none;
+}
+
+.labLogo.html {
+  color: #e34f26;
+  font-size: 19px;
+}
+
+.labLogo.python {
+  color: #2563eb;
+  background: linear-gradient(135deg, #eff6ff, #fef3c7);
+}
+
+.labLogo.java {
+  color: #ef4444;
+}
+
+.labLogo.sql {
+  color: #0284c7;
+}
+
+.labLogo.scratch {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+.labLogo.blockly {
+  color: #3b82f6;
+}
+
+.labLogo.krita {
+  color: #7c3aed;
+}
+
+.labLogo.phet {
+  color: #0f766e;
+}
+
+.labBadge {
+  justify-self: start;
+  min-height: 25px;
+  padding: 6px 12px;
+  border: 1px solid #b9ecf1;
+  border-radius: 999px;
+  background: #dff8fb;
+  color: #078173;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.codingLabCard strong {
+  margin-top: 4px;
+  color: #111827;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.codingLabCard p {
+  min-height: 38px;
+  margin: -4px 0 0;
+  color: #526174;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.labAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  margin-top: auto;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.labAction i {
+  display: grid;
+  min-width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.20);
+  font-size: 11px;
+  font-style: normal;
+}
+
+.codingCompiler {
+  display: grid;
+  gap: 24px;
+}
+
+.codingCompilerTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.codingCompilerTop span {
+  color: #0f9d88;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.codingCompilerTop h2 {
+  margin: 8px 0 0;
+  color: #111827;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1;
+}
+
+.codingCompilerTop p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.codingCompilerTop button,
+.compilerPanelHeader button {
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid #d1dfec;
+  border-radius: 999px;
+  background: #eef5fb;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.compilerTopActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.labApiStatus {
+  display: block;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.compilerGrid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(420px, 0.95fr);
+  gap: 18px;
+}
+
+.compilerPanel {
+  display: grid;
+  gap: 16px;
+  min-height: 462px;
+  padding: 18px;
+  border: 1px solid #cbd8e5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(28, 54, 78, 0.09);
+}
+
+.compilerPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.compilerPanelHeader h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+}
+
+.codeEditor {
+  width: 100%;
+  min-height: 310px;
+  padding: 20px 18px;
+  border: 0;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  outline: 0;
+  resize: vertical;
+}
+
+.runCodeButton {
+  justify-self: start;
+  min-width: 170px;
+  min-height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.livePreview {
+  width: 100%;
+  min-height: 372px;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: #f8fbff;
+}
+
+.compilerOutput {
+  min-height: 372px;
+  margin: 0;
+  padding: 20px;
+  overflow: auto;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #d1fae5;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.sqlOutputPanel {
+  min-height: 372px;
+  margin: 0;
+  padding: 20px;
+  overflow: auto;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: #f8fbff;
+  color: #0f172a;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.sqlResultTable {
+  min-height: 372px;
+  overflow: auto;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: #f8fbff;
+}
+
+.sqlResultTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sqlResultTable th,
+.sqlResultTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #dce7f2;
+  color: #172033;
+  font-size: 14px;
+  text-align: left;
+}
+
+.sqlResultTable th {
+  background: #eef5ff;
+  color: #1f5fcb;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.scratchLabPage,
+.simulationLabPage {
+  display: grid;
+  gap: 24px;
+}
+
+.scratchWorkspaceGrid {
+  display: grid;
+  grid-template-columns: minmax(680px, 1fr) 370px;
+  gap: 18px;
+}
+
+.scratchMainPanel,
+.scratchInfoCard,
+.phetPlayerPanel {
+  border: 1px solid #cbd8e5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(28, 54, 78, 0.09);
+}
+
+.scratchMainPanel,
+.phetPlayerPanel {
+  padding: 18px;
+}
+
+.scratchPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.scratchPanelHeader h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+}
+
+.scratchPanelHeader button {
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid #d1dfec;
+  border-radius: 999px;
+  background: #eef5fb;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.scratchTabs,
+.phetTabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.scratchTabs button,
+.phetTabs button {
+  min-height: 42px;
+  border: 1px solid #cbd8e5;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #334155;
+  font-weight: 900;
+}
+
+.scratchTabs button.active,
+.phetTabs button.active {
+  border-color: #5eead4;
+  background: #dffbf5;
+  color: #0f766e;
+}
+
+.scratchMockup {
+  overflow: hidden;
+  border: 1px solid #b9c9dc;
+  border-radius: 14px;
+  background: #eaf2ff;
+}
+
+.scratchEmbedShell {
+  overflow: hidden;
+  min-height: 610px;
+  border: 1px solid #b9c9dc;
+  border-radius: 14px;
+  background: #f8fbff;
+}
+
+.scratchEmbedFrame {
+  display: block;
+  width: 100%;
+  height: 610px;
+  border: 0;
+  background: #ffffff;
+}
+
+.realLabPage {
+  display: grid;
+  gap: 24px;
+}
+
+.realLabGrid {
+  display: grid;
+  grid-template-columns: minmax(680px, 1fr) 370px;
+  gap: 18px;
+}
+
+.realLabPanel {
+  padding: 18px;
+  border: 1px solid #cbd8e5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(28, 54, 78, 0.09);
+}
+
+.realLabTabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.realLabTabs button {
+  min-height: 42px;
+  border: 1px solid #cbd8e5;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #334155;
+  font-weight: 900;
+}
+
+.realLabTabs button:hover {
+  border-color: #5eead4;
+  background: #dffbf5;
+  color: #0f766e;
+}
+
+.realLabFrameShell {
+  position: relative;
+  overflow: hidden;
+  min-height: 610px;
+  border: 1px solid #b9c9dc;
+  border-radius: 14px;
+  background: #f8fbff;
+}
+
+.realLabFrame {
+  display: block;
+  width: 100%;
+  height: 610px;
+  border: 0;
+  background: #ffffff;
+}
+
+.frameFallback {
+  position: absolute;
+  inset: 18px;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  padding: 28px;
+  border: 1px dashed #9fb5ca;
+  border-radius: 14px;
+  background: rgba(248, 251, 255, 0.96);
+  text-align: center;
+}
+
+.frameFallback strong {
+  color: #111827;
+  font-size: 22px;
+}
+
+.frameFallback p {
+  max-width: 460px;
+  margin: 0;
+  color: #526174;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.frameFallback button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.blocklyLogoBig {
+  background: #eaf2ff;
+  color: #2563eb;
+}
+
+.kritaLogoBig {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.kritaLogoBig img {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+}
+
+.kritaRedirectPanel {
+  display: grid;
+  min-height: 520px;
+  place-items: center;
+}
+
+.kritaRedirectCard {
+  width: min(520px, 100%);
+  min-height: 420px;
+}
+
+.scratchToolbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 0 16px;
+  background: #8358d8;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.scratchToolbar strong {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #f59e0b;
+}
+
+.scratchToolbar input {
+  width: 184px;
+  min-height: 32px;
+  border: 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  padding: 0 10px;
+  font-weight: 800;
+}
+
+.scratchEditorMock {
+  display: grid;
+  grid-template-columns: 66px minmax(210px, 0.55fr) minmax(360px, 1fr);
+  min-height: 560px;
+}
+
+.scratchCategories {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 14px 8px;
+  background: #ffffff;
+  border-right: 1px solid #d5e0ed;
+}
+
+.scratchCategories span {
+  display: grid;
+  gap: 4px;
+  color: #475569;
+  font-size: 10px;
+  text-align: center;
+}
+
+.scratchCategories span::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #3b82f6;
+  content: "";
+}
+
+.scratchCategories span:nth-child(2)::before { background: #8b5cf6; }
+.scratchCategories span:nth-child(3)::before { background: #c084fc; }
+.scratchCategories span:nth-child(4)::before { background: #facc15; }
+.scratchCategories span:nth-child(5)::before { background: #f59e0b; }
+.scratchCategories span:nth-child(6)::before { background: #38bdf8; }
+.scratchCategories span:nth-child(7)::before { background: #22c55e; }
+.scratchCategories span:nth-child(8)::before { background: #fb7185; }
+.scratchCategories span:nth-child(9)::before { background: #14b8a6; }
+
+.scratchBlocks {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 18px 10px;
+  background:
+    radial-gradient(circle, rgba(148, 163, 184, 0.20) 1px, transparent 1px),
+    #fbfdff;
+  background-size: 24px 24px;
+  border-right: 1px solid #d5e0ed;
+}
+
+.scratchBlocks button {
+  justify-self: start;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.scratchCanvasArea {
+  display: grid;
+  grid-template-rows: 44px 1fr 112px;
+  gap: 8px;
+  padding: 8px;
+  background: #dceafd;
+}
+
+.scratchRunControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.scratchStagePreview {
+  display: grid;
+  place-items: center;
+  border: 1px solid #bdcbe0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.scratchCat {
+  display: grid;
+  width: 92px;
+  height: 92px;
+  place-items: center;
+  border: 5px solid #111827;
+  border-radius: 36% 46% 42% 48%;
+  background: #f59e0b;
+  color: #ffffff;
+  font-size: 46px;
+  font-weight: 900;
+  transform: rotate(-14deg);
+}
+
+.scratchSpritePanel {
+  padding: 18px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.scratchInfoCard {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 28px 18px;
+}
+
+.scratchInfoCard h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+}
+
+.scratchLogoBig {
+  display: grid;
+  min-height: 174px;
+  place-items: center;
+  border-radius: 18px;
+  background: #fff0dc;
+  color: #f97316;
+  font-size: 88px;
+  font-weight: 900;
+}
+
+.scratchInfoCard strong {
+  color: #111827;
+  font-size: 24px;
+  text-align: center;
+}
+
+.scratchInfoCard p {
+  margin: 0;
+  color: #526174;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.scratchInfoCard button {
+  min-height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.phetTabs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.phetFrame {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #111827;
+  border-radius: 14px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.phetEmbedFrame {
+  display: block;
+  width: 100%;
+  height: 610px;
+  border: 0;
+  background: #000000;
+}
+
+.blockEditor {
+  background: #10243f;
+}
+
+.blockStage {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: 372px;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.88)),
+    radial-gradient(circle at 24% 28%, rgba(59, 130, 246, 0.25), transparent 26%),
+    radial-gradient(circle at 78% 22%, rgba(34, 197, 94, 0.22), transparent 24%),
+    #eef7ff;
+}
+
+.scratchStage {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 248, 237, 0.90)),
+    radial-gradient(circle at 24% 30%, rgba(249, 115, 22, 0.25), transparent 26%),
+    radial-gradient(circle at 80% 24%, rgba(14, 165, 233, 0.22), transparent 22%),
+    #fff7ed;
+}
+
+.stageSprite {
+  position: absolute;
+  left: 34px;
+  top: 34px;
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f97316, #0ea5e9);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  box-shadow: 0 16px 34px rgba(14, 43, 69, 0.16);
+}
+
+.blocklyStage .stageSprite {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+}
+
+.blockStage pre {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #d1fae5;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.colorPickerLabel,
+.simulationControls label {
+  display: grid;
+  gap: 10px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.colorPickerLabel input {
+  width: 92px;
+  height: 44px;
+  padding: 4px;
+  border: 1px solid #cbd8e5;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.kritaCanvas {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: 372px;
+  overflow: hidden;
+  padding: 28px;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--brush-color) 18%, white), #ffffff 58%),
+    #ffffff;
+}
+
+.kritaCanvas span {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: var(--brush-color);
+  filter: blur(2px);
+  opacity: 0.22;
+  right: 34px;
+  top: 28px;
+}
+
+.kritaCanvas::before,
+.kritaCanvas::after {
+  position: absolute;
+  width: 160px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--brush-color);
+  content: "";
+}
+
+.kritaCanvas::before {
+  left: 40px;
+  top: 92px;
+  transform: rotate(-14deg);
+}
+
+.kritaCanvas::after {
+  left: 92px;
+  top: 148px;
+  opacity: 0.62;
+  transform: rotate(18deg);
+}
+
+.kritaCanvas strong,
+.kritaCanvas p {
+  position: relative;
+  z-index: 1;
+}
+
+.kritaCanvas strong {
+  max-width: 620px;
+  color: #111827;
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.kritaCanvas p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.simulationControls {
+  align-content: start;
+}
+
+.simulationControls input[type="range"] {
+  accent-color: #19b89f;
+}
+
+.phetOutput {
+  display: grid;
+  align-content: center;
+  min-height: 372px;
+  padding: 28px;
+  border: 1px solid #cbd8e5;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eef5ff, #ecfdf8);
+}
+
+.phetOutput strong {
+  color: #111827;
+  font-size: clamp(46px, 8vw, 86px);
+  line-height: 1;
+}
+
+.phetOutput p {
+  max-width: 420px;
+  margin: 14px 0 22px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.phetOutput div {
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dbeafe;
+}
+
+.phetOutput span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+}
+
+.comingSoonLab {
+  justify-items: start;
+  align-content: center;
+  min-height: 360px;
+}
+
+.comingSoonLab strong {
+  color: #111827;
+  font-size: 28px;
+}
+
+.comingSoonLab p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.studentMonitorModule {
+  display: grid;
+  gap: 24px;
+}
+
+.monitorActionPanel {
+  display: grid;
+  gap: 18px;
+}
+
+.monitorTabs {
+  display: inline-flex;
+  width: fit-content;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f8fafc;
+}
+
+.monitorTabs button {
+  min-height: 34px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--soft-text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.monitorTabs button.active {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.monitorWorkList {
+  display: grid;
+  gap: 10px;
+}
+
+.monitorMessageForm,
+.monitorSupportForm {
+  max-width: 920px;
+}
+
+.sentMessageList {
+  display: grid;
+  gap: 8px;
+}
+
+.sentMessageList p {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--soft-text);
+  font-weight: 700;
+}
+
+.sentMessageList strong {
+  color: var(--primary);
+  font-size: 12px;
+}
+
+.studentCodingLab {
+  display: grid;
+  gap: 24px;
+}
+
+.studentLabGrid {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.studentLabList {
+  display: grid;
+  gap: 12px;
+}
+
+.studentLabItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 82px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--ink);
+  text-align: left;
+}
+
+.studentLabItem.active {
+  border-color: var(--primary);
+  background: #eef5ff;
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+
+.studentLabItem strong {
+  display: block;
+  font-size: 16px;
+}
+
+.studentLabItem p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.studentCompiler {
+  min-width: 0;
+}
+
+.teacherMessageCard,
+.teacherMessageNotice {
+  border-color: #bfe5d7;
+  background: linear-gradient(135deg, #f0fdf8, #ffffff);
+}
+
+.teacherMessageCard small {
+  display: block;
+  margin-top: 8px;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.workProgressPage {
+  min-height: 420px;
+}
+
+.workProgressPanel {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.workProgressPanel .featureIcon {
+  width: 78px;
+  height: 78px;
+  border-radius: 18px;
+}
+
+.workProgressPanel span {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workProgressPanel h2 {
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1;
+}
+
+.workProgressPanel p {
+  max-width: 520px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.myCoursesModule {
+  display: grid;
+  gap: 24px;
+}
+
+.coursesHero {
+  justify-content: space-between;
+}
+
+.courseHeroStats {
+  display: grid;
+  min-width: 142px;
+  gap: 3px;
+  padding: 14px 18px;
+  border: 1px solid #cbd8e5;
+  border-radius: 12px;
+  background: #f8fafc;
+  text-align: right;
+}
+
+.courseHeroStats span,
+.courseHeroStats small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.courseHeroStats strong {
+  color: var(--primary);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.courseDashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.courseDashboardCard {
+  display: grid;
+  gap: 18px;
+  border-top: 4px solid var(--primary);
+}
+
+.courseCardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.courseCardTop span,
+.courseProgressBlock span,
+.courseCardMeta span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.courseCardTop strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.courseCardTop p {
+  margin: 6px 0 0;
+  color: var(--soft-text);
+  font-weight: 800;
+}
+
+.courseProgressBlock {
+  display: grid;
+  gap: 10px;
+}
+
+.courseProgressBlock > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courseProgressBlock strong {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.courseCardMeta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.courseCardMeta div {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f3f7fb;
+}
+
+.courseCardMeta strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.courseContinueButton {
+  justify-self: start;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #19b89f, #0ea5e9);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.testExamModule {
+  display: grid;
+  gap: 24px;
+}
+
+.testExamHero {
+  justify-content: space-between;
+}
+
+.examBuilderGrid {
+  align-items: start;
+}
+
+.examForm,
+.examPreview {
+  min-height: 100%;
+}
+
+.examCreationModes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 5px; border: 1px solid #d9e6f2; border-radius: 10px; background: #f5f9fd; }
+.examCreationModes button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; border: 0; border-radius: 7px; background: transparent; color: #607991; font-size: 12px; font-weight: 800; box-shadow: none; }
+.examCreationModes button.active { background: #ffffff; color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12); }
+.examAiCreator { display: grid; gap: 12px; padding: 16px; border: 1px solid #d9d1ff; border-radius: 10px; background: linear-gradient(135deg, #f7f5ff, #eff8ff); }.examAiCreator strong { display: inline-flex; align-items: center; gap: 7px; color: #5545bd; font-size: 13px; }.examAiCreator p { margin: 5px 0 0; color: #6d7590; font-size: 12px; font-weight: 700; }.examAiActions { display: grid; grid-template-columns: 1fr auto; gap: 10px; }.examAiActions input { min-height: 42px; border: 1px solid #d9e3f0; border-radius: 7px; padding: 0 12px; background: #fff; color: var(--ink); }.examAiActions button { min-height: 42px; padding: 0 14px; border-radius: 7px; background: #6d5ee8; color: #fff; font-size: 12px; font-weight: 800; }.examAiNote { color: #16816c !important; }.createExamButton { background: linear-gradient(90deg, #3977ef, #6d5ee8) !important; }
+
+.examPreviewCard {
+  display: grid;
+  gap: 8px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eef5ff, #ecfdf8);
+}
+
+.examPreviewCard span {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.examPreviewCard strong {
+  color: var(--ink);
+  font-size: 26px;
+  line-height: 1.08;
+}
+
+.examPreviewCard p,
+.examCard small {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.examListGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 560px) { .examCreationModes, .examAiActions { grid-template-columns: 1fr; } }
+
+.examCard {
+  align-items: flex-start;
+}
+
+.examCard p {
+  margin-bottom: 8px;
+}
+
+.examCardActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.examCardActions button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid #d6e2ef;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: var(--soft-text);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.examCardActions button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.createHomeworkModule .homeworkHero {
+  position: relative;
+  min-height: 92px;
+  padding: 18px 22px;
+  justify-content: flex-start;
+  gap: 14px;
+  overflow: hidden;
+  border-color: #cadbf2;
+  border-radius: 14px;
+  background: linear-gradient(105deg, #f7faff 0%, #eef5ff 58%, #f4f0ff 100%);
+  text-align: left;
+  box-shadow: 0 10px 28px rgba(43, 72, 118, .08);
+}
+
+.createHomeworkModule .homeworkHero p {
+  max-width: none;
+  margin: 6px 0 0;
+  color: #687b94;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.createHomeworkModule .homeworkHero::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102, 94, 221, .13), rgba(102, 94, 221, 0) 70%);
+  pointer-events: none;
+}
+
+.createHomeworkModule .homeworkHero .featureIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #5277d8;
+  box-shadow: 0 7px 18px rgba(59, 92, 165, .13), inset 0 0 0 1px #dce7f7;
+}
+
+.createHomeworkModule .homeworkHero .featureIcon svg { width: 25px; height: 25px; }
+.createHomeworkModule .homeworkHero h2 { color: #243750; font-size: clamp(22px, 2.3vw, 28px); line-height: 1.1; }
+
+.homeworkCreationModes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid #d9e6f2;
+  border-radius: 10px;
+  background: #f3f6fa;
+}
+
+.createHomeworkForm .automaticCreator {
+  border-color: #9fc1ef !important;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(112, 87, 222, .18), transparent 34%),
+    linear-gradient(135deg, #dcecff 0%, #e3ebff 55%, #eee3ff 100%) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .85), 0 8px 22px rgba(62, 94, 145, .13) !important;
+}
+
+.createHomeworkForm .automaticCreatorActions input {
+  border-color: #cbd9eb;
+  background: rgba(255, 255, 255, .92);
+}
+.createHomeworkForm > .homeworkPdfField { display: none; }
+.createHomeworkForm .automaticCreatorComposer {
+  display: grid;
+  gap: 0;
+  padding: 10px;
+  border: 1px solid #e4e7ec;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 3px 14px rgba(30, 41, 59, .1);
+}
+.automaticCreatorAttachments { display: flex; min-height: 58px; padding: 0 4px 6px; gap: 8px; }
+.automaticCreatorAttachmentCard { position: relative; display: grid; width: 58px; gap: 3px; color: #536174; font-size: 8px; font-weight: 700; text-align: center; }
+.automaticCreatorAttachmentCard > span:last-of-type { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.automaticCreatorAttachmentPreview { display: flex; height: 42px; align-items: center; justify-content: center; border: 1px solid #dde3ec; border-radius: 8px; background: linear-gradient(145deg, #64748b, #94a3b8); color: white; box-shadow: 0 2px 6px rgba(74, 85, 104, .14); }
+.automaticCreatorAttachmentPreview--pdf { background: linear-gradient(145deg, #e74355, #fb7185); }
+.automaticCreatorAttachmentPreview--doc,
+.automaticCreatorAttachmentPreview--docx { background: linear-gradient(145deg, #2563eb, #60a5fa); }
+.automaticCreatorAttachmentPreview small { position: absolute; bottom: 18px; right: 5px; padding: 1px 3px; border-radius: 3px; background: #e74c5b; color: #fff; font-size: 6px; }
+.automaticCreatorAttachmentRemove { position: absolute; top: -4px; right: -4px; display: grid; width: 16px; height: 16px; padding: 0; place-items: center; border: 1px solid #e3e7ed; border-radius: 50%; background: #fff; color: #667085; box-shadow: 0 1px 4px rgba(0,0,0,.12); cursor: pointer; }
+.createHomeworkForm .automaticCreatorComposer textarea {
+  width: 100%;
+  min-height: 72px;
+  padding: 8px 6px;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  color: #263b55 !important;
+  font-size: 15px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  box-shadow: none;
+}
+.createHomeworkForm .automaticCreatorComposer textarea::placeholder { color: #7b8797 !important; opacity: 1; }
+.automaticCreatorComposerBar { display: flex; min-width: 0; min-height: 40px; padding: 4px 2px 0; align-items: center; gap: 5px; }
+.createHomeworkForm .automaticCreatorPdfButton, .automaticCreatorTool { display: inline-grid; width: 32px; min-height: 32px; padding: 0; place-items: center; border: 0; border-radius: 50%; background: transparent; color: #5e6877; cursor: pointer; }
+.createHomeworkForm .automaticCreatorPdfButton:hover, .automaticCreatorTool:hover { background: #f1f3f6; color: #202a38; }
+.automaticCreatorPdfButton input { display: none; }
+.automaticCreatorAttachmentPicker { position: relative; display: flex; }
+.automaticCreatorFileInput { display: none; }
+.automaticCreatorAttachmentMenu { position: absolute; z-index: 20; bottom: calc(100% + 8px); left: 0; display: grid; width: 150px; padding: 6px; gap: 3px; border: 1px solid #e0e5ec; border-radius: 12px; background: #fff; box-shadow: 0 10px 30px rgba(15, 23, 42, .15); }
+.createHomeworkForm .automaticCreatorAttachmentMenu button { display: flex; width: 100%; min-height: 38px; padding: 0 10px; align-items: center; justify-content: flex-start; gap: 9px; border: 0; border-radius: 8px; background: transparent; color: #29374b; font-size: 11px; font-weight: 700; cursor: pointer; }
+.createHomeworkForm .automaticCreatorAttachmentMenu button:hover { background: #f1f5fb; color: #245ebd; }
+.createHomeworkForm .automaticCreatorAttachmentMenu button:first-child svg { color: #e34d5d; }
+.createHomeworkForm .automaticCreatorAttachmentMenu button:last-child svg { color: #3675d3; }
+.automaticCreatorPdfName { display: inline-flex; overflow: hidden; min-width: 0; align-items: center; gap: 5px; color: #60738d; font-size: 9px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.automaticCreatorPdfName svg { flex: 0 0 auto; color: #5578ce; }
+.createHomeworkForm .automaticCreatorComposerBar > .automaticCreatorSendButton { display: grid; flex: 0 0 36px; width: 36px; height: 36px; min-height: 36px; margin: 0 0 0 auto; padding: 0; place-items: center; align-self: center; border: 0; border-radius: 50%; background: #111827; color: #fff; font-size: 0; line-height: 1; box-shadow: none; }
+.createHomeworkForm .automaticCreatorComposerBar > .automaticCreatorSendButton svg { display: block; margin: 0; stroke-width: 2.5; }
+.createHomeworkForm .automaticCreatorComposerBar > .automaticCreatorSendButton:hover { background: #273244; }
+.createHomeworkForm .automaticCreatorComposerBar > .automaticCreatorSendButton:disabled { background: #aeb5c0; }
+
+@media (max-width: 620px) {
+  .automaticCreatorComposerBar { align-items: stretch; flex-wrap: wrap; }
+  .automaticCreatorPdfName { order: 3; width: 100%; }
+}
+
+.homeworkPdfField {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 15px 16px;
+  border: 1px dashed #9dbce4;
+  border-radius: 12px;
+  background: #f3f8ff;
+}
+
+.homeworkPdfField > div { display: grid; gap: 5px; }
+.homeworkPdfField strong { display: inline-flex; align-items: center; gap: 7px; color: #2d4565; font-size: 13px; }
+.homeworkPdfField strong svg { color: #477ed0; }
+.homeworkPdfField small { color: #71829a; font-size: 11px; font-weight: 600; }
+
+.createHomeworkForm .homeworkPdfButton {
+  display: inline-flex;
+  min-height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7ea7dc;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #3267aa;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.homeworkPdfButton input { display: none; }
+.homeworkPdfName { overflow: hidden; color: #3e5878; font-size: 11px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.homeworkPdfError { grid-column: 1 / -1; color: #b42318; font-size: 11px; font-weight: 700; }
+.homeworkPreviewChapter { padding: 9px 11px; border-radius: 8px; background: #f2f6fc; color: #526680; font-size: 12px; }
+
+@media (max-width: 680px) {
+  .homeworkPdfField { grid-template-columns: 1fr; }
+  .createHomeworkForm .homeworkPdfButton { width: 100%; }
+}
+
+.assignedHomeworkSide { display: grid; justify-items: end; gap: 10px; }
+.assignedHomeworkActions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.assignedHomeworkItem .assignedHomeworkActions button {
+  display: inline-flex;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 9px;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #d7e1ee;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #47617f;
+  font-size: 10px;
+  font-weight: 750;
+  box-shadow: none;
+}
+.assignedHomeworkItem .assignedHomeworkActions button:hover { border-color: #8aade0; color: #2d65ad; }
+.assignedHomeworkItem .assignedHomeworkActions button.delete { border-color: #f0d4d8; color: #b34455; }
+
+.homeworkViewOverlay {
+  position: fixed;
+  z-index: 1300;
+  inset: 0;
+  display: grid;
+  padding: 20px;
+  place-items: center;
+  background: rgba(25, 35, 55, .48);
+  backdrop-filter: blur(5px);
+}
+.homeworkViewModal {
+  display: grid;
+  gap: 18px;
+  width: min(620px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 24px;
+  border: 1px solid #d9e3ef;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(27, 39, 68, .26);
+}
+.homeworkViewHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 15px; border-bottom: 1px solid #e5ebf2; }
+.homeworkViewHeader > div { display: grid; gap: 4px; }
+.homeworkViewHeader span { color: #667a96; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.homeworkViewHeader h3 { margin: 0; color: #263950; font-size: 20px; }
+.homeworkViewHeader button { display: grid; width: 34px; height: 34px; padding: 0; place-items: center; border: 0; border-radius: 8px; background: #f1f4f8; color: #6c7b90; }
+.homeworkViewMeta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.homeworkViewMeta > span { display: grid; gap: 5px; padding: 11px; border: 1px solid #e0e8f2; border-radius: 9px; background: #f7faff; }
+.homeworkViewMeta small,
+.homeworkViewQuestion small { color: #74849a; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.homeworkViewMeta strong { color: #30455f; font-size: 12px; }
+.homeworkViewQuestion { display: grid; gap: 7px; }
+.homeworkViewQuestion p { margin: 0; padding: 13px; border-radius: 9px; background: #f5f8fc; color: #3e526c; font-size: 13px; line-height: 1.55; white-space: pre-wrap; }
+.homeworkViewQuestionItem { display: grid; gap: 6px; }
+.homeworkViewQuestionTags { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.homeworkViewQuestionTags > span { padding: 4px 7px; border-radius: 6px; background: #eaf0ff; color: #4e68c8; font-size: 9px; font-weight: 800; }
+.homeworkViewQuestionTags > strong { padding: 4px 7px; border-radius: 6px; background: #edf8f3; color: #19775c; font-size: 9px; font-weight: 800; }
+.homeworkViewQuestionItem ol { margin: 0; padding: 0 0 0 34px; color: #50627a; font-size: 12px; }
+.homeworkViewQuestionItem li { padding: 3px 5px; }
+.homeworkViewQuestionItem li.correct { color: #168160; font-weight: 800; }
+.homeworkCategorizedQuestions { gap: 12px; }
+.homeworkViewCategory { display: grid; gap: 8px; }
+.homeworkViewCategory h4 { display: flex; margin: 0; padding: 9px 11px; align-items: center; gap: 8px; border-left: 3px solid #5576d5; border-radius: 0 7px 7px 0; background: #edf3fc; color: #314862; font-size: 12px; }
+.homeworkViewCategory h4 span { padding: 3px 6px; border-radius: 5px; background: #dfe9fb; color: #4f69bf; font-size: 8px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.homeworkViewCategory .homeworkViewQuestionItem { gap: 5px; }
+.homeworkViewCategory .homeworkViewQuestionItem p { background: #f4f7fb; }
+
+@media (max-width: 600px) {
+  .assignedHomeworkItem { align-items: stretch; flex-direction: column; }
+  .assignedHomeworkSide { justify-items: start; }
+  .assignedHomeworkActions { justify-content: flex-start; }
+  .homeworkViewMeta { grid-template-columns: repeat(2, 1fr); }
+  .homeworkMcqOptions { grid-template-columns: 1fr; }
+  .homeworkQuestionTopRow { grid-template-columns: 1fr; }
+}
+
+/* Detailed icon-led homework form. */
+.createHomeworkForm .homeworkIconRow,
+.createHomeworkForm .homeworkScheduleGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.createHomeworkForm .homeworkIconRow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.createHomeworkForm .homeworkScheduleGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.createHomeworkForm .homeworkScheduleSimple { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.createHomeworkForm .homeworkIconRow label,
+.createHomeworkForm .homeworkScheduleGrid label,
+.createHomeworkForm .homeworkEditor {
+  display: grid;
+  gap: 7px;
+  color: #35465f;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.createHomeworkForm label b { color: #df3f55; }
+
+.homeworkFieldLabel {
+  display: inline-flex;
+  min-height: 14px;
+  align-items: center;
+  gap: 3px;
+  line-height: 1.2;
+}
+
+.homeworkControl {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.homeworkControl > svg:first-child {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 13px;
+  color: #536ff0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.createHomeworkForm .homeworkControl input,
+.createHomeworkForm .homeworkControl select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 35px 0 40px;
+  border: 1px solid #d4deed;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #2e3f59;
+  font-size: 12px;
+  font-weight: 650;
+  box-shadow: none;
+}
+
+.homeworkControl > svg:last-child:not(:first-child) { margin-left: -29px; color: #536ff0; }
+
+.homeworkEditorBox {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border: 1px solid #d4deed;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.createHomeworkForm .homeworkEditorBox textarea {
+  min-height: 92px;
+  padding: 13px;
+  border: 0;
+  border-radius: 0;
+  background: #ffffff;
+  resize: vertical;
+  box-shadow: none;
+}
+.homeworkEditorBox > small { position: absolute; right: 12px; bottom: 8px; color: #8492a7; font-size: 9px; }
+
+.homeworkQuestionList { display: grid; gap: 10px; }
+.homeworkQuestionWorkspace { display: grid; grid-template-columns: 1fr; align-items: start; gap: 16px; }
+.homeworkQuestionWorkspace > .homeworkQuestionPaper { display: none; }
+.homeworkQuestionEditors { display: grid; gap: 10px; }
+.homeworkQuestionHeading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.homeworkQuestionHeading > span { color: #35465f; font-size: 11px; font-weight: 800; }
+.homeworkQuestionHeading b { color: #df3f55; }
+.createHomeworkForm .homeworkQuestionHeading button {
+  display: inline-flex;
+  width: auto;
+  min-height: 34px;
+  margin: 0;
+  padding: 0 12px;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #9bb9e5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #376db4;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: none;
+}
+.createHomeworkForm .homeworkQuestionHeading button:disabled { cursor: not-allowed; opacity: .48; }
+.homeworkQuestionItem { position: relative; display: grid !important; grid-template-columns: 34px minmax(0, 1fr); gap: 0 !important; }
+.homeworkQuestionNumber { display: grid; min-height: 100%; place-items: start center; padding-top: 14px; border: 1px solid #d4deed; border-right: 0; border-radius: 9px 0 0 9px; background: #f1f6ff; color: #4d6fdb; font-size: 12px; font-weight: 850; }
+.homeworkQuestionContent { display: grid; gap: 12px; padding: 13px 52px 13px 13px; border: 1px solid #d4deed; border-radius: 0 9px 9px 0; background: #ffffff; }
+.homeworkQuestionContent > label { display: grid; gap: 6px; color: #53647b; font-size: 10px; font-weight: 800; }
+.homeworkQuestionTopRow { display: grid; grid-template-columns: minmax(0, 220px); gap: 10px; }
+.homeworkQuestionTopRow > label { display: grid; gap: 6px; color: #53647b; font-size: 10px; font-weight: 800; }
+.homeworkCustomCategory { display: grid; gap: 6px; padding: 10px; border: 1px dashed #aebfea; border-radius: 8px; background: #f5f7ff; color: #4e6180; font-size: 10px; font-weight: 800; }
+.createHomeworkForm .homeworkCustomCategory input { min-height: 40px; padding: 0 11px; border: 1px solid #cfdaf0; border-radius: 8px; background: #ffffff; color: #2d4059 !important; box-shadow: none; }
+.createHomeworkForm .homeworkCustomCategory input::placeholder { color: #8592a5; opacity: 1; }
+.createHomeworkForm input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.createHomeworkForm input[type="number"]::-webkit-inner-spin-button,
+.createHomeworkForm input[type="number"]::-webkit-outer-spin-button { margin: 0; -webkit-appearance: none; }
+.createHomeworkForm .homeworkQuestionContent textarea { min-height: 80px; padding: 11px 40px 22px 11px; border: 1px solid #dce4ef; border-radius: 8px; background: #fbfcff; color: #2d4059 !important; resize: vertical; box-shadow: none; }
+.createHomeworkForm .homeworkQuestionContent textarea::placeholder { color: #7b899c !important; opacity: 1; }
+.createHomeworkForm .homeworkQuestionType select,
+.createHomeworkForm .homeworkCorrectAnswer select { min-height: 40px; padding: 0 11px; border: 1px solid #d7e1ee; border-radius: 8px; background: #f8faff; color: #344963; box-shadow: none; }
+.homeworkQuestionType { max-width: 220px; }
+.homeworkMcqOptions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; padding-top: 2px; }
+.homeworkMcqOptions > label { display: flex; align-items: center; gap: 0; }
+.homeworkMcqOptions > label > span { display: grid; flex: 0 0 36px; min-height: 40px; place-items: center; border: 1px solid #d7e1ee; border-right: 0; border-radius: 8px 0 0 8px; background: #eef3ff; color: #526dde; font-weight: 850; }
+.createHomeworkForm .homeworkMcqOptions input { min-width: 0; min-height: 40px; border: 1px solid #d7e1ee; border-radius: 0 8px 8px 0; background: #ffffff; color: #2d4059 !important; box-shadow: none; }
+.createHomeworkForm .homeworkMcqOptions input::placeholder { color: #7b899c !important; opacity: 1; }
+.homeworkQuestionItem > small { position: absolute; right: 12px; bottom: 8px; color: #8492a7; font-size: 9px; }
+.createHomeworkForm .homeworkQuestionItem > button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  width: 30px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #fff0f2;
+  color: #b34455;
+  box-shadow: none;
+}
+.createHomeworkForm .homeworkSaveQuestion {
+  display: inline-flex;
+  width: auto;
+  min-width: 142px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  gap: 7px;
+  border: 1px solid #f0edff;
+  border-radius: 11px;
+  background: #ffffff !important;
+  color: #7868f2 !important;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(76, 68, 160, .09);
+}
+.createHomeworkForm .homeworkSaveQuestion svg { color: #7467f2; stroke-width: 2; }
+.createHomeworkForm .homeworkSaveQuestion:not(:disabled):hover { border-color: #cfc7ff; background: #faf9ff !important; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(76, 68, 160, .14); }
+.createHomeworkForm .homeworkSaveQuestion:disabled { cursor: not-allowed; opacity: .45; }
+.homeworkQuestionEmptyEditor { display: grid; min-height: 180px; padding: 24px; place-items: center; align-content: center; gap: 7px; border: 1px dashed #bed0e8; border-radius: 11px; background: #f8fbff; color: #6082bd; text-align: center; }
+.homeworkQuestionEmptyEditor span { color: #344b68; font-size: 13px; font-weight: 800; }
+.homeworkQuestionEmptyEditor small { color: #7b8ba1; font-size: 10px; }
+
+.homeworkQuestionPaper { overflow: hidden; min-height: 280px; border: 1px solid #d9e2ee; border-radius: 11px; background: #eef1f5; box-shadow: 0 8px 22px rgba(42, 66, 102, .08); }
+.createHomeworkModule .teacherGrid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
+  grid-template-areas:
+    "form paper"
+    "assigned assigned";
+  align-items: start;
+}
+.createHomeworkModule .createHomeworkForm { grid-area: form; }
+.createHomeworkModule .creatorSide { display: contents; }
+.createHomeworkModule .homeworkQuestionPaperSidebar { grid-area: paper; position: static; align-self: start; }
+.createHomeworkModule .creatorPreview { display: none !important; }
+.createHomeworkModule .assignedHomeworkList { grid-area: assigned; }
+.homeworkQuestionPaperHeader { display: flex; align-items: center; gap: 9px; padding: 13px 15px; border-bottom: 1px solid #dfe7f1; background: linear-gradient(135deg, #f4f8ff, #eef2ff); color: #506fd0; }
+.homeworkQuestionPaperHeader > div { display: grid; gap: 2px; }
+.homeworkQuestionPaperHeader strong { color: #2f435e; font-size: 12px; }
+.homeworkQuestionPaperHeader small { color: #76869b; font-size: 9px; font-weight: 700; }
+.homeworkQuestionPaperHeader > span { margin-left: auto; padding: 4px 7px; border-radius: 5px; background: #e34c5b; color: #fff; font-size: 8px; font-weight: 900; letter-spacing: .08em; }
+.homeworkQuestionPaperBody { display: grid; gap: 0; height: 590px; min-height: 0; margin: 14px; padding: 25px 24px 34px; align-content: start; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: #8aa9da #edf2f8; scrollbar-width: thin; background: #ffffff; box-shadow: 0 3px 13px rgba(35, 49, 73, .13); }
+.homeworkQuestionPaperBody::-webkit-scrollbar { width: 7px; }
+.homeworkQuestionPaperBody::-webkit-scrollbar-track { background: #edf2f8; }
+.homeworkQuestionPaperBody::-webkit-scrollbar-thumb { border: 2px solid #edf2f8; border-radius: 999px; background: #8aa9da; }
+.homeworkQuestionPaperBody::-webkit-scrollbar-thumb:hover { background: #6489c7; }
+.homeworkPdfDocumentHeader { display: grid; gap: 5px; margin-bottom: 13px; padding-bottom: 13px; border-bottom: 2px solid #2d3e56; text-align: center; }
+.homeworkPdfDocumentHeader > span { color: #66778c; font-size: 8px; font-weight: 900; letter-spacing: .14em; }
+.homeworkPdfDocumentHeader h3 { margin: 0; color: #1f2f44; font-family: Georgia, "Times New Roman", serif; font-size: 17px; }
+.homeworkPdfDocumentHeader p { margin: 0; color: #586a80; font-size: 9px; font-weight: 700; }
+.homeworkPdfDocumentHeader > .homeworkPdfMetaGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 9px; gap: 7px 14px; color: #4b5c70; text-align: left; }
+.homeworkPdfMetaGrid > span { display: grid; gap: 2px; padding-bottom: 4px; border-bottom: 1px dotted #ccd5e1; }
+.homeworkPdfMetaGrid small { color: #7b8797; font-size: 7px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.homeworkPdfMetaGrid strong { overflow: hidden; color: #33465d; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.homeworkQuestionPaperBody article { position: relative; display: grid; gap: 7px; padding: 13px 0; border-bottom: 1px solid #e7edf4; }
+.homeworkQuestionPaperBody article:last-child { border-bottom: 0; }
+.homeworkQuestionPaperBody article > div { display: flex; align-items: center; gap: 6px; padding-right: 56px; }
+.homeworkQuestionPaperBody article > div span { color: #2f4664; font-size: 11px; font-weight: 900; }
+.homeworkQuestionPaperBody article > div em { padding: 3px 6px; border-radius: 5px; background: #edf2ff; color: #566fcb; font-size: 8px; font-style: normal; font-weight: 800; }
+.homeworkQuestionPaperBody article > div strong { margin-left: auto; color: #62758e; font-size: 9px; }
+.homeworkQuestionPaperBody article p { margin: 0; color: #33485f; font-size: 11px; line-height: 1.45; white-space: pre-wrap; }
+.homeworkQuestionPaperBody article ol { margin: 0; padding-left: 25px; color: #65758a; font-size: 10px; }
+.homeworkPdfQuestionSection { display: grid; }
+.homeworkPdfQuestionSection + .homeworkPdfQuestionSection { margin-top: 17px; }
+.homeworkPdfQuestionSection h4 { display: flex; margin: 0; padding: 7px 8px; align-items: center; gap: 7px; border-left: 3px solid #4f6fc9; background: #f3f6fc; color: #2d4058; font-family: Georgia, "Times New Roman", serif; font-size: 11px; }
+.homeworkPdfQuestionSection h4 > span { color: #4f67b4; font-family: "Roboto", "Segoe UI", sans-serif; font-size: 8px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.homeworkPdfQuestionSection h4 small { margin-left: auto; color: #65778e; font-family: "Roboto", "Segoe UI", sans-serif; font-size: 8px; font-weight: 800; }
+.createHomeworkModule .homeworkQuestionPaperBody article > button { position: absolute !important; top: 9px; right: 0; display: inline-flex !important; width: auto !important; min-height: 26px !important; margin: 0 !important; padding: 0 7px !important; align-items: center; gap: 4px; border: 1px solid #cdd9e9 !important; border-radius: 6px !important; background: #ffffff !important; color: #456da9 !important; font-size: 9px; font-weight: 800; box-shadow: none !important; }
+.homeworkQuestionPaperEmpty { display: grid; min-height: 210px; place-items: center; align-content: center; gap: 8px; color: #a0aec0; text-align: center; }
+.homeworkQuestionPaperEmpty span { color: #7a899d; font-size: 10px; font-weight: 700; }
+
+.createHomeworkForm .homeworkCreateSubmit,
+.createHomeworkForm .homeworkCreateCancel { width: 100%; min-height: 46px; margin: 0; }
+.createHomeworkForm .homeworkCreateSubmit { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(90deg, #4d4df0, #7135e8) !important; color: #fff; }
+.createHomeworkForm .homeworkCreateCancel { border: 1px solid #d5deeb; background: #ffffff !important; color: #607087 !important; box-shadow: none; }
+
+@media (max-width: 1100px) {
+  .createHomeworkForm .homeworkScheduleGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .homeworkQuestionWorkspace { grid-template-columns: 1fr; }
+  .createHomeworkModule .teacherGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "form" "paper" "assigned";
+  }
+  .createHomeworkModule .homeworkQuestionPaperSidebar { position: static; }
+}
+
+@media (max-width: 680px) {
+  .createHomeworkForm .homeworkIconRow,
+  .createHomeworkForm .homeworkScheduleGrid { grid-template-columns: 1fr; }
+}
+
+.createHomeworkForm .homeworkCreationModes button {
+  display: inline-flex;
+  min-height: 42px;
+  margin: 0;
+  padding: 0 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: #60728a;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.createHomeworkForm .homeworkCreationModes button.active {
+  border-color: #77bfe9;
+  background: #ffffff;
+  color: #28558c !important;
+  box-shadow: 0 7px 18px rgba(52, 91, 190, .22);
+}
+
+.createHomeworkForm .homeworkCreationModes button.active svg {
+  color: #3b78c5;
+}
+
+@media (max-width: 560px) {
+  .homeworkCreationModes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1320px) {
+  .codingLabGrid {
+    grid-template-columns: repeat(3, minmax(210px, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .compilerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .realLabGrid,
+  .scratchWorkspaceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .codingLabGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .codingCompilerTop {
+    flex-direction: column;
+  }
+
+  .labProjectForm .formRow,
+  .labProjectGrid,
+  .courseDashboardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .coursesHero,
+  .courseCardTop {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .courseHeroStats {
+    width: 100%;
+    text-align: left;
+  }
+
+  .createHomeworkModule .homeworkHero {
+    flex-direction: column;
+  }
+
+  .testExamHero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .examListGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studentLabGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.studentShell .dashboard {
+  grid-template-columns: 163px minmax(0, 1fr);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.studentShell .sidebar {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.studentShell .content {
+  height: 100vh;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+.teacherShell .dashboard {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.teacherShell .sidebar {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.teacherShell .content {
+  height: 100vh;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 780px) {
+  .studentShell .dashboard {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  .studentShell .sidebar,
+  .studentShell .content {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .teacherShell .dashboard {
+    height: auto;
+    overflow: visible;
+  }
+
+  .teacherShell .sidebar,
+  .teacherShell .content {
+    height: auto;
+    overflow: visible;
+  }
+}
+

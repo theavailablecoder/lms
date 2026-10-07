@@ -1,0 +1,13 @@
+/* Integrates Certificates with the established Student Panel visual language. */
+.studentShell .content:has(.certificatesPage){min-width:0;background:#f3f6fb!important}
+.studentShell .content:has(.certificatesPage)>.topbar{padding-bottom:14px;border-bottom:1px solid #e1e8f1;background:rgba(243,246,251,.94)}
+.studentShell .content:has(.certificatesPage)>.topbar h1{color:#203650!important;font-size:28px!important;letter-spacing:-.35px}
+.studentShell .content:has(.certificatesPage)>.topbar p{color:#697d97!important;font-size:12px!important}
+.certificatesPage{width:100%;max-width:none;margin:0;padding:8px 20px 28px;color:#203650!important}
+.certHero{min-height:174px;border-radius:16px!important;background:linear-gradient(112deg,#fff 0%,#f8faff 68%,#edf3ff 100%)!important;box-shadow:0 9px 24px rgba(35,57,91,.08)!important}.certHeroCopy h1{color:#203650!important}.certHeroCopy p{color:#657a95!important}.certHeroIcon{color:#315fd4!important;background:#e9efff!important}.certHeroIcon svg{color:#315fd4!important;stroke:#315fd4!important}
+.certStats{gap:14px;margin:16px 0 20px}.certStats article{min-height:98px;border-radius:14px!important;box-shadow:0 7px 20px rgba(35,57,91,.065)!important}.certStats strong{color:#294fa8!important}.certStats .statGold strong{color:#e36436!important}
+.certToolbar{margin:0 0 14px;border-radius:13px!important}.certFilters button{min-height:36px}.certFilters button.active{background:linear-gradient(135deg,#315fd4,#2449ab)!important;box-shadow:0 5px 12px rgba(38,76,177,.25)!important}
+.certificateGrid{gap:16px}.certificateCard{border-radius:15px!important;box-shadow:0 8px 22px rgba(35,57,91,.075)!important}.certificateCard:hover{box-shadow:0 15px 30px rgba(35,57,91,.13)!important}.certificateInfo h3{color:#203650!important}.certificateInfo button{color:#315fd4!important;background:#f3f6ff!important}.certificateInfo button:not(:disabled):hover{color:#fff!important;background:#315fd4!important}
+.certCta{border-radius:15px!important;background:linear-gradient(110deg,#fff,#f1f5ff)!important}.certCta h2{color:#203650!important}.certCta button{background:linear-gradient(135deg,#315fd4,#2449ab)!important}
+@media(max-width:1100px){.certificatesPage{padding-inline:16px}.certStats{grid-template-columns:repeat(2,minmax(0,1fr))}.certificateGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.certificatesPage{padding:4px 12px 22px}.certHero{min-height:auto}.certStats,.certificateGrid{grid-template-columns:1fr}.certToolbar{overflow:hidden}.certFilters{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.certFilters button{flex:none}.certCta{align-items:flex-start;flex-direction:column}.certCta button{margin-left:0}}

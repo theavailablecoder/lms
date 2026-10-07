@@ -1,0 +1,435 @@
+/* Assessment workspace — reference-aligned final UI */
+.teacherShell .testExamModule {
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid #e1e8f2;
+  background: #f8fafc;
+}
+
+.teacherShell .examBuilderGrid {
+  grid-template-columns: minmax(620px, 1.7fr) minmax(360px, 1fr);
+  gap: 14px;
+}
+
+.teacherShell .examBuilderGrid .examForm,
+.teacherShell .examBuilderGrid .examPreview {
+  padding: 16px;
+  border: 1px solid #e4e9f2 !important;
+  border-radius: 13px;
+  background: #fff !important;
+  box-shadow: 0 8px 24px rgba(43, 67, 105, .07) !important;
+}
+
+.teacherShell .examForm .panelHeader,
+.teacherShell .examPreview .panelHeader {
+  min-height: 48px;
+  margin: -8px -4px 10px;
+  padding: 8px 4px 12px;
+  border: 0;
+  background: transparent !important;
+}
+.teacherShell .examForm .panelHeader h2,
+.teacherShell .examPreview .panelHeader h2 {
+  color: #15182f;
+  font-size: 14px;
+}
+.teacherShell .examForm .panelHeader h2::after,
+.teacherShell .examPreview .panelHeader h2::after {
+  display: block;
+  margin-top: 3px;
+  color: #697994;
+  content: "Build and review your assessment details";
+  font-size: 9px;
+  font-weight: 650;
+}
+.teacherShell .examPreview .panelHeader h2::after { content: "Preview test details before creating"; }
+.teacherShell .examForm .panelHeader h2 svg,
+.teacherShell .examPreview .panelHeader h2 svg {
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #eeeaff, #e6edff);
+  color: #4336d8;
+}
+.teacherShell .examForm .panelHeader > span {
+  border: 0;
+  background: #e9f8f2;
+  color: #15835a;
+}
+
+.teacherShell .examCreationModes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dce3ef;
+  border-radius: 9px;
+  background: #fff;
+}
+.teacherShell .examCreationModes button,
+.teacherShell .examCreationModes button.active {
+  min-height: 39px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #404b68;
+  box-shadow: none;
+  font-size: 10px;
+}
+.teacherShell .examCreationModes button.active {
+  margin: 2px;
+  background: linear-gradient(90deg, #4033d8, #3226cc);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(57, 42, 205, .25);
+}
+
+.teacherShell .examForm > label,
+.teacherShell .examForm > .formRow label { padding-top: 7px; }
+.teacherShell .examForm label.examFieldWrap {
+  position: relative;
+  display: block;
+}
+.teacherShell .examForm .examFloatingLabel {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 38px;
+  padding: 0 5px;
+  background: transparent;
+  color: #405986;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: opacity 160ms ease, transform 160ms ease, top 160ms ease, background 160ms ease, color 160ms ease;
+}
+.teacherShell .examForm label.examFieldWrap:focus-within .examFloatingLabel,
+.teacherShell .examForm label.examFieldWrap:has(select:valid) .examFloatingLabel,
+.teacherShell .examForm label.examFieldWrap:has(input:valid) .examFloatingLabel {
+  top: 7px;
+  background: #fff;
+  color: #405986;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+}
+.teacherShell .examForm label.examFieldWrap:has(select:invalid) .examFloatingLabel,
+.teacherShell .examForm label.examFieldWrap:has(input:invalid) .examFloatingLabel {
+  opacity: 0;
+  visibility: hidden;
+}
+.teacherShell .examForm label .examFieldIcon {
+  position: absolute;
+  z-index: 4;
+  left: 16px;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  color: #4237d3;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.teacherShell .examFormManual > label input,
+.teacherShell .examFormManual > label select,
+.teacherShell .examFormManual > .formRow input,
+.teacherShell .examFormManual > .formRow select,
+.teacherShell .examForm label.examFieldWrap select,
+.teacherShell .examForm label.examFieldWrap input {
+  min-height: 44px;
+  padding: 4px 38px 0 48px;
+  border: 1px solid #d8e1ef !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  color: #19233c !important;
+  box-shadow: 0 3px 9px rgba(45, 71, 109, .05) !important;
+  font-size: 11px;
+}
+.teacherShell .examFormManual > label input,
+.teacherShell .examFormManual > label select,
+.teacherShell .examForm label.examFieldWrap select,
+.teacherShell .examForm label.examFieldWrap input { padding-left: 48px; }
+.teacherShell .examForm .formRow { gap: 12px; }
+.teacherShell .examForm .formRow.three { gap: 12px; }
+.teacherShell .examScheduleFields,
+.teacherShell .examScoringFields {
+  position: relative;
+  margin-top: 18px !important;
+  padding-top: 8px;
+  border-top: 1px solid #edf0f5;
+}
+.teacherShell .examScheduleFields::before,
+.teacherShell .examScoringFields::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  padding-right: 8px;
+  background: #fff;
+  color: #3730c9;
+  content: attr(data-section);
+  font-size: 9px;
+  font-weight: 850;
+}
+
+.teacherShell .examSubmitBar {
+  display: flex;
+  min-height: 52px;
+  margin-top: 10px;
+  padding: 7px 8px 7px 12px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #dfddf7;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #f2f0ff, #fff);
+}
+.teacherShell .examSubmitHint { display: flex; align-items: center; gap: 9px; }
+.teacherShell .examSubmitHint svg { color: #4b3cd8; }
+.teacherShell .examSubmitHint span { display: grid; }
+.teacherShell .examSubmitHint strong { color: #3129be; font-size: 10px; }
+.teacherShell .examSubmitHint small { color: #7d87a0; font-size: 8px; }
+.teacherShell .createExamButton {
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4032d8, #3325cc) !important;
+  font-size: 10px;
+}
+
+.teacherShell .examPreview {
+  position: sticky;
+  top: 14px;
+  min-height: 510px;
+}
+.teacherShell .examPreviewCard {
+  min-height: 162px;
+  padding: 20px;
+  align-content: center;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255,255,255,.13), transparent 30%),
+    linear-gradient(135deg, #4033d8, #2f24c9) !important;
+  box-shadow: 0 13px 25px rgba(53, 39, 195, .25);
+}
+.teacherShell .examPreviewTitleIcon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+}
+.teacherShell .examPreviewEyebrow { display: none; }
+.teacherShell .examPreviewCard > strong { font-size: 18px; }
+.teacherShell .examPreviewCard > p { font-size: 10px; }
+.teacherShell .examPreviewStats { margin-top: 12px; }
+.teacherShell .examPreviewStats div {
+  display: grid;
+  grid-template-columns: 24px auto 1fr;
+  padding: 7px 8px;
+  border: 0;
+  background: transparent;
+}
+.teacherShell .examPreviewStats div > svg {
+  grid-row: 1 / 3;
+  align-self: center;
+  color: #fff;
+  opacity: .9;
+}
+.teacherShell .examPreviewStats strong { grid-column: 2; color: #fff; font-size: 15px; }
+.teacherShell .examPreviewStats span { color: #d8d5ff; font-size: 8px; }
+
+.teacherShell .examPreview .homeworkMeta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid #e4e9f1;
+  border-radius: 10px;
+}
+.teacherShell .examPreview .homeworkMeta div {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  min-height: 48px;
+  padding: 0 14px;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid #e9edf3;
+  border-radius: 0;
+  background: #fff;
+}
+.teacherShell .examPreview .homeworkMeta div:last-child { border-bottom: 0; }
+.teacherShell .examPreview .homeworkMeta span { color: #405374; font-size: 10px; font-weight: 750; }
+.teacherShell .examPreview .homeworkMeta strong { margin: 0; color: #161b2c; font-size: 10px; }
+.teacherShell .examPreviewSummary {
+  min-height: 62px;
+  border-color: #cde8d9;
+  background: linear-gradient(90deg, #effbf4, #f7fffa);
+}
+.teacherShell .examPreviewSummary strong { color: #178254; }
+
+.teacherShell .examListGrid {
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  gap: 14px;
+}
+.teacherShell .examCard {
+  min-height: 185px;
+  padding: 16px;
+  gap: 12px;
+  border: 1px solid #ded9fb;
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 94% 12%, rgba(255,255,255,.65), transparent 24%),
+    linear-gradient(145deg, #f1edff, #e7e4ff);
+  box-shadow: 0 8px 20px rgba(57, 47, 151, .10);
+}
+.teacherShell .examCard:nth-child(3n + 2) {
+  border-color: #ccebd9;
+  background: radial-gradient(circle at 94% 12%, rgba(255,255,255,.65), transparent 24%), linear-gradient(145deg, #eafbf1, #d9f6e6);
+}
+.teacherShell .examCard:nth-child(3n + 3) {
+  border-color: #f1d9bd;
+  background: radial-gradient(circle at 94% 12%, rgba(255,255,255,.7), transparent 24%), linear-gradient(145deg, #fff5e9, #ffe8cf);
+}
+.teacherShell .examListGrid .examCard:nth-child(3n + 1) {
+  border-color: #cfc5fb !important;
+  background:
+    radial-gradient(circle at 86% 20%, rgba(255,255,255,.62), transparent 25%),
+    linear-gradient(135deg, #f2ebff 0%, #dedbff 100%) !important;
+}
+.teacherShell .examListGrid .examCard:nth-child(3n + 2) {
+  border-color: #bfe7d0 !important;
+  background:
+    radial-gradient(circle at 86% 20%, rgba(255,255,255,.62), transparent 25%),
+    linear-gradient(135deg, #e8faef 0%, #ccf3dc 100%) !important;
+}
+.teacherShell .examListGrid .examCard:nth-child(3n + 3) {
+  border-color: #f2d3ae !important;
+  background:
+    radial-gradient(circle at 86% 20%, rgba(255,255,255,.65), transparent 25%),
+    linear-gradient(135deg, #fff3e3 0%, #ffddb9 100%) !important;
+}
+.teacherShell .examListGrid .examCard::before {
+  position: absolute;
+  z-index: 0;
+  top: auto !important;
+  right: -42px !important;
+  bottom: -52px !important;
+  left: auto !important;
+  display: block;
+  width: 125px;
+  height: 125px;
+  border: 22px solid rgba(255,255,255,.24);
+  border-radius: 50%;
+  background: transparent !important;
+  content: "";
+  opacity: 1;
+  transform: none !important;
+}
+.teacherShell .examListGrid .examCard { position: relative; isolation: isolate; overflow: hidden; }
+.teacherShell .examListGrid .examCard > * { position: relative; z-index: 1; }
+
+.teacherShell .examListGrid .examCardTop {
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+}
+.teacherShell .examListGrid .examCardIcon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,.72);
+  background: rgba(255,255,255,.62);
+  color: #3f3bd0;
+}
+.teacherShell .examListGrid .examCardTitle span { color: #536a8c; }
+.teacherShell .examListGrid .examCardTitle strong { color: #182b47; font-size: 13px; }
+.teacherShell .examListGrid .examCardMetrics div {
+  border: 1px solid rgba(255,255,255,.82);
+  background: rgba(255,255,255,.66);
+  box-shadow: 0 5px 12px rgba(46,70,108,.06);
+}
+.teacherShell .examListGrid .examCardMetrics span { color: #697b93; }
+.teacherShell .examListGrid .examCardMetrics strong { color: #203651; }
+.teacherShell .examListGrid .examCardSchedule { color: #536a86; }
+.teacherShell .examListGrid .examCardSchedule svg { color: #4f61d8; }
+.teacherShell .examListGrid .examCardSchedule em {
+  background: rgba(255,255,255,.70);
+  color: #465b78;
+}
+.teacherShell .examListGrid .examCardActions .examPrimaryAction {
+  border-color: transparent;
+  background: linear-gradient(135deg, #4a42d8, #6355e1);
+  color: #fb0707;
+  box-shadow: 0 5px 12px rgba(63,55,194,.18);
+}
+.teacherShell .examListGrid .examCardActions button:not(.examPrimaryAction):not(.examDeleteAction) {
+  color: #344d6f;
+}
+.teacherShell .examListGrid .examCardActions .examDeleteAction {
+  border-color: rgba(221,91,112,.18);
+  background: rgba(255,255,255,.76);
+  color: #cf415a;
+}
+.teacherShell .examCardTop { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 9px; }
+.teacherShell .examCardIcon { width: 34px; height: 34px; border-radius: 9px; }
+.teacherShell .examCardTitle strong { font-size: 12px; }
+.teacherShell .examCardMetrics { gap: 7px; }
+.teacherShell .examCardMetrics div { padding: 8px; border-color: rgba(255,255,255,.72); background: rgba(255,255,255,.52); }
+.teacherShell .examCardMetrics div > svg { color: #4d45cf; }
+.teacherShell .examCardSchedule { font-size: 9px; }
+.teacherShell .examCardActions { display: flex; padding-top: 8px; border: 0; }
+.teacherShell .examCardActions button { display: inline-flex; min-height: 31px; padding: 0 11px; align-items: center; gap: 6px; background: rgba(255,255,255,.75); font-size: 9px; }
+.teacherShell .examCardActions .examDeleteAction { margin-left: auto; }
+
+@media (max-width: 1100px) {
+  .teacherShell .examBuilderGrid { grid-template-columns: 1fr; }
+  .teacherShell .examPreview { position: static; min-height: 0; }
+}
+@media (max-width: 760px) {
+  .teacherShell .testExamModule { padding: 8px; }
+  .teacherShell .examListGrid { grid-template-columns: 1fr; }
+}
+.teacherShell .examCardQuestionList { display: grid; grid-column: 1/-1; gap: 9px; margin-top: 12px; padding: 14px; border: 1px solid #d8ddf4; border-radius: 14px; background: rgba(255,255,255,.72); }
+.teacherShell .examCardQuestionList > header { display: flex; align-items: center; justify-content: space-between; color: #293e61; }
+.teacherShell .examCardQuestionList > header small { color: #6679a0; font-size: 10px; }
+.teacherShell .examCardQuestionList > article { display: flex; align-items: flex-start; gap: 9px; padding: 10px; border: 1px solid #e0e5f2; border-radius: 10px; background: #fff; }
+.teacherShell .examCardQuestionList > article > b { display: grid; width: 24px; height: 24px; flex: 0 0 24px; place-items: center; border-radius: 7px; background: #606dde; color: #fff; font-size: 10px; }
+.teacherShell .examCardQuestionList article div { display: grid; gap: 4px; min-width: 0; }
+.teacherShell .examCardQuestionList article small { color: #6376c7; font-size: 8px; font-weight: 900; text-transform: uppercase; }
+.teacherShell .examCardQuestionList article strong { color: #2b405f; font-size: 11px; line-height: 1.45; }
+.teacherShell .examCardQuestionList article p { margin: 2px 0 0; color: #667892; font-size: 10px; line-height: 1.6; }
+.teacherShell .examCardQuestionEmpty { margin: 0; padding: 14px; color: #71819a; text-align: center; }
+.examQuestionsModalBackdrop { position: fixed; z-index: 1000; inset: 0; display: grid; padding: 24px; place-items: center; background: rgba(17,25,49,.66); backdrop-filter: blur(8px); }
+.teacherShell .examQuestionsModal { display: flex; width: min(720px,100%); max-height: min(760px,calc(100vh - 48px)); min-height: 0; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,.7); border-radius: 24px; background: #f5f7ff; box-shadow: 0 32px 90px rgba(10,18,48,.42),0 0 0 1px rgba(66,75,145,.13); animation: examQuestionsModalIn .24s ease-out both; }
+.teacherShell .examQuestionsModal > header { display: grid; padding: 22px 24px; grid-template-columns: auto minmax(0,1fr) auto auto; align-items: center; gap: 14px; border-bottom: 0; background: radial-gradient(circle at 90% 0,rgba(255,255,255,.2),transparent 32%),linear-gradient(120deg,#3f73df,#6252d5) !important; color: #fff !important; }
+.teacherShell .examQuestionsModalIcon { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 14px; background: rgba(255,255,255,.16) !important; color: #fff !important; box-shadow: 0 5px 0 rgba(39,42,125,.35); }
+.teacherShell .examQuestionsModalIcon svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .examQuestionsModal > header small { color: #dfe7ff !important; -webkit-text-fill-color: #dfe7ff; font-size: 9px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.teacherShell .examQuestionsModal > header h2 { margin: 3px 0; color: #fff !important; -webkit-text-fill-color: #fff; font-size: 21px; }
+.teacherShell .examQuestionsModal > header p { margin: 0; color: #e8edff !important; -webkit-text-fill-color: #e8edff; font-size: 11px; font-weight: 650; }
+.teacherShell .examQuestionsModal > header em { padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.16) !important; color: #fff !important; -webkit-text-fill-color: #fff; font-size: 9px; font-style: normal; font-weight: 900; white-space: nowrap; }
+.teacherShell .examQuestionsModal > header button { display: grid; width: 37px; height: 37px; padding: 0; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 11px; background: rgba(255,255,255,.14) !important; color: #fff !important; cursor: pointer; box-shadow: none !important; }
+.teacherShell .examQuestionsModal > header button svg { color: #fff !important; stroke: #fff !important; }
+.teacherShell .examQuestionsModal > header button:hover { background: rgba(255,255,255,.25); transform: translateY(-1px); }
+.teacherShell .examQuestionsModal > .examCardQuestionList { display: grid; flex: 1 1 auto; min-height: 0; align-content: start; gap: 10px; margin: 0; padding: 20px 22px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: #9aa8c4 #e8edf7; scrollbar-width: thin; border: 0; border-radius: 0; background: #f5f7ff; box-shadow: none; }
+.teacherShell .examQuestionsModal .examCardQuestionList > header { padding: 0 2px 4px; }
+.teacherShell .examQuestionsModal .examCardQuestionList > header div { display: grid; gap: 3px; }
+.teacherShell .examQuestionsModal .examCardQuestionList > header strong { color: #263b5b; font-size: 15px; }
+.teacherShell .examQuestionsModal .examCardQuestionList > header small { color: #7787a2; font-size: 9px; }
+.teacherShell .examQuestionsModal .examCardQuestionList > article { padding: 13px 14px; gap: 12px; border: 1px solid #dbe2f1; border-left: 4px solid #6874e4; border-radius: 12px; background: #fff; box-shadow: 0 4px 12px rgba(43,55,101,.06); }
+.teacherShell .examQuestionsModal .examCardQuestionList > article > b { width: 29px; height: 29px; flex-basis: 29px; border-radius: 9px; background: linear-gradient(145deg,#667bea,#6154d4) !important; color: #fff !important; -webkit-text-fill-color: #fff; box-shadow: 0 3px 0 #4448a6; }
+.teacherShell .examQuestionsModal .examCardQuestionList article strong { font-size: 12px; line-height: 1.5; }
+.teacherShell .examQuestionsModal .examCardQuestionList article p { padding-top: 5px; color: #40536f; border-top: 1px dashed #d6deec; font-size: 12px; line-height: 1.55; }
+.teacherShell .examQuestionsModal .examCardQuestionList article .examQuestionOptions { color: #344968; font-weight: 600; }
+.teacherShell .examQuestionsModal .examCardQuestionList article .examQuestionAnswer { margin-top: 3px; padding: 7px 9px; border: 0; border-radius: 7px; background: #e4f4eb; color: #175d40; font-weight: 750; }
+.teacherShell .examQuestionsModal > header,
+.teacherShell .examQuestionsModal > footer { flex: 0 0 auto; }
+.teacherShell .examQuestionsModal > footer { display: flex; padding: 13px 22px; align-items: center; justify-content: space-between; border-top: 1px solid #dce3f0; background: #fff; }
+.teacherShell .examQuestionsModal > footer span { display: inline-flex; align-items: center; gap: 7px; color: #28815c; font-size: 10px; font-weight: 800; }
+.teacherShell .examQuestionsModal > footer button { min-height: 36px; padding: 0 20px; border: 0; border-radius: 10px; background: linear-gradient(100deg,#4378e2,#6254d4) !important; color: #fff !important; -webkit-text-fill-color: #fff; font-size: 11px; font-weight: 850; cursor: pointer; box-shadow: 0 4px 0 #4149a5 !important; }
+@keyframes examQuestionsModalIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (max-width:600px) { .examQuestionsModalBackdrop { padding: 10px; } .teacherShell .examQuestionsModal { max-height: calc(100vh - 20px); border-radius: 17px; } .teacherShell .examQuestionsModal > header { padding: 17px; grid-template-columns: auto 1fr auto; } .teacherShell .examQuestionsModal > header em { display: none; } .teacherShell .examQuestionsModalIcon { width: 41px; height: 41px; } .teacherShell .examQuestionsModal > .examCardQuestionList { padding: 16px; } }

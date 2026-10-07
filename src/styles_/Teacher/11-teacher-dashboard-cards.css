@@ -1,0 +1,1315 @@
+/* Colorful teacher dashboard summary cards inspired by modern course covers. */
+.teacherShell .teacherStats {
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.teacherShell .teacherStats .statCard {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  min-height: 190px;
+  padding: 24px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  color: #283044;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.teacherShell .teacherStats .statCard:nth-child(1) {
+  background-color: #e4efff !important;
+  background-image: linear-gradient(145deg, #eaf3ff, #dbeaff) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(2) {
+  background-color: #f2e5f8 !important;
+  background-image: linear-gradient(145deg, #f7ebfb, #edddf5) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(3) {
+  background-color: #dcf3d8 !important;
+  background-image: linear-gradient(145deg, #e5f8e1, #d3efcf) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(4) {
+  background-color: #fff0b9 !important;
+  background-image: linear-gradient(145deg, #fff5cf, #ffebaa) !important;
+}
+
+/* .teacherShell .teacherStats .statCard::before {
+  position: absolute;
+  right: -26px;
+  bottom: -38px;
+  z-index: -1;
+  width: 142px;
+  height: 142px;
+  border: 1px solid rgba(91, 105, 135, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.28);
+  content: "";
+  transform: rotate(24deg);
+} */
+
+/* .teacherShell .teacherStats .statCard::after {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  z-index: -1;
+  width: 68px;
+  height: 68px;
+  border: 2px solid rgba(91, 105, 135, 0.08);
+  border-radius: 50%;
+  content: "";
+} */
+
+.teacherShell .teacherStats .statIcon,
+.teacherShell .teacherStats .statCard:nth-child(n) .statIcon {
+  display: none;
+}
+
+.teacherShell .teacherStats .statText {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 0;
+  padding: 40px 0 0;
+  text-align: left;
+}
+
+.teacherShell .teacherStats .statText strong {
+  order: 2;
+  color: #273147;
+  margin-top: 13px;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: none;
+}
+
+.teacherShell .teacherStats .statText p {
+  order: 1;
+  margin: 0;
+  color: #273147;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.teacherShell .teacherStats .statText small {
+  order: 3;
+  display: block;
+  margin-top: 6px;
+  overflow: hidden;
+  color: #69758a;
+  font-size: 11px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacherShell .teacherStats .cardOpen {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #53627a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teacherShell .teacherStats .statCard:hover {
+  box-shadow: 0 20px 38px rgba(49, 65, 105, 0.2);
+  /* transform: translateY(-5px); */
+}
+
+@media (max-width: 1200px) {
+  .teacherShell .teacherStats { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .teacherShell .teacherStats { grid-template-columns: 1fr; }
+  .teacherShell .teacherStats .statCard { min-height: 170px; }
+}
+
+/* Teaching-day workspace cards */
+.teacherShell .teacherDashboardWorkspace {
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.teacherShell .teacherDashboardWorkspace > .panel {
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(49, 65, 105, 0.08);
+}
+
+.teacherShell .teacherDashboardWorkspace > .panel::before { display: none; }
+
+.teacherShell .dashboardSchedule {
+  border-color: #dbe5f1 !important;
+  background: #fff !important;
+}
+
+.teacherShell .dashboardQuickActions {
+  border-color: #e2e5ed !important;
+  background: #fff !important;
+}
+
+.teacherShell .dashboardAssignments {
+  border-color: #dce7df !important;
+  background: #fff !important;
+}
+
+.teacherShell .dashboardSectionHeading {
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(72, 94, 128, 0.12);
+}
+
+.teacherShell .teacherDashboardWorkspace .eyebrow {
+  color: #587091;
+  font-size: 10px;
+  letter-spacing: 0.11em;
+}
+
+.teacherShell .teacherDashboardWorkspace h2 {
+  margin-top: 6px;
+  color: #26344b;
+  font-size: 22px;
+}
+
+.teacherShell .teacherDashboardWorkspace .textAction {
+  padding: 8px 11px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.58);
+  color: #4f68c8;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+.teacherShell .scheduleList {
+  display: grid;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.teacherShell .scheduleItem {
+  min-height: 76px;
+  padding: 14px 16px;
+  border: 1px solid rgba(109, 143, 185, 0.18);
+  border-radius: 13px;
+  background: #f8fbff;
+  box-shadow: none;
+  transition: 160ms ease;
+}
+
+.teacherShell .scheduleItem:hover {
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(62, 91, 132, 0.11);
+  /* transform: translateY(-3px); */
+}
+
+.teacherShell .scheduleItem:hover .scheduleMarker {
+  box-shadow: 0 0 0 5px rgba(94, 145, 212, 0.16);
+  transform: scale(1.08);
+}
+
+.teacherShell .scheduleTime {
+  min-width: 92px;
+  padding-right: 16px;
+  border-right: 1px solid rgba(84, 111, 151, 0.14);
+}
+
+.teacherShell .scheduleTime strong,
+.teacherShell .scheduleItem > div:nth-child(2) strong {
+  color: #253a57;
+}
+
+.teacherShell .scheduleItem p,
+.teacherShell .scheduleTime span {
+  color: #6f819c;
+}
+
+.teacherShell .scheduleItem .badge {
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.teacherShell .dashboardQuickActions > p {
+  color: #748098;
+  line-height: 1.5;
+}
+
+.teacherShell .dashboardQuickActions > button {
+  min-height: 48px;
+  border: 1px solid rgba(126, 92, 167, 0.16);
+  border-radius: 11px;
+  background: #faf9fd;
+  color: #4e5f84;
+  box-shadow: none;
+}
+
+.teacherShell .dashboardQuickActions > button:first-of-type {
+  border-color: transparent;
+  background: #7c65c9;
+  color: #fff;
+}
+
+.teacherShell .dashboardQuickActions > button:hover {
+  background: #fff;
+  color: #6850b8;
+  transform: translateY(-2px);
+}
+
+.teacherShell .assignmentPreviewList {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.teacherShell .assignmentPreviewList article,
+.teacherShell .dashboardEmptyState {
+  border: 1px solid rgba(86, 145, 83, 0.16);
+  border-radius: 13px;
+  background: #f8fcf7;
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading {
+  border-left: 4px solid #77a9e7;
+  padding-left: 14px;
+}
+
+.teacherShell .dashboardAssignments .dashboardSectionHeading {
+  border-left: 4px solid #79bd74;
+  padding-left: 14px;
+}
+
+.teacherShell .dashboardQuickActions {
+  border-top: 4px solid #9a82d8 !important;
+}
+
+.teacherShell .assignmentPreviewList .assignmentIcon {
+  background: #e4f2ff;
+  color: #3f7dbb;
+}
+
+@media (max-width: 900px) {
+  .teacherShell .teacherDashboardWorkspace { grid-template-columns: 1fr; }
+  .teacherShell .dashboardSchedule,
+  .teacherShell .dashboardQuickActions,
+  .teacherShell .dashboardAssignments { grid-column: 1; }
+}
+
+/* Dashboard workspace v2: timeline + action hub */
+.teacherShell .teacherDashboardWorkspace {
+  grid-template-columns: minmax(0, 1.45fr) minmax(340px, .75fr);
+  align-items: stretch;
+}
+
+.teacherShell .dashboardSchedule,
+.teacherShell .dashboardQuickActions {
+  min-height: 430px;
+  padding: 26px;
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 46px auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 0 20px;
+  border: 0;
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading > div {
+  display: block;
+}
+
+.teacherShell .dashboardSchedule .scheduleHeadingIcon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid #d5e5f8;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #edf5ff, #dcecff);
+  color: #4e83c8;
+  box-shadow: 0 6px 14px rgba(66, 104, 153, .1);
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading .eyebrow,
+.teacherShell .dashboardSchedule .dashboardSectionHeading h2 { grid-column: auto; }
+
+.teacherShell .scheduleList {
+  position: relative;
+  gap: 0;
+  margin: 8px 0 0 18px;
+  padding-left: 28px;
+  border-left: 2px solid #dbe6f3;
+}
+
+.teacherShell .scheduleItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) auto;
+  gap: 18px;
+  min-height: 90px;
+  margin-bottom: 14px;
+  padding: 17px 18px;
+  border: 0;
+  border-radius: 15px;
+  background: #f7f9fc;
+}
+
+.teacherShell .scheduleItem:last-child { margin-bottom: 0; }
+
+.teacherShell .scheduleMarker {
+  position: absolute;
+  top: 31px;
+  left: -36px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #5e91d4;
+  box-shadow: 0 0 0 2px #c9d9ee;
+}
+
+.teacherShell .scheduleMarker.meeting { background: #e9a33a; }
+
+.teacherShell .scheduleTime {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.teacherShell .scheduleTime strong { font-size: 17px; }
+.teacherShell .scheduleTime span { margin-top: 5px; font-size: 10px; text-transform: uppercase; }
+.teacherShell .scheduleItem > div:nth-of-type(2) strong { font-size: 14px; }
+.teacherShell .scheduleItem > div:nth-of-type(2) p { margin-top: 7px; }
+
+.teacherShell .dashboardQuickActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 12px;
+  border-top: 0 !important;
+}
+
+.teacherShell .dashboardQuickActions > .eyebrow,
+.teacherShell .dashboardQuickActions > h2,
+.teacherShell .dashboardQuickActions > p {
+  grid-column: 1 / -1;
+}
+
+.teacherShell .dashboardQuickActions > h2 { margin: 0; }
+.teacherShell .dashboardQuickActions > p { margin: -4px 0 8px; }
+
+.teacherShell .dashboardQuickActions > button,
+.teacherShell .dashboardQuickActions > button:first-of-type {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 8px 10px;
+  min-height: 126px;
+  padding: 15px;
+  border: 1px solid #e2e8f1;
+  border-radius: 15px;
+  background: #fff;
+  color: #34435c;
+  text-align: left;
+}
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(1) {
+  background: linear-gradient(135deg, #edf5ff 0%, #dfeeff 100%) !important;
+}
+.teacherShell .dashboardQuickActions > button:nth-of-type(2) {
+  background: linear-gradient(135deg, #faf3fd 0%, #f0e5f8 100%) !important;
+}
+.teacherShell .dashboardQuickActions > button:nth-of-type(3) {
+  background: linear-gradient(135deg, #f1faef 0%, #e1f3de 100%) !important;
+}
+.teacherShell .dashboardQuickActions > button:nth-of-type(4) {
+  background: linear-gradient(135deg, #fff9e7 0%, #fff0c5 100%) !important;
+}
+
+.teacherShell .dashboardQuickActions .quickActionIcon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+  color: #5079bb;
+  box-shadow: 0 5px 12px rgba(50, 70, 105, .08);
+}
+
+.teacherShell .dashboardQuickActions > button > span:nth-child(2) {
+  display: grid;
+  align-self: center;
+  gap: 4px;
+}
+
+.teacherShell .dashboardQuickActions > button strong {
+  color: #26344c;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.teacherShell .dashboardQuickActions > button small {
+  color: #6f7d92;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.teacherShell .dashboardQuickActions > button > svg { grid-column: 2; justify-self: end; color: #7a879b; }
+
+.teacherShell .dashboardQuickActions > button:hover,
+.teacherShell .dashboardQuickActions > button:first-of-type:hover {
+  border-color: #bdcce1;
+  color: #34435c;
+  box-shadow: 0 12px 24px rgba(52, 70, 104, 0.13);
+  transform: translateY(-4px);
+}
+
+.teacherShell .dashboardQuickActions > button:hover .quickActionIcon {
+  color: #3d68aa;
+  box-shadow: 0 7px 16px rgba(50, 70, 105, .14);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.teacherShell .dashboardQuickActions > button:hover > svg {
+  color: #4f68a5;
+  transform: translateX(3px);
+}
+
+.teacherShell .scheduleItem,
+.teacherShell .scheduleMarker,
+.teacherShell .dashboardQuickActions > button,
+.teacherShell .dashboardQuickActions .quickActionIcon,
+.teacherShell .dashboardQuickActions > button > svg {
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+/* Static dashboard interactions — no hover movement or visual effects. */
+.teacherShell .scheduleItem:hover {
+  background: #f7f9fc;
+  box-shadow: none;
+  transform: none;
+}
+
+.teacherShell .scheduleItem:hover .scheduleMarker {
+  box-shadow: 0 0 0 2px #c9d9ee;
+  transform: none;
+}
+
+.teacherShell .dashboardQuickActions > button:hover,
+.teacherShell .dashboardQuickActions > button:first-of-type:hover {
+  border-color: #e2e8f1;
+  color: #34435c;
+  box-shadow: none;
+  transform: none;
+}
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(1):hover { background: linear-gradient(135deg, #edf5ff, #dfeeff) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(2):hover { background: linear-gradient(135deg, #faf3fd, #f0e5f8) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(3):hover { background: linear-gradient(135deg, #f1faef, #e1f3de) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(4):hover { background: linear-gradient(135deg, #fff9e7, #fff0c5) !important; }
+
+.teacherShell .dashboardQuickActions > button:hover .quickActionIcon {
+  color: #5079bb;
+  box-shadow: 0 5px 12px rgba(50, 70, 105, .08);
+  transform: none;
+}
+
+.teacherShell .dashboardQuickActions > button:hover > svg {
+  color: #7a879b;
+  transform: none;
+}
+
+@media (max-width: 1100px) {
+  .teacherShell .teacherDashboardWorkspace { grid-template-columns: 1fr; }
+  .teacherShell .dashboardSchedule,
+  .teacherShell .dashboardQuickActions,
+  .teacherShell .dashboardAssignments { grid-column: 1; }
+}
+
+@media (max-width: 600px) {
+  .teacherShell .dashboardSchedule,
+  .teacherShell .dashboardQuickActions { min-height: 0; padding: 19px; }
+  .teacherShell .dashboardQuickActions { grid-template-columns: 1fr; }
+  .teacherShell .scheduleItem { grid-template-columns: 60px 1fr; }
+  .teacherShell .scheduleItem .badge { grid-column: 2; justify-self: start; }
+}
+
+/* Connected calendar preview below Quick Actions */
+.teacherShell .dashboardMiniCalendar {
+  grid-column: 2;
+  padding: 24px;
+  border: 1px solid #e0e6ef !important;
+  background: #fff !important;
+}
+
+.teacherShell .miniCalendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.teacherShell .miniCalendarHeader h2 { margin: 4px 0 0; font-size: 18px; }
+
+.teacherShell .miniCalendarHeader button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid #d9e4f1;
+  border-radius: 9px;
+  background: #f7faff;
+  color: #5370c7;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.teacherShell .miniCalendarWeekdays,
+.teacherShell .miniCalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.teacherShell .miniCalendarWeekdays { margin: 17px 0 7px; }
+
+.teacherShell .miniCalendarWeekdays span {
+  color: #8a95a6;
+  font-size: 9px;
+  font-weight: 850;
+  text-align: center;
+}
+
+.teacherShell .miniCalendarGrid > span,
+.teacherShell .miniCalendarGrid button {
+  position: relative;
+  display: grid;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 9px;
+  background: #f7f9fc;
+  color: #4f5d72;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.teacherShell .miniCalendarGrid .empty { background: transparent; }
+
+.teacherShell .miniCalendarGrid button.hasEvent {
+  background: linear-gradient(145deg, #e9f2ff, #dcecff);
+  color: #356bb2;
+  font-weight: 900;
+}
+
+.teacherShell .miniCalendarGrid button i {
+  position: absolute;
+  right: 50%;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5c89d5;
+  transform: translateX(50%);
+}
+
+@media (max-width: 1100px) {
+  .teacherShell .dashboardMiniCalendar { grid-column: 1; }
+}
+
+/* Compact planner variant */
+.teacherShell .dashboardMiniCalendar { padding: 0; }
+
+.teacherShell .miniCalendarHeader {
+  padding: 20px 22px;
+  border: 0;
+  border-radius: 17px 17px 0 0;
+  background: linear-gradient(135deg, #edf5ff, #f4effc);
+}
+
+.teacherShell .miniCalendarHeader button { background: #fff; }
+
+.teacherShell .miniCalendarWeekdays,
+.teacherShell .miniCalendarGrid {
+  margin-right: 22px;
+  margin-left: 22px;
+  gap: 3px;
+}
+
+.teacherShell .miniCalendarWeekdays { margin-top: 16px; margin-bottom: 5px; }
+
+.teacherShell .miniCalendarGrid > span,
+.teacherShell .miniCalendarGrid button {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: auto;
+  justify-self: center;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.teacherShell .miniCalendarGrid button.hasEvent {
+  background: #5d86df;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(67, 104, 180, .18);
+}
+
+.teacherShell .miniCalendarGrid button i {
+  right: 5px;
+  bottom: 5px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #fff;
+  background: #ffd36b;
+  transform: none;
+}
+
+.teacherShell .miniCalendarAgenda {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 16px 22px 22px;
+  border-top: 1px solid #edf0f4;
+}
+
+.teacherShell .miniAgendaTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  color: #2f3c53;
+  font-size: 12px;
+}
+
+.teacherShell .miniAgendaTitle span { color: #8994a6; font-size: 9px; font-weight: 750; }
+
+.teacherShell .miniCalendarAgenda > button {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
+  padding: 7px 10px;
+  border: 1px solid #e7ebf1;
+  border-radius: 11px;
+  background: #fafbfd;
+  color: #344158;
+  text-align: left;
+}
+
+.teacherShell .miniAgendaDate {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-content: center;
+  border-radius: 10px;
+  background: #eaf2ff;
+  color: #4778c2;
+  text-align: center;
+}
+
+.teacherShell .miniAgendaDate strong { font-size: 13px; line-height: 1; }
+.teacherShell .miniAgendaDate small { margin-top: 3px; font-size: 7px; font-weight: 850; text-transform: uppercase; }
+.teacherShell .miniCalendarAgenda > button > span:nth-child(2) { display: grid; gap: 4px; min-width: 0; }
+.teacherShell .miniCalendarAgenda > button > span:nth-child(2) strong { overflow: hidden; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .miniCalendarAgenda > button > span:nth-child(2) small { color: #8290a4; font-size: 8px; font-weight: 700; }
+.teacherShell .miniCalendarAgenda > button > svg { color: #8b97a8; }
+
+/* Clean green calendar layout */
+.teacherShell .dashboardMiniCalendar {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.35fr) minmax(170px, .65fr);
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 16px;
+  padding: 14px 12px 22px;
+  border-radius: 8px;
+}
+
+.teacherShell .miniCalendarNewEvent {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 49px;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #527fd9, #7467dc) !important;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.teacherShell .miniCalendarHeader {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  gap: 10px;
+  padding: 11px 0;
+  background: transparent;
+}
+
+.teacherShell .miniCalendarHeader h2 {
+  align-self: center;
+  margin: 0;
+  color: #121924;
+  font-size: 15px;
+  text-align: center;
+}
+
+.teacherShell .miniCalendarHeader button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  min-height: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 5px;
+  background: #f3f5f5;
+  color: #5c72d2;
+}
+
+.teacherShell .previousMonthIcon { transform: rotate(180deg); }
+
+.teacherShell .miniCalendarWeekdays,
+.teacherShell .miniCalendarGrid {
+  grid-column: 1;
+  margin-right: 0;
+  margin-left: 0;
+  gap: 0;
+}
+
+.teacherShell .miniCalendarWeekdays {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 6px 0;
+  background: #e9edff;
+}
+
+.teacherShell .miniCalendarWeekdays span {
+  color: #152b29;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.teacherShell .miniCalendarGrid {
+  grid-auto-rows: 52px;
+  border-bottom: 1px solid #dcece8;
+}
+
+.teacherShell .miniCalendarGrid > span,
+.teacherShell .miniCalendarGrid button {
+  width: 100%;
+  height: 52px;
+  border-radius: 0;
+  border-bottom: 1px solid #dcece8;
+  background: #fff;
+  color: #27333e;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.teacherShell .miniCalendarGrid .empty { background: #fff; }
+
+.teacherShell .miniCalendarGrid button.hasEvent {
+  isolation: isolate;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #dcece8;
+  border-radius: 0;
+  background: #fff;
+  color: #fff;
+  box-shadow: none;
+}
+
+.teacherShell .miniCalendarGrid button.hasEvent::before {
+  position: absolute;
+  z-index: -1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #5d83dd, #7465d8);
+  content: "";
+}
+
+.teacherShell .miniCalendarGrid button i { display: none; }
+
+.teacherShell .miniCalendarEventPanel {
+  grid-column: 2;
+  grid-row: 2 / 5;
+  min-width: 0;
+  margin-top: 11px;
+  padding: 14px;
+  border: 1px solid #dfe3f3;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #f8f9ff, #f1f3fd);
+}
+
+.teacherShell .miniCalendarEventHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dfe3f3;
+  color: #243631;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.teacherShell .miniCalendarEventHeading strong {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5e9fc;
+  color: #596fd0;
+  font-size: 10px;
+}
+
+.teacherShell .miniCalendarEventList { display: grid; gap: 8px; margin-top: 12px; }
+
+.teacherShell .miniCalendarEventList article {
+  display: grid;
+  grid-template-columns: 4px minmax(0, 1fr);
+  gap: 9px;
+  width: 100%;
+  min-height: 66px;
+  padding: 9px;
+  border: 1px solid #e1ebe8;
+  border-radius: 7px;
+  background: #fff;
+  text-align: left;
+}
+
+.teacherShell .miniEventAccent { width: 4px; height: 100%; border-radius: 999px; background: #617bd8; }
+.teacherShell .miniEventAccent.meeting { background: #edaa3d; }
+.teacherShell .miniEventDetails { display: grid; align-content: center; gap: 4px; min-width: 0; }
+.teacherShell .miniEventDetails strong { overflow: hidden; color: #293a35; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .miniEventDetails small { color: #71817d; font-size: 8px; font-weight: 750; }
+.teacherShell .miniEventDetails em { color: #596fc3; font-size: 8px; font-style: normal; font-weight: 750; }
+.teacherShell .miniCalendarEventList > p { color: #7e8d89; font-size: 10px; text-align: center; }
+
+@media (max-width: 700px) {
+  .teacherShell .dashboardMiniCalendar { grid-template-columns: 1fr; }
+  .teacherShell .miniCalendarNewEvent,
+  .teacherShell .miniCalendarHeader,
+  .teacherShell .miniCalendarWeekdays,
+  .teacherShell .miniCalendarGrid,
+  .teacherShell .miniCalendarEventPanel { grid-column: 1; }
+  .teacherShell .miniCalendarEventPanel { grid-row: auto; }
+}
+
+.miniEventOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(25, 35, 55, .48);
+  backdrop-filter: blur(5px);
+}
+
+.miniEventPopup {
+  display: grid;
+  gap: 16px;
+  width: min(480px, 100%);
+  padding: 24px;
+  border: 1px solid #dce3f0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(27, 39, 68, .24);
+}
+
+.miniEventPopupHeader {
+  display: grid;
+  grid-template-columns: 44px 1fr 34px;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e8ecf2;
+}
+
+.miniEventPopupHeader .quickActionIcon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 12px;
+  background: #eaf0ff;
+  color: #5a72d2;
+}
+
+.miniEventPopupHeader > div { display: grid; gap: 4px; }
+.miniEventPopupHeader strong { color: #27354b; font-size: 16px; }
+.miniEventPopupHeader small { color: #7d899c; font-size: 10px; font-weight: 700; }
+.miniEventPopupHeader > button { display: grid; width: 34px; height: 34px; padding: 0; place-items: center; border: 0; border-radius: 9px; background: #f2f4f8; color: #728096; }
+
+.miniEventPopup label {
+  display: grid;
+  gap: 7px;
+  color: #56647a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.miniEventPopup input,
+.miniEventPopup select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #27354b;
+  outline: 0;
+}
+
+.miniEventPopup input:focus,
+.miniEventPopup select:focus { border-color: #829ce1; box-shadow: 0 0 0 3px rgba(89, 113, 203, .1); }
+.miniEventFormRow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.miniEventActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid #e8ecf2;
+}
+
+.miniEventPopup .miniEventCancel,
+.miniEventPopup .miniEventSave {
+  display: inline-flex !important;
+  min-height: 46px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.miniEventPopup .miniEventCancel {
+  border: 1px solid #d5deeb;
+  background: #f5f7fa;
+  color: #526178;
+}
+
+.miniEventPopup .miniEventSave {
+  min-width: 150px;
+  border: 0;
+  background: linear-gradient(90deg, #527fd9, #7467dc) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(82, 103, 205, .24);
+}
+
+@media (max-width: 520px) {
+  .miniEventPopup { padding: 18px; }
+  .miniEventFormRow { grid-template-columns: 1fr; }
+  .miniEventActions { align-items: stretch; flex-direction: column-reverse; }
+  .miniEventPopup .miniEventCancel,
+  .miniEventPopup .miniEventSave { width: 100%; }
+}
+
+/* Unified blue dashboard palette. */
+.teacherShell .teacherStats .statCard:nth-child(1) {
+  background: linear-gradient(145deg, #eaf4ff, #d8eaff) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(2) {
+  background: linear-gradient(145deg, #e8efff, #d9e3ff) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(3) {
+  background: linear-gradient(145deg, #e1efff, #cfe3fb) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(4) {
+  background: linear-gradient(145deg, #edf3ff, #dce6f8) !important;
+}
+
+.teacherShell .teacherStats .statCard:nth-child(1) { border-top: 3px solid #78aef0 !important; }
+.teacherShell .teacherStats .statCard:nth-child(2) { border-top: 3px solid #7897e8 !important; }
+.teacherShell .teacherStats .statCard:nth-child(3) { border-top: 3px solid #5f91cf !important; }
+.teacherShell .teacherStats .statCard:nth-child(4) { border-top: 3px solid #8298c7 !important; }
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(1),
+.teacherShell .dashboardQuickActions > button:nth-of-type(1):hover {
+  background: linear-gradient(135deg, #edf6ff, #dcecff) !important;
+}
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(2),
+.teacherShell .dashboardQuickActions > button:nth-of-type(2):hover {
+  background: linear-gradient(135deg, #edf1ff, #dfe6ff) !important;
+}
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(3),
+.teacherShell .dashboardQuickActions > button:nth-of-type(3):hover {
+  background: linear-gradient(135deg, #e7f2ff, #d4e8fb) !important;
+}
+
+.teacherShell .dashboardQuickActions > button:nth-of-type(4),
+.teacherShell .dashboardQuickActions > button:nth-of-type(4):hover {
+  background: linear-gradient(135deg, #f0f5ff, #dfe8f8) !important;
+}
+
+.teacherShell .dashboardQuickActions > button {
+  border-color: #ccdaee !important;
+}
+
+.teacherShell .dashboardQuickActions .quickActionIcon {
+  color: #416fba;
+}
+
+.teacherShell .dashboardAssignments .dashboardSectionHeading,
+.teacherShell .dashboardSchedule .dashboardSectionHeading {
+  border-left-color: #5f91d5 !important;
+}
+
+.teacherShell .dashboardQuickActions { border-top-color: #6f8fd5 !important; }
+
+.teacherShell .assignmentPreviewList article,
+.teacherShell .dashboardEmptyState {
+  border-color: rgba(83, 130, 190, 0.20);
+  background: #f4f8ff;
+}
+
+.teacherShell .miniCalendarHeader {
+  background: linear-gradient(90deg, #4d7fd5, #6688d7) !important;
+}
+
+/* Blue calendar and event-panel refresh. */
+.teacherShell .dashboardMiniCalendar {
+  gap: 0 18px;
+  padding: 14px 14px 20px;
+  border: 1px solid #cbdcf2 !important;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f8fbff, #eef5ff) !important;
+  box-shadow: 0 12px 28px rgba(55, 91, 145, 0.12) !important;
+}
+
+.teacherShell .miniCalendarNewEvent {
+  min-height: 52px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #356fc8, #557fd5) !important;
+  box-shadow: 0 8px 18px rgba(53, 111, 200, 0.22);
+}
+
+.teacherShell .miniCalendarNewEvent:hover {
+  background: linear-gradient(90deg, #2f65b8, #496fc1) !important;
+}
+
+.teacherShell .miniCalendarHeader {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 9px 9px 0 0;
+  background: #dbeaff !important;
+}
+
+.teacherShell .miniCalendarHeader h2 {
+  color: #173968 !important;
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.teacherShell .miniCalendarHeader button {
+  border: 1px solid #bdd3f1;
+  background: #ffffff;
+  color: #376fc2;
+}
+
+.teacherShell .miniCalendarHeader button:hover {
+  border-color: #7fa7df;
+  background: #edf5ff;
+}
+
+.teacherShell .miniCalendarWeekdays {
+  margin-top: 0;
+  background: #c8dcf8;
+}
+
+.teacherShell .miniCalendarWeekdays span { color: #23466f; }
+
+.teacherShell .miniCalendarGrid {
+  overflow: hidden;
+  border: 1px solid #d4e2f2;
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  background: #ffffff;
+}
+
+.teacherShell .miniCalendarGrid > span,
+.teacherShell .miniCalendarGrid button,
+.teacherShell .miniCalendarGrid .empty {
+  border-color: #e2ebf6;
+  background: #ffffff;
+  color: #263d5b;
+}
+
+.teacherShell .miniCalendarGrid button:hover {
+  background: #edf5ff;
+  color: #245da7;
+}
+
+.teacherShell .miniCalendarGrid button.hasEvent,
+.teacherShell .miniCalendarGrid button.hasEvent:hover {
+  border-color: #e2ebf6;
+  background: #ffffff;
+  color: #ffffff;
+}
+
+.teacherShell .miniCalendarGrid button.hasEvent::before {
+  background: linear-gradient(145deg, #3978cf, #5d8dde);
+  box-shadow: 0 5px 12px rgba(57, 120, 207, 0.26);
+}
+
+.teacherShell .miniCalendarEventPanel {
+  margin-top: 10px;
+  padding: 15px;
+  border-color: #c9dbf1;
+  border-radius: 10px;
+  background: #eaf3ff;
+}
+
+.teacherShell .miniCalendarEventHeading {
+  border-color: #c8d9ef;
+  color: #19385f;
+}
+
+.teacherShell .miniCalendarEventHeading strong {
+  background: #cfe1fa;
+  color: #2f67b6;
+}
+
+.teacherShell .miniCalendarEventList article {
+  border-color: #cbdcf0;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(55, 91, 145, 0.07);
+}
+
+.teacherShell .miniEventAccent { background: #4f7fd2; }
+.teacherShell .miniEventAccent.meeting { background: #83a9df; }
+.teacherShell .miniEventDetails strong { color: #223a59; }
+.teacherShell .miniEventDetails small { color: #6a7f9d; }
+.teacherShell .miniEventDetails em { color: #3d70bd; }
+
+/* FullCalendar dashboard integration. */
+.teacherShell .fullCalendarHost {
+  grid-column: 1;
+  min-width: 0;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid #cbdcf1;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.teacherShell .fullCalendarHost .fc {
+  --fc-border-color: #dce8f5;
+  --fc-button-bg-color: #ffffff;
+  --fc-button-border-color: #bdd3f1;
+  --fc-button-text-color: #376fc2;
+  --fc-button-hover-bg-color: #edf5ff;
+  --fc-button-hover-border-color: #7fa7df;
+  --fc-button-active-bg-color: #dbeaff;
+  --fc-button-active-border-color: #7fa7df;
+  --fc-event-bg-color: #4f7fd2;
+  --fc-event-border-color: #4f7fd2;
+  --fc-event-text-color: #ffffff;
+  --fc-page-bg-color: #ffffff;
+  --fc-neutral-bg-color: #c8dcf8;
+  --fc-today-bg-color: #edf5ff;
+  color: #263d5b;
+  font-size: 11px;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-toolbar {
+  min-height: 54px;
+  margin: 0;
+  padding: 9px 10px;
+  background: #dbeaff;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-toolbar-title {
+  color: #173968;
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 6px;
+  box-shadow: none !important;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-col-header-cell {
+  padding: 7px 2px;
+  background: #c8dcf8;
+  color: #23466f;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-daygrid-day-frame { min-height: 62px; }
+
+.teacherShell .fullCalendarHost .fc .fc-daygrid-day-number {
+  padding: 6px;
+  color: #263d5b;
+  font-weight: 750;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-daygrid-day:hover {
+  background: #f2f7ff;
+  cursor: pointer;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-day-other .fc-daygrid-day-number {
+  color: #9aacbf;
+}
+
+.teacherShell .fullCalendarHost .fc .fc-daygrid-event {
+  margin: 1px 3px;
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: #4f7fd2;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.teacherShell .fullCalendarHost .fc .meetingEvent {
+  background: #7c9fd3;
+}
+
+@media (max-width: 700px) {
+  .teacherShell .fullCalendarHost { grid-column: 1; }
+}

@@ -1,0 +1,72 @@
+/* Assignment styling only: preserve all existing form and workspace behavior. */
+#akAssignmentStudio { padding:24px 30px; min-width:0; }
+#akAssignmentStudio .assignmentSummaryGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin:0 0 22px; }
+#akAssignmentStudio .assignmentSummaryCard { display:grid; grid-template-columns:44px 1fr; align-content:center; gap:4px 14px; min-height:114px; padding:20px !important; background:#fff !important; border:1px solid #d9e5ec !important; border-radius:12px !important; box-shadow:none !important; transform:none !important; }
+#akAssignmentStudio .assignmentSummaryCard::before,#akAssignmentStudio .assignmentSummaryCard::after { display:none !important; }
+#akAssignmentStudio .assignmentSummaryIcon { grid-column:1; grid-row:1 / 4; position:static; display:grid; place-items:center; width:44px; height:44px; border:0; border-radius:12px; background:#e9f4f7 !important; color:#227e97 !important; box-shadow:none !important; }
+#akAssignmentStudio .assignmentSummaryCard strong { grid-column:2; color:#243f52 !important; -webkit-text-fill-color:#243f52; font-size:28px; font-weight:650; line-height:1.1; margin:0; }
+#akAssignmentStudio .assignmentSummaryCard h3 { grid-column:2; color:#587587 !important; font-size:12px; font-weight:600; margin:2px 0; }
+#akAssignmentStudio .assignmentSummaryCard p { grid-column:2; color:#8196a3 !important; font-size:10px; margin:0; }
+#akAssignmentStudio .assignmentSummaryCard.amber .assignmentSummaryIcon { background:#fbf4e8 !important; color:#ac7d30 !important; }
+#akAssignmentStudio .assignmentSummaryCard.green .assignmentSummaryIcon { background:#e9f6ee !important; color:#3d8a66 !important; }
+#akAssignmentStudio .assignmentSummaryCard.pink .assignmentSummaryIcon { background:#edf0f8 !important; color:#7082ad !important; }
+#akAssignmentStudio .homeworkSwipeWorkspace { background:transparent !important; border:0 !important; border-radius:0; padding:0 !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkSwipeHeader { padding:24px 28px; margin:0 0 18px; background:#173e55 !important; border-radius:12px; }
+#akAssignmentStudio .homeworkSwipeHeader span { color:#71d2df !important; -webkit-text-fill-color:#71d2df; font-size:10px; letter-spacing:1.5px; }
+#akAssignmentStudio .homeworkSwipeHeader h2 { color:#fff !important; -webkit-text-fill-color:#fff; font-size:28px; font-weight:600; letter-spacing:-.6px; margin:10px 0 8px; }
+#akAssignmentStudio .homeworkSwipeHeader p { color:#b8d1df !important; -webkit-text-fill-color:#b8d1df; font-size:13px; font-weight:400; margin:0; line-height:1.7; }
+#akAssignmentStudio .homeworkSwipeTabs { display:flex; gap:0; padding:0 !important; margin:0 0 22px; border:0 !important; border-bottom:1px solid #ccdce5 !important; border-radius:0; background:transparent !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkSwipeTabs .homeworkbothTab { flex:0 1 300px; min-height:72px; padding:14px 18px !important; border:0 !important; border-bottom:3px solid transparent !important; border-radius:0; background:transparent !important; box-shadow:none !important; transform:none !important; }
+#akAssignmentStudio .homeworkSwipeTabs .homeworkbothTab.active { background:#ffffff80 !important; border-bottom-color:#138b9f !important; }
+#akAssignmentStudio .homeworkCreateTab { display:flex; align-items:center; gap:12px; background:transparent; padding:0; }
+#akAssignmentStudio .homeworkCreateTabIcon,#akAssignmentStudio .homeworkCreateTabIcon>span { display:grid; place-items:center; width:36px; height:36px; border:0; border-radius:9px; background:#e4f0f5 !important; color:#28829b !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkCreateTabNote>span:first-child { color:#386c82 !important; -webkit-text-fill-color:#386c82; font-size:13px; font-weight:600; }
+#akAssignmentStudio .homeworkCreateTabNote>span:last-child { color:#748e9e !important; -webkit-text-fill-color:#748e9e; font-size:11px; font-weight:400; }
+#akAssignmentStudio .createHomeworkModule { padding:0; background:transparent; }
+#akAssignmentStudio .createHomeworkModule>.teacherGrid { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr); gap:22px; align-items:start; }
+#akAssignmentStudio .createHomeworkForm { padding:24px !important; border:1px solid #d9e5ec !important; border-radius:12px !important; background:#fff !important; box-shadow:none !important; overflow:hidden; }
+#akAssignmentStudio .createHomeworkForm::before,#akAssignmentStudio .createHomeworkForm::after { display:none !important; }
+#akAssignmentStudio .createHomeworkForm>.panelHeader { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; min-height:0; padding:0 0 20px !important; margin:0 0 20px !important; background:transparent !important; border:0 !important; border-bottom:1px solid #e4edf2 !important; border-radius:0; box-shadow:none !important; }
+#akAssignmentStudio .createHomeworkForm>.panelHeader h2 { color:#284e63 !important; -webkit-text-fill-color:#284e63; font-size:19px; text-shadow:none; }
+#akAssignmentStudio .createHomeworkForm>.panelHeader h2 svg { width:22px; height:22px; padding:0; border:0; background:transparent; color:#24859c; box-shadow:none; }
+#akAssignmentStudio .createHomeworkForm>.panelHeader>span { padding:6px 10px; background:#eaf6ee !important; color:#3a7858 !important; border:0; border-radius:6px; font-size:10px; box-shadow:none; }
+#akAssignmentStudio .homeworkCreationModes { display:flex; gap:8px; padding:5px; margin:0 0 24px; border:1px solid #e1eaf0; border-radius:8px; background:#f3f7fa !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkCreationModes button { flex:1; min-height:39px; padding:10px; border:0 !important; border-radius:5px; background:transparent !important; color:#6e8797 !important; -webkit-text-fill-color:#6e8797; font-size:12px; box-shadow:none !important; transform:none; }
+#akAssignmentStudio .homeworkCreationModes button.active { background:#fff !important; color:#1b7a94 !important; -webkit-text-fill-color:#1b7a94; box-shadow:0 1px 5px #203c5010 !important; }
+#akAssignmentStudio .assignForm .formRow { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:0 0 20px; }
+#akAssignmentStudio .homeworkIconRow>label { padding:0 !important; border:0 !important; border-radius:0; background:transparent !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkFieldLabel { display:block; margin-bottom:8px; color:#5c7687 !important; -webkit-text-fill-color:#5c7687; font-size:12px; font-weight:500; }
+#akAssignmentStudio .homeworkControl { border:0; background:transparent !important; box-shadow:none; }
+#akAssignmentStudio .homeworkControl>svg { color:#378ba3 !important; }
+#akAssignmentStudio :is(input:not([type=radio]):not([type=checkbox]),select,textarea) { border:1px solid #d8e6ee !important; border-radius:8px; background:#f9fbfd !important; color:#314f61 !important; -webkit-text-fill-color:#314f61 !important; font-size:13px; box-shadow:none !important; }
+#akAssignmentStudio :is(input:not([type=radio]):not([type=checkbox]),select) { min-height:44px; }
+#akAssignmentStudio textarea { min-height:120px; padding:12px; }
+#akAssignmentStudio .homeworkCreationStep { border:0; background:transparent; padding:0; box-shadow:none; }
+#akAssignmentStudio .homeworkQuestionHeading { border-top:1px dashed #d8e6ee; padding-top:20px; color:#365b70; }
+#akAssignmentStudio .homeworkQuestionItem { padding:18px; border:1px solid #e0eaf0 !important; border-radius:10px; background:#f8fbfd !important; box-shadow:none; }
+#akAssignmentStudio .homeworkQuestionNumber { border-radius:7px; background:#2b889f; color:#fff; box-shadow:none; }
+#akAssignmentStudio .homeworkSaveQuestion { background:#e7f3f7 !important; color:#28718b !important; border:1px solid #cfe5ed; border-radius:7px; box-shadow:none; }
+#akAssignmentStudio .creatorSide { display:grid; gap:18px; min-width:0; }
+#akAssignmentStudio .homeworkQuestionPaper { padding:18px; border:1px solid #d9e5ec !important; border-radius:12px !important; background:#fff !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkQuestionPaperHeader { padding:0 0 16px; color:#385f74; border-bottom:1px solid #e4edf2; background:transparent !important; }
+#akAssignmentStudio .homeworkQuestionPaperHeader>svg { background:#e8f3f7; color:#26839c; box-shadow:none; border-radius:9px; }
+#akAssignmentStudio .homeworkQuestionPaperHeader strong { color:#385f74; font-size:14px; }
+#akAssignmentStudio .homeworkQuestionPaperHeader small { color:#819aa8; font-size:10px; }
+#akAssignmentStudio .homeworkQuestionPaperBody { padding:18px 0 0; background:transparent; }
+#akAssignmentStudio .homeworkQuestionPaperEmpty { min-height:210px; padding:24px; border:1px dashed #cddfe9; border-radius:10px; background:#fafcfd; color:#7b96a6; }
+#akAssignmentStudio .homeworkQuestionPaperEmpty svg { color:#5399ae; background:#ecf5f9; box-shadow:none; }
+#akAssignmentStudio .homeworkQuestionPaperEmpty span { font-size:12px; line-height:1.7; }
+#akAssignmentStudio .creatorPreview { padding:20px !important; border:1px solid #d9e5ec !important; border-radius:12px; background:#fff !important; box-shadow:none !important; }
+#akAssignmentStudio .homeworkPdfField { padding:16px; border:1px dashed #cddfe9; border-radius:9px; background:#f7fafc; }
+#akAssignmentStudio .homeworkPdfButton { background:#e9f4f7 !important; color:#28718b !important; border-color:#cfe5ed; border-radius:7px; box-shadow:none; }
+#akAssignmentStudio .homeworkCreateSubmit { background:#16869a !important; color:#fff !important; border:0; border-radius:8px; min-height:44px; padding:12px 20px; box-shadow:none !important; }
+#akAssignmentStudio .homeworkCreateCancel { min-height:44px; padding:12px 20px; border:1px solid #d9e5ec; border-radius:8px; background:#fff !important; color:#658294; box-shadow:none; }
+#akAssignmentStudio .automaticCreator { background:#f7fbfd !important; border:1px solid #dce9ef; border-radius:10px; box-shadow:none; }
+#akAssignmentStudio .automaticCreatorSendButton { background:#16869a !important; color:#fff !important; border-radius:8px; box-shadow:none; }
+#akAssignmentStudio .homeworkHero { padding:24px; background:#edf5f9 !important; border:1px solid #d9e5ec; border-radius:12px; box-shadow:none; }
+#akAssignmentStudio .homeworkHero :is(h2,p) { color:#385f74 !important; -webkit-text-fill-color:#385f74; }
+#akAssignmentStudio .homeworkWorkList,#akAssignmentStudio .homeworkEmptyState { border:1px solid #d9e5ec; border-radius:12px; background:#fff !important; box-shadow:none; }
+#akAssignmentStudio :is(button,input,select,textarea):focus-visible { outline:2px solid #138b9f !important; outline-offset:3px; }
+#akAssignmentStudio [hidden] { display:none !important; }
+@media(max-width:1100px) { #akAssignmentStudio .assignmentSummaryGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } #akAssignmentStudio .createHomeworkModule>.teacherGrid { grid-template-columns:1fr; } }
+@media(max-width:600px) { #akAssignmentStudio { padding:16px; } #akAssignmentStudio .assignmentSummaryGrid { gap:10px; } #akAssignmentStudio .assignmentSummaryCard { padding:15px !important; grid-template-columns:32px 1fr; gap:5px 9px; } #akAssignmentStudio .assignmentSummaryIcon { width:32px; height:32px; } #akAssignmentStudio .homeworkSwipeHeader { padding:22px; } #akAssignmentStudio .homeworkbothTab { padding:12px 8px !important; } #akAssignmentStudio .homeworkCreateTabNote>span:last-child { display:none; } #akAssignmentStudio .createHomeworkForm { padding:18px !important; } #akAssignmentStudio .assignForm .formRow { grid-template-columns:1fr; } }

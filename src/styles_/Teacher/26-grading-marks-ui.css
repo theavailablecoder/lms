@@ -1,0 +1,10 @@
+/* Clear two-column marks layout in the grading form. */
+.teacherShell .gradeForm { gap: 12px; }
+.teacherShell .gradeForm .marks { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 18px; padding: 2px 0 1px; }
+.teacherShell .gradeForm .marks label { min-width: 0; display: grid; gap: 6px; color: #607492; font-weight: 600; }
+.teacherShell .gradeForm .marks label input { width: 72px; min-height: 30px; box-sizing: border-box; font-size: 12px; }
+.teacherShell .gradeForm .marks label b { display: block; margin: -1px 0 0; color: #334a6d; font-size: 12px; }
+.teacherShell .gradeForm .marks > span { display: grid; justify-items: end; gap: 6px; min-width: 74px; padding: 0 0 1px; color: #607492; font-size: 11px; text-align: right; }
+.teacherShell .gradeForm .marks > span strong { color: #172d4e; font-size: 13px; line-height: 30px; }
+.teacherShell .gradeForm > label:has(select) { gap: 6px; color: #607492; font-weight: 600; }
+.teacherShell .gradeForm > label:has(select) select { min-height: 31px; font-size: 12px; background: #fff; }

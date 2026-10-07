@@ -1,0 +1,412 @@
+.studentQuizExperience { overflow: visible; border: 0; border-radius: 24px; background: transparent; box-shadow: none; }
+.studentQuizExperience .studentPaperSheet { position: relative; min-height: 540px; max-height: none; margin: 0; padding: 26px; overflow: visible; border: 1px solid #dfe6f4; border-radius: 24px; background: linear-gradient(145deg,#f8fbff,#f5f2ff); box-shadow: 0 8px 0 #dce4f2,0 22px 45px rgba(50,65,110,.13); }
+.studentQuizExperience .studentPaperSheet > header { position: relative; min-height: 180px; margin: 0; padding: 30px 31% 28px 30px; border-radius: 20px; background: radial-gradient(circle at 70% 0,rgba(255,255,255,.3),transparent 28%),linear-gradient(135deg,#4d69e8,#754ed4); box-shadow: 0 7px 0 #394bb2,0 17px 28px rgba(63,67,165,.25); text-align: left; }
+.studentQuizExperience .studentPaperSheet > header::before { content: "✦  INTERACTIVE QUIZ"; display: inline-block; padding: 7px 11px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(255,255,255,.16); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.studentQuizExperience .studentPaperSheet > header > small { display: none; }
+.studentQuizExperience .studentPaperSheet > header h3 { margin: 16px 0 7px; color: #fff; font-family: inherit; font-size: clamp(23px,3vw,34px); line-height: 1.12; text-shadow: 0 3px 0 rgba(35,32,105,.24); }
+.studentQuizExperience .studentPaperSheet > header p { color: #ececff; font-size: 12px; font-weight: 700; }
+.studentQuizVisual { position: absolute; z-index: 2; top: 20px; right: 38px; width: 27%; height: 185px; pointer-events: none; }
+.studentQuizVisual img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 12px rgba(24,24,82,.25)); }
+.studentQuizExperience .studentPaperMeta { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 26px 0 8px; }
+.studentQuizExperience .studentPaperMeta span { position: relative; min-height: 72px; padding: 14px 12px 12px; border: 1px solid #dfe6f2; border-radius: 14px; background: #fff; box-shadow: 0 4px 0 #dfe5f0,0 9px 18px rgba(57,72,108,.08); }
+.studentQuizExperience .studentPaperMeta .studentQuizMetric { padding-left: 52px; }
+.studentQuizMetric i { position: absolute; top: 15px; left: 13px; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 9px; background: #ebeefe; color: #654fd3; }
+.studentQuizExperience .studentPaperMeta small { color: #8996aa; font-size: 8px; }
+.studentQuizExperience .studentPaperMeta strong { overflow: hidden; color: #35435c; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.studentQuizExperience .studentPaperAnswerArea { margin-top: 28px; padding-top: 0; border: 0; }
+.studentQuizExperience .studentPaperAnswerHeading > span { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 13px; background: linear-gradient(145deg,#ffb847,#ff7f50); color: #fff; box-shadow: 0 5px 0 #d9663e,0 10px 18px rgba(216,99,58,.2); }
+.studentQuizExperience .studentPaperAnswerHeading strong { color: #293952; font-size: 18px; }
+.studentQuizExperience .studentQuestionAnswerList { gap: 20px; }
+.studentQuizExperience .studentAnswerCategory { margin-top: 5px; padding: 11px 14px; border: 0; border-radius: 12px; background: linear-gradient(90deg,#e7ebff,#f0eaff); box-shadow: 0 3px 0 #d5daef; }
+.studentQuizExperience .studentQuestionAnswer { padding: 17px; border: 1px solid #dce4f2; border-radius: 17px; background: #fff; box-shadow: 0 6px 0 #dce3ee,0 14px 25px rgba(55,70,105,.09); }
+.studentQuizExperience .studentQuestionAnswer legend > span { width: 34px; height: 34px; flex-basis: 34px; border-radius: 11px; background: linear-gradient(145deg,#6d7ff0,#6550d4); color: #fff; box-shadow: 0 4px 0 #4439a4; }
+.studentQuizExperience .studentQuestionAnswer legend strong { color: #273851; font-size: 13px; }
+.studentQuizExperience .studentMcqAnswers { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+.studentQuizExperience .studentMcqAnswers label { min-height: 52px; padding: 10px 12px; border: 1px solid #dde4ef; border-radius: 13px; background: #f9faff; box-shadow: 0 3px 0 #e0e5ee; transition: transform .18s ease,box-shadow .18s ease; }
+.studentQuizExperience .studentMcqAnswers label:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #d9dfeb,0 9px 14px rgba(60,75,110,.08); }
+.studentQuizExperience .studentMcqAnswers label:has(input:checked) { border-color: #7568df; background: linear-gradient(135deg,#eceeff,#f3edff); box-shadow: 0 4px 0 #9c92e2; }
+@media (max-width:800px) { .studentQuizVisual { right: 15px; opacity: .35; width: 38%; } .studentQuizExperience .studentPaperMeta { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px) { .studentQuizExperience .studentPaperSheet { padding: 13px; } .studentQuizExperience .studentPaperSheet > header { min-height: 210px; padding: 24px 20px; } .studentQuizVisual { right: -10px; width: 50%; opacity: .2; } .studentQuizExperience .studentPaperMeta,.studentQuizExperience .studentMcqAnswers { grid-template-columns:1fr; } }
+
+/* Lock visible icon and font colors against global theme overrides. */
+.studentShell .studentQuizExperience .studentPaperSheet > header {
+  background: radial-gradient(circle at 70% 0, rgba(255,255,255,.3), transparent 28%), linear-gradient(135deg, #4d69e8, #754ed4) !important;
+  background-color: #5b60df !important;
+  border-color: rgba(255,255,255,.55) !important;
+}
+.studentShell .studentQuizExperience .studentPaperSheet > header::before {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+.studentShell .studentQuizExperience .studentPaperSheet > header h3 { color: #fff !important; -webkit-text-fill-color: #fff; }
+.studentShell .studentQuizExperience .studentPaperSheet > header p { color: #eef0ff !important; -webkit-text-fill-color: #eef0ff; }
+.studentShell .studentQuizExperience .studentQuizMetric i,
+.studentShell .studentQuizExperience .studentQuizMetric i svg { color: #5b4bc9 !important; stroke: #5b4bc9 !important; opacity: 1 !important; }
+.studentShell .studentQuizExperience .studentQuizMetric i { background: #ebeefe !important; }
+.studentShell .studentQuizExperience .studentPaperMeta small { color: #687892 !important; -webkit-text-fill-color: #687892; font-size: 9px !important; font-weight: 800 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta strong { color: #263750 !important; -webkit-text-fill-color: #263750; font-size: 11px !important; font-weight: 800 !important; }
+.studentShell .studentQuizExperience .studentPaperAnswerHeading > span,
+.studentShell .studentQuizExperience .studentPaperAnswerHeading > span svg { color: #fff !important; stroke: #fff !important; opacity: 1 !important; }
+.studentShell .studentQuizExperience .studentPaperAnswerHeading > span { background: linear-gradient(145deg,#ffb847,#ff7048) !important; }
+.studentShell .studentQuizExperience .studentPaperAnswerHeading strong { color: #293952 !important; -webkit-text-fill-color: #293952; }
+.studentShell .studentQuizExperience .studentPaperAnswerHeading small { color: #718097 !important; -webkit-text-fill-color: #718097; }
+.studentShell .studentQuizExperience .studentAnswerCategory span { color: #5845bd !important; -webkit-text-fill-color: #5845bd; font-size: 9px !important; }
+.studentShell .studentQuizExperience .studentAnswerCategory strong { color: #304174 !important; -webkit-text-fill-color: #304174; font-size: 12px !important; }
+.studentShell .studentQuizExperience .studentQuestionAnswer legend > span { color: #fff !important; -webkit-text-fill-color: #fff; background: linear-gradient(145deg,#6d7ff0,#5944ca) !important; }
+.studentShell .studentQuizExperience .studentQuestionAnswer legend small { color: #66758d !important; -webkit-text-fill-color: #66758d; font-size: 9px !important; }
+.studentShell .studentQuizExperience .studentQuestionAnswer legend strong { color: #21334e !important; -webkit-text-fill-color: #21334e; font-size: 14px !important; }
+.studentShell .studentQuizExperience .studentMcqAnswers label { color: #33445e !important; -webkit-text-fill-color: #33445e; font-size: 12px !important; font-weight: 700 !important; }
+.studentShell .studentQuizExperience .studentMcqAnswers label > span { color: #53617a !important; -webkit-text-fill-color: #53617a; }
+.studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked) { color: #43359e !important; -webkit-text-fill-color: #43359e; }
+.studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked) > span { color: #fff !important; -webkit-text-fill-color: #fff; background: #6552d5 !important; }
+
+/* Soft category backgrounds for the quiz cards. */
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(1) { background: linear-gradient(145deg,#f0efff,#e8eaff) !important; border-color: #cbc9fa !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(2) { background: linear-gradient(145deg,#fff5e8,#ffedda) !important; border-color: #f5d1a8 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(3) { background: linear-gradient(145deg,#eaf8ff,#e4f2ff) !important; border-color: #badcf4 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(4) { background: linear-gradient(145deg,#edfbf3,#e2f7eb) !important; border-color: #bce4cd !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(5) { background: linear-gradient(145deg,#fff0f6,#fce7f1) !important; border-color: #efc3d5 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(6) { background: linear-gradient(145deg,#f2efff,#eae5ff) !important; border-color: #d0c5f5 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(7) { background: linear-gradient(145deg,#fff8e6,#fff0c9) !important; border-color: #eed79e !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(8) { background: linear-gradient(145deg,#fff0ed,#ffe6df) !important; border-color: #efc3b8 !important; }
+.studentShell .studentQuizExperience .studentPaperMeta > span:nth-child(9) { background: linear-gradient(145deg,#eaf7ff,#e1f0fb) !important; border-color: #bdd9ec !important; }
+.studentShell .studentQuizExperience .studentPaperAnswerArea { padding: 18px !important; border: 1px solid #d9def5 !important; border-radius: 18px !important; background: linear-gradient(145deg,#fbfaff,#f2f5ff) !important; box-shadow: 0 6px 0 #d8def1,0 16px 28px rgba(61,72,126,.09) !important; }
+.studentShell .studentQuizExperience .studentAnswerCategory { background: linear-gradient(90deg,#dedfff,#eee7ff) !important; border: 1px solid #cbc9ee !important; }
+.studentShell .studentQuizExperience .studentQuestionAnswer { background: linear-gradient(145deg,#ffffff,#f6f8ff) !important; border-color: #cfd9ef !important; }
+.studentShell .studentQuizExperience .studentMcqAnswers label { background: linear-gradient(145deg,#f4f7ff,#edf1fb) !important; border-color: #d2dced !important; }
+.studentShell .studentQuizExperience .studentMcqAnswers label:hover { background: linear-gradient(145deg,#edf0ff,#e7e9ff) !important; border-color: #aaaee8 !important; }
+.studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked) { background: linear-gradient(135deg,#dddfff,#ece4ff) !important; border-color: #7568df !important; }
+
+/* Question reveal and answer interaction effects. */
+@keyframes quizQuestionReveal {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes quizAnswerPop {
+  0% { transform: scale(1); }
+  55% { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+@keyframes quizSelectedPulse {
+  0%,100% { box-shadow: 0 4px 0 #9c92e2,0 0 0 0 rgba(101,82,213,.18); }
+  50% { box-shadow: 0 4px 0 #9c92e2,0 0 0 7px rgba(101,82,213,0); }
+}
+.studentShell .studentQuizExperience .studentQuestionAnswer {
+  position: relative;
+  overflow: hidden;
+  animation: quizQuestionReveal .42s cubic-bezier(.2,.8,.2,1) both;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.studentShell .studentQuizExperience .studentQuestionAnswer:nth-of-type(2n) { animation-delay: .06s; }
+.studentShell .studentQuizExperience .studentQuestionAnswer:nth-of-type(3n) { animation-delay: .12s; }
+.studentShell .studentQuizExperience .studentQuestionAnswer::after {
+  position: absolute;
+  top: 0;
+  left: -45%;
+  width: 30%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,transparent,#7b6ee8,transparent);
+  content: "";
+  opacity: 0;
+  transition: left .45s ease,opacity .2s ease;
+}
+.studentShell .studentQuizExperience .studentQuestionAnswer:hover {
+  z-index: 2;
+  border-color: #aaaee8 !important;
+  box-shadow: 0 9px 0 #d6dced,0 20px 32px rgba(68,71,145,.15) !important;
+  transform: translateY(-4px);
+}
+.studentShell .studentQuizExperience .studentQuestionAnswer:hover::after { left: 115%; opacity: 1; }
+.studentShell .studentQuizExperience .studentQuestionAnswer:focus-within {
+  border-color: #8579e4 !important;
+  box-shadow: 0 7px 0 #cfcdf0,0 0 0 4px rgba(101,82,213,.11) !important;
+}
+.studentShell .studentQuizExperience .studentMcqAnswers label {
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease !important;
+}
+.studentShell .studentQuizExperience .studentMcqAnswers label::after {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #6552d5;
+  color: #fff;
+  content: "\2713";
+  font-size: 12px;
+  font-weight: 900;
+  opacity: 0;
+  transform: scale(.35) rotate(-20deg);
+  transition: opacity .18s ease,transform .25s cubic-bezier(.2,1.5,.4,1);
+}
+.studentShell .studentQuizExperience .studentMcqAnswers label:hover {
+  transform: translateY(-3px) scale(1.008);
+}
+.studentShell .studentQuizExperience .studentMcqAnswers label:active { transform: translateY(0) scale(.985); }
+.studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked) {
+  animation: quizAnswerPop .3s ease,quizSelectedPulse 1.1s ease .3s 1;
+}
+.studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked)::after {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+.studentShell .studentQuizExperience .studentMcqAnswers input:focus-visible {
+  outline: 3px solid rgba(101,82,213,.28);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .studentShell .studentQuizExperience .studentQuestionAnswer,
+  .studentShell .studentQuizExperience .studentMcqAnswers label:has(input:checked) { animation: none; }
+  .studentShell .studentQuizExperience .studentQuestionAnswer,
+  .studentShell .studentQuizExperience .studentMcqAnswers label { transition: none !important; }
+}
+
+/* Keep every question type together under its own category heading. */
+.studentShell .studentQuizExperience .studentQuestionCategoryGroup {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.studentShell .studentQuizExperience .studentQuestionCategoryGroup + .studentQuestionCategoryGroup {
+  margin-top: 8px;
+}
+.studentShell .studentQuizExperience .studentAnswerCategory em {
+  margin-left: auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  color: #6558b8;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Color treatment for the student Homework header banner. */
+.studentShell .homeworkModule .homeworkHero {
+  border-color: #c9d4fb !important;
+  background: radial-gradient(circle at 78% 15%,rgba(255,255,255,.72),transparent 18%),linear-gradient(120deg,#e8edff 0%,#dddfff 48%,#e9dcff 100%) !important;
+  box-shadow: 0 7px 0 #cdd5ef,0 18px 38px rgba(66,73,145,.15) !important;
+}
+.studentShell .homeworkModule .homeworkHero::before {
+  position: absolute;
+  top: -70px;
+  left: 38%;
+  width: 230px;
+  height: 230px;
+  border: 38px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+.studentShell .homeworkModule .homeworkHero .featureIcon {
+  border: 1px solid rgba(255,255,255,.75) !important;
+  background: linear-gradient(145deg,#667df0,#654fcf) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #4652ae,0 13px 22px rgba(67,74,164,.24) !important;
+}
+.studentShell .homeworkModule .homeworkHero .featureIcon svg {
+  color: #fff !important;
+  stroke: #fff !important;
+}
+.studentShell .homeworkModule .homeworkHero h2 { color: #26355f !important; -webkit-text-fill-color: #26355f; }
+.studentShell .homeworkModule .homeworkHero p { color: #596985 !important; -webkit-text-fill-color: #596985; }
+.studentShell .homeworkModule .homeworkHero > .badge {
+  border: 1px solid #f0ce78 !important;
+  background: linear-gradient(145deg,#fff7cf,#ffe6a1) !important;
+  color: #9a6500 !important;
+  box-shadow: 0 4px 0 #e3ca86 !important;
+}
+
+/* Modern upload and submission footer. */
+.studentShell .studentQuizExperience .studentAnswerUpload {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(220px,1fr) auto;
+  align-items: center;
+  gap: 14px 20px !important;
+  margin-top: 22px;
+  padding: 18px 20px !important;
+  border: 2px dashed #b9c5ed !important;
+  border-radius: 16px;
+  background: linear-gradient(145deg,#f8faff,#eef1ff) !important;
+  color: #34445e !important;
+  cursor: pointer;
+  transition: border-color .2s ease,background .2s ease,transform .2s ease;
+}
+.studentShell .studentQuizExperience .studentAnswerUpload:hover {
+  border-color: #7568df !important;
+  background: linear-gradient(145deg,#f4f1ff,#e9eaff) !important;
+  transform: translateY(-2px);
+}
+.studentShell .studentQuizExperience .studentUploadHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.studentShell .studentQuizExperience .studentUploadHeading > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border-radius: 11px;
+  background: linear-gradient(145deg,#6f82ed,#654fcf);
+  color: #fff !important;
+  stroke: #fff !important;
+  box-shadow: 0 4px 0 #4b47aa;
+}
+.studentShell .studentQuizExperience .studentUploadHeading > span { display: grid; gap: 4px; }
+.studentShell .studentQuizExperience .studentUploadHeading strong { color: #283a57 !important; font-size: 13px; }
+.studentShell .studentQuizExperience .studentUploadHeading small { color: #74839a !important; font-size: 10px; font-weight: 600; }
+.studentShell .studentQuizExperience .studentAnswerUpload > input[type="file"] {
+  width: auto !important;
+  max-width: 260px;
+  padding: 6px !important;
+  border: 1px solid #d4dbed !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+  color: #68758a !important;
+  font-size: 10px !important;
+  cursor: pointer;
+}
+.studentShell .studentQuizExperience .studentAnswerUpload > input[type="file"]::file-selector-button {
+  margin-right: 10px;
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 8px;
+  background: #e8ebff;
+  color: #5546bd;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.studentShell .studentQuizExperience .studentUploadedFile {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border-radius: 9px;
+  background: #e6f7ed;
+  color: #267147 !important;
+  font-size: 10px;
+  font-weight: 800;
+}
+.studentShell .studentQuizExperience .studentUploadedFile svg { color: #2b9256 !important; stroke: #2b9256 !important; }
+.studentShell .studentQuizExperience .homeworkSubmitBox > button[type="submit"] {
+  display: flex;
+  width: min(100%,420px) !important;
+  min-height: 50px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 22px auto 5px !important;
+  border: 1px solid rgba(255,255,255,.4) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg,#617df0,#684fd1) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 0 #4546a8,0 14px 24px rgba(70,69,164,.24) !important;
+  transition: transform .18s ease,box-shadow .18s ease,filter .18s ease;
+}
+.studentShell .studentQuizExperience .homeworkSubmitBox > button[type="submit"] svg { color: #fff !important; stroke: #fff !important; }
+.studentShell .studentQuizExperience .homeworkSubmitBox > button[type="submit"]:not(:disabled):hover { transform: translateY(-3px); filter: saturate(1.12); box-shadow: 0 8px 0 #4546a8,0 18px 28px rgba(70,69,164,.28) !important; }
+.studentShell .studentQuizExperience .homeworkSubmitBox > button[type="submit"]:not(:disabled):active { transform: translateY(3px); box-shadow: 0 3px 0 #4546a8 !important; }
+.studentShell .studentQuizExperience .homeworkSubmitBox > button[type="submit"]:disabled { background: linear-gradient(135deg,#aab5d9,#9ca5c8) !important; box-shadow: 0 4px 0 #7f89ab !important; opacity: .72; cursor: not-allowed; }
+@media (max-width:650px) {
+  .studentShell .studentQuizExperience .studentAnswerUpload { grid-template-columns: 1fr; }
+  .studentShell .studentQuizExperience .studentAnswerUpload > input[type="file"] { width: 100% !important; max-width: none; }
+}
+
+/* Inline answer field replaces the underscore in fill-in-the-blank questions. */
+.studentShell .studentQuizExperience .studentInlineBlankQuestion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+  line-height: 2.25 !important;
+}
+.studentShell .studentQuizExperience .studentInlineBlankQuestion input[type="text"] {
+  width: 92px !important;
+  height: 25px !important;
+  min-height: 0 !important;
+  margin: 0 3px;
+  padding: 1px 4px 0 !important;
+  border: 0 !important;
+  border-bottom: 2px solid #273142 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #172033 !important;
+  -webkit-text-fill-color: #172033;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  text-align: center;
+  transition: width .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease !important;
+}
+.studentShell .studentQuizExperience .studentInlineBlankQuestion input[type="text"]::placeholder {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  font-size: 10px;
+  font-weight: 600;
+}
+.studentShell .studentQuizExperience .studentInlineBlankQuestion input[type="text"]:focus::placeholder {
+  color: #8d8aaa !important;
+  -webkit-text-fill-color: #8d8aaa;
+}
+.studentShell .studentQuizExperience .studentInlineBlankQuestion input[type="text"]:focus {
+  border-bottom-color: #111827 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none;
+}
+.studentShell .studentQuizExperience .studentInlineBlankQuestion input[type="text"]:not(:placeholder-shown) {
+  background: transparent !important;
+}
+
+/* Question heading stays fully inside its answer card. */
+.studentShell .studentQuizExperience .studentQuestionPrompt {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 15px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #e2e7f3;
+}
+.studentShell .studentQuizExperience .studentQuestionPrompt > span {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(145deg,#6d7ff0,#5944ca) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 4px 0 #4439a4;
+}
+.studentShell .studentQuizExperience .studentQuestionPrompt > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+.studentShell .studentQuizExperience .studentQuestionPrompt small {
+  color: #66758d !important;
+  -webkit-text-fill-color: #66758d;
+  font-size: 9px !important;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.studentShell .studentQuizExperience .studentQuestionPrompt strong {
+  color: #21334e !important;
+  -webkit-text-fill-color: #21334e;
+  font-size: 14px !important;
+  line-height: 1.45;
+}

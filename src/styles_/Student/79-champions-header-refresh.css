@@ -1,0 +1,86 @@
+.lbPodiumPanel > header {
+  min-height: 112px !important;
+  padding: 16px 190px 16px 20px !important;
+  background:
+    radial-gradient(circle at 50% 0%, #fff3bf 0, transparent 34%),
+    linear-gradient(180deg, #fff 0%, #f5f8ff 100%) !important;
+}
+
+.lbPodiumPanel > header > span {
+  left: 85px;
+  min-width: 360px;
+  padding: 18px 42px 14px !important;
+  border: 1px solid #f0d486 !important;
+  border-radius: 16px !important;
+  background: linear-gradient(160deg, #fffef8 0%, #fff 48%, #f3f6fc 100%) !important;
+  box-shadow: inset 0 2px 0 #fff, inset 0 -5px 8px #8c9bb01c,
+    0 5px 0 #e3c467, 0 10px 0 #e5ebf4, 0 17px 25px #344b7723 !important;
+  transform: none !important;
+}
+
+.lbPodiumPanel > header > span::before {
+  content: none;
+}
+
+.lbPodiumPanel > header > span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 86px;
+  height: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, transparent, #efb52a, transparent);
+  transform: translateX(-50%);
+}
+
+.lbPodiumPanel > header > span > i {
+  position: absolute;
+  top: 62%;
+  left: 22px;
+  color: #d99a12 !important;
+  font-size: 28px !important;
+  opacity: .78;
+  transform: translateY(-40%) rotate(-25deg) !important;
+}
+
+.lbPodiumPanel > header > span > i:last-child {
+  left: auto;
+  right: 22px;
+  transform: translateY(-40%) scaleX(-1) rotate(-25deg) !important;
+}
+
+.lbPodiumPanel > header > span > b {
+  position: relative;
+  z-index: 2;
+}
+
+.lbPodiumPanel > header > span > b {
+  color: #1e3556 !important;
+  font-size: 20px !important;
+  letter-spacing: -.4px;
+}
+
+.lbPodiumPanel > header > span > b small {
+  margin-top: 6px !important;
+  padding: 3px 12px !important;
+  color: #6b7891 !important;
+  border: 1px solid #e4e9f2;
+  background: #f2f5fb !important;
+  box-shadow: inset 0 1px #fff !important;
+}
+
+.lbPodiumPanel > header > span:hover {
+  transform: translateY(-2px) !important;
+}
+
+@media (max-width: 850px) {
+  .lbPodiumPanel > header { padding: 20px 16px 16px !important; }
+  .lbPodiumPanel > header > span { left: 0; min-width: min(360px, 92%); }
+}
+
+@media (max-width: 480px) {
+  .lbPodiumPanel > header > span { padding-inline: 33px !important; }
+  .lbPodiumPanel > header > span > i { left: 10px; font-size: 21px !important; }
+  .lbPodiumPanel > header > span > i:last-child { right: 10px; }
+}

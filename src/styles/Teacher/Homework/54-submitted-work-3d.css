@@ -1,0 +1,184 @@
+.reviewModule { display: grid; gap: 22px; }
+.reviewModule > .featureHero {
+  position: relative;
+  min-height: 130px;
+  padding: 24px 30px;
+  overflow: hidden;
+  border: 1px solid #cbdcf2;
+  border-radius: 25px;
+  background: radial-gradient(circle at 90% 10%, rgba(117,84,218,.18), 
+  transparent 24%), linear-gradient(125deg, #eef6ff, #f4f0ff) !important;
+  box-shadow: 0 7px 0 #d5e0ed, 0 22px 40px rgba(44,70,108,.12);
+}
+.reviewModule > .featureHero::after {
+  position: absolute;
+  right: 13%;
+  bottom: -74px;
+  width: 170px;
+  height: 170px;
+  border: 28px solid rgba(74,116,216,.07);
+  border-radius: 50%;
+  content: "";
+}
+.reviewModule > .featureHero .featureIcon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #397ff0, #6554dc) !important;
+  color: #fff !important;
+  box-shadow: 0 7px 0 #3850ab, 0 15px 24px rgba(57,73,168,.23);
+}
+.reviewModule > .featureHero h2 { color: #253a58 !important; }
+.reviewModule > .featureHero p { color: #697e9b !important; }
+
+.homeworkReviewWorkspace { grid-template-columns: minmax(270px, 320px) minmax(0, 1fr); gap: 22px; }
+.homeworkWorkList {
+  border: 1px solid #ccdaed;
+  border-radius: 21px;
+  background: linear-gradient(155deg, #fff, #f3f7ff);
+  box-shadow: 0 6px 0 #d2ddea, 0 18px 32px rgba(42,67,104,.12);
+}
+.homeworkWorkList > header {
+  padding: 18px;
+  border-bottom: 0;
+  background: linear-gradient(120deg, #326fcf 0%, #4e60cf 55%, #634cc1 100%) !important;
+}
+.homeworkWorkList > header strong { color: #fff !important; font-size: 14px; }
+.homeworkWorkList > header small { color: #e0e9ff !important; opacity: 1 !important; }
+.homeworkWorkList > header .badge {
+  border: 1px solid rgba(255,255,255,.30) !important;
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+.homeworkWorkList > button {
+  min-height: 82px;
+  padding: 14px 13px;
+  border-bottom-color: #dce5f1;
+  background: rgba(255,255,255,.72) !important;
+  transition: transform .18s ease, background .18s ease;
+}
+.homeworkWorkList > button:hover { transform: translateX(3px); }
+.homeworkWorkList > button.active {
+  background: linear-gradient(105deg, #e5efff, #eeeaff) !important;
+  box-shadow: inset 4px 0 #4a76e2;
+}
+.homeworkWorkIcon {
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #4b85ef, #6559db) !important;
+  color: #fff !important;
+  stroke: #fff !important;
+  box-shadow: 0 4px 0 #c6d4ed;
+}
+
+.homeworkReviewWorkspace > .reviewCard {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #cbdcf1;
+  border-radius: 24px;
+  background: radial-gradient(circle at 100% 0, rgba(102,78,210,.12), transparent 23%), linear-gradient(150deg, #fff, #f5f8ff) !important;
+  box-shadow: 0 7px 0 #d1ddea, 0 22px 42px rgba(41,65,100,.13);
+}
+.reviewTop { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; }
+.reviewStudentAvatar {
+  display: grid !important;
+  width: 52px;
+  height: 52px;
+  margin: 0 !important;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,.45);
+  background: linear-gradient(145deg, #347fee 0%, #5262d9 58%, #6c4fd2 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 5px 0 #c4d3ec;
+  place-items: center;
+}
+.reviewStudentAvatar svg { color: #fff !important; stroke: #fff !important; }
+.homeworkWorkIcon svg { color: #fff !important; stroke: #fff !important; }
+.homeworkWorkList > button strong { color: #263e5e !important; opacity: 1 !important; }
+.homeworkWorkList > button small { color: #5d7391 !important; opacity: 1 !important; }
+.homeworkWorkList > button em { color: #7c8da5 !important; opacity: 1 !important; }
+.reviewTop > div > span { margin-bottom: 5px; color: #5671ca !important; }
+.reviewTop > div > strong { color: #213754 !important; opacity: 1 !important; }
+.reviewMetaLine { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.reviewMetaLine span {
+  display: inline-flex;
+  margin: 0;
+  padding: 6px 8px;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #dae4f2;
+  border-radius: 8px;
+  background: #fff;
+  color: #647894;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.reviewMetaLine span,
+.reviewMetaLine span svg { color: #536e95 !important; stroke: currentColor !important; opacity: 1 !important; }
+.submissionBlock {
+  gap: 13px;
+  padding: 18px;
+  border-color: #ccdbee;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #eef5ff, #f2efff) !important;
+  box-shadow: inset 0 1px #fff, 0 9px 20px rgba(48,73,111,.08);
+}
+.submissionBlockTitle { display: flex; align-items: center; gap: 11px; }
+.submissionBlockTitle > span {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  background: #fff;
+  color: #526fd5;
+  box-shadow: 0 4px 10px rgba(50,75,113,.10);
+  place-items: center;
+}
+.submissionBlockTitle > div { display: grid; gap: 2px; }
+.submissionBlockTitle small { color: #71839d; font-size: 9px; font-weight: 700; }
+.homeworkReviewWorkspace .submissionBlock .viewStudentAnswersButton {
+  display: flex;
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 0 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #4f75db;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #397eeb, #6556db) !important;
+  color: #fff !important;
+  box-shadow: 0 5px 0 #394faa, 0 11px 18px rgba(58,73,170,.18);
+}
+.homeworkReviewWorkspace .reviewForm { gap: 15px; }
+.reviewFieldLabel { display: inline-flex; align-items: center; gap: 7px; color: #405b81; }
+.homeworkReviewWorkspace .reviewForm select,
+.homeworkReviewWorkspace .reviewForm textarea {
+  border: 1px solid #cbd9ec;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: inset 0 2px 5px rgba(46,70,105,.04), 0 5px 12px rgba(46,70,105,.05);
+}
+.homeworkReviewWorkspace .reviewForm > button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #347cea, #6554d9) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #3b4ead, 0 13px 22px rgba(57,72,165,.20);
+}
+@media (max-width: 900px) {
+  .homeworkReviewWorkspace { grid-template-columns: 1fr; }
+  .reviewTop { grid-template-columns: auto minmax(0,1fr); }
+  .reviewTop > .badge { grid-column: 1 / -1; justify-self: start; }
+}

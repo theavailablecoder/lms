@@ -1,0 +1,66 @@
+.classroomWelcome { min-height:100svh; padding:30px clamp(24px,6vw,96px) 22px; background:#f8f6f1; color:#292a25; }
+.welcomeHeader,.welcomeFooter { display:flex; justify-content:space-between; align-items:center; gap:20px; max-width:1240px; margin:auto; }
+.welcomeBrand { display:flex; align-items:center; gap:12px; color:#303029; letter-spacing:2px; font-size:17px; }
+.welcomeBrand img { width:52px; height:52px; object-fit:contain; border-radius:50%; background:white; }
+.welcomeBrand b { color:#d35b2a; }
+.welcomeBrand small { display:block; margin-top:4px; font-size:10px; letter-spacing:4px; }
+.welcomeHeaderNote,.welcomeFooter { color:#76776e; font-size:12px; }
+.welcomeGrid { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:clamp(40px,8vw,120px); max-width:1150px; margin:60px auto; }
+.welcomeEyebrow { display:flex; align-items:center; gap:9px; color:#77786b; font-size:10px; font-weight:700; letter-spacing:1.7px; }
+.welcomeEyebrow i { width:7px; height:7px; border-radius:50%; background:#cf633d; }
+.welcomeStory h1 { margin:22px 0; font-size:clamp(42px,4.6vw,66px); font-weight:650; line-height:1.08; letter-spacing:-2.7px; }
+.welcomeStory h1 em { color:#c6572f; font-family:Georgia,serif; font-weight:400; }
+.welcomeStory>p { max-width:400px; color:#77786e; font-size:14px; line-height:1.8; }
+.welcomeWorkspace { margin-top:30px; padding:16px; border:1px solid #e2dfd5; border-radius:18px; background:#fffdf8; box-shadow:0 15px 35px #38382608; transform:rotate(-2deg); }
+.workspaceTop { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:15px; color:#8c8b80; }
+.workspaceTop>span { display:flex; gap:5px; }
+.workspaceTop i { width:6px; height:6px; border-radius:50%; background:#e1ddd3; }
+.workspaceTop small { font-size:10px; }
+.workspaceTop b { color:#b66645; font-size:12px; }
+.workspaceBody { display:grid; grid-template-columns:1.1fr 1fr; gap:12px; }
+.workspaceLesson { padding:18px 16px 12px; border-radius:11px; background:#eee8d9; overflow:hidden; }
+.workspaceTag,.workspaceWidgets>div>span { font-size:8px; font-weight:700; letter-spacing:1.2px; }
+.workspaceLesson h3 { margin:12px 0 8px; font-size:23px; line-height:1.18; font-weight:600; letter-spacing:-.7px; }
+.workspaceBooks { height:60px; display:flex; justify-content:center; align-items:end; gap:7px; padding:4px; }
+.workspaceBooks i { width:29px; height:48px; border-radius:4px 8px 3px 3px; background:#bd643f; border-left:5px solid #a75030; transform:rotate(-12deg); }
+.workspaceBooks i:nth-child(2) { height:54px; background:#6d7962; border-color:#546349; transform:rotate(0); }
+.workspaceBooks i:nth-child(3) { height:40px; background:#d4b978; border-color:#b69b5b; transform:rotate(12deg); }
+.workspaceLessonFoot { display:flex; justify-content:space-between; gap:5px; margin-top:14px; font-size:8px; color:#716958; }
+.workspaceWidgets { display:grid; gap:10px; }
+.workspaceCode { background:#30382e; border-radius:11px; padding:15px; color:#ccd2c1; }
+.workspaceCode code { display:block; margin-top:14px; font-size:10px; line-height:1.7; }
+.workspaceCode code b { color:#e7b18b; font-weight:400; }
+.workspaceProgress { background:#f1eee6; padding:12px 15px; border-radius:11px; }
+.workspaceProgress>div { display:flex; height:41px; align-items:end; gap:6px; margin:10px 0; }
+.workspaceProgress i { flex:1; height:25%; background:#a5b094; border-radius:3px 3px 0 0; }
+.workspaceProgress i:nth-child(2) { height:40%; }.workspaceProgress i:nth-child(3) { height:35%; }.workspaceProgress i:nth-child(4) { height:60%; }.workspaceProgress i:nth-child(5) { height:70%; }.workspaceProgress i:nth-child(6) { height:85%; }.workspaceProgress i:nth-child(7) { height:100%; background:#637454; }
+.workspaceProgress small { display:flex; justify-content:space-between; font-size:8px; color:#79796e; }
+.welcomeFeatures { display:flex; flex-wrap:wrap; gap:16px; margin-top:27px; color:#7a7b6f; font-size:10px; }
+.welcomeFormPanel { width:100%; max-width:440px; justify-self:center; padding:38px; background:#fff; border:1px solid #e9e5dc; border-radius:22px; box-shadow:0 16px 50px #33302506; }
+.welcomeFormHeading { margin-bottom:26px; }
+.welcomeHello { display:grid; place-items:center; width:43px; height:43px; border-radius:13px; background:#fcf0e8; color:#c65a32; font-size:26px; }
+.welcomeFormHeading h2 { margin:18px 0 8px; font-size:29px; font-weight:650; letter-spacing:-1px; }
+.welcomeFormHeading p { margin:0; font-size:13px; color:#898a80; }
+.classroomWelcome .roleSwitch { display:flex; gap:5px; padding:5px; margin:0 0 26px; width:100%; border:1px solid #ece9e2; border-radius:11px; background:#f7f6f2; }
+.classroomWelcome .roleSwitch button { display:flex; flex:1; align-items:center; justify-content:center; gap:7px; min-height:40px; padding:8px; border:0; border-radius:7px; background:transparent; color:#85867a; font-size:12px; font-weight:600; box-shadow:none; }
+.classroomWelcome .roleSwitch button.active { background:#fff; color:#b34c29; box-shadow:0 2px 7px #3a342012; }
+.classroomWelcome .loginForm { display:grid; gap:20px; width:100%; margin:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+.classroomWelcome .loginForm label { display:grid; gap:9px; color:#4b4e43; font-size:12px; font-weight:600; }
+.classroomWelcome .loginForm input { width:100%; min-height:48px; padding:12px 14px; border:1px solid #e5e3db; border-radius:9px; background:#fafaf7; color:#303329; font-size:13px; outline:none; box-shadow:none; }
+.classroomWelcome .loginForm input::placeholder { color:#a1a197; font-weight:400; }
+.classroomWelcome .loginForm input:focus { border-color:#ca6b46; background:#fff; box-shadow:0 0 0 3px #ca6b4614; }
+.classroomWelcome .loginForm button[type=submit] { min-height:48px; padding:13px 18px; border:0; border-radius:9px; background:#c75b32; color:#fff; font-size:14px; font-weight:600; box-shadow:0 4px 10px #c75b321a; }
+.classroomWelcome .loginForm button[type=submit]:hover { background:#ae4824; transform:none; }
+.classroomWelcome .loginForm button[type=submit]:disabled { opacity:.65; cursor:wait; }
+.classroomWelcome .loginForm .passwordVisibilityToggle { color:#898b7e; background:transparent; }
+.classroomWelcome .loginForm .createAccountTrigger { flex-wrap:wrap; gap:5px; color:#8b8c82; font-size:11px; }
+.classroomWelcome .loginForm .createAccountTrigger strong { color:#b94f29; font-size:11px; }
+.welcomeFormFoot { margin:27px 0 0; padding-top:22px; border-top:1px solid #efeee8; color:#99998f; text-align:center; font-size:10px; }
+.classroomWelcome .error,.classroomWelcome .authError { color:#b43a2c; font-size:12px; }
+.classroomWelcome button:focus-visible,.classroomWelcome a:focus-visible { outline:2px solid #c75b32; outline-offset:4px; }
+.classroomWelcome .accountChoiceHeading>span { color:#b94f29; }
+.classroomWelcome .accountChoiceCard { border-color:#e6e0d5; }
+.classroomWelcome .accountChoiceIcon,.classroomWelcome .accountChoiceCard.teacher .accountChoiceIcon { background:#fcf0e8; color:#b94f29; }
+@media(min-width:1500px) { .welcomeGrid { margin-top:90px; margin-bottom:90px; } }
+@media(max-width:900px) { .welcomeGrid { gap:35px; grid-template-columns:1fr 1fr; margin:45px auto; }.welcomeFormPanel { padding:26px; }.welcomeStory h1 { font-size:45px; }.welcomeFeatures { gap:10px; } }
+@media(max-width:680px) { .classroomWelcome { padding:20px; }.welcomeHeaderNote { display:none; }.welcomeGrid { grid-template-columns:1fr; margin:35px auto; gap:28px; }.welcomeStory h1 { font-size:43px; }.welcomeStory>p { max-width:100%; }.welcomeWorkspace,.welcomeFeatures { display:none; }.welcomeFormPanel { max-width:100%; padding:28px 24px; }.welcomeFooter { font-size:10px; }.welcomeEyebrow { font-size:9px; } }

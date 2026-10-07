@@ -1,0 +1,836 @@
+/* Modern coding workspace -------------------------------------------------- */
+.codingCompiler {
+  --workspace-blue: #4f7fe8;
+  --workspace-blue-dark: #315fca;
+  --workspace-ink: #172033;
+  --workspace-muted: #718096;
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid #d8e5f5;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(167, 210, 255, 0.28), transparent 27%),
+    radial-gradient(circle at 92% 6%, rgba(198, 205, 255, 0.25), transparent 28%),
+    linear-gradient(145deg, #f7faff, #edf4fc);
+  box-shadow: 0 18px 42px rgba(57, 82, 117, 0.1);
+}
+
+.codingCompilerTop {
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 22px rgba(57, 82, 117, 0.07);
+  backdrop-filter: blur(16px);
+}
+
+.codingCompilerTop > div:first-child {
+  min-width: 180px;
+}
+
+.codingCompilerTop span {
+  display: block;
+  margin-bottom: 5px;
+  color: #2d77d7;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.codingCompilerTop h2 {
+  margin: 0;
+  color: var(--workspace-ink);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.compilerTopActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.codingCompilerTop .compilerTopActions button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid #cadcf2;
+  border-radius: 10px;
+  background: #f7fbff;
+  color: #3e5d83;
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.codingCompilerTop .compilerTopActions button:first-child {
+  border-color: var(--workspace-blue);
+  background: linear-gradient(135deg, #5d8ef2, #4775dc);
+  color: #ffffff;
+  box-shadow: 0 7px 15px rgba(71, 117, 220, 0.22);
+}
+
+.codingCompilerTop .compilerTopActions button:hover {
+  border-color: #99b9e4;
+  background: #edf5ff;
+  color: #284f85;
+  transform: translateY(-1px);
+}
+
+.codingCompilerTop .compilerTopActions button:first-child:hover {
+  border-color: #3769d0;
+  background: linear-gradient(135deg, #5183e8, #3868ce);
+  color: #ffffff;
+}
+
+.compilerGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 16px;
+  min-height: 540px;
+}
+
+.compilerPanel {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 540px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d6e2f0;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(57, 82, 117, 0.08);
+}
+
+.compilerGrid > .compilerPanel:first-child {
+  border-color: #263650;
+  background: #101827;
+  box-shadow: 0 14px 28px rgba(15, 24, 39, 0.2);
+}
+
+.compilerPanelHeader {
+  display: flex;
+  min-height: 52px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 15px;
+  border-bottom: 1px solid #e3ebf4;
+  background: #f9fbfe;
+}
+
+.compilerGrid > .compilerPanel:first-child .compilerPanelHeader {
+  border-bottom-color: #263650;
+  background: #151f31;
+}
+
+.compilerPanelHeader h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  color: #27364d;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.compilerPanelHeader h3::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4f8cf0;
+  box-shadow: 13px 0 #f4b44e, 26px 0 #52c59b;
+  content: "";
+  margin-right: 27px;
+}
+
+.compilerGrid > .compilerPanel:first-child .compilerPanelHeader h3 {
+  color: #dbe8fb;
+}
+
+.compilerPanelHeader button {
+  min-height: 30px;
+  padding: 0 11px;
+  border: 1px solid #d4e1f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #57708f;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.compilerGrid > .compilerPanel:first-child .compilerPanelHeader button {
+  border-color: #31415c;
+  background: #1d2a40;
+  color: #b8c9df;
+}
+
+.codeEditor {
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  resize: none;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background:
+    linear-gradient(90deg, #0d1422 0 48px, #111b2c 48px 49px, #101827 49px) !important;
+  color: #d9e7ff;
+  caret-color: #7fb3ff;
+  padding: 22px 22px 22px 68px;
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.75;
+  tab-size: 2;
+}
+
+.codeEditor::selection {
+  background: rgba(79, 127, 232, 0.38);
+}
+
+.runCodeButton {
+  align-self: flex-start;
+  min-width: 150px;
+  min-height: 42px;
+  margin: 14px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #5d8ff1, #426fda) !important;
+  color: #ffffff !important;
+  box-shadow: 0 9px 18px rgba(66, 111, 218, 0.28);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.runCodeButton::before {
+  margin-right: 8px;
+  content: "▶";
+  font-size: 10px;
+}
+
+.runCodeButton:hover {
+  background: linear-gradient(135deg, #4f82e8, #3561c8) !important;
+  box-shadow: 0 11px 22px rgba(66, 111, 218, 0.34);
+  transform: translateY(-2px);
+}
+
+.livePreview,
+.compilerOutput,
+.sqlOutputPanel {
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.livePreview {
+  padding: 10px;
+}
+
+.compilerOutput,
+.sqlOutputPanel {
+  overflow: auto;
+  padding: 22px;
+  color: #d9e7ff;
+  background: #101827;
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.labProjectForm,
+.labProjectList {
+  border-radius: 16px !important;
+}
+
+@media (max-width: 1050px) {
+  .compilerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .compilerPanel,
+  .compilerGrid {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 700px) {
+  .codingCompiler {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .codingCompilerTop {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .compilerTopActions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .codingCompilerTop .compilerTopActions button {
+    width: 100%;
+  }
+
+  .codeEditor {
+    padding-left: 20px;
+    background: #101827 !important;
+  }
+}
+
+/* Flat white Coding Lab library theme. */
+.codingLabPage {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+.codingLabPage .codingLabGrid {
+  border: 1px solid #edf0f3 !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.codingLabPage .codingLabCard,
+.codingLabPage .codingLabCard.html,
+.codingLabPage .codingLabCard.python,
+.codingLabPage .codingLabCard.java,
+.codingLabPage .codingLabCard.sql,
+.codingLabPage .codingLabCard.scratch,
+.codingLabPage .codingLabCard.phet {
+  border-color: #e5e7eb !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: 0 7px 20px rgba(15, 23, 42, .08) !important;
+}
+
+.codingLabPage .codingLabCard::before,
+.codingLabPage .codingLabCard::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.codingLabPage .codingLabCard:hover {
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, .11) !important;
+}
+
+.codingLabPage .codingLabActions,
+.codingLabPage .codingHomeworkBanner,
+.codingLabPage .labProjectForm {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+.codingLabPage .codingLabActions > button,
+.codingLabPage .codingLabActions > button::before,
+.codingLabPage .codingLabActions > button::after {
+  background-image: none !important;
+}
+
+/* Clear action hierarchy for compiler toolbar buttons. */
+.codingCompilerTop .compilerTopActions button {
+  position: relative;
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.01em;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.codingCompilerTop .compilerTopActions button::before {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(1) {
+  border-color: #4e8cf0 !important;
+  background: linear-gradient(135deg, #5b96f3, #4275dd) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(66, 117, 221, 0.28) !important;
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(1)::before {
+  content: "+";
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(2) {
+  border-color: #31b98b !important;
+  background: linear-gradient(135deg, #38c99a, #219e78) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(33, 158, 120, 0.22) !important;
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(2)::before {
+  content: "✓";
+}
+
+.codingCompilerTop .compilerTopActions button:last-child {
+  border-color: rgba(175, 198, 229, 0.34) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #c8d8ec !important;
+  box-shadow: none !important;
+}
+
+.codingCompilerTop .compilerTopActions button:last-child::before {
+  content: "←";
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(1):hover {
+  background: linear-gradient(135deg, #68a2fb, #3769d2) !important;
+  box-shadow: 0 11px 22px rgba(66, 117, 221, 0.36) !important;
+}
+
+.codingCompilerTop .compilerTopActions button:nth-child(2):hover {
+  background: linear-gradient(135deg, #43d4a5, #178c69) !important;
+  box-shadow: 0 11px 22px rgba(33, 158, 120, 0.3) !important;
+}
+
+.codingCompilerTop .compilerTopActions button:last-child:hover {
+  border-color: rgba(190, 214, 244, 0.56) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+.codingCompilerTop .compilerTopActions button:active {
+  box-shadow: none !important;
+  transform: translateY(1px);
+}
+
+/* Keep the execution action at the bottom-right of the editor. */
+.compilerGrid > .compilerPanel:first-child .runCodeButton {
+  align-self: flex-end;
+  margin: 14px 16px 16px auto;
+}
+
+@media (max-width: 520px) {
+  .compilerGrid > .compilerPanel:first-child .runCodeButton {
+    width: calc(100% - 28px);
+    margin: 14px;
+  }
+}
+
+/* Create-project form actions. */
+:is(.codingCompiler, .codingLabPage) .labProjectForm .panelHeader .projectFormClose {
+  display: grid;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #d5e1ef !important;
+  border-radius: 10px;
+  background: #f6f9fd !important;
+  color: #627792 !important;
+  box-shadow: none !important;
+}
+
+:is(.codingCompiler, .codingLabPage) .labProjectForm .panelHeader .projectFormClose:hover {
+  border-color: #f2b4ba !important;
+  background: #fff0f1 !important;
+  color: #dc4c5b !important;
+  transform: rotate(4deg);
+}
+
+:is(.codingCompiler, .codingLabPage) .labProjectForm .projectFormSubmit {
+  display: inline-flex;
+  width: auto;
+  min-width: 170px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  justify-self: start;
+  padding: 0 20px;
+  border: 1px solid #4e83e4 !important;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #5c91ed, #416fda) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 17px rgba(65, 111, 218, 0.24) !important;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+:is(.codingCompiler, .codingLabPage) .labProjectForm .projectFormSubmit:hover {
+  background: linear-gradient(135deg, #5085e5, #3561c8) !important;
+  box-shadow: 0 11px 21px rgba(65, 111, 218, 0.32) !important;
+  transform: translateY(-1px);
+}
+
+:is(.codingCompiler, .codingLabPage) .labProjectForm :is(.projectFormClose, .projectFormSubmit):focus-visible {
+  outline: 3px solid rgba(78, 131, 228, 0.25);
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  :is(.codingCompiler, .codingLabPage) .labProjectForm .projectFormSubmit {
+    width: 100%;
+  }
+}
+
+.codingLabPage .codingLabActions > button::before {
+  display: grid;
+  width: 21px;
+  height: 21px;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  content: "+";
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.codingLabPage .codingLabActions > button {
+  gap: 8px;
+}
+
+@media (max-width: 440px) {
+  .compilerTopActions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Workspace redesign: unified developer console. */
+.codingCompiler {
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #c8d9ee;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e9f2fd, #f3f7fc) !important;
+  box-shadow: 0 18px 42px rgba(39, 64, 101, 0.13);
+}
+
+.codingCompilerTop {
+  min-height: 92px;
+  padding: 17px 19px;
+  border: 1px solid #243854;
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(59, 130, 246, 0.24), transparent 32%),
+    linear-gradient(135deg, #142238, #0e1828) !important;
+  box-shadow: 0 12px 25px rgba(14, 24, 40, 0.22);
+}
+
+.codingCompilerTop span {
+  color: #57d7f2;
+}
+
+.codingCompilerTop h2 {
+  color: #ffffff;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+.codingCompilerTop .compilerTopActions button {
+  min-height: 40px;
+  border: 1px solid rgba(164, 190, 225, 0.3) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #dce9fa !important;
+  box-shadow: none !important;
+}
+
+.codingCompilerTop .compilerTopActions button:first-child {
+  border-color: #35c4e4 !important;
+  background: linear-gradient(135deg, #2fc2e3, #288fdc) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 17px rgba(47, 194, 227, 0.25) !important;
+}
+
+.codingCompilerTop .compilerTopActions button:hover {
+  border-color: rgba(173, 209, 255, 0.55) !important;
+  background: rgba(255, 255, 255, 0.13) !important;
+  color: #ffffff !important;
+}
+
+.codingCompilerTop .compilerTopActions button:first-child:hover {
+  background: linear-gradient(135deg, #36cdeb, #247fcf) !important;
+}
+
+.compilerGrid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 14px;
+  min-height: 570px;
+}
+
+.compilerPanel,
+.compilerGrid > .compilerPanel:first-child {
+  min-height: 570px;
+  border-radius: 15px;
+}
+
+.compilerGrid > .compilerPanel:first-child {
+  border: 1px solid #243650;
+  background: #0d1727;
+  box-shadow: 0 13px 27px rgba(12, 23, 39, 0.22);
+}
+
+.compilerGrid > .compilerPanel:last-child {
+  border: 1px solid #d3e0ef;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(48, 72, 108, 0.09);
+}
+
+.compilerPanelHeader {
+  min-height: 54px;
+  padding: 0 16px;
+}
+
+.compilerGrid > .compilerPanel:first-child .compilerPanelHeader {
+  border-bottom-color: #263a58;
+  background: #132137;
+}
+
+.compilerGrid > .compilerPanel:last-child .compilerPanelHeader {
+  position: relative;
+  padding-right: 135px;
+  background: #f5f8fc;
+}
+
+.compilerGrid > .compilerPanel:last-child .compilerPanelHeader::after {
+  position: absolute;
+  right: 14px;
+  max-width: 115px;
+  overflow: hidden;
+  padding: 5px 9px;
+  border: 1px solid #dbe5f0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #8a99ad;
+  content: "preview.local";
+  font-family: Consolas, monospace;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compilerPanelHeader h3::before {
+  width: 7px;
+  height: 7px;
+  margin-right: 24px;
+  background: #ff6f68;
+  box-shadow: 12px 0 #ffbd4a, 24px 0 #48c78e;
+}
+
+.codeEditor {
+  background:
+    linear-gradient(90deg, #091321 0 50px, #182941 50px 51px, #0d1727 51px) !important;
+  color: #d7e7fc;
+  padding: 24px 24px 24px 70px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.runCodeButton {
+  min-width: 164px;
+  min-height: 44px;
+  border: 1px solid #36c5e5 !important;
+  background: linear-gradient(135deg, #31c3e3, #2f83df) !important;
+  box-shadow: 0 9px 19px rgba(47, 157, 224, 0.3);
+}
+
+.runCodeButton:hover {
+  background: linear-gradient(135deg, #39cce9, #2874cf) !important;
+}
+
+.livePreview {
+  padding: 18px;
+  background: #ffffff;
+}
+
+.compilerOutput,
+.sqlOutputPanel {
+  background:
+    linear-gradient(180deg, rgba(41, 74, 112, 0.1), transparent 80px),
+    #0d1727;
+}
+
+@media (max-width: 1120px) {
+  .compilerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .codingCompiler {
+    padding: 9px;
+  }
+
+  .codingCompilerTop {
+    min-height: auto;
+  }
+
+  .compilerGrid > .compilerPanel:last-child .compilerPanelHeader {
+    padding-right: 16px;
+  }
+
+  .compilerGrid > .compilerPanel:last-child .compilerPanelHeader::after {
+    display: none;
+  }
+}
+
+.codingLabPage,
+.codingLabPage .codingLabGrid,
+.codingLabPage .codingLabCard,
+.codingLabPage .codingLabCard:hover,
+.codingLabPage .codingHomeworkBanner,
+.codingLabPage .labProjectForm {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+.codingLabPage .codingLabGrid { box-shadow: none !important; }
+.codingLabPage .codingLabCard { border-color: #e5e7eb !important; box-shadow: 0 7px 20px rgba(15, 23, 42, .08) !important; }
+.codingLabPage .codingLabCard:hover { box-shadow: 0 12px 26px rgba(15, 23, 42, .11) !important; }
+.codingLabPage .codingLabCard::before,
+.codingLabPage .codingLabCard::after { display: none !important; content: none !important; background: none !important; }
+
+/* Soft blue accents for the Coding Lab library. */
+.codingLabPage .codingLabGrid {
+  border-color: #dce8f8 !important;
+  background-color: #f8fbff !important;
+}
+.codingLabPage .codingLabCard,
+.codingLabPage .codingLabCard.html,
+.codingLabPage .codingLabCard.java,
+.codingLabPage .codingLabCard.scratch {
+  border-color: #d6e4f5 !important;
+  background-color: #f7faff !important;
+}
+.codingLabPage .codingLabCard.python,
+.codingLabPage .codingLabCard.sql,
+.codingLabPage .codingLabCard.phet {
+  border-color: #ccdef4 !important;
+  background-color: #eef6ff !important;
+}
+.codingLabPage .codingLabCard:hover {
+  border-color: #9fc1eb !important;
+  background-color: #eaf3ff !important;
+}
+.codingLabPage .codingLabTags span {
+  background-color: #e1edfc !important;
+  color: #315d96 !important;
+}
+.codingLabPage .codingLabCardFooter {
+  border-top-color: #d6e3f3 !important;
+}
+.codingLabPage .codingLabCardFooter > span,
+.codingLabPage .codingLabCard strong {
+  color: #173b68 !important;
+}
+.codingLabPage .codingLabCardFooter button {
+  background-color: #2868bd !important;
+  color: #fff !important;
+}
+.codingLabPage .codingLabCardFooter button:hover {
+  background-color: #1f559d !important;
+}
+
+.codingLabPage .codingLabCard .labLogo {
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  padding: 10px !important;
+}
+.codingLabPage .codingLabCard .labLogo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.codingLabPage .codingLabGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+@media (max-width: 1200px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 900px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 560px) {
+  .codingLabPage .codingLabGrid { grid-template-columns: 1fr !important; }
+}
+
+/* Ordered, coding-themed card composition. */
+.codingLabPage .codingLabCard {
+  min-height: 285px !important;
+  padding: 20px !important;
+  border-top: 4px solid #3978cf !important;
+  border-radius: 16px !important;
+  justify-content: flex-start !important;
+}
+.codingLabPage .codingLabCard:nth-child(even) { border-top-color: #245da9 !important; }
+.codingLabPage .codingLabCardTop { order: 1 !important; }
+.codingLabPage .codingLabCard .codingLabMeta {
+  order: 2 !important;
+  margin: 15px 0 0 !important;
+  color: #3972b8 !important;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.codingLabPage .codingLabCard > strong {
+  order: 3 !important;
+  margin: 8px 0 0 !important;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif !important;
+  font-size: 20px !important;
+}
+.codingLabPage .codingLabCard > p {
+  order: 4 !important;
+  min-height: 38px;
+  margin: 5px 0 0 !important;
+  font-size: 12px !important;
+}
+.codingLabPage .codingLabTags {
+  order: 5 !important;
+  margin-top: 10px !important;
+}
+.codingLabPage .codingLabCardFooter {
+  order: 6 !important;
+  width: 100%;
+  margin-top: auto !important;
+  padding-top: 14px !important;
+}
+.codingLabPage .codingLabCardFooter button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 8px;
+}

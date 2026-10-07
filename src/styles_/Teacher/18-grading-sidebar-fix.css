@@ -1,0 +1,6 @@
+/* Keep the normal teacher navigation available on the grading route. */
+.teacherShell:has(.gradingExact) .dashboard { grid-template-columns: 224px minmax(0, 1fr); }
+.teacherShell:has(.gradingExact) .sidebar { display: flex; }
+.teacherShell:has(.gradingExact) .content { min-width: 0; }
+.teacherShell:has(.gradingExact) .gradingExact { min-width: 0; }
+@media (max-width: 780px) { .teacherShell:has(.gradingExact) .dashboard { grid-template-columns: 1fr; } }

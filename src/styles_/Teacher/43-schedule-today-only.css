@@ -1,0 +1,4 @@
+.teacherShell .dashboardSchedule .schedulePlannerBody { grid-template-rows: 1fr; }
+.teacherShell .scheduleTodayEmpty { display: grid; min-height: 230px; place-content: center; justify-items: center; gap: 7px; margin-left: -25px; border: 1px dashed #c8d7ea; border-radius: 15px; background: #f4f8fd; color: #7190bb; text-align: center; }
+.teacherShell .scheduleTodayEmpty strong { color: #344b69; font-size: 13px; }
+.teacherShell .scheduleTodayEmpty p { margin: 0; color: #7a8ba1; font-size: 10px; }

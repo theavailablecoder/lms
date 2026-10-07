@@ -1,0 +1,232 @@
+
+/* =========================
+   Homework Workspace
+========================= */
+
+.teacherHomeworkWorkspace {
+  display: grid;
+  gap: 28px;
+}
+
+.teacherHomeworkWorkspace > .reviewModule {
+  padding-top: 24px;
+  border-top: 1px solid #dce4ef;
+}
+
+
+/* =========================
+   Submission Block
+========================= */
+
+.teacherHomeworkWorkspace .submissionBlock .viewStudentAnswersButton {
+  width: auto;
+  margin: 10px 0;
+}
+
+
+/* =========================
+   Review Workspace
+========================= */
+
+.homeworkReviewWorkspace {
+  display: grid;
+  align-items: start;
+}
+
+
+/* =========================
+   Homework Work List
+========================= */
+
+.homeworkWorkList {
+  position: sticky;
+  top: 16px;
+  overflow: hidden;
+}
+
+
+/* Work List Header */
+
+.homeworkWorkList > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.homeworkWorkList > header > div {
+  display: grid;
+  gap: 3px;
+}
+
+.homeworkWorkList > header strong {
+  color: #2a3d58;
+}
+
+.homeworkWorkList > header small {
+  color: #8190a4;
+  font-size: 10px;
+}
+
+
+/* Work List Buttons */
+
+.homeworkWorkList > button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 10px;
+  border: 0;
+  border-bottom: 1px solid #edf1f6;
+  border-radius: 0;
+  background: #fff;
+  text-align: left;
+  box-shadow: none;
+}
+
+.homeworkWorkList > button:hover,
+.homeworkWorkList > button.active {
+  background: #f1f5ff;
+}
+
+
+/* Work List Icon */
+
+.homeworkWorkIcon {
+  display: grid;
+  place-items: center;
+  background: #eaf0ff;
+  color: #5876d7;
+}
+
+
+/* Work List Text */
+
+.homeworkWorkList > button > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.homeworkWorkList > button strong {
+  overflow: hidden;
+  color: #30435e;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.homeworkWorkList > button small {
+  overflow: hidden;
+  color: #677990;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.homeworkWorkList > button em {
+  color: #929fb0;
+  font-size: 8px;
+  font-style: normal;
+}
+
+
+/* =========================
+   Review Card
+========================= */
+
+.homeworkReviewWorkspace > .reviewCard {
+  margin: 0;
+}
+
+.homeworkReviewWorkspace .reviewForm .formRow {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+
+/* =========================
+   Mobile Review Workspace
+========================= */
+
+@media (max-width: 900px) {
+
+  .homeworkWorkList {
+    position: static;
+  }
+}
+
+
+/* =========================
+   Answers Popup
+========================= */
+
+.homeworkAnswersPopup {
+  z-index: 9999;
+}
+
+.homeworkAnswersPopup .studentAnswersModal {
+  width: min(780px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+}
+
+
+/* =========================
+   Written Answers
+========================= */
+
+.homeworkAnswersPopup .gradingWrittenAnswers {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.homeworkAnswersPopup .gradingWrittenAnswers > h4 {
+  margin-bottom: 14px;
+}
+
+
+/* =========================
+   Answer Categories
+========================= */
+
+.homeworkAnswersPopup .gradingAnswerCategory {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 9px;
+}
+
+.homeworkAnswersPopup .gradingAnswerCategory + .gradingAnswerCategory {
+  margin-top: 18px;
+}
+
+.homeworkAnswersPopup .gradingAnswerCategory > header,
+.homeworkAnswersPopup .gradingAnswerCategory > article {
+  width: 100%;
+  min-width: 0;
+  grid-column: 1;
+}
+
+.homeworkAnswersPopup .gradingAnswerCategory > article b,
+.homeworkAnswersPopup .gradingAnswerCategory > article p {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+
+/* =========================
+   Mobile Answers Popup
+========================= */
+
+@media (max-width: 560px) {
+  .homeworkAnswersPopup {
+    padding: 8px;
+  }
+
+  .homeworkAnswersPopup .studentAnswersModal {
+    width: 100%;
+    max-height: calc(100vh - 16px);
+  }
+}
+

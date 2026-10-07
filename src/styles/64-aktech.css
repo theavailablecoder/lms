@@ -1,0 +1,94 @@
+.akCompanyBrand { display:inline-flex; flex-direction:column; align-items:flex-start; gap:6px; }
+.akWordmark { color:#124b70; font-size:34px; font-weight:750; letter-spacing:-1.5px; line-height:1.1; }
+.akWordmark>span { color:#0da9ad; }
+.akCompanyBrand>small { font-size:8px; font-weight:600; color:#739099; letter-spacing:1.7px; }
+.akCompanyBrand>img { width:150px; height:55px; object-fit:contain; }
+.akCompanyBrand .akCompanyLogo { display:block; width:170px; height:auto; aspect-ratio:640 / 230; flex-shrink:0; border-radius:0; background:transparent; }
+.akCompanyBrand.akCompanyBrandCompact .akCompanyLogo { width:34px; aspect-ratio:165 / 230; }
+.welcomeBrand .akCompanyBrand { letter-spacing:normal; }
+.welcomeBrand .akCompanyBrand>small { letter-spacing:1.7px; font-size:8px; }
+.websiteRefresh .sidebar .brand { overflow:visible; }
+.websiteRefresh .sidebar .akCompanyBrand { padding:7px 10px; background:#f5fafb; border-radius:10px; }
+.websiteRefresh .sidebar .akCompanyBrand .akCompanyLogo { width:138px; }
+.websiteRefresh .sidebar .akCompanyBrand>small { color:#527885 !important; }
+.websiteRefresh .sidebarCollapsed .akCompanyBrand.akCompanyBrandCompact { max-width:none; padding:6px 8px; overflow:visible; }
+.websiteRefresh .sidebarCollapsed .akCompanyBrand.akCompanyBrandCompact .akCompanyLogo { width:30px; }
+.websiteRefresh.appShell { --primary:#087f88; --primary-soft:#e7f7f6; --secondary:#126077; --ink:#203440; --muted:#6a808b; --surface-soft:#f3f8f9; --line:#dce8eb; --sidebar:#142e3e; --sidebar-deep:#102532; --refresh-ink:#203440; --refresh-muted:#6a808b; --refresh-line:#dce8eb; --refresh-bg:#f5f9fa; background:#f5f9fa !important; }
+.websiteRefresh .content,.websiteRefresh .topbar { background:#f5f9fa !important; }
+.websiteRefresh .sidebar { background:#142e3e !important; }
+.websiteRefresh .sidebar .akWordmark { color:#e2f2f6; font-size:30px; }
+.websiteRefresh .sidebar .akWordmark>span { color:#2ed0ce; }
+.websiteRefresh .sidebar .akCompanyBrand>small { color:#9bbac5; font-size:7px; }
+.websiteRefresh .sidebarLogoOrbit { width:auto !important; height:auto !important; border-radius:0; border:0; margin:18px 45px 18px 12px; }
+.websiteRefresh .sidebarCollapsed .akCompanyBrand { max-width:none; overflow:visible; }
+.websiteRefresh .sidebarCollapsed .akCompanyBrand>small { display:none; }
+.websiteRefresh .navItem.active,.websiteRefresh .navItem:hover,.websiteRefresh .sidebarToggle { background:#244a5c !important; }
+.websiteRefresh .navItem svg { color:#94c6d2 !important; }
+.websiteRefresh .navGroup>p { color:#83aebd !important; }
+.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading) { background:#eaf4f5 !important; border-color:#d6e7eb; }
+.websiteRefresh .resourceLibraryHeading :is(h2,p),.websiteRefresh .overviewWelcome :is(h2,p) { color:var(--ink); }
+.websiteRefresh :is(.eyebrow,.resourceLibraryHeading>span) { color:#428591 !important; }
+.websiteRefresh :is(.primaryButton,.primaryBtn,button[type=submit],.downloadButton,.orangeGptLink,.overviewWelcome>button,.courseFilterBar>button) { background:#087f88 !important; color:#fff !important; box-shadow:none !important; }
+.websiteRefresh :is(.textAction,.categoryList>button.active,.categoryList>button:hover) { background:#e8f4f5 !important; color:#176776 !important; border-color:#d4e6e9 !important; }
+.websiteRefresh :is(.statIcon,.quickActionIcon,.assignmentSummaryIcon,.assignmentIcon,.scheduleEventIcon) { background:#e8f4f5 !important; color:#218391 !important; box-shadow:none !important; }
+.websiteRefresh .teacherStats .statCard:nth-child(n) .statIcon { background:#e8f4f5 !important; color:#218391 !important; }
+.websiteRefresh .dashboardQuickActions>button,.websiteRefresh .dashboardSchedule .scheduleItem,.websiteRefresh .assignmentPreviewCard { background:#f8fbfc !important; border-color:#e0ebed !important; }
+.websiteRefresh :is(.courseBreadcrumb strong,.coverCaption>strong,.courseFilterBar label,.courseTableFooter,.categoryPanelHeader,.dashboardQuickActions>button strong) { color:#315767 !important; }
+.websiteRefresh .dashboardSchedule .scheduleItem { border-left-color:#5ba6b1 !important; }
+.websiteRefresh th { background:#edf6f7 !important; color:#3f6471 !important; }
+.websiteRefresh :is(input,select,textarea):not(.codeEditor) { background:#f9fcfc !important; border-color:#d5e5e8 !important; }
+.websiteRefresh :is(button,a,input,select,textarea):focus-visible { outline-color:#16a4ab !important; }
+.websiteRefresh .courseFilterBar>button:hover,.websiteRefresh button[type=submit]:hover { background:#076a73 !important; }
+.classroomWelcome { background:#f3f8fa; color:#203440; }
+.classroomWelcome .welcomeStory h1 em { color:#078f9b; }
+.classroomWelcome .welcomeEyebrow i { background:#16a4ab; }
+.classroomWelcome .welcomeHello { background:#e6f6f6; color:#078f9b; }
+.classroomWelcome .roleSwitch button.active { color:#087f88; }
+.classroomWelcome .loginForm button[type=submit] { background:#087f88; box-shadow:none; }
+.classroomWelcome .loginForm button[type=submit]:hover { background:#066b73; }
+.classroomWelcome .loginForm .createAccountTrigger strong { color:#087f88; }
+.classroomWelcome .loginForm input:focus { border-color:#16a4ab; box-shadow:0 0 0 3px #16a4ab18; }
+.classroomWelcome .workspaceLesson { background:#e0edf1; }
+.classroomWelcome .workspaceCode { background:#16384c; }
+.classroomWelcome .workspaceCode code b { color:#54d7cd; }
+.classroomWelcome .workspaceProgress { background:#e9f5f4; }
+.classroomWelcome .workspaceProgress i { background:#91c4c2; }
+.classroomWelcome .workspaceProgress i:last-child { background:#149399; }
+.loginShell .loginBrand .logoOrbit { width:auto; height:auto; border:0; background:transparent; box-shadow:none; }
+.loginShell .loginBrand .logoOrbit::before,.loginShell .loginBrand .logoOrbit::after { display:none; }
+
+/* Chat screen: centered conversation, prompt suggestions, and a bottom composer. */
+.websiteRefresh .akChat.panel { display:flex; flex-direction:column; min-height:calc(100svh - 180px); margin:24px 30px; padding:0 28px; border:1px solid #dce8eb !important; border-top:1px solid #dce8eb !important; background:#fff !important; box-shadow:none !important; }
+.akChat .panelHeader { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; padding:20px 0; margin:0; border-bottom:1px solid #e5eef0; }
+.akChat .panelHeader h2 { font-size:17px; color:#2a485a; }
+.akChat .studyHelperActions { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.akChat .akNewChat { border:1px solid #dce8eb; background:#fff; border-radius:8px; padding:9px 13px; color:#496571; font-size:12px; }
+.akChat .orangeGptLink { display:inline-flex; align-items:center; gap:7px; border-radius:8px; padding:9px 13px; font-size:12px; }
+.akChat .modeTabs { display:flex; flex-wrap:wrap; gap:7px; max-width:800px; width:100%; margin:18px auto 0; padding:0; background:transparent; border:0; }
+.akChat .modeTabs button { border:1px solid #e3ecef; border-radius:20px; padding:7px 12px; background:#fff; color:#6b818d; font-size:11px; font-weight:500; box-shadow:none; }
+.akChat .modeTabs button.active { background:#e8f6f6; color:#087c86; border-color:#b9e1e2; }
+.akChat .chatWindow { flex:1; width:100%; max-width:800px; margin:0 auto; min-height:290px; max-height:55svh; overflow-y:auto; padding:24px 0; background:transparent; border:0; border-radius:0; }
+.akChatWelcome { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:270px; text-align:center; padding:30px 10px; }
+.akChatWelcome .akWelcomeRobot { display:block; width:120px; height:120px; object-fit:contain; }
+.akChatSpark { display:grid; place-items:center; width:64px; height:64px; background:#e8f6f6; color:#07929b; border-radius:20px; }
+.akChatEyebrow { font-size:9px; letter-spacing:1.7px; color:#79a0aa; font-weight:600; }
+.akChatWelcome h3 { margin:0; font-size:clamp(24px,3vw,36px); font-weight:600; color:#21455a; letter-spacing:-1px; }
+.akChatWelcome p { margin:0; color:#78909b; font-size:13px; line-height:1.7; }
+.akChat .chatMessage { width:fit-content; max-width:90%; margin:0 0 20px; padding:14px 18px; background:#f5f9fa; border:0; border-radius:14px; color:#2a485a; box-shadow:none; }
+.akChat .chatMessage.student { margin-left:auto; background:#e5f4f3; }
+.akChat .chatMessage>span { color:#318390; font-size:10px; font-weight:700; }
+.akChat .chatMessage p { font-size:14px; line-height:1.8; white-space:pre-wrap; overflow-wrap:anywhere; margin:7px 0 0; }
+.akChat .akThinking { font-size:13px; color:#63818e; }
+.akChat .promptChips { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:8px auto 20px; }
+.akChat .promptChips button { background:#fff; border:1px solid #dde9ec; color:#4b7380; border-radius:12px; padding:12px 18px; font-size:12px; box-shadow:none; }
+.akChat .promptChips button:hover { background:#f0f8f8; border-color:#94cace; }
+.akChat .chatComposer { width:100%; max-width:800px; display:flex; align-items:center; gap:10px; margin:0 auto; padding:12px; border:1px solid #cbdfe4; border-radius:18px; background:#f9fcfc; box-shadow:0 4px 18px #123c5010; }
+.websiteRefresh .akChat .chatComposer input { flex:1; min-width:0; border:0 !important; border-radius:9px; background:transparent !important; padding:12px; font-size:14px; }
+.akChat .chatComposer button { display:flex; align-items:center; justify-content:center; gap:8px; border-radius:10px; padding:12px 15px; font-size:12px; }
+.akChatBottom { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; width:100%; max-width:800px; margin:0 auto; padding:12px 0; min-height:90px; }
+.akChatBottom>p { color:#8aa0aa; font-size:10px; }
+.akRobotCompanion { display:flex; align-items:center; justify-content:center; gap:10px; }
+.akRobotCompanion img { width:75px; height:80px; object-fit:contain; object-position:bottom; }
+.akRobotCompanion span { color:#789aa4; font-size:10px; max-width:100px; line-height:1.6; }
+.websiteRefresh.themeDark .akChat.panel { background:#172c38 !important; }.websiteRefresh.themeDark .akChat .chatMessage { background:#223e4c; color:#d3e5ed; }.websiteRefresh.themeDark .akChatWelcome h3 { color:#d3e5ed; }
+@media(max-width:700px) { .websiteRefresh .akChat.panel { margin:16px; padding:0 16px; min-height:calc(100svh - 160px); }.akChat .panelHeader { gap:10px; }.akChat .chatWindow { max-height:50svh; }.akChat .akChatWelcome { min-height:230px; }.akChat .promptChips { gap:6px; }.akChat .promptChips button { padding:10px; font-size:11px; }.akChat .chatComposer { padding:8px; }.akChat .chatComposer button { font-size:0; padding:12px; }.akChat .chatComposer button svg { width:18px; }.akRobotCompanion span { display:none; }.akRobotCompanion img { width:60px; height:68px; }.akChatBottom>p { max-width:210px; line-height:1.6; } }

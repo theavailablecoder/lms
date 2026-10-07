@@ -1,0 +1,55 @@
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule > .dashboardSectionHeading {
+  border-bottom: 1px solid #cbdcf4 !important;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(116, 151, 232, .2), transparent 31%),
+    linear-gradient(125deg, #eef5ff, #e3edff 58%, #edf0ff) !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge {
+  position: relative;
+  display: flex;
+  border-color: #baeb9d;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 6px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #4f89e4, #315fb9);
+  color: #ff0000;
+  box-shadow: 0 9px 0 -5px #aec4e5, 0 16px 22px -15px #33598e, inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge span {
+  position: static !important;
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #33f707 !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: .12em !important;
+  text-align: center;
+  text-indent: .12em;
+  text-transform: uppercase;
+  transform: none !important;
+}
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge strong {
+  position: static !important;
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  color: #ff0000 !important;
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(24,48,91,.28);
+  transform: none !important;
+}
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading .eyebrow { color: #5576ad !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading h2 { color: #213650 !important; text-shadow: none !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading p { color: #647a99 !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading .textAction { border-color: #b9cdec; background: rgba(255,255,255,.72); color: #3e69bd; box-shadow: 0 6px 14px rgba(56,89,143,.1), inset 0 1px 0 #fff; }

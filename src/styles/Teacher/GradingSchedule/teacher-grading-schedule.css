@@ -1,0 +1,861 @@
+/* 38-schedule-color-fix.css */
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule > .dashboardSectionHeading {
+  border-bottom: 1px solid #cbdcf4 !important;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(116, 151, 232, .2), transparent 31%),
+    linear-gradient(125deg, #eef5ff, #e3edff 58%, #edf0ff) !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge {
+  position: relative;
+  display: flex;
+  border-color: #baeb9d;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 6px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #4f89e4, #315fb9);
+  color: #ff0000;
+  box-shadow: 0 9px 0 -5px #aec4e5, 0 16px 22px -15px #33598e, inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge span {
+  position: static !important;
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #33f707 !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: .12em !important;
+  text-align: center;
+  text-indent: .12em;
+  text-transform: uppercase;
+  transform: none !important;
+}
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .scheduleDateBadge strong {
+  position: static !important;
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  color: #ff0000 !important;
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(24,48,91,.28);
+  transform: none !important;
+}
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading .eyebrow { color: #5576ad !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading h2 { color: #213650 !important; text-shadow: none !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading p { color: #647a99 !important; }
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule .dashboardSectionHeading .textAction { border-color: #b9cdec; background: rgba(255,255,255,.72); color: #3e69bd; box-shadow: 0 6px 14px rgba(56,89,143,.1), inset 0 1px 0 #fff; }
+
+/* 39-schedule-timeline-image.css */
+.teacherShell .dashboardSchedule .schedulePlannerBody { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 20px; padding: 20px; background: #f7f9fd; }
+.teacherShell .dashboardSchedule .scheduleList { position: relative; display: grid; grid-template-columns: 1fr; gap: 12px; margin: 0; padding: 0 0 0 28px; }
+.teacherShell .dashboardSchedule .scheduleList::before { display: block; position: absolute; top: 23px; bottom: 23px; left: 9px; width: 3px; border-radius: 4px; background: linear-gradient(#4389ed, #795ce0 50%, #ed8b25); content: ""; }
+.teacherShell .dashboardSchedule .scheduleItem { --event-color: #4088ee; --event-soft: #eaf3ff; position: relative; display: grid; min-height: 108px; grid-template-columns: auto 74px minmax(0, 1fr) auto; grid-template-rows: 1fr; align-items: center; gap: 13px; padding: 14px 16px; overflow: visible; border: 1px solid color-mix(in srgb, var(--event-color) 20%, #dfe7f1) !important; border-top: 1px solid color-mix(in srgb, var(--event-color) 20%, #dfe7f1) !important; border-left: 4px solid var(--event-color) !important; border-radius: 15px; background: linear-gradient(100deg, #fff, var(--event-soft)) !important; }
+.teacherShell .dashboardSchedule .scheduleItem::before { position: absolute; top: 50%; left: -28px; width: 15px; height: 15px; border: 4px solid #fff; border-radius: 50%; background: var(--event-color); content: ""; box-shadow: 0 0 0 3px color-mix(in srgb, var(--event-color) 26%, transparent); transform: translate(-50%, -50%); }
+.teacherShell .dashboardSchedule .scheduleEventIcon { grid-column: 1; grid-row: 1; }
+.teacherShell .dashboardSchedule .scheduleTime { grid-column: 2; grid-row: 1; justify-items: start; padding-right: 12px; border-right: 1px solid color-mix(in srgb, var(--event-color) 18%, #dfe7f1); }
+.teacherShell .dashboardSchedule .scheduleTime strong { font-size: 17px; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) { display: grid; grid-column: 3; grid-row: 1; gap: 4px; padding: 0; }
+.teacherShell .dashboardSchedule .scheduleItem .badge { grid-column: 4; grid-row: 1; }
+.teacherShell .scheduleIllustrationPanel { position: relative; display: flex; min-height: 348px; flex-direction: column; justify-content: space-between; overflow: hidden; border: 1px solid #cdddf2; border-radius: 19px; background: linear-gradient(155deg, #edf5ff, #e8efff 55%, #fff4e7); box-shadow: 0 12px 0 -8px #c4d4ea, 0 22px 30px -22px rgba(37,60,96,.35), inset 0 2px 0 #fff; }
+.teacherShell .scheduleIllustrationPanel > div { position: relative; z-index: 2; display: grid; gap: 5px; padding: 20px 20px 0; }
+.teacherShell .scheduleIllustrationPanel span { color: #5378b9; font-size: 9px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.teacherShell .scheduleIllustrationPanel strong { color: #243a59; font-size: 17px; }
+.teacherShell .scheduleIllustrationPanel p { margin: 0; color: #71839b; font-size: 10px; line-height: 1.5; }
+.teacherShell .scheduleIllustrationPanel img { width: 100%; height: 235px; object-fit: cover; object-position: 58% 58%; mix-blend-mode: multiply; }
+
+@media (max-width: 1200px) {
+  .teacherShell .dashboardSchedule .schedulePlannerBody { grid-template-columns: 1fr; }
+  .teacherShell .scheduleIllustrationPanel { min-height: 190px; }
+  .teacherShell .scheduleIllustrationPanel img { position: absolute; right: 0; bottom: 0; width: 48%; height: 100%; }
+}
+
+@media (max-width: 650px) {
+  .teacherShell .dashboardSchedule .schedulePlannerBody { padding: 13px; }
+  .teacherShell .dashboardSchedule .scheduleItem { grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; }
+  .teacherShell .dashboardSchedule .scheduleEventIcon { grid-column: 1; grid-row: 1 / 3; }
+  .teacherShell .dashboardSchedule .scheduleTime { grid-column: 2; grid-row: 1; border: 0; }
+  .teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) { grid-column: 2 / 4; grid-row: 2; }
+  .teacherShell .dashboardSchedule .scheduleItem .badge { grid-column: 3; grid-row: 1; }
+  .teacherShell .scheduleIllustrationPanel { display: none; }
+}
+
+/* 40-schedule-list-final.css */
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .schedulePlannerBody > .scheduleList {
+  display: flex !important;
+  min-width: 0;
+  flex-direction: column !important;
+  gap: 11px !important;
+  padding: 0 0 0 30px !important;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .schedulePlannerBody > .scheduleList > .scheduleItem {
+  display: grid !important;
+  width: 100% !important;
+  min-height: 92px !important;
+  grid-template-columns: 48px 98px minmax(0, 1fr) auto !important;
+  grid-template-rows: 1fr !important;
+  align-items: center !important;
+  gap: 13px !important;
+  margin: 0 !important;
+  padding: 13px 15px !important;
+  border-top: 1px solid color-mix(in srgb, var(--event-color) 20%, #dfe7f1) !important;
+  border-right: 1px solid color-mix(in srgb, var(--event-color) 20%, #dfe7f1) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--event-color) 20%, #dfe7f1) !important;
+  border-left: 4px solid var(--event-color) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(100deg, #fff 58%, var(--event-soft)) !important;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .scheduleEventIcon {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .scheduleTime {
+  display: grid !important;
+  min-width: 0 !important;
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  justify-items: start !important;
+  padding: 0 12px 0 0 !important;
+  border-right: 1px solid #dce5f0 !important;
+  border-bottom: 0 !important;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .scheduleTime strong { white-space: nowrap; }
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > div:nth-of-type(2) {
+  display: grid !important;
+  min-width: 0;
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  gap: 4px !important;
+  padding: 0 !important;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > div:nth-of-type(2) strong,
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > div:nth-of-type(2) p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .badge {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+  align-self: center !important;
+}
+
+@media (max-width: 720px) {
+  .teacherShell .teacherDashboardWorkspace .dashboardSchedule .schedulePlannerBody > .scheduleList > .scheduleItem {
+    grid-template-columns: 42px minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+  }
+  .teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .scheduleEventIcon { grid-row: 1 / 3 !important; width: 42px; height: 42px; }
+  .teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .scheduleTime { grid-column: 2 !important; grid-row: 1 !important; border: 0 !important; }
+  .teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > div:nth-of-type(2) { grid-column: 2 / 4 !important; grid-row: 2 !important; }
+  .teacherShell .teacherDashboardWorkspace .dashboardSchedule .scheduleItem > .badge { grid-column: 3 !important; grid-row: 1 !important; }
+}
+
+/* 41-schedule-overflow.css */
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents {
+  max-height: 348px;
+  padding-right: 8px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #8ba7ce #e7edf6;
+  scrollbar-width: thin;
+}
+
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar { width: 8px; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-track { border-radius: 10px; background: #e7edf6; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-thumb { border: 2px solid #e7edf6; border-radius: 10px; background: #8ba7ce; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-thumb:hover { background: #6685b2; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::before { bottom: -30px; }
+.teacherShell .scheduleMoreHint { position: sticky; z-index: 5; bottom: 0; display: flex; min-height: 31px; align-items: center; justify-content: center; gap: 5px; margin-left: -22px; border: 1px solid #d5e0ee; border-radius: 9px; background: rgba(245,248,253,.94); color: #617794; font-size: 9px; font-weight: 800; box-shadow: 0 -7px 15px rgba(49,72,107,.08); backdrop-filter: blur(7px); }
+
+@media (max-width: 650px) {
+  .teacherShell .dashboardSchedule .scheduleList.hasMoreEvents { max-height: 330px; }
+}
+
+/* 42-schedule-day-wise.css */
+.teacherShell .dashboardSchedule .schedulePlannerBody { grid-template-rows: auto 1fr; }
+.teacherShell .scheduleDayTabs { display: flex; grid-column: 1 / -1; gap: 8px; padding-bottom: 3px; overflow-x: auto; scrollbar-width: thin; }
+.teacherShell .scheduleDayTabs button { display: grid; min-width: 82px; grid-template-columns: auto auto; align-items: center; gap: 1px 7px; padding: 9px 11px; border: 1px solid #d5e0ee; border-radius: 11px; background: #fff; color: #71829a; text-align: left; box-shadow: 0 5px 0 -3px #d6e0ed; cursor: pointer; }
+.teacherShell .scheduleDayTabs button span { font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.teacherShell .scheduleDayTabs button strong { grid-row: 1 / 3; grid-column: 2; color: #293d59; font-size: 20px; }
+.teacherShell .scheduleDayTabs button small { font-size: 8px; }
+.teacherShell .scheduleDayTabs button.active { border-color: #6f98dd; background: linear-gradient(145deg, #4f88e1, #3b69bd); color: #dfeaff; box-shadow: 0 7px 0 -4px #9db6da, 0 12px 18px -14px #355c96; }
+.teacherShell .scheduleDayTabs button.active strong { color: #fff; }
+
+@media (max-width: 650px) {
+  .teacherShell .scheduleDayTabs { grid-column: 1; }
+}
+
+/* 43-schedule-today-only.css */
+.teacherShell .dashboardSchedule .schedulePlannerBody { grid-template-rows: 1fr; }
+.teacherShell .scheduleTodayEmpty { display: grid; min-height: 230px; place-content: center; justify-items: center; gap: 7px; margin-left: -25px; border: 1px dashed #c8d7ea; border-radius: 15px; background: #f4f8fd; color: #7190bb; text-align: center; }
+.teacherShell .scheduleTodayEmpty strong { color: #344b69; font-size: 13px; }
+.teacherShell .scheduleTodayEmpty p { margin: 0; color: #7a8ba1; font-size: 10px; }
+
+/* 44-schedule-date-theme.css */
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule > .dashboardSectionHeading > .scheduleDateBadge {
+  border: 1px solid #9fbbe7 !important;
+  background: linear-gradient(145deg, #f8fbff, #dceaff) !important;
+  color: #315fae !important;
+  box-shadow: 0 9px 0 -5px #b3c7e5, 0 17px 24px -16px #3f6498, inset 0 2px 0 #fff !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule > .dashboardSectionHeading > .scheduleDateBadge > span {
+  color: #527dcc !important;
+  text-shadow: none !important;
+}
+
+.teacherShell .teacherDashboardWorkspace > .dashboardSchedule > .dashboardSectionHeading > .scheduleDateBadge > strong {
+  color: #1e3e70 !important;
+  text-shadow: 0 1px 0 #fff !important;
+}
+
+/* 15-grading-system.css */
+.gradingSystem { display: grid; gap: 18px; max-width: 1450px; margin: 0 auto; }.gradingSystemHero, .gradingAssignmentCard, .gradingTablePanel, .gradingStat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }.gradingSystemHero { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 24px; }.gradingEyebrow { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }.gradingSystemHero h1 { margin: 4px 0; font-size: 27px; color: var(--ink); }.gradingSystemHero p { margin: 0; color: var(--muted); font-size: 14px; }.gradingHeroControls { display: flex; gap: 10px; }.gradingHeroControls select, .gradingForm input, .gradingForm select, .gradingForm textarea { min-height: 39px; border: 1px solid var(--line); border-radius: 7px; padding: 0 10px; color: var(--ink); background: var(--surface-soft); }.gradingStats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }.gradingStat { display: flex; align-items: center; gap: 12px; padding: 16px; }.gradingStat > span { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 12px; background: var(--primary-soft); color: var(--primary); }.gradingStat.amber > span { background: var(--warning-soft); color: var(--warning); }.gradingStat.green > span { background: var(--success-soft); color: var(--success); }.gradingStat.purple > span { background: #f2edff; color: #7652be; }.gradingStat small { display: block; color: var(--muted); font-size: 11px; font-weight: 700; }.gradingStat strong { display: block; margin: 2px 0; font-size: 22px; }.gradingStat p { margin: 0; color: var(--muted); font-size: 10px; }.gradingAssignmentCard { display: flex; align-items: center; gap: 14px; padding: 17px 20px; }.gradingAssignmentIcon { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 10px; background: var(--primary); color: #fff; }.gradingAssignmentInfo { flex: 1; }.gradingAssignmentInfo span, .gradingAssignmentMeta span { display: block; color: var(--muted); font-size: 11px; }.gradingAssignmentInfo strong { display: block; margin-top: 3px; font-size: 16px; }.gradingAssignmentInfo p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }.gradingAssignmentMeta { display: flex; align-items: center; gap: 22px; }.gradingAssignmentMeta strong { display: block; margin-top: 4px; color: var(--ink); font-size: 13px; }.gradingAssignmentMeta button, .gradingReviewButton, .gradingSubmit { border: 0; border-radius: 6px; background: var(--primary); color: #fff; padding: 9px 12px; font-size: 12px; font-weight: 750; cursor: pointer; }.gradingTablePanel { overflow: hidden; }.gradingToolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; border-bottom: 1px solid var(--line); }.gradingTabs { display: flex; gap: 6px; overflow-x: auto; }.gradingTabs button { white-space: nowrap; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--muted); padding: 8px 10px; font-size: 12px; cursor: pointer; }.gradingTabs button.active { background: var(--primary-soft); border-color: #bcd5f8; color: var(--primary); font-weight: 800; }.gradingTabs span { font-size: 10px; }.gradingSearch { display: flex; align-items: center; gap: 7px; width: 245px; border: 1px solid var(--line); border-radius: 7px; padding: 0 9px; color: var(--muted); }.gradingSearch input { width: 100%; height: 35px; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 12px; }.gradingTableScroll { overflow-x: auto; }.gradingTable { width: 100%; min-width: 880px; border-collapse: collapse; }.gradingTable th { padding: 11px 13px; background: var(--surface-soft); color: var(--muted); font-size: 10px; text-align: left; text-transform: uppercase; letter-spacing: .03em; }.gradingTable td { padding: 12px 13px; border-top: 1px solid var(--line); color: var(--soft-text); font-size: 12px; }.gradingTable td strong { display: block; color: var(--ink); font-size: 12px; }.gradingTable td small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }.gradingStatus { display: inline-block; border-radius: 20px; padding: 4px 8px; background: var(--warning-soft); color: var(--warning); font-size: 10px; font-weight: 800; }.gradingStatus.graded { background: var(--success-soft); color: var(--success); }.gradingStatus.not-submitted { background: #fff0f1; color: var(--danger); }.gradingStatus.late { background: #fff2e7; color: #c66c1e; }.gradingReviewButton.quiet { border: 1px solid var(--line); background: #fff; color: var(--primary); }.gradingEmpty { display: grid; place-items: center; gap: 6px; min-height: 240px; color: var(--muted); text-align: center; }.gradingEmpty strong { color: var(--ink); }.gradingEmpty p { margin: 0; font-size: 13px; }.gradingDrawerBackdrop { position: fixed; z-index: 40; inset: 0; display: flex; justify-content: flex-end; background: rgba(23, 20, 47, .25); }.gradingDrawer { width: min(460px, 100%); height: 100%; background: #fff; box-shadow: -12px 0 32px rgba(23,20,47,.14); overflow-y: auto; }.gradingDrawer > header { display: flex; justify-content: space-between; gap: 12px; padding: 21px; border-bottom: 1px solid var(--line); }.gradingDrawer header span { color: var(--primary); font-size: 11px; font-weight: 800; text-transform: uppercase; }.gradingDrawer h2 { margin: 4px 0; font-size: 20px; }.gradingDrawer header p { margin: 0; color: var(--muted); font-size: 12px; }.gradingDrawer header button { width: 32px; height: 32px; border: 0; border-radius: 7px; background: var(--surface-soft); color: var(--muted); cursor: pointer; }.gradingDrawerBody { display: grid; gap: 18px; padding: 21px; }.gradingSubmission { padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-soft); }.gradingSubmission > strong { font-size: 12px; }.gradingSubmission div { display: flex; align-items: center; gap: 9px; margin-top: 10px; color: var(--danger); }.gradingSubmission div span { color: var(--ink); font-size: 12px; }.gradingSubmission small { display: block; color: var(--muted); }.gradingSubmission p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }.gradingForm { display: grid; gap: 15px; }.gradingForm label { display: grid; gap: 6px; color: var(--soft-text); font-size: 12px; font-weight: 800; }.gradingForm textarea { min-height: 98px; padding-top: 10px; resize: vertical; }.gradingScoreRow { display: flex; align-items: end; gap: 12px; }.gradingScoreRow label { flex: 1; }.gradingScoreRow span { padding-bottom: 8px; color: var(--muted); font-weight: 700; }.gradingScoreRow span small { display: block; margin-top: 4px; color: var(--primary); font-size: 10px; white-space: nowrap; }.gradingQuickFeedback { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }.gradingQuickFeedback span { width: 100%; color: var(--muted); font-size: 11px; font-weight: 700; }.gradingQuickFeedback button { border: 1px solid var(--line); border-radius: 20px; background: var(--surface-soft); padding: 5px 8px; color: var(--primary); font-size: 10px; cursor: pointer; }.gradingForm footer { display: flex; justify-content: flex-end; gap: 9px; margin-top: 4px; }.gradingCancel { border: 1px solid var(--line); border-radius: 6px; background: #fff; padding: 9px 12px; color: var(--soft-text); font-size: 12px; cursor: pointer; }.gradingSubmit { display: inline-flex; align-items: center; gap: 6px; } @media (max-width: 900px) { .gradingStats { grid-template-columns: repeat(2, 1fr); }.gradingSystemHero, .gradingAssignmentCard { align-items: flex-start; flex-direction: column; }.gradingAssignmentMeta { width: 100%; justify-content: space-between; }.gradingToolbar { align-items: stretch; flex-direction: column; }.gradingSearch { width: 100%; } } @media (max-width: 520px) { .gradingStats { grid-template-columns: 1fr; }.gradingHeroControls { width: 100%; }.gradingHeroControls select { width: 50%; }.gradingAssignmentMeta { align-items: flex-start; flex-wrap: wrap; gap: 12px; }.gradingSystemHero, .gradingAssignmentCard { padding: 16px; } }
+
+/* 16-grading-reference.css */
+/* Compact reference layout: the global teacher header supplies the top bar. */
+.teacherShell .gradingSystem { gap: 10px; padding-right: 368px; max-width: none; }
+.teacherShell .gradingSystemHero { display: none; }
+.teacherShell .gradingStats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.teacherShell .gradingStat, .teacherShell .gradingAssignmentCard, .teacherShell .gradingTablePanel { border-radius: 6px; box-shadow: 0 2px 9px rgba(36, 82, 148, .06); }
+.teacherShell .gradingStat { min-height: 64px; padding: 11px; }.teacherShell .gradingStat > span { width: 32px; height: 32px; border-radius: 50%; }.teacherShell .gradingStat strong { font-size: 18px; }.teacherShell .gradingStat p { font-size: 9px; }
+.teacherShell .gradingAssignmentCard { padding: 13px 16px; }.teacherShell .gradingAssignmentIcon { flex-basis: 39px; height: 39px; border-radius: 6px; }.teacherShell .gradingAssignmentMeta { gap: 17px; }.teacherShell .gradingToolbar { padding: 9px 11px; }.teacherShell .gradingTable th { padding: 9px 11px; }.teacherShell .gradingTable td { padding: 9px 11px; }
+.teacherShell .gradingDrawerBackdrop { position: fixed; z-index: 30; top: 0; right: 0; bottom: 0; left: auto; width: 355px; display: block; background: #fff; border-left: 1px solid var(--line); }
+.teacherShell .gradingDrawer { width: 100%; box-shadow: none; }.teacherShell .gradingDrawer > header { padding: 16px; }.teacherShell .gradingDrawerBody { gap: 13px; padding: 16px; }.teacherShell .gradingForm { gap: 11px; }
+@media (max-width: 1100px) { .teacherShell .gradingSystem { padding-right: 0; }.teacherShell .gradingDrawerBackdrop { width: min(420px, 100%); background: rgba(23,20,47,.24); }.teacherShell .gradingDrawer { margin-left: auto; background: #fff; box-shadow: -12px 0 32px rgba(23,20,47,.14); } }
+
+/* 17-grading-exact.css */
+.teacherShell:has(.gradingExact) .content { background: #f7faff; }
+.teacherShell .gradingPageHeaderTitle { display: inline-flex; align-items: center; gap: 10px; }
+.teacherShell .gradingPageHeaderTitle img { width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 4px 5px rgba(54, 82, 170, .16)); }
+.teacherShell .gradingClassFilterBar { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 10px 12px; border: 1px solid #dce6f4; border-radius: 9px; background: #fff; box-shadow: 0 4px 12px rgba(36, 73, 125, .06); }
+.teacherShell .gradingClassFilterBar label { color: #415776; font-size: 12px; font-weight: 700; }
+.teacherShell .gradingClassFilterBar select { min-width: 165px; height: 38px; padding: 0 34px 0 12px; border: 1px solid #cbd9ee; border-radius: 7px; background: #f8fbff; color: #253c60; font: 600 12px "Segoe UI", Arial, sans-serif; outline: none; }
+.teacherShell .gradingClassFilterBar select:focus { border-color: #4d74e6; box-shadow: 0 0 0 3px rgba(77, 116, 230, .12); }
+.teacherShell .gradingExact .filterButton { display: none; }
+.teacherShell .exactTable .studentClassCell { display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 6px; background: #eef3ff; color: #405da8; font-weight: 700; white-space: nowrap; }
+.gradingExact { min-height: 100vh; background: #f7faff; color: #17254a; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 11px; }.gradingExact button { cursor: pointer; font: inherit; }.gradingExactHeader { height: 50px; display: flex; align-items: center; gap: 24px; padding: 0 20px; background: #fff; border-bottom: 1px solid #e8edf7; }.gradingTitle { display: flex; align-items: center; gap: 18px; min-width: 140px; font-size: 16px; }.gradingTitle svg { color: #41628e; }.gradingSelects { display: flex; gap: 9px; align-items: center; flex: 1; }.gradingSelects select, .gradingSelects label { height: 28px; border: 1px solid #dce5f3; border-radius: 5px; background: #fff; color: #385074; font-size: 9px; }.gradingSelects select { width: 126px; padding: 0 10px; }.gradingSelects label { display: flex; align-items: center; gap: 6px; width: 160px; padding: 0 8px; color: #7190b6; }.gradingSelects input { width: 100%; border: 0; outline: 0; font-size: 9px; }.gradingUser { display: flex; align-items: center; gap: 8px; }.gradingUser > button { position: relative; border: 0; background: none; color: #244d8d; }.gradingUser i { position: absolute; top: -4px; right: -5px; display: grid; place-items: center; width: 11px; height: 11px; border-radius: 50%; background: #f43d59; color: #fff; font-size: 7px; font-style: normal; }.gradingUser div { display: grid; gap: 1px; }.gradingUser b { font-size: 10px; }.gradingUser small { color: #73809a; font-size: 8px; }
+.gradingExactBody { display: grid; grid-template-columns: minmax(0, 1fr) 265px; }.gradingExactMain { display: grid; gap: 9px; padding: 9px; border-right: 1px solid #e2e9f4; }.exactStats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; }.exactStat, .exactAssignment, .exactTableCard, .exactAnalytics { border: 1px solid #e7edf7; border-radius: 7px; background: #fff; box-shadow: 0 2px 8px rgba(30, 80, 150, .035); }.exactStat { display: flex; align-items: center; gap: 10px; min-height: 62px; padding: 9px 11px; }.exactStat > span { display: grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; border-radius: 50%; background: #eaf2ff; color: #1464ec; font-size: 19px; }.exactStat.orange > span { background: #fff1df; color: #ff8b14; }.exactStat.green > span { background: #e7f9ef; color: #24af6a; }.exactStat.purple > span { background: #f1ecff; color: #8155f5; }.exactStat div { display: grid; gap: 2px; }.exactStat small { color: #5d6f8e; font-size: 8px; font-weight: 700; }.exactStat b { font-size: 16px; line-height: 1; }.exactStat em { color: #4683e9; font-size: 8px; font-style: normal; }.exactAssignment { display: flex; align-items: center; min-height: 60px; padding: 9px 12px; gap: 12px; }.assignmentIcon { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 5px; background: #0868e9; color: #fff; }.assignmentName { min-width: 210px; flex: 1; }.assignmentName small, .assignmentMeta small, .graderAssignment small { display: block; color: #71819e; font-size: 8px; }.assignmentName strong { display: block; margin: 3px 0; font-size: 13px; }.assignmentName p { display: flex; gap: 5px; margin: 0; }.assignmentName em { padding: 2px 7px; border-radius: 10px; background: #f1f4f9; color: #506383; font-size: 8px; font-style: normal; }.assignmentMeta { min-width: 82px; padding-left: 13px; border-left: 1px solid #eef2f7; }.assignmentMeta b { display: block; margin-top: 4px; color: #314665; font-size: 8px; line-height: 1.35; }.exactAssignment > button { display: flex; align-items: center; gap: 16px; border: 1px solid #d6e3f8; border-radius: 4px; background: #fff; color: #1164e8; padding: 6px 9px; font-size: 9px; }
+.exactTableCard { overflow: hidden; }.exactTableTools { display: flex; align-items: center; gap: 7px; padding: 8px; }.exactTableTools > div { display: flex; gap: 4px; flex: 1; }.exactTableTools button { border: 1px solid #e1e9f5; border-radius: 4px; background: #fff; padding: 5px 10px; color: #536887; font-size: 8px; }.exactTableTools button.active { border-color: #6d9ff2; background: #f3f7ff; color: #1265eb; }.exactTableTools label { display: flex; align-items: center; gap: 4px; width: 170px; border: 1px solid #e1e9f5; border-radius: 4px; padding: 0 7px; color: #7990b1; }.exactTableTools input { height: 25px; width: 100%; border: 0; outline: 0; font-size: 8px; }.exactTableTools .filterButton { padding: 5px 12px; }.exactTable { width: 100%; border-collapse: collapse; font-size: 8px; }.exactTable th { padding: 8px 7px; background: #f7f9fd; color: #526786; text-align: left; font-size: 8px; }.exactTable td { padding: 7px; border-top: 1px solid #eef2f7; color: #25395a; vertical-align: middle; }.exactTable td:first-child { display: flex; align-items: center; gap: 6px; white-space: nowrap; }.exactTable td b { font-size: 9px; }.avatar { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #1d4d89; color: #fff; font-size: 7px; font-weight: 800; }.state { display: inline-block; padding: 3px 6px; border-radius: 4px; background: #edf7f1; color: #20a65e; font-size: 7px; white-space: nowrap; }.state.pending { background: #fff4e6; color: #fa8d22; }.state.late { background: #fff0e7; color: #f07c28; }.state.missing { background: #fff0f0; color: #f04c55; }.exactTable td svg { color: #1367eb; }.exactTable td button { min-width: 47px; border-radius: 4px; padding: 4px 7px; font-size: 8px; }.exactTable .review { border: 1px solid #c7dbfb; background: #fff; color: #1266ee; }.exactTable .grade { border: 1px solid #0868ec; background: #0868ec; color: #fff; }.exactPagination { display: flex; justify-content: space-between; align-items: center; padding: 9px; color: #70819d; font-size: 8px; }.exactPagination div { letter-spacing: 7px; color: #567098; }.exactPagination div b { padding: 5px 7px; border-radius: 3px; background: #1266e9; color: #fff; }.exactPagination button { border: 1px solid #dae6f7; border-radius: 4px; background: #fff; padding: 5px 8px; color: #435b7c; font-size: 8px; }
+.exactAnalytics { padding: 9px; }.exactAnalytics h3 { margin: 0 0 9px; font-size: 10px; }.analyticsGrid { display: grid; grid-template-columns: 1.2fr 1.2fr .95fr .95fr; gap: 9px; }.analyticsGrid article { min-height: 118px; padding: 9px; border: 1px solid #e8eef7; border-radius: 6px; }.analyticsGrid h4 { margin: 0 0 8px; font-size: 8px; }.barChart { display: flex; height: 72px; align-items: end; justify-content: space-around; border-bottom: 1px solid #d8e4f4; }.barChart i { width: 15px; background: #65a2f5; border-radius: 2px 2px 0 0; }.barChart i:last-child { background: #1266e9; }.analyticsGrid article > small { display: block; margin-top: 5px; color: #6d83a3; font-size: 7px; }.donut { display: grid; place-items: center; width: 75px; height: 75px; margin: 3px auto; border-radius: 50%; background: conic-gradient(#4d8ff2 0 44%, #ffbb18 44% 66%, #ff714e 66% 78%, #e8edf4 78%); }.donut::before { content: ''; position: absolute; width: 47px; height: 47px; border-radius: 50%; background: #fff; }.donut b { z-index: 1; text-align: center; font-size: 13px; }.donut small { display: block; font-size: 7px; color: #617593; }.analyticsGrid p { display: grid; grid-template-columns: 16px 1fr; gap: 3px; margin: 0 0 9px; color: #6d83a3; font-size: 8px; }.analyticsGrid p b { color: #334a6d; }.analyticsGrid p span { grid-column: 2; }.analyticsGrid p b:last-child { margin-left: auto; }.analyticsGrid article button { width: 100%; margin-top: 4px; border: 1px solid #9cc0fb; border-radius: 4px; background: #fff; color: #1266e9; padding: 6px; font-size: 8px; }
+.exactGrader { min-height: calc(100vh - 50px); background: #fff; }.exactGrader > header { display: flex; justify-content: space-between; padding: 10px 13px; border-bottom: 1px solid #edf1f7; }.exactGrader header button { border: 0; background: none; color: #1167e8; font-size: 9px; }.exactGrader .close { color: #1266e9; }.studentDetail { display: flex; align-items: center; gap: 10px; padding: 12px 15px; border-bottom: 1px solid #edf1f7; }.avatar.big { width: 36px; height: 36px; font-size: 10px; }.studentDetail div { display: grid; gap: 3px; }.studentDetail b { font-size: 10px; }.studentDetail small { color: #607492; font-size: 8px; }.graderAssignment { display: grid; gap: 4px; padding: 11px 15px; }.graderAssignment b { font-size: 9px; }.graderAssignment em { width: max-content; padding: 2px 7px; border-radius: 8px; background: #edf4ff; color: #1265e8; font-size: 7px; font-style: normal; }.graderAssignment i { color: #f45443; font-style: normal; }.submissionFile { padding: 0 15px 10px; border-bottom: 1px solid #edf1f7; }.submissionFile > b { font-size: 8px; }.submissionFile > div { display: flex; align-items: center; gap: 7px; margin-top: 6px; padding: 8px; border: 1px solid #e6edf7; border-radius: 4px; color: #ed3e42; }.submissionFile span { flex: 1; color: #304766; font-size: 8px; }.submissionFile small { display: block; color: #7b8ca5; }.submissionFile button { border: 0; background: none; color: #2f5c9d; }.gradeForm { display: grid; gap: 9px; padding: 10px 15px; }.gradeForm h4 { margin: 0; color: #1265e8; font-size: 9px; }.gradeForm label { display: grid; gap: 4px; color: #607492; font-size: 8px; }.gradeForm input, .gradeForm select, .gradeForm textarea { border: 1px solid #dce6f3; border-radius: 3px; padding: 5px; font: inherit; color: #213858; }.gradeForm textarea { min-height: 44px; resize: vertical; font-size: 7px; }.marks { display: flex; gap: 15px; }.marks label { flex: 1; }.marks label input { width: 62px; }.marks label b { margin-left: 3px; color: #415775; }.marks > span { display: grid; gap: 4px; color: #607492; font-size: 8px; }.marks > span strong { color: #172d4e; font-size: 11px; }.rubric { border: 1px solid #e5ecf5; border-radius: 5px; overflow: hidden; }.rubric h4 { margin: 0; padding: 7px; border-bottom: 1px solid #e5ecf5; font-size: 8px; }.rubric > div { display: grid; grid-template-columns: 1.35fr .55fr .85fr .28fr; align-items: center; gap: 4px; padding: 4px 7px; font-size: 7px; }.rubric .rubricHead { background: #f8faff; color: #617593; font-size: 7px; }.rubric input { width: 36px; padding: 2px; font-size: 7px; }.rubric svg { color: #1266e9; }.rubric footer { display: grid; grid-template-columns: 1.35fr .55fr 1fr; padding: 5px 7px; border-top: 1px solid #e5ecf5; font-size: 8px; }.rubric footer strong { color: #1265e8; }.quick { display: flex; flex-wrap: wrap; gap: 3px; }.quick small { width: 100%; color: #607492; font-size: 8px; }.quick button { border: 0; border-radius: 3px; background: #edf4ff; color: #1165e9; padding: 3px 5px; font-size: 7px; }.attach { color: #1265e8 !important; }.attach input { display: none; }.exactGrader > footer { display: flex; align-items: center; gap: 7px; padding: 10px 15px; border-top: 1px solid #e7edf6; color: #27a85f; font-size: 7px; }.exactGrader > footer span { flex: 1; }.exactGrader > footer button { border: 1px solid #b9d3f9; border-radius: 4px; background: #fff; color: #1266e9; padding: 6px 9px; font-size: 8px; }.exactGrader > footer .submit { border-color: #1266e9; background: #1266e9; color: #fff; }
+@media (max-width: 980px) { .gradingExactBody { grid-template-columns: 1fr; }.exactGrader { border-top: 1px solid #e2e9f4; }.exactStats { grid-template-columns: repeat(3, 1fr); }.gradingExactHeader { flex-wrap: wrap; height: auto; padding: 10px; }.gradingUser { display: none; } } @media (max-width: 620px) { .gradingExactMain { overflow: auto; }.exactStats { grid-template-columns: repeat(2, 150px); }.exactAssignment { min-width: 720px; }.exactTableCard { min-width: 850px; }.analyticsGrid { grid-template-columns: repeat(2, 170px); }.gradingSelects label { display: none; } }
+
+/* 18-grading-sidebar-fix.css */
+/* Keep the normal teacher navigation available on the grading route. */
+.teacherShell:has(.gradingExact) .dashboard { grid-template-columns: 224px minmax(0, 1fr); }
+.teacherShell:has(.gradingExact) .sidebar { display: flex; }
+.teacherShell:has(.gradingExact) .content { min-width: 0; }
+.teacherShell:has(.gradingExact) .gradingExact { min-width: 0; }
+@media (max-width: 780px) { .teacherShell:has(.gradingExact) .dashboard { grid-template-columns: 1fr; } }
+
+/* 19-grading-font-fix.css */
+/* Readable type scale for the compact grading workspace. */
+.gradingExact { font-size: 13px; }
+.gradingExactHeader { height: 58px; }.gradingTitle { font-size: 18px; }.gradingSelects select, .gradingSelects label, .gradingSelects input { font-size: 11px; }.gradingUser b { font-size: 12px; }.gradingUser small { font-size: 10px; }
+.exactStat small { font-size: 10px; }.exactStat b { font-size: 20px; }.exactStat em { font-size: 9px; }
+.assignmentName small, .assignmentMeta small, .graderAssignment small { font-size: 10px; }.assignmentName strong { font-size: 15px; }.assignmentName em, .assignmentMeta b { font-size: 10px; }.exactAssignment > button { font-size: 10px; }
+.exactTableTools button, .exactTableTools input, .exactTableTools label { font-size: 10px; }.exactTable { font-size: 10px; }.exactTable th { font-size: 9px; }.exactTable td b { font-size: 10px; }.state, .exactTable td button, .exactPagination { font-size: 9px; }
+.exactAnalytics h3 { font-size: 12px; }.analyticsGrid h4 { font-size: 10px; }.analyticsGrid p, .analyticsGrid article > small, .analyticsGrid article button { font-size: 9px; }
+.exactGrader header button { font-size: 11px; }.studentDetail b { font-size: 12px; }.studentDetail small { font-size: 10px; }.graderAssignment b, .submissionFile > b, .submissionFile span { font-size: 10px; }.submissionFile small { font-size: 9px; }
+.gradeForm h4 { font-size: 11px; }.gradeForm label, .marks > span, .quick small { font-size: 10px; }.gradeForm textarea { font-size: 9px; }.quick button { font-size: 8px; }.rubric h4, .rubric > div, .rubric .rubricHead, .rubric input, .rubric footer { font-size: 9px; }.exactGrader > footer, .exactGrader > footer button { font-size: 9px; }
+
+/* 20-grading-layout-fix.css */
+/* The screenshot layout is wide; with the teacher sidebar present, stack the grader
+   before the central workspace becomes too narrow. */
+@media (max-width: 1400px) {
+  .teacherShell .gradingExactBody { grid-template-columns: minmax(0, 1fr); }
+  .teacherShell .exactGrader { min-height: auto; border-top: 1px solid #e2e9f4; }
+  .teacherShell .exactGrader > header { padding: 12px 16px; }
+  .teacherShell .studentDetail, .teacherShell .graderAssignment, .teacherShell .submissionFile, .teacherShell .gradeForm { max-width: 760px; margin-left: auto; margin-right: auto; }
+  .teacherShell .exactGrader > footer { justify-content: flex-end; padding: 12px 16px; }
+}
+
+@media (max-width: 1120px) {
+  .teacherShell .exactStats { grid-template-columns: repeat(3, minmax(150px, 1fr)); }
+  .teacherShell .exactAssignment { flex-wrap: wrap; }
+  .teacherShell .assignmentName { min-width: 250px; }
+}
+
+@media (max-width: 780px) {
+  .teacherShell .exactStats { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+  .teacherShell .gradingExactHeader { gap: 10px; }
+  .teacherShell .gradingSelects { order: 3; width: 100%; }
+}
+
+/* 21-grading-table-data.css */
+/* Keep the student count at left and group every page control at bottom right. */
+.exactPagination > div { margin-left: auto; }
+.exactPagination > button { margin-left: 10px; }
+.exactPagination > div, .exactPagination > button { cursor: pointer; }
+
+/* 22-grading-font-scale.css */
+/* Larger, readable desktop type scale. */
+.gradingExact { font-size: 15px; }
+.gradingExactBody { align-items: start; }.gradingExactMain { align-content: start; grid-auto-rows: min-content; }
+.gradingExactHeader { height: 62px; }.gradingTitle { font-size: 20px; }.gradingSelects select, .gradingSelects label, .gradingSelects input { font-size: 12px; }.gradingUser b { font-size: 13px; }.gradingUser small { font-size: 11px; }
+.exactStat small { font-size: 11px; }.exactStat b { font-size: 22px; }.exactStat em { font-size: 10px; }
+.assignmentName small, .assignmentMeta small, .graderAssignment small { font-size: 11px; }.assignmentName strong { font-size: 17px; }.assignmentName em, .assignmentMeta b, .exactAssignment > button { font-size: 11px; }
+.exactTableTools button, .exactTableTools input, .exactTableTools label { font-size: 11px; }.exactTable { font-size: 11px; }.exactTable th { font-size: 10px; }.exactTable td { font-size: 11px; }.exactTable td b { font-size: 11px; }.state, .exactTable td button, .exactPagination { font-size: 10px; }
+.exactGrader header button { font-size: 12px; }.studentDetail b { font-size: 14px; }.studentDetail small { font-size: 11px; }.graderAssignment b, .submissionFile > b, .submissionFile span { font-size: 11px; }.submissionFile small { font-size: 10px; }
+.gradeForm h4 { font-size: 12px; }.gradeForm label, .marks > span, .quick small { font-size: 11px; }.gradeForm input, .gradeForm select { font-size: 11px; }.gradeForm textarea { font-size: 10px; }.quick button { font-size: 9px; }.rubric h4, .rubric > div, .rubric .rubricHead, .rubric input, .rubric footer { font-size: 10px; }.exactGrader > footer, .exactGrader > footer button { font-size: 10px; }
+
+/* 23-grading-sidebar-ui.css */
+/* Desktop grading sidebar stays beside the table and scrolls independently. */
+@media (min-width: 1051px) {
+  .teacherShell .gradingExactBody { grid-template-columns: minmax(0, 1fr) 286px; align-items: stretch; }
+  .teacherShell .exactGrader { position: sticky; top: 0; height: 100vh; min-height: 0; overflow-y: auto; border-left: 1px solid #e2e9f4; border-top: 0; }
+}
+@media (max-width: 1050px) {
+  .teacherShell .exactGrader { position: static; height: auto; overflow: visible; }
+}
+
+/* 24-grading-sidebar-content-fix.css */
+/* Do not clip the grading form beneath its sidebar header. */
+@media (min-width: 1051px) {
+  .teacherShell .exactGrader {
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    min-height: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+  .teacherShell .exactGrader > header,
+  .teacherShell .exactGrader > section,
+  .teacherShell .exactGrader > footer { display: flex; }
+  .teacherShell .exactGrader > section { display: grid; }
+  .teacherShell .studentDetail, .teacherShell .submissionFile { display: flex !important; }
+}
+
+/* 25-grading-alignment-fix.css */
+/* Keep the submission label above its file card in the grading sidebar. */
+.teacherShell .exactGrader .submissionFile { display: block !important; }
+.teacherShell .exactGrader .submissionFile > b { display: block; margin-bottom: 7px; }
+.teacherShell .exactGrader .submissionFile > div { display: flex; width: 100%; box-sizing: border-box; }
+.teacherShell .exactGrader .marks { align-items: end; }
+.teacherShell .exactGrader .marks > span { min-width: 58px; text-align: right; }
+
+/* 26-grading-marks-ui.css */
+/* Clear two-column marks layout in the grading form. */
+.teacherShell .gradeForm { gap: 12px; }
+.teacherShell .gradeForm .marks { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 18px; padding: 2px 0 1px; }
+.teacherShell .gradeForm .marks label { min-width: 0; display: grid; gap: 6px; color: #607492; font-weight: 600; }
+.teacherShell .gradeForm .marks label input { width: 72px; min-height: 30px; box-sizing: border-box; font-size: 12px; }
+.teacherShell .gradeForm .marks label b { display: block; margin: -1px 0 0; color: #334a6d; font-size: 12px; }
+.teacherShell .gradeForm .marks > span { display: grid; justify-items: end; gap: 6px; min-width: 74px; padding: 0 0 1px; color: #607492; font-size: 11px; text-align: right; }
+.teacherShell .gradeForm .marks > span strong { color: #172d4e; font-size: 13px; line-height: 30px; }
+.teacherShell .gradeForm > label:has(select) { gap: 6px; color: #607492; font-weight: 600; }
+.teacherShell .gradeForm > label:has(select) select { min-height: 31px; font-size: 12px; background: #fff; }
+
+/* 27-grading-marks-alignment-final.css */
+.teacherShell .exactGrader .gradeForm .marks {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  align-items: start !important;
+}
+.teacherShell .exactGrader .gradeForm .marks > span {
+  align-self: start !important;
+  padding: 0 !important;
+}
+.teacherShell .exactGrader .gradeForm .marks > span strong {
+  display: block;
+  line-height: 30px !important;
+}
+.teacherShell .exactGrader .gradeForm .marks label input {
+  display: block;
+  margin: 0 !important;
+}
+.teacherShell .exactGrader .gradeForm .marks label b {
+  line-height: 1 !important;
+}
+
+/* 28-grading-marks-final-layout.css */
+.teacherShell .exactGrader .gradeForm .marks label {
+  position: relative;
+  padding-bottom: 0;
+}
+.teacherShell .exactGrader .gradeForm .marks label b {
+  position: absolute;
+  top: 28px;
+  left: 80px;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+.teacherShell .exactGrader .gradeForm .marks label input { width: 68px; }
+
+/* 29-grading-rubric-ui.css */
+/* Rubric and feedback panel: larger type with aligned, breathable controls. */
+.teacherShell .exactGrader .gradeForm { gap: 14px; padding: 14px; }
+.teacherShell .latestFeedback { padding: 12px 14px; border: 1px solid #b8d3fb; border-radius: 7px; background: linear-gradient(135deg, #f5f9ff, #fff); }.teacherShell .latestFeedbackTitle { display: flex; justify-content: space-between; align-items: center; gap: 12px; }.teacherShell .latestFeedbackTitle div { display: grid; gap: 3px; }.teacherShell .latestFeedbackTitle small { color: #0868e9; font-size: 10px; font-weight: 700; }.teacherShell .latestFeedbackTitle b { color: #243b61; font-size: 12px; }.teacherShell .latestFeedbackTitle div span { color: #71819e; font-size: 10px; }.teacherShell .latestFeedback p { margin: 9px 0 0; color: #536987; font-size: 11px; line-height: 1.45; }
+.teacherShell .feedbackOverview { border: 1px solid #dce7f5; border-radius: 7px; background: #fff; overflow: hidden; }.teacherShell .feedbackOverview > header { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e8eef7; }.teacherShell .feedbackOverview h3, .teacherShell .feedbackOverview p { margin: 0; }.teacherShell .feedbackOverview h3 { color: #243b61; font-size: 13px; }.teacherShell .feedbackOverview header p { margin-top: 3px; color: #71819e; font-size: 10px; }.teacherShell .feedbackOverview > header > span { padding: 4px 8px; border-radius: 999px; background: #edf4ff; color: #0868e9; font-size: 10px; font-weight: 700; }.teacherShell .feedbackOverviewList { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; padding: 12px; }.teacherShell .feedbackOverviewList article { display: flex; gap: 9px; align-items: flex-start; padding: 10px; border: 1px solid #e6edf7; border-radius: 6px; background: #fbfdff; }.teacherShell .feedbackOverviewList article > div { min-width: 0; flex: 1; }.teacherShell .feedbackOverviewList b { color: #263d60; font-size: 11px; }.teacherShell .feedbackOverviewList p { margin-top: 4px; color: #647792; font-size: 10px; line-height: 1.4; }.teacherShell .feedbackOverviewList strong { color: #0868e9; font-size: 10px; white-space: nowrap; }.teacherShell .feedbackEmpty { padding: 18px 14px; color: #71819e; font-size: 11px; }
+.teacherShell .feedbackOverviewList b, .teacherShell .feedbackOverviewList small { display: block; }.teacherShell .feedbackOverviewList small { margin-top: 3px; color: #71819e; font-size: 9px; }.teacherShell .feedbackOverviewList aside { display: grid; justify-items: end; gap: 8px; }.teacherShell .feedbackOverviewList aside button { border: 1px solid #a8c8f8; border-radius: 4px; background: #f3f7ff; color: #0868e9; padding: 4px 6px; font-size: 9px; white-space: nowrap; }
+.teacherShell .exactGrader .submissionFile > div { flex-wrap: wrap; }.teacherShell .exactGrader .submissionFile > div > span { min-width: calc(100% - 25px); }.teacherShell .exactGrader .submissionFile .showFileButton { margin-left: 25px; }
+.teacherShell .exactGrader .submissionFile .showFileButton, .teacherShell .exactGrader .submissionFile .downloadFileButton { border: 1px solid #9bc1f8; border-radius: 4px; background: #f3f7ff; color: #0868e9; padding: 5px 8px; font-size: 9px; white-space: nowrap; }.teacherShell .exactGrader .submissionFile .downloadFileButton { background: #0868e9; border-color: #0868e9; color: #fff; }.teacherShell .exactGrader .fileActionMessage { margin: 7px 0 0; color: #c05a2b; font-size: 9px; }.teacherShell .exactGrader .submissionPreview { display: grid; gap: 8px; margin-top: 8px; padding: 8px; border: 1px solid #d7e3f3; border-radius: 5px; background: #f8fbff; }.teacherShell .exactGrader .submissionPreview iframe { width: 100%; height: 360px; border: 0; border-radius: 3px; background: #fff; }.teacherShell .exactGrader .submissionPreview p { margin: 0; color: #607492; font-size: 10px; line-height: 1.4; }.teacherShell .exactGrader .submissionPreview button { justify-self: end; border: 0; background: none; color: #0868e9; font-size: 9px; }
+.teacherShell .exactGrader .rubric { border-color: #d7e3f3; border-radius: 6px; }
+.teacherShell .exactGrader .rubric h4 { padding: 9px 10px; color: #0868e9; font-size: 12px; }
+.teacherShell .exactGrader .rubric > div { grid-template-columns: minmax(0, 1.6fr) .65fr .9fr; min-height: 30px; gap: 7px; padding: 5px 10px; color: #243b61; font-size: 10px; }
+.teacherShell .exactGrader .rubric .rubricHead { min-height: 31px; align-items: center; background: #f6f9fd; color: #59708f; font-size: 10px; line-height: 1.15; }.teacherShell .exactGrader .rubric .rubricHead span:not(:first-child) { text-align: center; }
+.teacherShell .exactGrader .rubric > div > b { text-align: center; font-size: 10px; }.teacherShell .exactGrader .rubric > div > svg { justify-self: center; width: 14px; height: 14px; }
+.teacherShell .exactGrader .rubric input { justify-self: center; width: 42px; min-height: 22px; box-sizing: border-box; padding: 2px 5px; font-size: 10px; text-align: center; }
+.teacherShell .exactGrader .rubric footer { grid-template-columns: minmax(0, 1.6fr) .65fr .9fr; align-items: center; min-height: 31px; padding: 5px 10px; font-size: 11px; }.teacherShell .exactGrader .rubric footer b:nth-child(2), .teacherShell .exactGrader .rubric footer strong { text-align: center; }
+.teacherShell .exactGrader .gradeForm > label:has(textarea) { gap: 6px; color: #526987; font-size: 11px; }.teacherShell .exactGrader .gradeForm textarea { min-height: 100px; padding: 7px; font-size: 10px; line-height: 1.4; }
+.teacherShell .exactGrader .quick { gap: 5px; }.teacherShell .exactGrader .quick small { margin-bottom: 1px; font-size: 11px; }.teacherShell .exactGrader .quick button { padding: 4px 7px; font-size: 9px; }
+.teacherShell .exactGrader .attach { padding-top: 2px; font-size: 11px !important; }.teacherShell .exactGrader > footer { min-height: 54px; padding: 10px 14px; }.teacherShell .exactGrader > footer span { font-size: 10px; line-height: 1.25; }.teacherShell .exactGrader > footer button { min-height: 30px; padding: 6px 10px; font-size: 10px; white-space: nowrap; }
+
+/* 32-grading-submissions.css */
+.gradingWrittenAnswers {
+  display: grid;
+  max-height: 360px;
+  gap: 9px;
+  padding: 16px 18px;
+  overflow-y: auto;
+  border-bottom: 1px solid #e3e8f0;
+  background: #f8faff;
+}
+.gradingWrittenAnswers h4 { margin: 0 0 3px; color: #27364d; font-size: 13px; }
+.gradingWrittenAnswers article { display: grid; gap: 4px; padding: 10px; border: 1px solid #e0e7f2; border-radius: 8px; background: #fff; }
+.gradingWrittenAnswers article small { color: #5575d7; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.gradingWrittenAnswers article b { color: #2d405b; font-size: 11px; line-height: 1.4; }
+.gradingWrittenAnswers article p,
+.gradingWrittenAnswers > p { margin: 3px 0 0; padding: 8px; border-radius: 6px; background: #eef3ff; color: #30476b; font-size: 11px; line-height: 1.5; white-space: pre-wrap; }
+.gradingAnswerCategory { display: grid; gap: 8px; }
+.gradingAnswerCategory + .gradingAnswerCategory { margin-top: 7px; padding-top: 14px; border-top: 1px solid #dce4f0; }
+.gradingAnswerCategory > header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 7px; padding: 9px 10px; border-left: 3px solid #5d7ce2; border-radius: 0 7px 7px 0; background: #eaf0ff; }
+.gradingAnswerCategory > header span { color: #5b78d4; font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.gradingAnswerCategory > header b { color: #304878; font-size: 10px; }
+.gradingAnswerCategory > header small { color: #7083a5; font-size: 8px; font-weight: 700; }
+.viewStudentAnswersButton { width: 100%; margin-top: 10px; padding: 9px 12px; border: 1px solid #bfd0f3; border-radius: 7px; background: #eef3ff; color: #4265ca; font-size: 11px; font-weight: 800; cursor: pointer; }
+.viewStudentAnswersButton:hover { border-color: #6683df; background: #e5edff; }
+.studentAnswersModalBackdrop { position: fixed; z-index: 120; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(19, 31, 51, .55); backdrop-filter: blur(3px); }
+.studentAnswersModal { display: grid; width: min(760px, 100%); max-height: min(820px, calc(100vh - 48px)); grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; border: 1px solid #dce4f0; border-radius: 16px; background: #fff; box-shadow: 0 24px 70px rgba(15, 27, 48, .28); }
+.studentAnswersModal > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 20px 22px; border-bottom: 1px solid #e5eaf2; background: #fff; }
+.studentAnswersModal > header small { color: #5876d6; font-size: 9px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.studentAnswersModal > header h2 { margin: 4px 0; color: #243650; font-size: 20px; }
+.studentAnswersModal > header p { margin: 0; color: #75859a; font-size: 11px; }
+.studentAnswersModal > header button { display: grid; width: 34px; height: 34px; place-items: center; border: 0; border-radius: 8px; background: #f0f3f8; color: #66778e; cursor: pointer; }
+.studentAnswersModal .gradingWrittenAnswers { max-height: none; padding: 18px 22px; border: 0; }
+.studentAnswersModal > footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 22px; border-top: 1px solid #e5eaf2; background: #fff; }
+.studentAnswersModal > footer span { color: #7b899c; font-size: 10px; }
+.studentAnswersModal > footer button { padding: 9px 18px; border: 0; border-radius: 7px; background: #5876dc; color: #fff; font-size: 11px; font-weight: 800; cursor: pointer; }
+@media (max-width: 600px) {
+  .studentAnswersModalBackdrop { padding: 10px; }
+  .studentAnswersModal { max-height: calc(100vh - 20px); }
+  .studentAnswersModal > header, .studentAnswersModal .gradingWrittenAnswers, .studentAnswersModal > footer { padding-left: 15px; padding-right: 15px; }
+}
+
+/* 37-teacher-schedule-planner.css */
+.teacherShell .dashboardSchedule {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 24px !important;
+  background: #f7f9fd !important;
+  box-shadow: 0 18px 45px -26px rgba(25,44,78,.34), 0 8px 0 -5px rgba(46,70,110,.12) !important;
+}
+
+.teacherShell .dashboardSchedule .dashboardSectionHeading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 17px;
+  padding: 22px 24px;
+  border: 0;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(103,145,226,.28), transparent 28%),
+    linear-gradient(125deg, #172d50, #244d82 60%, #3167a8);
+}
+
+.teacherShell .scheduleDateBadge {
+  display: grid;
+  width: 64px;
+  height: 70px;
+  place-content: center;
+  justify-items: center;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 17px;
+  background: rgba(255,255,255,.13);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(7,21,43,.22), inset 0 1px 0 rgba(255,255,255,.32);
+  backdrop-filter: blur(8px);
+}
+.teacherShell .scheduleDateBadge span { font-size: 9px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.teacherShell .scheduleDateBadge strong { margin-top: 2px; font-size: 27px; line-height: 1; }
+.teacherShell .dashboardSchedule .eyebrow { color: #a9c9f5 !important; }
+.teacherShell .dashboardSchedule .dashboardSectionHeading h2 { margin: 4px 0 2px; color: #fff; font-size: 22px; }
+.teacherShell .dashboardSchedule .dashboardSectionHeading p { margin: 0; color: #c5d8f0; font-size: 10px; }
+.teacherShell .dashboardSchedule .scheduleHeadingIcon { display: none; }
+.teacherShell .dashboardSchedule .textAction { padding: 10px 13px; border: 1px solid rgba(255,255,255,.3); border-radius: 11px; background: rgba(255,255,255,.13); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(7px); }
+
+.teacherShell .dashboardSchedule .scheduleList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 0;
+  padding: 20px;
+}
+.teacherShell .dashboardSchedule .scheduleList::before { display: none; }
+.teacherShell .dashboardSchedule .scheduleItem {
+  --event-color: #4088ee;
+  --event-soft: #eaf3ff;
+  display: grid;
+  min-height: 190px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
+  gap: 9px 12px;
+  margin: 0;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--event-color) 22%, #dfe7f1) !important;
+  border-top: 5px solid var(--event-color) !important;
+  border-radius: 18px;
+  background: linear-gradient(150deg, #fff 52%, var(--event-soft)) !important;
+  box-shadow: 0 10px 0 -7px color-mix(in srgb, var(--event-color) 25%, transparent), 0 20px 30px -22px rgba(32,54,89,.3), inset 0 1px 0 #fff !important;
+}
+.teacherShell .dashboardSchedule .scheduleItem:nth-child(2) { --event-color: #765de0; --event-soft: #f0edff; }
+.teacherShell .dashboardSchedule .scheduleItem:nth-child(3) { --event-color: #e28b28; --event-soft: #fff3df; }
+.teacherShell .dashboardSchedule .scheduleItem:hover { transform: translateY(-5px) rotateX(1deg); box-shadow: 0 14px 0 -8px color-mix(in srgb, var(--event-color) 28%, transparent), 0 27px 35px -21px rgba(32,54,89,.36), inset 0 1px 0 #fff !important; }
+.teacherShell .dashboardSchedule .scheduleMarker { display: none; }
+.teacherShell .dashboardSchedule .scheduleEventIcon { grid-column: 1; grid-row: 1; width: 48px; height: 48px; border: 0; border-radius: 14px; background: var(--event-soft); color: var(--event-color); box-shadow: 0 8px 0 -5px color-mix(in srgb, var(--event-color) 28%, transparent), inset 0 1px 0 #fff; }
+.teacherShell .dashboardSchedule .scheduleTime { display: grid; min-width: 0; grid-column: 2; grid-row: 1; justify-items: end; padding: 0; border: 0; }
+.teacherShell .dashboardSchedule .scheduleTime strong { color: #203653; font-size: 20px; }
+.teacherShell .dashboardSchedule .scheduleTime span { color: var(--event-color); font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) { display: grid; grid-column: 1 / -1; grid-row: 2 / 4; align-content: start; gap: 7px; padding-top: 7px; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) strong { color: #233852; font-size: 14px; }
+.teacherShell .dashboardSchedule .scheduleItem > div:nth-of-type(2) p { margin: 0; color: #708197; font-size: 10px; line-height: 1.55; }
+.teacherShell .dashboardSchedule .scheduleItem .badge { grid-column: 1; grid-row: 4; width: fit-content; border: 1px solid color-mix(in srgb, var(--event-color) 20%, transparent); background: var(--event-soft); color: var(--event-color); }
+
+@media (max-width: 1050px) {
+  .teacherShell .dashboardSchedule .scheduleList { grid-template-columns: 1fr; }
+  .teacherShell .dashboardSchedule .scheduleItem { min-height: 155px; }
+}
+
+@media (max-width: 560px) {
+  .teacherShell .dashboardSchedule .dashboardSectionHeading { grid-template-columns: auto 1fr; padding: 17px; }
+  .teacherShell .dashboardSchedule .textAction { grid-column: 1 / -1; justify-content: center; }
+  .teacherShell .dashboardSchedule .scheduleList { padding: 13px; }
+}
+
+/* 60-grading-readable-ui.css */
+/* Readable grading workspace: standard typography and comfortable sizing. */
+.teacherShell .gradingExact,
+.teacherShell .gradingExact * {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.teacherShell .gradingExact {
+  color: #243853;
+  font-size: 14px;
+}
+
+.teacherShell .gradingExactMain {
+  gap: 16px;
+  padding: 18px;
+}
+
+.teacherShell .gradingExactBody:not(:has(.exactGrader)) {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.teacherShell .gradingClassFilterBar {
+  position: relative;
+  overflow: hidden;
+  min-height: 72px;
+  padding: 14px 18px;
+  border-color: #c9d9f4;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 82% -40%, rgba(129, 105, 238, .22), transparent 38%),
+    linear-gradient(120deg, #edf6ff 0%, #f7f5ff 55%, #eef1ff 100%);
+  box-shadow: 0 8px 22px rgba(43, 67, 109, .1);
+}
+
+.teacherShell .gradingClassFilterBar label {
+  position: relative;
+  z-index: 1;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: 650;
+}
+.teacherShell .gradingClassFilterBar .gradingFilterCopy + label { margin-left: auto; }
+
+.teacherShell .gradingFilterIcon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 13px;
+  background: linear-gradient(145deg, #4286ee, #6251d8) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 0 #454db4, 0 10px 18px rgba(71, 78, 182, .2);
+}
+.teacherShell .gradingFilterIcon svg { color: #fff !important; stroke: #fff !important; }
+
+.teacherShell .gradingFilterCopy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+}
+
+.teacherShell .gradingFilterCopy strong { color: #253a5b; font-size: 16px; font-weight: 700; }
+.teacherShell .gradingFilterCopy small { color: #6d7f9b; font-size: 12px; }
+
+.teacherShell .gradingClassFilterBar select {
+  position: relative;
+  z-index: 1;
+  min-width: 190px;
+  height: 46px;
+  padding: 0 38px 0 14px;
+  border-radius: 9px;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+.teacherShell .gradingClassFilterBar #grading-section-filter { min-width: 145px; }
+
+.teacherShell .exactTableCard {
+  border: 1px solid #d9e3f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(37, 61, 101, .08);
+  overflow-x: auto;
+}
+
+.teacherShell .exactTableTools {
+  min-width: 1120px;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #e2e9f3;
+  background: #fff;
+}
+
+.teacherShell .exactTableTools > div {
+  gap: 7px;
+}
+
+.teacherShell .exactTableTools button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 8px;
+  font-size: 12px !important;
+  font-weight: 600;
+  color: #4b617f !important;
+  -webkit-text-fill-color: #4b617f !important;
+}
+
+.teacherShell .exactTableTools button svg { flex: 0 0 auto; color: #58739a !important; stroke: #58739a !important; }
+.teacherShell .exactTableTools button span { color: #4b617f !important; -webkit-text-fill-color: #4b617f !important; }
+.teacherShell .exactTableTools button em {
+  display: inline-grid;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 6px;
+  place-items: center;
+  border-radius: 999px;
+  background: #edf2fb;
+  color: #506785;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.teacherShell .exactTableTools button.active {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: #376de3 !important;
+  background: linear-gradient(135deg, #3979e8, #5b56d7) !important;
+  box-shadow: 0 4px 10px rgba(55, 100, 215, .2) !important;
+}
+
+.teacherShell .exactTableTools button.active span,
+.teacherShell .exactTableTools button.active svg { color: #fff !important; stroke: #fff !important; -webkit-text-fill-color: #fff !important; }
+.teacherShell .exactTableTools button.active em { background: rgba(255, 255, 255, .2) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; }
+
+.teacherShell .exactTableTools > label {
+  width: 225px;
+  min-height: 40px;
+  padding: 0 11px;
+  border-radius: 8px;
+}
+
+.teacherShell .exactTableTools input {
+  height: 38px;
+  font-size: 13px !important;
+}
+
+.teacherShell .exactTable {
+  min-width: 1120px;
+  font-size: 13px !important;
+}
+
+.teacherShell .exactTable th {
+  padding: 14px 12px;
+  background: #f3f6fb;
+  color: #526782;
+  font-size: 12px !important;
+  font-weight: 650;
+  text-transform: none;
+}
+
+.teacherShell .exactTable td {
+  height: 58px;
+  padding: 11px 12px;
+  color: #2e435f;
+  font-size: 13px !important;
+}
+.teacherShell .exactTable td:first-child { display: table-cell; white-space: nowrap; }
+.teacherShell .exactTable td:nth-child(2) { display: flex; align-items: center; gap: 9px; white-space: nowrap; }
+.teacherShell .exactTable td:first-child strong { color: #38577d; font-size: 13px; font-weight: 700; }
+
+.teacherShell .exactTable tbody tr:hover {
+  background: #f8faff;
+}
+
+.teacherShell .exactTable td b {
+  font-size: 13px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactTable .avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  font-size: 10px !important;
+}
+
+.teacherShell .exactTable .studentClassCell,
+.teacherShell .exactTable .state {
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 11px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactTable td button {
+  min-width: 76px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 7px;
+  font-size: 11px !important;
+  font-weight: 650;
+}
+
+.teacherShell .exactPagination {
+  min-width: 1120px;
+  min-height: 58px;
+  padding: 12px 14px;
+  border-top: 1px solid #e6ecf4;
+  font-size: 12px !important;
+}
+
+.teacherShell .exactPagination button {
+  min-height: 34px;
+  font-size: 11px !important;
+}
+
+.teacherShell .exactPagination > span { flex: 1; color: #71819a; }
+.teacherShell .exactPagination > span strong { color: #314866; font-weight: 700; }
+.teacherShell .exactPagination .gradingPaginationControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 14px;
+  letter-spacing: normal;
+}
+.teacherShell .gradingPaginationControls button {
+  display: grid;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #d5e0ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #4b6383;
+  -webkit-text-fill-color: #4b6383;
+  font-weight: 700;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.teacherShell .gradingPaginationControls button:hover:not(:disabled) { transform: translateY(-1px); border-color: #6689e8; box-shadow: 0 4px 10px rgba(58, 92, 177, .14); }
+.teacherShell .gradingPaginationControls button.active { border-color: #3e68d9 !important; background: linear-gradient(145deg, #397ce9, #5c55d8) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; box-shadow: 0 4px 0 #414ba9, 0 7px 12px rgba(62, 74, 169, .2) !important; }
+.teacherShell .gradingPaginationControls button:disabled { cursor: not-allowed; opacity: .42; }
+.teacherShell .gradingPaginationControls .pageArrow { color: #587198 !important; -webkit-text-fill-color: #587198 !important; font-size: 20px !important; line-height: 1; }
+.teacherShell .gradingPageSize { display: inline-flex; align-items: center; gap: 8px; color: #647895; font-size: 11px; font-weight: 650; }
+.teacherShell .gradingPageSize select { width: 66px; height: 36px; padding: 0 8px; border: 1px solid #d5e0ef; border-radius: 9px; background: #f8faff; color: #314866; font: 650 12px "Segoe UI", Arial, sans-serif; outline: none; }
+
+.teacherShell .feedbackOverview {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(37, 61, 101, .07);
+}
+
+@media (max-width: 760px) {
+  .teacherShell .gradingExactMain { padding: 10px; }
+  .teacherShell .gradingClassFilterBar { align-items: stretch; flex-direction: column; }
+  .teacherShell .gradingClassFilterBar label { margin-left: 0; }
+  .teacherShell .gradingClassFilterBar select { width: 100%; }
+  .teacherShell .exactPagination { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .teacherShell .exactPagination .gradingPaginationControls { margin: 0; }
+}
+
+/* Teacher's own-details popover. */
+.teacherShell .profilePopover {
+  width: 310px;
+  padding: 17px;
+  border: 1px solid #cbdaf0;
+  border-radius: 16px;
+  /* background: linear-gradient(155deg, #fff 0%, #f8faff 100%); */
+  box-shadow: 0 22px 55px rgba(35, 55, 91, .22);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.teacherShell .profilePopoverEyebrow { display: block; margin-bottom: 11px; color: #5871c9; font-size: 10px; font-weight: 750; letter-spacing: .1em; }
+.teacherShell .profilePopoverTitle { gap: 12px; padding-bottom: 14px; }
+.teacherShell .profilePopoverTitle > svg { width: 40px; height: 40px; padding: 8px; border-radius: 11px; background: #edf2ff; color: #3970df; stroke: #3970df; }
+.teacherShell .profilePopoverTitle strong { font-size: 16px; font-weight: 700; }
+.teacherShell .profilePopoverTitle span { font-size: 12px; }
+.teacherShell .teacherProfileEmail { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid #e2e9f4; }
+.teacherShell .teacherProfileEmail > svg { color: #5874b8; stroke: #5874b8; }
+.teacherShell .teacherProfileEmail div { display: grid; min-width: 0; gap: 3px; }
+.teacherShell .teacherProfileEmail span { color: #70829b; font-size: 11px; font-weight: 650; }
+.teacherShell .teacherProfileEmail strong { overflow: hidden; color: #29405f; font-size: 13px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .teacherCodeRow span { font-size: 11px; }
+.teacherShell .teacherCodeRow strong { color: #253d5e; font-size: 15px; }
+.teacherShell .teacherCodeRow button { min-width: 72px; height: 36px; border: 1px solid #c7d5ec; background: #fff; color: #3867c7; box-shadow: 0 3px 8px rgba(46, 76, 139, .08); }
+.teacherShell .teacherCodeRow button:hover { border-color: #527be0; background: #eef3ff; }
+
+/* Focused marks entry for assessment and assignment grading. */
+.teacherShell .simplifiedGradeForm { display: grid; gap: 16px; }
+.teacherShell .simplifiedGradeForm > h4 { margin: 0; color: #245fd1; font-size: 16px; }
+.teacherShell .gradingMarksHint { margin: -8px 0 0; color: #71829a; font-size: 12px; line-height: 1.45; }
+.teacherShell .directMarksField { display: grid; gap: 8px; color: #526783; font-size: 12px; font-weight: 650; }
+.teacherShell .directMarksField > div { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid #d8e3f2; border-radius: 10px; background: #f7faff; }
+.teacherShell .directMarksField input { width: 92px; height: 44px; border: 1px solid #bfd0e9; border-radius: 8px; background: #fff; color: #203b60; font-size: 17px; font-weight: 700; text-align: center; }
+.teacherShell .directMarksField strong { color: #253e64; font-size: 15px; }
+.teacherShell .simplifiedGradeForm textarea { min-height: 115px; }

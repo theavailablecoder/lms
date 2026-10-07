@@ -1,0 +1,76 @@
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+}
+
+ .courseEmptyState {
+  display: flex;
+  width: min(100%, 720px);
+  min-height: 112px;
+  margin: 28px auto;
+  padding: 22px 26px;
+  align-items: center;
+  gap: 18px;
+  border: 1px dashed #8eb8ed;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f7fbff, #eef5ff 55%, #f5f1ff);
+  box-shadow: 0 14px 34px rgba(47, 91, 150, 0.1);
+  color: #203957;
+  text-align: left;
+}
+
+.courseEmptyIcon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #3477dc, #7657e8) !important;
+  box-shadow: 0 7px 0 #c5d5ef, 0 13px 22px rgba(52, 91, 170, 0.2) !important;
+  color: #fff;
+}
+
+ .courseEmptyState strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #17324f;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.courseEmptyState p {
+  margin: 0;
+  color: #657a94;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+ .courseEmptyStateMissing {
+  border-color: #e8bd7c;
+  background: linear-gradient(135deg, #fffdf7, #fff7e8 55%, #fffaf2);
+}
+
+ .courseEmptyStateMissing .courseEmptyIcon {
+  background: linear-gradient(145deg, #e88b2d, #f2ad42);
+  box-shadow: 0 7px 0 #f3d6aa, 0 13px 22px rgba(190, 116, 35, 0.18);
+}
+
+@media (max-width: 620px) {
+ .courseEmptyState {
+    padding: 18px;
+    align-items: flex-start;
+  }
+
+ .courseEmptyIcon {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    border-radius: 15px;
+  }
+}

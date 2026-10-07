@@ -1,0 +1,58 @@
+.teacherShell .dashboardSchedule,
+.teacherShell .dashboardQuickActions,
+.teacherShell .dashboardAssignments { border-radius: 22px !important; box-shadow: 0 12px 0 -8px rgba(55,79,116,.12), 0 24px 40px -25px rgba(35,58,94,.24), inset 0 2px 0 #fff !important; }
+
+.teacherShell .scheduleHeadingIcon { display: grid; width: 48px; height: 48px; margin-left: auto; place-items: center; border: 1px solid #cfe0f6; border-radius: 14px; background: linear-gradient(145deg, #fff, #e9f2ff); color: #4c7ed7; box-shadow: 0 8px 0 -5px #b5c9e8, 0 14px 22px -15px #5676a6; }
+.teacherShell .dashboardSchedule .dashboardSectionHeading { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; }
+.teacherShell .scheduleList { position: relative; padding-left: 10px; }
+.teacherShell .scheduleList::before { position: absolute; top: 7px; bottom: 7px; left: 28px; width: 2px; border-radius: 2px; background: linear-gradient(#8ab9f1, #c3d7ef); content: ""; }
+.teacherShell .scheduleItem { grid-template-columns: auto auto minmax(86px, auto) 1fr auto; gap: 15px; min-height: 90px; margin-left: 0; padding: 15px 18px 15px 12px; border: 1px solid #dce6f2 !important; border-top: 1px solid #dce6f2 !important; background: linear-gradient(145deg, #fff, #f5f8fc) !important; }
+.teacherShell .scheduleMarker { position: relative; z-index: 2; width: 14px; height: 14px; margin: 0 2px; border: 3px solid #fff; border-radius: 50%; background: #66a0e7; box-shadow: 0 0 0 2px #b8d0ec, 0 5px 10px rgba(53,89,136,.2); }
+.teacherShell .scheduleMarker.meeting { background: #f0aa42; }
+.teacherShell .scheduleEventIcon { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid #cfe0f5; border-radius: 13px; background: linear-gradient(145deg, #f8fbff, #dcecff); color: #3979cc; box-shadow: 0 7px 0 -4px #b7cce8, 0 12px 18px -13px #466993; }
+.teacherShell .scheduleEventIcon.review { border-color: #d8d1f4; background: linear-gradient(145deg, #faf8ff, #e8e1ff); color: #7459ce; }
+.teacherShell .scheduleEventIcon.meeting { border-color: #f0d7ae; background: linear-gradient(145deg, #fffaf0, #ffebc8); color: #c57b20; }
+.teacherShell .scheduleTime { min-width: 80px; }
+
+.teacherShell .dashboardQuickActions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 14px; }
+.teacherShell .dashboardQuickActions > .eyebrow,
+.teacherShell .dashboardQuickActions > h2,
+.teacherShell .dashboardQuickActions > p { grid-column: 1 / -1; }
+.teacherShell .dashboardQuickActions > button { position: relative; display: grid; min-height: 130px; grid-template-columns: auto 1fr; align-content: center; align-items: center; gap: 12px; margin: 0; padding: 18px 16px; overflow: hidden; border: 1px solid #cfdef2 !important; border-radius: 16px; text-align: left; box-shadow: 0 9px 0 -6px rgba(65,94,137,.19), 0 16px 25px -18px rgba(42,65,101,.3), inset 0 2px 0 rgba(255,255,255,.8) !important; transition: transform 180ms ease, box-shadow 180ms ease; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(1) { background: linear-gradient(145deg, #edf7ff, #d8ebff) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(2) { background: linear-gradient(145deg, #f2efff, #e1dcff) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(3) { background: linear-gradient(145deg, #ebfbf4, #d4f3e5) !important; }
+.teacherShell .dashboardQuickActions > button:nth-of-type(4) { background: linear-gradient(145deg, #fff7e9, #ffe8be) !important; }
+.teacherShell .dashboardQuickActions > button:hover { transform: translateY(-4px); box-shadow: 0 13px 0 -7px rgba(65,94,137,.2), 0 22px 28px -17px rgba(42,65,101,.35), inset 0 2px 0 #fff !important; }
+.teacherShell .dashboardQuickActions .quickActionIcon { width: 48px; height: 48px; border-radius: 14px; background: rgba(255,255,255,.88); color: #4976ce; }
+.teacherShell .dashboardQuickActions > button > span:nth-child(2) { display: grid; gap: 4px; }
+.teacherShell .dashboardQuickActions > button strong { color: #283c59; font-size: 12px; }
+.teacherShell .dashboardQuickActions > button small { color: #718198; font-size: 10px; }
+.teacherShell .dashboardQuickActions > button > svg { position: absolute; right: 13px; bottom: 13px; color: #7187a5; }
+
+.teacherShell .dashboardAssignments .dashboardSectionHeading { border-left: 4px solid #6894e5; padding-left: 15px; }
+.teacherShell .assignmentPreviewList { display: grid; gap: 11px; margin-top: 16px; }
+.teacherShell .assignmentPreviewCard { display: grid; width: 100%; min-height: 84px; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 13px; padding: 13px 15px; border: 1px solid #dce6f2; border-radius: 14px; background: linear-gradient(145deg, #fff, #f4f8fd); text-align: left; box-shadow: 0 8px 0 -6px rgba(57,83,121,.16), 0 15px 24px -19px rgba(35,59,94,.28), inset 0 2px 0 #fff; transition: transform 180ms ease, box-shadow 180ms ease; }
+.teacherShell .assignmentPreviewCard:hover { transform: translateY(-3px) translateX(2px); box-shadow: 0 11px 0 -7px rgba(57,83,121,.18), 0 21px 29px -18px rgba(35,59,94,.32), inset 0 2px 0 #fff; }
+.teacherShell .assignmentPreviewContent { display: grid; gap: 3px; min-width: 0; }
+.teacherShell .assignmentPreviewContent > span { color: #6482b7; font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.teacherShell .assignmentPreviewContent strong { overflow: hidden; color: #293d59; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.teacherShell .assignmentPreviewContent p { margin: 0; color: #77879b; font-size: 10px; }
+.teacherShell .assignmentPreviewSide { display: grid; justify-items: end; gap: 5px; }
+.teacherShell .assignmentPreviewSide small { color: #8492a4; font-size: 8px; }
+.teacherShell .assignmentPreviewArrow { color: #7d91ad; }
+
+@media (max-width: 760px) {
+  .teacherShell .dashboardQuickActions { grid-template-columns: 1fr; }
+  .teacherShell .dashboardQuickActions > .eyebrow, .teacherShell .dashboardQuickActions > h2, .teacherShell .dashboardQuickActions > p { grid-column: 1; }
+  .teacherShell .scheduleItem { grid-template-columns: auto auto 1fr auto; }
+  .teacherShell .scheduleTime { grid-column: 3; border: 0; }
+  .teacherShell .scheduleItem > div:nth-of-type(2) { grid-column: 3; }
+}
+
+@media (max-width: 520px) {
+  .teacherShell .scheduleHeadingIcon { display: none; }
+  .teacherShell .dashboardSchedule .dashboardSectionHeading { grid-template-columns: 1fr auto; }
+  .teacherShell .assignmentPreviewCard { grid-template-columns: auto minmax(0,1fr) auto; }
+  .teacherShell .assignmentPreviewSide { grid-column: 2; justify-items: start; }
+}

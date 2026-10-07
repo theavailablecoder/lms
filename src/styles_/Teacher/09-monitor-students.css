@@ -1,0 +1,253 @@
+.teacherShell .studentMonitorModule {
+  display: grid;
+  gap: 24px;
+}
+
+.teacherShell .monitorTablePanel {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e2e7ef;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(31, 41, 55, 0.05);
+}
+
+.teacherShell .monitorTablePanel::before { display: none; }
+
+.teacherShell .monitorOverviewBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+  padding: 13px 18px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.teacherShell .monitorOverviewBar h2 {
+  margin: 0;
+  color: #20242c;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.teacherShell .monitorOverviewBar p {
+  margin: 4px 0 0;
+  color: #8a929f;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.teacherShell .monitorOverviewControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.teacherShell .monitorFilterControl,
+.teacherShell .monitorDateControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #dce2eb;
+  border-radius: 7px;
+  background: #fff;
+  color: #4d5562;
+  box-shadow: 0 1px 3px rgba(31, 41, 55, 0.04);
+}
+
+.teacherShell .monitorFilterControl select {
+  width: 112px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #4d5562;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teacherShell .monitorDateControl {
+  min-width: 196px;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teacherShell .monitorTableScroll { width: 100%; overflow-x: auto; }
+
+.teacherShell .monitorTable {
+  width: 100%;
+  min-width: 940px;
+  border-collapse: collapse;
+  color: #20242c;
+}
+
+.teacherShell .monitorTable th {
+  height: 62px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #dfe4eb;
+  background: #fbfcfd;
+  color: #272b33;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.teacherShell .monitorTable th small {
+  display: block;
+  margin-top: 4px;
+  color: #818996;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.teacherShell .monitorTable th:first-child,
+.teacherShell .monitorTable td:first-child { padding-left: 18px; }
+.teacherShell .monitorTable th:last-child,
+.teacherShell .monitorTable td:last-child { padding-right: 18px; text-align: right; }
+
+.teacherShell .monitorTable td {
+  height: 80px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e7ebf0;
+  color: #343a44;
+  font-size: 14px;
+  font-weight: 700;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.teacherShell .monitorTable tbody tr:last-child td { border-bottom: 0; }
+.teacherShell .monitorTable tbody tr:hover { background: #fafbff; }
+
+.teacherShell .monitorStudentCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 176px;
+}
+
+.teacherShell .monitorAvatar {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  box-shadow: 0 0 0 1px #dce2e9;
+  overflow: hidden;
+}
+
+.teacherShell .monitorAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teacherShell .avatarTone1 { background: #315a78; }
+.teacherShell .avatarTone2 { background: #835543; }
+.teacherShell .avatarTone3 { background: #4d6b57; }
+.teacherShell .avatarTone4 { background: #614f7b; }
+
+.teacherShell .monitorStudentIdentity { display: grid; gap: 3px; }
+.teacherShell .monitorStudentIdentity strong { color: #292e36; font-size: 15px; font-weight: 800; }
+.teacherShell .monitorStudentIdentity small { color: #87909d; font-size: 12px; font-weight: 600; }
+
+.teacherShell .monitorProgressCell {
+  display: grid;
+  gap: 7px;
+  width: 106px;
+}
+
+.teacherShell .monitorProgressCell strong { font-size: 14px; }
+
+.teacherShell .monitorProgressCell .courseProgress {
+  width: 100px;
+  height: 5px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: #e3e7ed;
+  box-shadow: none;
+}
+
+.teacherShell .monitorProgressCell .courseProgress span { display: block; height: 100%; border-radius: inherit; box-shadow: none; }
+.teacherShell .monitorProgressCell .courseProgress.high span { background: #27c63f; }
+.teacherShell .monitorProgressCell .courseProgress.medium span { background: #ff8b16; }
+.teacherShell .monitorProgressCell .courseProgress.low span { background: #f13a3a; }
+
+.teacherShell .monitorStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teacherShell .monitorStatus i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.teacherShell .monitorStatus.on-track { background: #eaf9ed; color: #18a62c; }
+.teacherShell .monitorStatus.needs-attention { background: #fff3df; color: #f2830a; }
+.teacherShell .monitorStatus.falling-behind { background: #ffe8e8; color: #ed3030; }
+
+.teacherShell .monitorRowActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.teacherShell .monitorIconAction {
+  display: inline-grid;
+  width: 40px;
+  height: 38px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #8d84ff;
+  border-radius: 6px;
+  background: #fff;
+  color: #685cf0;
+  box-shadow: none;
+}
+
+.teacherShell .monitorIconAction.message {
+  border-color: #74a9e8;
+  color: #3278ca;
+}
+
+.teacherShell .monitorIconAction:hover {
+  background: #f3f1ff;
+  transform: translateY(-1px);
+}
+
+.teacherShell .monitorIconAction.message:hover { background: #edf6ff; }
+
+.teacherShell .monitorIconAction:focus-visible {
+  outline: 3px solid rgba(104, 92, 240, 0.2);
+  outline-offset: 2px;
+}
+
+.teacherShell .studentMonitorModule .monitorActionPanel {
+  gap: 18px;
+  border: 1px solid #e2e7ef;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(31, 41, 55, 0.05);
+}
+
+@media (max-width: 760px) {
+  .teacherShell .monitorOverviewBar { align-items: flex-start; flex-direction: column; }
+  .teacherShell .monitorOverviewControls { width: 100%; flex-wrap: wrap; }
+  .teacherShell .monitorDateControl { flex: 1; }
+}

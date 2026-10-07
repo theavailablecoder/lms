@@ -1,0 +1,16 @@
+.searchLoading.eduPageLoader { position:fixed; inset:0; z-index:2000; display:grid; place-items:center; padding:24px; background:#edf4f8e8; backdrop-filter:blur(7px); }
+.eduLoaderCard { display:flex; flex-direction:column; align-items:center; width:min(390px,100%); padding:38px 30px; border:1px solid #d8e7ef; border-radius:20px; background:#fff; box-shadow:0 16px 60px #163d5214; text-align:center; }
+.eduLoaderCard .akCompanyBrand { flex-direction:row; align-items:center; gap:14px; padding:0; background:transparent; box-shadow:none; }
+.eduLoaderCard .akCompanyLogo { width:120px; }
+.eduLoaderCard .akPlatformName { font-size:22px; }
+.eduLoaderTrack { width:100%; height:4px; margin:28px 0 24px; border-radius:4px; background:#e7f1f5; overflow:hidden; }
+.eduLoaderTrack>span { display:block; width:40%; height:100%; background:linear-gradient(90deg,#175e81,#1cbdbe); border-radius:4px; animation:eduLoaderSlide 1.7s ease-in-out infinite; }
+.eduLoaderCard>strong { color:#2a5066; font-size:17px; font-weight:600; }
+.eduLoaderCard>p { margin:10px 0 0; color:#7b96a6; font-size:12px; line-height:1.8; }
+.eduLoaderDots { display:flex; gap:6px; margin-top:22px; }
+.eduLoaderDots i { width:5px; height:5px; border-radius:50%; background:#218fa4; animation:eduLoaderPulse 1.2s ease-in-out infinite; }
+.eduLoaderDots i:nth-child(2) { animation-delay:.15s; }.eduLoaderDots i:nth-child(3) { animation-delay:.3s; }
+@keyframes eduLoaderSlide { 0% { transform:translateX(-100%); } 100% { transform:translateX(350%); } }
+@keyframes eduLoaderPulse { 0%,100% { opacity:.3; transform:scale(.8); } 50% { opacity:1; transform:scale(1.2); } }
+@media(prefers-reduced-motion:reduce) { .eduLoaderTrack>span,.eduLoaderDots i { animation:none; }.eduLoaderTrack>span { width:100%; } }
+@media(max-width:400px) { .eduLoaderCard { padding:30px 22px; }.eduLoaderCard .akCompanyLogo { width:100px; }.eduLoaderCard .akPlatformName { font-size:19px; } }

@@ -1,0 +1,64 @@
+/* Assessment presentation only. No state, handlers, validation or API changes. */
+.appShell.websiteRefresh .testExamModule { padding:24px 30px; background:transparent; border:0; min-width:0; }
+.appShell.websiteRefresh .assessmentSummaryGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin:0 0 24px; }
+.appShell.websiteRefresh .assessmentSummaryCard { display:grid; grid-template-columns:40px 1fr; align-content:center; align-items:center; gap:8px 14px; min-height:120px; padding:20px !important; background:#fff !important; border:1px solid #dce5ee !important; border-left:3px solid #2993ad !important; border-radius:8px !important; box-shadow:none !important; transform:none !important; overflow:hidden; }
+.appShell.websiteRefresh .assessmentSummaryCard::before,.appShell.websiteRefresh .assessmentSummaryCard::after { display:none; }
+.appShell.websiteRefresh .assessmentSummaryArtwork { display:none; }
+.appShell.websiteRefresh .assessmentSummaryIcon { position:static; grid-column:1; grid-row:1 / 4; display:grid; place-items:center; width:40px; height:40px; border:0; border-radius:9px; background:#eaf4f8 !important; color:#2489a5 !important; box-shadow:none !important; }
+.appShell.websiteRefresh .assessmentSummaryCard>strong { grid-column:2; color:#25465b; font-size:29px; line-height:1; margin:0; }
+.appShell.websiteRefresh .assessmentSummaryCard>span:not(.assessmentSummaryIcon),.appShell.websiteRefresh .assessmentSummaryCard>small { grid-column:2; color:#668395; font-size:12px; font-weight:500; }
+.appShell.websiteRefresh .assessmentSummaryCard>small { font-size:10px; color:#91a3af; }
+.appShell.websiteRefresh .assessmentSummaryCard>h3 { grid-column:2; margin:0; color:#476a80; font-size:12px; font-weight:600; }
+.appShell.websiteRefresh .assessmentSummaryCard>p { grid-column:2; margin:0; color:#91a3af; font-size:10px; }
+.appShell.websiteRefresh .examPreview .examPreviewCard { background:#edf5f9 !important; border:1px solid #d7e6ee; border-radius:9px; box-shadow:none !important; }
+.appShell.websiteRefresh .examPreview .examPreviewCard :is(strong,p,span) { color:#325b70 !important; }
+.appShell.websiteRefresh .examPreviewTitleIcon { background:#dcecf3 !important; color:#2485a0 !important; border:0; box-shadow:none; }
+@media(max-width:600px) { .appShell.websiteRefresh .assessmentSummaryCard>h3,.appShell.websiteRefresh .assessmentSummaryCard>p { grid-column:1; } }
+.appShell.websiteRefresh .assessmentSummaryCard.amber { border-left-color:#bb9a59 !important; }
+.appShell.websiteRefresh .assessmentSummaryCard.green { border-left-color:#449c88 !important; }
+.appShell.websiteRefresh .assessmentSummaryCard.pink { border-left-color:#8c95b7 !important; }
+.appShell.websiteRefresh .assessmentSwipeWorkspace { padding:0 !important; border:0 !important; background:transparent !important; box-shadow:none !important; border-radius:0; }
+.appShell.websiteRefresh .assessmentSwipeHeader { padding:26px 28px; margin:0 0 20px; border:0; border-radius:8px 24px 8px 8px; background:linear-gradient(110deg,#183b52,#205a6b); }
+.appShell.websiteRefresh .assessmentSwipeHeader span { color:#70d5de; font-size:10px; letter-spacing:1.5px; }
+.appShell.websiteRefresh .assessmentSwipeHeader h2 { color:#f5fbff; font-size:27px; font-weight:600; margin:9px 0; letter-spacing:-.6px; }
+.appShell.websiteRefresh .assessmentSwipeHeader p { color:#b7d0dd; font-size:13px; font-weight:400; line-height:1.7; margin:0; }
+.appShell.websiteRefresh .assessmentSwipeTabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:0; margin-bottom:22px; border:0; background:transparent; box-shadow:none; }
+.appShell.websiteRefresh .assessmentSwipeTabs>button { min-height:80px; padding:16px 20px; border:1px solid #dce5ee !important; border-radius:9px; background:#fff !important; color:#526f80; box-shadow:none !important; transform:none !important; }
+.appShell.websiteRefresh .assessmentSwipeTabs>button.active { border-color:#22899f !important; background:#e8f4f7 !important; color:#186781 !important; box-shadow:inset 3px 0 0 #22899f !important; }
+.appShell.websiteRefresh .assessmentSwipeTabs>button>span { background:#eef5f8 !important; color:#2686a0 !important; border:0; border-radius:9px; box-shadow:none; }
+.appShell.websiteRefresh .assessmentSwipeTabs strong { font-size:14px; color:inherit; }
+.appShell.websiteRefresh .assessmentSwipeTabs small { font-size:11px; color:#7e98a6; font-weight:400; }
+.appShell.websiteRefresh .assessmentSwipeTabs em { background:#d4eaf0; color:#3b7b8c; font-size:10px; }
+.appShell.websiteRefresh .examBuilderGrid { grid-template-columns:minmax(0,1.35fr) minmax(300px,1fr); gap:22px; align-items:start; }
+.appShell.websiteRefresh .examBuilderGrid .examForm { padding:24px !important; background:#fff !important; border:1px solid #dce5ee !important; border-radius:10px !important; box-shadow:none !important; }
+.appShell.websiteRefresh .examBuilderGrid .examForm>.panelHeader { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; min-height:0; margin:0 0 20px !important; padding:0 0 20px !important; border:0 !important; border-bottom:1px solid #e2ecf1 !important; border-radius:0 !important; background:transparent !important; box-shadow:none !important; }
+.appShell.websiteRefresh .examForm>.panelHeader h2 { display:flex; align-items:center; gap:10px; color:#284f65 !important; font-size:19px; margin:0; }
+.appShell.websiteRefresh .examForm>.panelHeader h2 svg { width:22px; height:22px; padding:0; border:0; background:transparent; color:#2687a0; box-shadow:none; }
+.appShell.websiteRefresh .examForm>.panelHeader h2::after { display:none; }
+.appShell.websiteRefresh .examForm>.panelHeader>span { position:static; padding:6px 10px; background:#eaf6ef; color:#437b61; border:0; border-radius:6px; font-size:10px; }
+.appShell.websiteRefresh .examHeaderIllustration { display:none; }
+.appShell.websiteRefresh .examCreationModes { display:flex; gap:8px; padding:5px; margin-bottom:24px; border:1px solid #dfe9ee; border-radius:8px; background:#f4f8fb; box-shadow:none !important; }
+.appShell.websiteRefresh .examCreationModes>button { flex:1; min-height:40px; padding:10px; border:0 !important; border-radius:5px; background:transparent !important; color:#77909f !important; box-shadow:none !important; font-size:12px; }
+.appShell.websiteRefresh .examCreationModes>button.active { background:#fff !important; color:#197b93 !important; box-shadow:0 2px 6px #17375010 !important; }
+.appShell.websiteRefresh .examForm .formRow { gap:16px; margin-bottom:18px; }
+.appShell.websiteRefresh .examForm label { font-size:12px; color:#688292; }
+.appShell.websiteRefresh .examForm .homeworkFieldLabel { display:block; margin-bottom:8px; font-weight:500; }
+.appShell.websiteRefresh .examForm .homeworkControl { background:transparent; border:0; box-shadow:none; }
+.appShell.websiteRefresh .examForm :is(select,input,textarea) { min-height:44px; font-size:13px; border-radius:7px; }
+.appShell.websiteRefresh .examFieldIcon { color:#398ba3 !important; box-shadow:none; }
+.appShell.websiteRefresh .examForm .examScheduleFields { border-top:1px dashed #dce8ef; padding-top:20px; }
+.appShell.websiteRefresh .examForm button[type=submit] { min-height:44px; padding:12px 18px; border-radius:7px; box-shadow:none !important; }
+.appShell.websiteRefresh .examPreview { background:#fff !important; border:1px solid #dce5ee !important; border-radius:10px !important; padding:22px !important; box-shadow:none !important; }
+.appShell.websiteRefresh .examPreview .panelHeader { padding-bottom:18px; background:transparent; border-color:#e2ecf1; }
+.appShell.websiteRefresh .examPreview :is(.examPreviewHero,.examPreviewHeader,.examPreviewTitle) { background:#edf5f9 !important; border:1px solid #d7e6ee; border-radius:9px; color:#325b70 !important; box-shadow:none !important; }
+.appShell.websiteRefresh .examPreview :is(.examPreviewHero,.examPreviewHeader,.examPreviewTitle) :is(h2,h3,strong,p,small,span) { color:#325b70 !important; }
+.appShell.websiteRefresh .examPreviewQuestionList,.appShell.websiteRefresh .examPreviewSummary { border:1px solid #e1eaf0; border-radius:8px; background:#fafcfd; box-shadow:none; }
+.appShell.websiteRefresh .examListGrid { gap:16px; margin-top:24px; }
+.appShell.websiteRefresh .examCard { border:1px solid #dce5ee !important; border-radius:9px !important; background:#fff !important; box-shadow:none !important; }
+.appShell.websiteRefresh .examCardIcon { background:#eaf4f8; color:#2687a0; border-radius:8px; box-shadow:none; }
+.appShell.websiteRefresh .examPrimaryAction { background:#167f96 !important; color:#fff; border:0; border-radius:7px; box-shadow:none; }
+.appShell.websiteRefresh .assessmentSubmissionSearch { background:#fff !important; border:1px solid #dce5ee; border-radius:10px; padding:20px; box-shadow:none !important; }
+.appShell.websiteRefresh .studentAssessmentList button { border-radius:8px; box-shadow:none; }
+.appShell.websiteRefresh .studentAssessmentList button.active { background:#e8f4f7; border-color:#73b2c3; color:#216c86; }
+@media(max-width:1100px) { .appShell.websiteRefresh .examBuilderGrid { grid-template-columns:1fr; }.appShell.websiteRefresh .assessmentSummaryGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .appShell.websiteRefresh .testExamModule { padding:16px; }.appShell.websiteRefresh .assessmentSummaryGrid { gap:10px; }.appShell.websiteRefresh .assessmentSummaryCard { grid-template-columns:1fr; padding:16px !important; }.appShell.websiteRefresh .assessmentSummaryIcon { grid-row:auto; }.appShell.websiteRefresh .assessmentSummaryCard>strong,.appShell.websiteRefresh .assessmentSummaryCard>span:not(.assessmentSummaryIcon),.appShell.websiteRefresh .assessmentSummaryCard>small { grid-column:1; }.appShell.websiteRefresh .assessmentSwipeTabs { grid-template-columns:1fr; }.appShell.websiteRefresh .assessmentSwipeHeader { padding:22px; }.appShell.websiteRefresh .examBuilderGrid .examForm { padding:18px !important; }.appShell.websiteRefresh .examForm .formRow { grid-template-columns:1fr; } }

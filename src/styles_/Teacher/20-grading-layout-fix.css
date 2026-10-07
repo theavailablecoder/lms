@@ -1,0 +1,21 @@
+/* The screenshot layout is wide; with the teacher sidebar present, stack the grader
+   before the central workspace becomes too narrow. */
+@media (max-width: 1400px) {
+  .teacherShell .gradingExactBody { grid-template-columns: minmax(0, 1fr); }
+  .teacherShell .exactGrader { min-height: auto; border-top: 1px solid #e2e9f4; }
+  .teacherShell .exactGrader > header { padding: 12px 16px; }
+  .teacherShell .studentDetail, .teacherShell .graderAssignment, .teacherShell .submissionFile, .teacherShell .gradeForm { max-width: 760px; margin-left: auto; margin-right: auto; }
+  .teacherShell .exactGrader > footer { justify-content: flex-end; padding: 12px 16px; }
+}
+
+@media (max-width: 1120px) {
+  .teacherShell .exactStats { grid-template-columns: repeat(3, minmax(150px, 1fr)); }
+  .teacherShell .exactAssignment { flex-wrap: wrap; }
+  .teacherShell .assignmentName { min-width: 250px; }
+}
+
+@media (max-width: 780px) {
+  .teacherShell .exactStats { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+  .teacherShell .gradingExactHeader { gap: 10px; }
+  .teacherShell .gradingSelects { order: 3; width: 100%; }
+}

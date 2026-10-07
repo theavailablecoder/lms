@@ -1,0 +1,69 @@
+/* Keep company branding separate from the navigation controls. */
+.appShell.websiteRefresh .sidebar { display:flex !important; flex-direction:column; padding:0 !important; overflow:hidden !important; }
+.appShell.websiteRefresh .sidebar .brand { display:flex !important; align-items:center; justify-content:center; flex-shrink:0; min-height:140px !important; height:auto !important; padding:42px 14px 18px !important; margin:0 !important; overflow:visible; border-bottom:1px solid #ffffff12; }
+.appShell.websiteRefresh .sidebar .brand::after { display:none !important; }
+.appShell.websiteRefresh .sidebar .brand .sidebarLogoOrbit { position:static !important; width:100% !important; height:auto !important; margin:0 !important; padding:0 !important; border:0 !important; transform:none !important; display:flex; justify-content:center; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand { width:100%; max-width:178px; align-items:center; padding:12px !important; border-radius:10px; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand .akCompanyLogo { width:100%; max-width:154px; height:auto; }
+.appShell.websiteRefresh .sidebar .brand .sidebarToggle { position:absolute !important; top:10px !important; right:10px !important; left:auto !important; width:26px !important; height:26px !important; padding:3px !important; border:1px solid #ffffff30; border-radius:7px !important; transform:none !important; box-shadow:none !important; }
+.appShell.websiteRefresh .sidebar>nav { flex:1; min-height:0; width:100%; overflow-y:auto; overflow-x:hidden; padding:5px 0 12px; scrollbar-width:thin; scrollbar-color:#355666 transparent; }
+.appShell.websiteRefresh .navGroup { margin:0; }
+.appShell.websiteRefresh .navGroup>p { margin:18px 0 8px; padding:0 20px; font-size:9px; }
+.appShell.websiteRefresh .sidebar .navItem { display:flex; align-items:center; gap:12px; width:calc(100% - 20px) !important; min-height:40px !important; margin:3px 10px !important; padding:10px 12px !important; border:0 !important; border-radius:8px !important; font-size:12px !important; font-weight:500 !important; text-align:left; }
+.appShell.websiteRefresh .sidebar .navItem>span { line-height:1.4; }
+.appShell.websiteRefresh .sidebar .navItem>svg { width:18px; height:18px; flex-shrink:0; padding:0; border:0; border-radius:0; }
+.appShell.websiteRefresh .sidebar .navItem.active { border:0 !important; background:#245265 !important; }
+.appShell.websiteRefresh .sidebar .logoutButton { flex-shrink:0; margin:0; min-height:45px; border-top:1px solid #ffffff15; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .brand { min-height:113px !important; padding:44px 8px 12px !important; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyBrand { width:44px; padding:7px !important; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyLogo { width:30px; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .navItem { justify-content:center; padding:10px 5px !important; gap:0; }
+
+.websiteRefresh .gradingExact { padding:24px 30px 32px !important; background:transparent !important; border:0 !important; min-height:0 !important; font-size:13px; }
+.websiteRefresh .akGradingWelcome { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:26px 28px; margin-bottom:22px; border:1px solid #d7e8ec; border-radius:16px; background:#eaf4f5; }
+.akGradingWelcome>div>span { font-size:10px; letter-spacing:1.4px; font-weight:700; color:#4e8b97; }
+.akGradingWelcome h2 { margin:10px 0; color:#224657; font-size:28px; font-weight:600; letter-spacing:-.7px; }
+.akGradingWelcome p { margin:0; font-size:13px; color:#6a8793; line-height:1.7; }
+.akGradingWelcomeIcon { display:grid; place-items:center; width:65px; height:65px; flex-shrink:0; background:#fff8; border-radius:18px; color:#148993; }
+.websiteRefresh .akGradingSummary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-bottom:22px; }
+.akGradingSummary article { display:flex; align-items:center; gap:16px; padding:20px; border:1px solid #dce8eb; background:#fff; border-radius:13px; }
+.akGradingSummary article>svg { color:#248b99; background:#eaf6f6; width:42px; height:42px; padding:11px; border-radius:11px; }
+.akGradingSummary article>div { display:grid; gap:5px; }
+.akGradingSummary strong { color:#274958; font-size:27px; font-weight:600; }
+.akGradingSummary article span { color:#78909b; font-size:12px; }
+.websiteRefresh .gradingExactBody { min-height:0 !important; background:transparent !important; padding:0 !important; gap:22px; }
+.websiteRefresh .gradingExactMain { padding:0 !important; min-width:0; overflow:visible; background:transparent !important; min-height:0 !important; }
+.websiteRefresh .gradingClassFilterBar { display:flex; align-items:center; flex-wrap:wrap; gap:12px; padding:20px !important; margin:0 0 18px; border:1px solid #dce8eb !important; border-radius:13px !important; background:#fff !important; box-shadow:none !important; }
+.websiteRefresh .gradingFilterIcon { display:grid; place-items:center; width:44px; height:44px; border-radius:11px; background:#eaf6f6 !important; color:#18818e !important; box-shadow:none !important; }
+.websiteRefresh .gradingFilterCopy { flex:1; min-width:190px; }
+.websiteRefresh .gradingFilterCopy strong { color:#284e60; font-size:14px; }
+.websiteRefresh .gradingFilterCopy small { display:block; margin-top:5px; color:#8299a4; font-size:12px; }
+.websiteRefresh .gradingClassFilterBar>label { font-size:12px; color:#65818e; }
+.websiteRefresh .gradingClassFilterBar select { padding:10px 12px; min-width:140px; }
+.websiteRefresh .exactTableCard { min-width:0 !important; border:1px solid #dce8eb !important; border-radius:14px; box-shadow:none !important; background:#fff; overflow-x:auto; }
+.websiteRefresh .exactTableTools { display:flex; flex-wrap:wrap; gap:16px; padding:18px !important; border-bottom:1px solid #e2edef; }
+.websiteRefresh .exactTableTools>div { display:flex; flex-wrap:wrap; gap:8px; }
+.websiteRefresh .exactTableTools button { display:flex; align-items:center; gap:7px; min-height:38px; padding:9px 12px; font-size:12px !important; font-weight:500; border:1px solid #dce8eb !important; border-radius:8px; background:#fff !important; color:#62828f !important; box-shadow:none !important; }
+.websiteRefresh .exactTableTools button.active { border-color:#0e8993 !important; background:#0e8993 !important; color:#fff !important; }
+.websiteRefresh .exactTableTools button span { background:#ffffff30; color:inherit; }
+.websiteRefresh .exactTableTools>label { width:230px; padding:0 10px; border:1px solid #dce8eb; border-radius:9px; }
+.websiteRefresh .exactTableTools input { border:0 !important; font-size:12px; background:transparent !important; }
+.websiteRefresh .exactTable { width:100%; min-width:740px; font-size:13px; }
+.websiteRefresh .exactTable th { padding:15px 16px; font-size:11px !important; font-weight:600; }
+.websiteRefresh .exactTable td { padding:16px; font-size:12px; }
+.websiteRefresh .exactTable td b { font-size:13px; }
+.websiteRefresh .exactTable td button { min-height:34px; padding:8px 12px; font-size:12px; box-shadow:none; }
+.websiteRefresh .exactTable .grade { background:#0e8993; border-color:#0e8993; }
+.websiteRefresh .exactTable .review { color:#157c8a; border-color:#cde6e9; }
+.websiteRefresh .akGradingEmpty { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; min-height:250px; padding:35px 24px; text-align:center; }
+.akGradingEmpty>span { display:grid; place-items:center; width:70px; height:70px; background:#eff8f8; color:#4b9aa4; border-radius:20px; }
+.akGradingEmpty h3 { margin:5px 0 0; color:#355c6b; font-size:20px; font-weight:600; }
+.akGradingEmpty p { margin:0; color:#8299a4; font-size:13px; line-height:1.7; }
+.akGradingEmpty button { padding:10px 16px; background:#e9f5f6; color:#207f8c; border-radius:8px; }
+.websiteRefresh .exactPagination { display:flex; flex-wrap:wrap; gap:16px; padding:16px 20px; border-top:1px solid #e4eef0; color:#839ba6; font-size:12px; }
+.websiteRefresh .exactPagination button { min-height:35px; font-size:12px; padding:8px 12px; border-radius:8px; box-shadow:none !important; }
+.websiteRefresh .exactPagination button.active { background:#0e8993 !important; border-color:#0e8993 !important; }
+.websiteRefresh .gradingPaginationControls { letter-spacing:normal; }
+.websiteRefresh .exactGrader { background:#fff !important; border:1px solid #dce8eb; border-radius:14px; overflow:hidden; box-shadow:none; }
+@media(max-width:1050px) { .websiteRefresh .akGradingSummary { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) { .websiteRefresh .gradingExact { padding:16px !important; }.websiteRefresh .akGradingWelcome { padding:20px; }.akGradingWelcome h2 { font-size:23px; }.akGradingWelcomeIcon { display:none; }.websiteRefresh .akGradingSummary { gap:10px; }.akGradingSummary article { padding:14px; gap:10px; }.akGradingSummary article span { font-size:10px; }.websiteRefresh .gradingClassFilterBar select { flex:1; min-width:110px; }.websiteRefresh .gradingFilterCopy { flex-basis:calc(100% - 60px); }.websiteRefresh .exactTableTools>label { width:100%; } }

@@ -1,0 +1,1829 @@
+/* Student dashboard — matches reference design */
+.studentShell .content:has(.studentDashboardRef) {
+  background: #f4f7fb !important;
+}
+.studentShell .content:has(.studentDashboardRef) .topbar,
+.studentShell .content:has(.studentDashboardRef) .appFooter {
+  display: none;
+}
+.studentDashboardRef {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px 28px 32px;
+  min-width: 0;
+   /* border: 2px solid red !important; */
+   margin: 0 !important;
+}
+/* Welcome */
+.sdWelcome {
+  position: relative;
+  display: grid;
+  min-height: 218px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 38%);
+  align-items: center;
+  overflow: hidden;
+  padding: 26px 32px;
+  border: 1px solid #d9e7fb;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #eaf4ff 0%, #eff3ff 52%, #e5edff 100%);
+  box-shadow: 0 12px 30px rgba(48, 89, 148, 0.08);
+}
+.sdWelcomeCopy {
+  position: relative;
+  z-index: 2;
+  max-width: 610px;
+}
+.sdWelcome h1 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.sdWelcome p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+}
+.sdLearningHighlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+.sdLearningHighlights span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(147, 197, 253, 0.58);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #315276;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+.sdLearningHighlights svg { color: #3b82f6; }
+.sdDailyGoal {
+  width: min(100%, 350px);
+  margin-top: 17px;
+}
+.sdDailyGoalLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  color: #526987;
+  font-size: 11px;
+  font-weight: 700;
+}
+.sdDailyGoalLabel strong { color: #2563eb; }
+.sdDailyGoalTrack {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.sdDailyGoalTrack span {
+  display: block;
+  width: 75%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #3b82f6, #7c5cf4);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.38);
+}
+
+.sdWelcomeVisual {
+  position: absolute;
+  top: -28%;
+  right: -1%;
+  bottom: -28%;
+  width: 37%;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.sdWelcomeVisual::before {
+  content: '';
+  position: absolute;
+  width: 74%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.sdWelcomeVisual img {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 360px);
+  max-height: 245px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 22px rgba(51, 74, 135, 0.17));
+}
+
+.sdVisualBubble {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.sdVisualBubble--one { width: 14px; height: 14px; top: 31%; left: 8%; }
+.sdVisualBubble--two { width: 8px; height: 8px; right: 10%; bottom: 28%; }
+
+/* Stats row */
+.sdStatsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sdStatCard {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+  min-height: 160px;
+  padding: 20px 22px;
+  border: 1px solid #e8eef5;
+  /* border-bottom: 4px solid #3b82f6; */
+  border-radius: 12px;
+  background: #ffffff;
+box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+
+}
+
+
+.sdStatCard--blue  {
+  background-color: #e4efff !important;
+   background: linear-gradient(145deg, #eaf4ff, #d8eaff) !important;
+  
+}
+
+.sdStatCard--green  {
+  background-color: #f2e5f8 !important;
+  background: linear-gradient(145deg, #e8efff, #d9e3ff) !important;
+}
+
+.sdStatCard--purple {
+  background-color: #dcf3d8 !important;
+ background: linear-gradient(145deg, #e1efff, #cfe3fb) !important;
+}
+
+.sdStatCard--orange {
+  background-color: #fff0b9 !important;
+background: linear-gradient(145deg, #edf3ff, #dce6f8) !important;
+}
+
+
+
+
+.sdStatIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.sdStatIcon--blue { background: #dbeafe; color: #0d6efd; }
+.sdStatIcon--green { background: #d1fae5; color: #059669; }
+.sdStatIcon--purple { background: #e9d5ff; color: #7c3aed; }
+.sdStatIcon--orange { background: #fef3c7; color: #d97706; }
+
+.sdStatText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sdStatText > span {
+  color: #173447;
+    font-size: 22px;
+  font-weight: 600;
+}
+
+.sdStatText strong {
+ color: #0d47a1;
+    font-size: 38px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.sdStatText small {
+  color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Main grid */
+.sdMainGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.sdMainGridBottom {
+  display: grid;
+  grid-template-columns:minmax(45rem, 1fr) minmax(0rem, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.sdColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Cards */
+.sdCard {
+  border: 1px solid #e8eef5;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.sdCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 14px;
+}
+
+.sdCardHeader h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.sdViewAll {
+  padding: 0;
+  background: transparent;
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sdViewAll:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Assignments */
+.sdAssignmentList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 12px;
+}
+
+.sdAssignmentItem {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  text-align: left;
+  transition: background 160ms ease;
+}
+
+.sdAssignmentItem:hover {
+  background: #f8fafc;
+}
+
+.sdItemIcon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.sdIconBlue { background: #dbeafe; color: #0d6efd; }
+.sdIconGreen { background: #d1fae5; color: #10b981; }
+.sdIconPurple { background: #e9d5ff; color: #8b5cf6; }
+.sdIconOrange { background: #fde68a; color: #f59e0b; }
+.sdIconPink { background: #fbcfe8; color: #ec4899; }
+
+.sdAssignmentBody {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sdAssignmentBody strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sdAssignmentBody > span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sdAssignmentAside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  min-width: 88px;
+}
+
+.sdAssignmentTime {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.sdDueRed,
+.sdDueOrange,
+.sdDuePurple,
+.sdDueGray {
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sdDueRed { background: #fef2f2; color: #ef4444; }
+.sdDueOrange { background: #fff7ed; color: #f97316; }
+.sdDuePurple { background: #f5f3ff; color: #a855f7; }
+.sdDueGray { background: #f1f5f9; color: #64748b; }
+
+.sdItemChevron {
+  color: #cbd5e1;
+}
+
+/* Progress */
+.sdProgressCard {
+  padding-bottom: 16px;
+}
+
+.sdProgressContent {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 10px 18px;
+  align-items: center;
+  padding: 4px 20px 16px;
+}
+
+.sdProgressDonutWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.sdProgressDonut {
+  display: grid;
+  width: 130px;
+  height: 130px;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.sdProgressDonutHole {
+  display: flex;
+  width: 88px;
+  height: 88px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #eef2f7;
+}
+
+.sdProgressDonutHole strong {
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sdProgressDonutHole span {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sdProgressLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sdProgressLegend li {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sdProgressLegend strong {
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sdLegendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.sdLegendDot--green { background: #22c55e; }
+.sdLegendDot--blue { background: #3b82f6; }
+.sdLegendDot--purple { background: #a855f7; }
+.sdLegendDot--orange { background: #f59e0b; }
+
+.sdProgressNote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #3b82f6;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.sdProgressNote svg {
+  flex: 0 0 auto;
+}
+
+/* Deadlines */
+.sdDeadlineList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px 16px;
+}
+
+.sdDeadlineItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sdDeadlineBody {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sdDeadlineBody strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sdDeadlineBody span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+
+
+/* =========================================
+   MAIN SCHEDULE CARD
+========================================= */
+
+.sdScheduleCard {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 0 0;
+  box-sizing: border-box;
+  box-shadow: 0 8px 30px rgba(30, 60, 100, 0.08);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sdScheduleCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 22px;
+}
+
+.sdScheduleCardHeader h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17233d;
+}
+
+.sdScheduleViewAll {
+  border: 1px solid #dbe5f2;
+  background: #ffffff;
+  color: #2878ff;
+  padding: 9px 15px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sdScheduleViewAll span {
+  margin-left: 6px;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.sdScheduleCardContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 305px;
+  gap: 24px;
+  padding: 0 24px 20px;
+  align-items: stretch;
+}
+
+
+/* =========================================
+   LEFT SCHEDULE
+========================================= */
+
+.sdScheduleTrack {
+  position: relative;
+  width: 100%;
+  /* min-height: 475px; */
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   STRAIGHT VERTICAL TIMELINE
+========================================= */
+
+.sdScheduleTrack::before {
+  content: "";
+  position: absolute;
+
+  /* Start and end of line */
+  top: 43px;
+  bottom: 43px;
+
+  /* Center of the timeline */
+  left: 106px;
+
+  width: 2px;
+
+  background: #dce5f0;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   SCHEDULE ITEM
+========================================= */
+
+.sdScheduleItem {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 92px 30px minmax(0, 1fr);
+
+  align-items: center;
+
+  /* min-height: 86px; */
+
+  /* margin-bottom: 12px; */
+  padding: 0 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5ebf3;
+  border-radius: 14px;
+
+  box-sizing: border-box;
+}
+
+
+/* Remove margin from last item */
+
+.sdScheduleItemLast {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   TIME
+========================================= */
+
+.sdScheduleTime {
+  display: block;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: #14213d;
+}
+
+
+/* =========================================
+   TIMELINE RAIL
+========================================= */
+
+.sdScheduleRail {
+  position: relative;
+
+  width: 30px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+.sdScheduleDot {
+  position: relative;
+
+  z-index: 5;
+
+  width: 13px;
+  /* height: 13px; */
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 3px solid;
+
+  box-sizing: border-box;
+}
+
+
+
+
+/* =========================================
+   SUBJECT / ROOM
+========================================= */
+
+.sdScheduleBody {
+  min-width: 0;
+  padding-left: 18px;
+}
+
+.sdScheduleBody strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #17233d;
+}
+
+.sdScheduleBody span {
+  display: block;
+
+  font-size: 14px;
+
+  color: #61708d;
+}
+
+
+
+
+/* =========================================
+   RIGHT IMAGE CONTAINER
+========================================= */
+
+.sdScheduleIllustration {
+  /* width: 100%; */
+  /* max-width: 330px; */
+  /* min-height: 480px; */
+  margin: 0 auto;
+  /* padding: 18px 38px 24px; */
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    #f3f8ff 0%,
+    #eef6ff 100%
+  );
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color:#F2F7FE;
+}
+
+/* ---------------- IMAGE ---------------- */
+
+.sdScheduleImage {
+  width: 100%;
+  height: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sdScheduleImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------------- QUOTE ---------------- */
+
+.sdScheduleQuote {
+      display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 15px;
+}
+
+.sdQuoteIcon {
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #3579e8;
+  font-family: Georgia, serif;
+  transform: translateY(3px);
+}
+
+.sdScheduleQuote p {
+  margin: 0;
+  padding-top: 2px;
+  color: #4d6f9f;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ---------------- DIVIDER ---------------- */
+
+.sdScheduleDivider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: #d7e5f5;
+  margin: 20px 0 16px;
+}
+
+/* ---------------- DATE ---------------- */
+
+.sdScheduleDate {
+  display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+/* Calendar icon box */
+.sdCalendarIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #dcecff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sdCalendarIcon span {
+  width: 27px;
+  height: 27px;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Date text */
+.sdDateContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sdDateContent p {
+  margin: 0;
+}
+
+.sdDay {
+  color: #2371df;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.sdDate {
+  color: #5e789e;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  .sdScheduleIllustration {
+    max-width: 320px;
+    padding: 16px 30px 22px;
+  }
+
+  .sdScheduleImage {
+    height: 265px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sdScheduleIllustration {
+    max-width: 100%;
+    min-height: auto;
+    padding: 15px 25px 20px;
+  }
+
+  .sdScheduleImage {
+    height: 250px;
+  }
+
+  .sdScheduleQuote p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.sdScheduleIllustration img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .sdScheduleCardContent {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 18px;
+  }
+
+  .sdScheduleIllustration {
+    height: 475px;
+  }
+
+  .sdScheduleIllustration img {
+    height: 230px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .sdScheduleCardContent {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sdScheduleIllustration {
+    height: 300px;
+  }
+
+  .sdScheduleIllustration img {
+    height: 220px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .sdScheduleCard {
+    border-radius: 12px;
+  }
+
+  .sdScheduleCardHeader {
+    padding: 0 16px 18px;
+  }
+
+  .sdScheduleCardHeader h2 {
+    font-size: 20px;
+  }
+
+  .sdScheduleCardContent {
+    padding: 0 12px 16px;
+  }
+
+  .sdScheduleItem {
+    grid-template-columns: 75px 25px minmax(0, 1fr);
+
+    min-height: 78px;
+
+    padding: 0 10px;
+
+    border-radius: 12px;
+  }
+
+  .sdScheduleTrack::before {
+    left: 87px;
+  }
+
+  .sdScheduleBody {
+    padding-left: 8px;
+  }
+
+  .sdScheduleBody strong {
+    font-size: 14px;
+  }
+
+  .sdScheduleBody span {
+    font-size: 12px;
+  }
+
+  .sdScheduleTime {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sdScheduleArt {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+  opacity: 0.8;
+}
+
+.sdScheduleItem {
+  display: grid;
+  grid-template-columns: 72px 20px 1fr;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.sdScheduleTime {
+  padding-top: 2px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.sdScheduleRail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 4px;
+}
+
+.sdScheduleDot {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+.sdScheduleDot--blue { background: #3bf69c; color: #3b82f6; }
+.sdScheduleDot--green { background: #10b981; color: #10b981; }
+.sdScheduleDot--purple { background: #8b5cf6; color: #8b5cf6; }
+.sdScheduleDot--orange { background: #f59e0b; color: #f59e0b; }
+.sdScheduleDot--pink { background: #ec4899; color: #ec4899; }
+
+.sdScheduleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 8px;
+}
+
+.sdScheduleBody strong {
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.sdScheduleBody span {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Restore the card layout after the shared compact timeline rules. */
+.sdScheduleCard .sdScheduleTrack { display: flex; flex-direction: column; gap: 10px; }
+.sdScheduleCard .sdScheduleTrack::before {     top: 36px;
+    bottom: 44px;
+    left: 114px;
+  }
+.sdScheduleCard .sdScheduleItem {
+  grid-template-columns: 76px 24px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 72px;
+  padding: 10px 14px;
+  border: 1px solid #e5ebf3;
+  border-radius: 14px;
+}
+.sdScheduleCard .sdScheduleTime { align-self: center; padding-top: 0; font-size: 12px; }
+.sdScheduleCard .sdScheduleRail { align-items: center; min-height: 100%; padding-top: 0; }
+.sdScheduleCard .sdScheduleBody { justify-content: center; gap: 3px; padding: 0; }
+.sdScheduleCard .sdScheduleBody strong { margin: 0; font-size: 14px; }
+.sdScheduleCard .sdScheduleBody span { font-size: 12px; }
+.sdScheduleCard .sdScheduleIllustration {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+}
+.sdScheduleCard .sdScheduleImage { height: 210px; }
+.sdScheduleCard .sdScheduleQuote { align-items: flex-start; padding: 0 18px; }
+.sdScheduleCard .sdScheduleDate { margin-top: auto; padding: 0 18px 18px; }
+.sdScheduleCard .sdCalendarIcon span { color: #2371df; font-size: 12px; font-weight: 800; }
+
+/* Announcements */
+.sdAnnouncementList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 16px 18px;
+}
+
+.sdAnnouncementItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+
+.sdAnnouncementIcon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.sdAnnouncementIcon--blue { background: #dbeafe; color: #0d6efd; }
+.sdAnnouncementIcon--green { background: #d1fae5; color: #10b981; }
+
+.sdAnnouncementBody {
+  min-width: 0;
+}
+
+.sdAnnouncementTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sdAnnouncementTop strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sdAnnouncementTop span {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sdNewBadge {
+  display: inline-flex;
+  margin: 6px 0 4px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sdAnnouncementBody p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Calendar */
+.sdCalendarWrapper {
+  display: flex;
+  gap: 20px;
+  background: #edf5ff;
+  padding: 14px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 720px;
+}
+
+
+/* Calendar */
+
+.sdCalendarBox {
+  width: 100%;
+  background: white;
+  border: 1px solid #c9dcf7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.sdCalendarTop {
+  height: 58px;
+  background: #e8f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+
+.sdCalendarTop h3 {
+  font-size: 17px;
+  margin: 0;
+  color: #172b4d;
+}
+
+
+.sdNavBtn {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border: 1px solid #c9dcf7;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5b78a8;
+}
+
+
+.sdCalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+}
+
+
+.sdWeek {
+  height: 30px;
+  background:#dceaff;
+  font-size:10px;
+  font-weight:700;
+  color:#5276b8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.sdDate {
+  height:65px;
+  border-right:1px solid #d8e4f4;
+  border-bottom:1px solid #d8e4f4;
+  padding:8px;
+  font-size:12px;
+  font-weight:600;
+  color:#42536b;
+  position:relative;
+}
+
+
+.sdDate:first-letter {
+  color:#445;
+}
+
+
+.activeEvent {
+  background:#f5f9ff;
+}
+
+
+.sdEventTag {
+  position:absolute;
+  bottom:8px;
+  left:5px;
+  background:#4d80d8;
+  color:white;
+  padding:3px 7px;
+  border-radius:4px;
+  font-size:9px;
+}
+
+
+
+/* Events Panel */
+
+.sdEventsPanel {
+  flex:1;
+  background:#eaf3ff;
+  border:1px solid #c9dcf7;
+  border-radius:12px;
+  padding:16px;
+}
+
+
+.sdEventsHeader {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+
+.sdEventsHeader h3 {
+  margin:0;
+  font-size:14px;
+  color:#173b70;
+}
+
+
+.sdEventsHeader span {
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#d5e6ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#5276b8;
+  font-size:12px;
+}
+
+
+
+/* Event cards */
+
+.sdEventCard {
+  background:white;
+  border-radius:8px;
+  padding:12px;
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+  box-shadow:0 3px 10px rgba(40,80,140,0.08);
+}
+
+
+.sdEventLine {
+  width:4px;
+  background:#5b8de8;
+  border-radius:5px;
+}
+
+
+.sdEventCard h4 {
+  margin:0 0 6px;
+  font-size:12px;
+  color:#203957;
+}
+
+
+.sdEventCard p {
+  margin:0;
+  font-size:10px;
+  color:#657994;
+}
+
+
+.sdEventCard small {
+  font-size:10px;
+  color:#4773b8;
+}
+
+
+/* Motivational card */
+.sdMotivationalCard {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+     padding: 23px 17px !important;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
+}
+
+.sdMotivationalCard {
+  width: 100%;
+  height: 94%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sdMotivationalContent {
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(180deg, #eaf4ff 0%, #dcecff 100%) !important; */
+  border-radius: 16px;
+  /* padding: 24px 20px; */
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sdMotivationalContent h3 {
+  /* margin: 0; */
+  color: #204b80;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.sdMotivationalContent p {
+  /* margin: 14px 0 0; */
+  width: 80%;
+  color: #405875;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.sdMotivationalIllustration {
+  position: absolute;
+      bottom: -14px;
+    right: -34px;
+    width: 250px;
+    z-index: 1;
+    filter: drop-shadow(10px -7px 22px rgba(231, 226, 103, 0.8));
+}
+
+.sdMotivationalIllustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Decorative sparkles */
+.sdMotivationalContent::before {
+  content: "✦";
+  position: absolute;
+  top: 102px;
+  right: 30px;
+  color: #ffc928;
+  font-size: 26px;
+  filter: drop-shadow(10px -7px 22px rgb(231, 227, 103)) ;
+}
+
+.sdMotivationalContent::after {
+      content: "✦";
+    position: absolute;
+    bottom: 133px;
+    right: 133px;
+  color: #b9d9ff;
+  font-size: 26px;
+  z-index: 2;
+  filter: drop-shadow(10px -7px 22px rgb(0, 0, 0));
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .sdMainGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sdMainGridBottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sdColumnRight {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .sdStatsRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sdMainGrid,
+  .sdMainGridBottom,
+  .sdColumnRight {
+    grid-template-columns: 1fr;
+  }
+
+  .sdProgressContent {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .sdProgressLegend {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .sdAssignmentItem {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .sdAssignmentAside {
+    grid-column: 2 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+  }
+
+  .sdItemChevron {
+    display: none;
+  }
+
+  .sdScheduleIllustration {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .studentDashboardRef {
+    padding: 18px 14px 24px;
+  }
+
+  .sdWelcome h1 {
+    font-size: 22px;
+  }
+
+  .sdStatsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard composition -------------------------------------------------- */
+.studentDashboardRef {
+  --sd-space: clamp(16px, 1.35vw, 22px);
+  --sd-border: #dfe8f3;
+  --sd-shadow: 0 8px 24px rgba(30, 64, 110, 0.06);
+}
+
+.studentDashboardRef .sdMainGrid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--sd-space);
+  align-items: stretch;
+}
+
+.studentDashboardRef .sdMainGridBottom {
+  grid-template-columns: minmax(360px, 1.3fr) minmax(330px, 1fr) minmax(330px, 1fr);
+  gap: var(--sd-space);
+  align-items: start;
+}
+
+.studentDashboardRef .sdCard,
+.studentDashboardRef .sdCalendarWrapper {
+  border-color: var(--sd-border);
+  box-shadow: var(--sd-shadow);
+}
+
+.studentDashboardRef .sdCardHeader {
+  min-height: 58px;
+  padding: 18px 18px 12px;
+}
+
+.studentDashboardRef .sdAssignmentsCard {
+  align-self: start;
+  overflow: hidden;
+}
+
+.studentDashboardRef .sdAssignmentList {
+  padding: 0 10px 12px;
+}
+
+.studentDashboardRef .sdAssignmentItem {
+  min-height: 57px;
+  padding: 8px 10px;
+}
+
+.studentDashboardRef .sdScheduleCard {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.studentDashboardRef .sdScheduleCardContent {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 34%);
+  gap: 18px;
+  padding: 0 18px 16px;
+}
+
+.studentDashboardRef .sdScheduleIllustration {
+  min-height: 100%;
+  border-radius: 20px;
+}
+
+.studentDashboardRef .sdAnnouncementsCard {
+  overflow: hidden;
+}
+
+.studentDashboardRef .sdAnnouncementList {
+  gap: 8px;
+  padding: 0 12px 14px;
+}
+
+.studentDashboardRef .sdAnnouncementItem {
+  padding: 2px 0;
+}
+
+.studentDashboardRef .sdCalendarWrapper {
+  max-width: none;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.studentDashboardRef .sdCalendarTop {
+  height: 50px;
+}
+
+.studentDashboardRef .sdDate {
+  height: 56px;
+}
+
+.studentDashboardRef .sdMotivationalCard {
+  height: 100%;
+  min-height: 392px;
+  padding: 24px !important;
+  align-self: stretch;
+  text-align: left;
+}
+
+.studentDashboardRef .sdMotivationalContent h3 {
+  margin: 8px 0 14px;
+}
+
+.studentDashboardRef .sdMotivationalContent p {
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .studentDashboardRef .sdMainGridBottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .studentDashboardRef .sdMotivationalCard {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 900px) {
+  .studentDashboardRef .sdMainGrid,
+  .studentDashboardRef .sdMainGridBottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .studentDashboardRef .sdAssignmentsCard {
+    width: 100%;
+  }
+
+  .studentDashboardRef .sdScheduleCardContent {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .studentDashboardRef .sdScheduleIllustration {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .studentDashboardRef .sdCardHeader {
+    min-height: 52px;
+    padding: 15px 14px 10px;
+  }
+
+  .studentDashboardRef .sdScheduleCardContent {
+    padding: 0 12px 14px;
+  }
+
+  .studentDashboardRef .sdScheduleCard .sdScheduleItem {
+    grid-template-columns: 68px 20px minmax(0, 1fr);
+    padding-inline: 10px;
+  }
+
+  .studentDashboardRef .sdScheduleCard .sdScheduleTrack::before {
+    left: 88px;
+  }
+
+  .studentDashboardRef .sdMotivationalCard {
+    min-height: 320px;
+  }
+}
+
+/* Unified masonry-style layout: prevents short cards leaving empty rows. */
+.studentDashboardRef .sdDashboardContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr) minmax(0, 0.62fr);
+  grid-template-areas:
+    "assignments schedule schedule"
+    "announcements schedule schedule"
+    ". calendar motivation";
+  gap: var(--sd-space);
+  align-items: start;
+}
+
+.studentDashboardRef .sdDashboardContent > .sdMainGrid,
+.studentDashboardRef .sdDashboardContent > .sdMainGridBottom {
+  display: contents;
+}
+
+.studentDashboardRef .sdAssignmentsCard { grid-area: assignments; }
+.studentDashboardRef .sdScheduleCard { grid-area: schedule; }
+.studentDashboardRef .sdAnnouncementsCard { grid-area: announcements; }
+.studentDashboardRef .sdCalendarWrapper { grid-area: calendar; }
+.studentDashboardRef .sdMotivationalCard { grid-area: motivation; }
+
+.studentDashboardRef .sdAssignmentsCard,
+.studentDashboardRef .sdAnnouncementsCard,
+.studentDashboardRef .sdScheduleCard,
+.studentDashboardRef .sdCalendarWrapper,
+.studentDashboardRef .sdMotivationalCard {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.studentDashboardRef .sdMotivationalCard {
+  min-height: 390px;
+}
+
+@media (max-width: 1200px) {
+  .studentDashboardRef .sdDashboardContent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "assignments assignments"
+      "schedule schedule"
+      "announcements calendar"
+      "motivation motivation";
+  }
+
+  .studentDashboardRef .sdMotivationalCard {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 760px) {
+  .studentDashboardRef .sdDashboardContent {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "assignments"
+      "schedule"
+      "announcements"
+      "calendar"
+      "motivation";
+  }
+}
+
+@media (max-width: 900px) {
+  .sdWelcome {
+    grid-template-columns: minmax(0, 1fr) 220px;
+    padding-inline: 24px;
+  }
+
+  .sdWelcomeVisual {
+    right: -4%;
+    width: 38%;
+    opacity: 0.82;
+  }
+}
+
+@media (max-width: 650px) {
+  .sdWelcome {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 22px 18px;
+  }
+
+  .sdWelcomeCopy {
+    padding-right: 0;
+  }
+
+  .sdWelcomeVisual {
+    top: auto;
+    right: -52px;
+    bottom: -42px;
+    width: 190px;
+    height: 180px;
+    opacity: 0.22;
+  }
+
+  .sdWelcome h1,
+  .sdWelcome p,
+  .sdLearningHighlights,
+  .sdDailyGoal {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .sdLearningHighlights {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

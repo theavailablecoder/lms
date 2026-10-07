@@ -1,0 +1,202 @@
+/* All application stylesheet imports are managed here. */
+@import "react-chat-elements/dist/main.css";
+@import "./styles/Auth/01-foundation.css";
+@import "./styles/Auth/04-auth-shell.css";
+@import "./styles/Auth/10-auth-account-popup.css";
+@import "./styles/02-components.css";
+@import "./styles/03-themes.css";
+@import "./styles/06-product-polish.css";
+@import "./styles/07-coding-cards.css";
+@import "./styles/08-coding-workspace.css";
+@import "./styles/35-platform-card-system.css";
+
+
+ /* Teacher Styles */
+@import "./styles/Teacher/CourseLibrary/05-course-library.css";
+@import "./styles/Teacher/Monitor/09-monitor-students.css";
+@import "./styles/Teacher/Dashboard/11-teacher-dashboard-cards.css";
+@import "./styles/Teacher/Assessments/12-test-exam.css";
+@import "./styles/Teacher/Sidebar/14-teacher-sidebar.css";
+@import "./styles/Teacher/Dashboard/45-recent-assignments-board.css";
+@import "./styles/Teacher/Dashboard/46-dashboard-space-fix.css";
+@import "./styles/Teacher/CourseLibrary/47-course-library-dashboard-theme.css";
+@import "./styles/Teacher/Assessments/48-assessment-reference-ui.css";
+@import "./styles/Teacher/Homework/49-assignment-summary-cards.css";
+@import "./styles/Teacher/Homework/50-homework-creator-card.css";
+@import "./styles/Teacher/Homework/51-assigned-homework-cards.css";
+@import "./styles/Teacher/Homework/52-homework-swipe-workspace.css";
+@import "./styles/Teacher/Chat/09-teacher-chat.css";
+@import "./styles/Teacher/Homework/33-teacher-homework-review.css";
+@import "./styles/Teacher/Dashboard/34-teacher-stats-3d.css";
+@import "./styles/Teacher/Dashboard/36-teacher-dashboard-workspace-3d.css";
+@import "./styles/Teacher/Homework/53-homework-paper-preview.css";
+@import "./styles/Teacher/Homework/54-submitted-work-3d.css";
+@import "./styles/Teacher/Assessments/59-assessment-builder-3d.css";
+@import "./styles/Teacher/GradingSchedule/teacher-grading-schedule.css";
+@import "./styles/Teacher/AiStudy/61-ai-study-box-reference.css";
+@import "./styles/Teacher/Profile/10-teacher-profile.css";
+
+
+ /* Student Styles */
+@import "./styles/Student/Sidebar/13-student-sidebar.css";
+@import "./styles/Student/Dashboard/30-student-dashboard.css";
+@import "./styles/Student/Homework/31-student-homework.css";
+@import "./styles/Student/Assessments/55-assessment-text-contrast.css";
+@import "./styles/Student/Assessments/56-assessment-swipe-workspace.css";
+@import "./styles/Student/Assessments/57-student-assessment.css";
+@import "./styles/Student/Assessments/58-student-quiz-cards.css";
+@import "./styles/Student/Certificates/61-student-certificates.css";
+@import "./styles/Student/Certificates/63-certificates-2d-readable.css";
+@import "./styles/Student/Certificates/64-certificates-panel-match.css";
+@import "./styles/Student/Certificates/65-certificate-requirements.css";
+@import "./styles/Student/Profile/81-student-profile-popover.css";
+@import "./styles/Student/Leaderboard/66-student-leaderboard.css";
+@import "./styles/Student/Leaderboard/67-leaderboard-panel-3d.css";
+@import "./styles/Student/Leaderboard/68-ranking-soft-3d.css";
+@import "./styles/Student/Leaderboard/69-leaderboard-reference-hero.css";
+@import "./styles/Student/Leaderboard/70-leaderboard-hero-icons.css";
+@import "./styles/Student/Leaderboard/71-real-trophy.css";
+@import "./styles/Student/Leaderboard/72-metrics-soft-3d.css";
+@import "./styles/Student/Leaderboard/73-podium-enhanced-3d.css";
+@import "./styles/Student/Leaderboard/74-podium-spacing-fix.css";
+@import "./styles/Student/Leaderboard/75-podium-celebration-animation.css";
+@import "./styles/Student/Leaderboard/76-podium-ribbon-center.css";
+@import "./styles/Student/Leaderboard/77-champions-header-3d.css";
+@import "./styles/Student/Leaderboard/78-achievements-rank-3d.css";
+@import "./styles/Student/Leaderboard/79-champions-header-refresh.css";
+@import "./styles/Student/Leaderboard/80-podium-group-center.css";
+@import "./styles/Student/Leaderboard/81-education-podium.css";
+@import "./styles/Student/Leaderboard/82-podium-visibility-fix.css";
+@import "./styles/Student/Leaderboard/83-scholar-spotlight-board.css";
+@import "./styles/Student/Leaderboard/84-classroom-superstars.css";
+@import "./styles/Student/Leaderboard/85-superstars-layout-polish.css";
+@import "./styles/Student/Leaderboard/86-superstars-visual-finish.css";
+@import "./styles/Student/Leaderboard/87-superstars-progress.css";
+@import "./styles/Student/Leaderboard/88-student-ranking-board.css";
+@import "./styles/Student/Leaderboard/89-ranking-podium-grid.css";
+@import "./styles/Student/Leaderboard/90-ranking-podium-3d.css";
+@import "./styles/Student/Leaderboard/91-ranking-footer-visibility.css";
+@import "./styles/Student/Leaderboard/92-creative-3d-stage.css";
+@import "./styles/Student/Leaderboard/93-clean-creative-podium.css";
+@import "./styles/Student/Profile/82-student-profile.css";
+@import "./styles/global.css";
+@import "./styles/Auth/11-login-redesign.css";
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+}
+
+.courseEmptyState {
+  display: flex;
+  width: min(100%, 720px);
+  min-height: 112px;
+  margin: 28px auto;
+  padding: 22px 26px;
+  align-items: center;
+  gap: 18px;
+  border: 1px dashed #8eb8ed;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f7fbff, #eef5ff 55%, #f5f1ff);
+  box-shadow: 0 14px 34px rgba(47, 91, 150, 0.1);
+  color: #203957;
+  text-align: left;
+}
+
+.courseEmptyIcon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #3477dc, #7657e8) !important;
+  box-shadow:
+    0 7px 0 #c5d5ef,
+    0 13px 22px rgba(52, 91, 170, 0.2) !important;
+  color: #fff;
+}
+
+.courseEmptyState strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #17324f;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.courseEmptyState p {
+  margin: 0;
+  color: #657a94;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.courseEmptyStateMissing {
+  border-color: #e8bd7c;
+  background: linear-gradient(135deg, #fffdf7, #fff7e8 55%, #fffaf2);
+}
+
+.courseEmptyStateMissing .courseEmptyIcon {
+  background: linear-gradient(145deg, #e88b2d, #f2ad42);
+  box-shadow:
+    0 7px 0 #f3d6aa,
+    0 13px 22px rgba(190, 116, 35, 0.18);
+}
+
+@media (max-width: 620px) {
+  .courseEmptyState {
+    padding: 18px;
+    align-items: flex-start;
+  }
+
+  .courseEmptyIcon {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    border-radius: 15px;
+  }
+}
+
+/* Alert Styles */
+.alert {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert.success {
+  background: #e8f7ee;
+  color: #18794e;
+  border: 1px solid #b7e4c7;
+}
+
+.alert.error {
+  background: #fdecec;
+  color: #b42318;
+  border: 1px solid #f3b5b5;
+}
+
+
+
+.examAiToolGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+
+
+
+
+
+/* @import "./styles/Teacher/48-assessment-reference-ui.css";
+@import "./styles/Teacher/59-assessment-builder-3d.css"; */
+

@@ -1,0 +1,25 @@
+/* Keep assessment creation tabs readable above global button themes. */
+.teacherShell .testExamModule .examCreationModes button {
+  background: transparent !important;
+  color: #344b69 !important;
+  opacity: 1 !important;
+}
+
+.teacherShell .testExamModule .examCreationModes button svg {
+  color: #526bc5 !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+
+.teacherShell .testExamModule .examCreationModes button.active {
+  border: 1px solid rgba(255,255,255,.35) !important;
+  background: linear-gradient(100deg, #347ce9 0%, #4d62d8 55%, #634fd4 100%) !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  box-shadow: 0 5px 0 #394ca7, 0 11px 20px rgba(53,69,163,.22) !important;
+}
+
+.teacherShell .testExamModule .examCreationModes button.active svg {
+  color: #fff !important;
+  stroke: #fff !important;
+}

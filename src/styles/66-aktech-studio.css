@@ -1,0 +1,77 @@
+/* AKTech Studio: compact branding, a light navigation rail and geometric panels. */
+.appShell.websiteRefresh { --primary:#087c91; --secondary:#1b627b; --ink:#233d50; --muted:#718596; --line:#dce5ee; --refresh-bg:#edf2f7; --refresh-line:#dce5ee; background:#edf2f7 !important; }
+.appShell.websiteRefresh .content { background:#edf2f7 !important; }
+.appShell.websiteRefresh .topbar { background:#fff !important; border-bottom:1px solid #dce5ee; padding:22px 30px; }
+.appShell.websiteRefresh .topbar h1 { font-weight:600; font-size:23px; letter-spacing:-.7px; }
+.appShell.websiteRefresh .topbar p { font-size:12px; }
+.appShell.websiteRefresh .sidebar { background:#fcfdff !important; border:1px solid #dce5ee !important; border-radius:14px !important; box-shadow:3px 0 20px #17375006 !important; }
+.appShell.websiteRefresh .sidebar .brand { min-height:112px !important; padding:35px 14px 16px !important; border-bottom:1px solid #e5edf3; perspective:600px; }
+.appShell.websiteRefresh .sidebar .akCompanyBrand { max-width:132px; padding:9px 11px !important; border:1px solid #fff; border-radius:11px; background:linear-gradient(145deg,#fff,#e8f0f5); box-shadow:0 4px 0 #c0d2df,0 10px 15px #17375018,inset 0 1px 0 #fff; transform:rotateX(6deg); }
+.appShell.websiteRefresh .sidebar .akCompanyBrand .akCompanyLogo { max-width:110px; filter:drop-shadow(0 2px 1px #17375020); }
+.appShell.websiteRefresh .sidebar .akCompanyBrand>small { font-size:6px !important; letter-spacing:1px; color:#68889a !important; }
+.appShell.websiteRefresh .sidebar .brand .sidebarToggle { background:#eff4f8 !important; border-color:#dce7ef; color:#52758a !important; }
+.appShell.websiteRefresh .sidebar .navGroup>p { color:#97aaba !important; font-size:9px; letter-spacing:1.5px; }
+.appShell.websiteRefresh .sidebar .navItem { color:#647b8d !important; border-radius:7px !important; background:transparent !important; }
+.appShell.websiteRefresh .sidebar .navItem>svg { color:#7c9bab !important; }
+.appShell.websiteRefresh .sidebar .navItem.active { position:relative; background:#e6f2f7 !important; color:#125d79 !important; border-left:3px solid #149bb1 !important; padding-left:9px !important; }
+.appShell.websiteRefresh .sidebar .navItem.active>svg { color:#148aa5 !important; }
+.appShell.websiteRefresh .sidebar .navItem:hover { background:#f0f5f9 !important; color:#24536d !important; }
+.appShell.websiteRefresh .sidebar .logoutButton { border-top:1px solid #e5edf3; color:#6b8293 !important; }
+.appShell.websiteRefresh .sidebar>nav { scrollbar-color:#c8d6e0 transparent; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .brand { min-height:108px !important; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyBrand { max-width:44px; }
+.appShell.websiteRefresh .sidebar.sidebarCollapsed .akCompanyLogo { max-width:30px; }
+
+.appShell.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading,.akGradingWelcome) { position:relative; overflow:hidden; background:linear-gradient(110deg,#183b52,#205a6b) !important; border:0; border-radius:8px 24px 8px 8px; padding:28px; }
+.appShell.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading,.akGradingWelcome)::after { content:''; position:absolute; width:140px; height:140px; right:-50px; top:-55px; border:24px solid #57cad71c; border-radius:28px; transform:rotate(35deg); pointer-events:none; }
+.appShell.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading,.akGradingWelcome) :is(h2,p) { color:#f3faff !important; }
+.appShell.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading,.akGradingWelcome) p { color:#b7d0dd !important; }
+.appShell.websiteRefresh :is(.overviewWelcome .eyebrow,.resourceLibraryHeading>span,.akGradingWelcome>div>span) { color:#70d5de !important; }
+.appShell.websiteRefresh .overviewWelcome>button { background:#fff !important; color:#1b607a !important; border-radius:7px; }
+.appShell.websiteRefresh .akGradingWelcomeIcon { background:#ffffff12; color:#79d8e2; }
+.appShell.websiteRefresh .panel { border-radius:10px !important; box-shadow:0 5px 16px #12354b04 !important; }
+.appShell.websiteRefresh .teacherStats .statCard { border-radius:8px !important; border-top:3px solid #3c9fba !important; min-height:130px; }
+.appShell.websiteRefresh .teacherStats .statCard:nth-child(2) { border-top-color:#728fae !important; }
+.appShell.websiteRefresh .teacherStats .statCard:nth-child(3) { border-top-color:#48a9a2 !important; }
+.appShell.websiteRefresh .teacherStats .statCard:nth-child(4) { border-top-color:#c3a371 !important; }
+.appShell.websiteRefresh .teacherStats .statCard .statIcon { border-radius:8px; }
+.appShell.websiteRefresh .akGradingSummary article { border-radius:8px; border-bottom:3px solid #d3e5ef; }
+.appShell.websiteRefresh .categoryPanelHeader { background:#f1f6fa !important; }
+.appShell.websiteRefresh .courseCategoryPanel,.appShell.websiteRefresh .courseFilterBar,.appShell.websiteRefresh .courseCoverPreview { border-radius:9px !important; }
+.appShell.websiteRefresh .courseCoverPreview { border-bottom:3px solid #cadfe9 !important; }
+.appShell.websiteRefresh .downloadButton { border-radius:6px; }
+.appShell.websiteRefresh .dashboardQuickActions>button { border-radius:8px; border-left:3px solid #90b4c7 !important; }
+.appShell.websiteRefresh .gradingClassFilterBar { border-radius:8px !important; }
+.appShell.websiteRefresh .exactTableCard { border-radius:8px; }
+
+.appShell.websiteRefresh .akChat.panel { border-radius:12px !important; background:linear-gradient(180deg,#fff 70%,#f8fbfd) !important; border-top:3px solid #2d8ca9 !important; }
+.akChat .panelHeader h2 { letter-spacing:.2px; }
+.akChat .akChatWelcome { position:relative; gap:13px; }
+.akChat .akWelcomeRobot { width:105px; height:105px; filter:drop-shadow(0 9px 7px #234c641a); }
+.akChat .akChatWelcome h3 { font-size:clamp(25px,3vw,38px); font-weight:650; }
+.akChat .modeTabs { justify-content:center; gap:6px; padding-bottom:14px; border-bottom:1px dashed #dae5ed; }
+.akChat .modeTabs button { border-radius:6px; font-size:10px; letter-spacing:.3px; }
+.akChat .promptChips { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; max-width:800px; }
+.akChat .promptChips button { position:relative; padding:18px 16px 18px 30px; text-align:left; background:#f3f8fb; border:1px solid #e0eaf1; border-radius:6px; font-size:12px; }
+.akChat .promptChips button::before { content:'↗'; position:absolute; left:12px; color:#2093ab; }
+.akChat .chatComposer { border-radius:8px; border:1px solid #c9dfe8; border-bottom:3px solid #bfd4e0; background:#fff; box-shadow:0 8px 18px #17405a08; }
+.akChat .chatComposer button { border-radius:6px; }
+.akChat .chatMessage { border-radius:4px 14px 14px 14px; background:#f0f5f9; }
+.akChat .chatMessage.student { border-radius:14px 4px 14px 14px; background:#e4f2f6; }
+.akChat .akChatBottom { min-height:48px; }
+
+.classroomWelcome { background:linear-gradient(135deg,#f5f9fc,#eaf1f6); }
+.classroomWelcome .welcomeBrand .akCompanyBrand { padding:8px 12px; border-radius:10px; background:linear-gradient(145deg,#fff,#e8f0f5); border:1px solid #fff; box-shadow:0 3px 0 #d0dfe8,0 8px 18px #183b5210; }
+.classroomWelcome .welcomeBrand .akCompanyLogo { width:128px; filter:drop-shadow(0 2px 1px #17375020); }
+.classroomWelcome .welcomeStory h1 { font-weight:600; }
+.classroomWelcome .welcomeStory h1 em { font-family:inherit; font-style:normal; font-weight:700; color:#167e9b; }
+.classroomWelcome .welcomeFormPanel { border-radius:8px 26px 8px 8px; border-top:4px solid #1d7d9e; }
+.classroomWelcome .welcomeWorkspace { transform:none; border-radius:10px; border-bottom:4px solid #d0dfe8; }
+.classroomWelcome .welcomeHello { border-radius:8px; background:#e8f2f7; color:#1d7d9e; }
+.classroomWelcome .roleSwitch,.classroomWelcome .loginForm input,.classroomWelcome .loginForm button[type=submit] { border-radius:6px; }
+.loginShell .loginBrand .akCompanyLogo { width:128px; filter:drop-shadow(0 2px 1px #17375020); }
+.appShell.websiteRefresh.themeDark .sidebar { background:#172e3e !important; border-color:#345164 !important; }
+.appShell.websiteRefresh.themeDark .sidebar .navItem { color:#c5d7e2 !important; }
+.appShell.websiteRefresh.themeDark .content,.appShell.websiteRefresh.themeDark .topbar { background:#172632 !important; }
+.appShell.websiteRefresh.themeDark .akChat.panel { background:#1c3344 !important; }
+@media(max-width:700px) { .akChat .promptChips { grid-template-columns:1fr; gap:6px; }.akChat .promptChips button { padding:10px 14px 10px 30px; }.appShell.websiteRefresh :is(.overviewWelcome,.resourceLibraryHeading,.akGradingWelcome) { padding:22px; }.classroomWelcome .welcomeBrand .akCompanyLogo { width:115px; } }

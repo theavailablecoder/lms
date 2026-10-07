@@ -1,0 +1,20 @@
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents {
+  max-height: 348px;
+  padding-right: 8px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #8ba7ce #e7edf6;
+  scrollbar-width: thin;
+}
+
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar { width: 8px; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-track { border-radius: 10px; background: #e7edf6; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-thumb { border: 2px solid #e7edf6; border-radius: 10px; background: #8ba7ce; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::-webkit-scrollbar-thumb:hover { background: #6685b2; }
+.teacherShell .dashboardSchedule .scheduleList.hasMoreEvents::before { bottom: -30px; }
+.teacherShell .scheduleMoreHint { position: sticky; z-index: 5; bottom: 0; display: flex; min-height: 31px; align-items: center; justify-content: center; gap: 5px; margin-left: -22px; border: 1px solid #d5e0ee; border-radius: 9px; background: rgba(245,248,253,.94); color: #617794; font-size: 9px; font-weight: 800; box-shadow: 0 -7px 15px rgba(49,72,107,.08); backdrop-filter: blur(7px); }
+
+@media (max-width: 650px) {
+  .teacherShell .dashboardSchedule .scheduleList.hasMoreEvents { max-height: 330px; }
+}
